@@ -1,0 +1,158 @@
+---
+layout: default
+title: Design Showcase | Tillerstead LLC
+seo_title: Design Showcase - Sacred Tile Pattern | Tillerstead LLC
+permalink: /design-showcase/
+body_class: page-design-showcase
+description: Discover the Sacred Tile pattern and signature design elements that define Tillerstead's approach to precision tilework and waterproof assemblies in South Jersey.
+keywords:
+  - Design showcase Tillerstead
+  - Sacred Tile pattern
+  - Custom tile design South Jersey
+  - Signature tilework patterns NJ
+  - Precision tile installation
+
+# Hero content
+hero_eyebrow: "Signature Design"
+hero_title: "Design Showcase"
+hero_summary: >
+  Explore the signature patterns, design philosophy, and craftsmanship details that define our approach to precision tilework and remodeling.
+hero_primary_url: "/contact/"
+hero_primary_label: "Discuss Your Project"
+hero_secondary_url: "/services/"
+hero_secondary_label: "View Services"
+---
+
+{% comment %}
+The default layout includes head.html, header.html, and page-hero.html.
+Design showcase content lives here.
+{% endcomment %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Design Showcase",
+  "description": "{{ page.description }}",
+  "url": "{{ site.url }}{{ page.url }}",
+  "mainEntity": {
+    "@type": "CreativeWork",
+    "name": "Sacred Tile Pattern",
+    "description": "A signature geometric pattern inspired by sacred geometry and traditional tilework, representing precision and harmony in tile installation.",
+    "creator": {
+      "@type": "Organization",
+      "name": "Tillerstead LLC"
+    }
+  }
+}
+</script>
+
+<!-- Design Philosophy Section -->
+<section class="ts-section section" aria-labelledby="philosophy-heading">
+  <div class="ts-section-inner container">
+    <header class="ts-section-header">
+      <p class="ts-eyebrow">Our Approach</p>
+      <h2 id="philosophy-heading" class="ts-section-title">
+        Design Philosophy
+      </h2>
+      <p class="ts-section-subtitle">
+        Every project begins with a commitment to lasting quality, precise installation,
+        and designs that honor both function and beauty.
+      </p>
+    </header>
+
+    <div class="about-grid">
+      <article class="about-card">
+        <h3>Precision First</h3>
+        <p>
+          From layout planning to the final grout line, every measurement matters. We approach
+          each installation with the understanding that small details create lasting impressions.
+        </p>
+      </article>
+
+      <article class="about-card">
+        <h3>Waterproofing Integrity</h3>
+        <p>
+          Beautiful tile means nothing if water finds its way behind it. We build proper
+          waterproof assemblies that protect your investment for years to come.
+        </p>
+      </article>
+
+      <article class="about-card">
+        <h3>Thoughtful Design</h3>
+        <p>
+          Whether incorporating signature patterns or executing your vision, we balance
+          aesthetic appeal with practical durability and maintenance requirements.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Pattern Showcase Section (main feature) -->
+{% include pattern-showcase.html %}
+
+<!-- Pattern Details Section -->
+<section class="ts-section ts-section--muted section" aria-labelledby="details-heading">
+  <div class="ts-section-inner container">
+    <header class="ts-section-header">
+      <p class="ts-eyebrow">Technical Excellence</p>
+      <h2 id="details-heading" class="ts-section-title">
+        Craftsmanship Details
+      </h2>
+      <p class="ts-section-subtitle">
+        Quality tilework requires attention to every layer of the assembly,
+        from substrate preparation to final sealing.
+      </p>
+    </header>
+
+    <div class="why-grid">
+      <article class="why-item">
+        <h3>Substrate Preparation</h3>
+        <p>
+          Proper surface prep is non-negotiable. We ensure substrates are clean, level, and
+          structurally sound before any tile goes down.
+        </p>
+      </article>
+
+      <article class="why-item">
+        <h3>Waterproof Membrane Systems</h3>
+        <p>
+          We use industry-standard waterproofing membranes and methods, paying special
+          attention to corners, transitions, and penetrations.
+        </p>
+      </article>
+
+      <article class="why-item">
+        <h3>Layout & Pattern Planning</h3>
+        <p>
+          Thoughtful layout prevents awkward cuts and creates visual balance. We plan
+          every project to minimize waste and maximize impact.
+        </p>
+      </article>
+
+      <article class="why-item">
+        <h3>Grout & Seal Protection</h3>
+        <p>
+          Proper grouting and sealing complete the installation. We select products
+          matched to your tile type and use conditions.
+        </p>
+      </article>
+    </div>
+
+    <div class="scopes-cta-row">
+      <p class="section-intro">
+        Interested in incorporating these details into your next tile project?
+        We're ready to discuss layout options, material selection, and timing.
+      </p>
+      <p class="section-cta">
+        <a href="{{ '/contact/' | relative_url }}" class="btn btn-primary">
+          Start a conversation
+        </a>
+        <a href="{{ '/services/' | relative_url }}" class="btn btn-ghost">
+          View all services
+        </a>
+      </p>
+    </div>
+  </div>
+</section>
