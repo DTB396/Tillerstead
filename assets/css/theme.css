@@ -286,7 +286,7 @@ pre {
   padding-block: clamp(3rem, 6vw, 5rem);
   /* Performance: CSS containment */
   contain: layout style paint;
-  content-visibility: auto;
+  /* content-visibility: auto; removed for accessibility */
   contain-intrinsic-size: auto 500px;
 }
 
