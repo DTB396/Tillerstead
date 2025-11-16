@@ -1705,3 +1705,139 @@ textarea {
   font-size: 0.875rem;
   color: var(--ts-text-muted);
 }
+
+/* ============================================
+   Print Styles - Optimize for printing
+   ============================================ */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /* Don't show links for images or javascript: URIs */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after,
+  a[href^="tel:"]::after,
+  a[href^="mailto:"]::after {
+    content: "";
+  }
+
+  /* Page breaks */
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+
+  /* Hide navigation and non-essential elements */
+  .site-header,
+  .site-footer,
+  .nav-toggle,
+  .hero-actions,
+  .btn,
+  button {
+    display: none !important;
+  }
+
+  /* Expand content */
+  body {
+    font-size: 12pt;
+  }
+
+  h1 {
+    font-size: 24pt;
+  }
+
+  h2 {
+    font-size: 18pt;
+  }
+
+  h3 {
+    font-size: 14pt;
+  }
+}
+
+/* ============================================
+   Dark mode improvements (for those who prefer it)
+   ============================================ */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Already dark by default, but ensure consistency */
+    color-scheme: dark;
+  }
+}
+
+/* ============================================
+   High contrast mode support
+   ============================================ */
+
+@media (prefers-contrast: high) {
+  :root {
+    --ts-border: rgba(255, 255, 255, 0.5);
+    --ts-border-strong: rgba(255, 255, 255, 0.7);
+  }
+
+  .btn,
+  button.btn {
+    border-width: 2px;
+  }
+}
+
+/* ============================================
+   Reduced transparency for better readability
+   ============================================ */
+
+@media (prefers-reduced-transparency: reduce) {
+  * {
+    backdrop-filter: none !important;
+  }
+
+  .site-header {
+    background: var(--ts-bg) !important;
+  }
+}

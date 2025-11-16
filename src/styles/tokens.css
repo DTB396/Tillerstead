@@ -215,6 +215,27 @@ html.light {
 .p-5 { padding: var(--space-5) !important; }
 .p-6 { padding: var(--space-6) !important; }
 
+/* Modern Logical Property Utilities (for better internationalization) */
+.mt-block-1 { margin-block-start: var(--space-1) !important; }
+.mt-block-2 { margin-block-start: var(--space-2) !important; }
+.mt-block-3 { margin-block-start: var(--space-3) !important; }
+.mt-block-4 { margin-block-start: var(--space-4) !important; }
+
+.mb-block-1 { margin-block-end: var(--space-1) !important; }
+.mb-block-2 { margin-block-end: var(--space-2) !important; }
+.mb-block-3 { margin-block-end: var(--space-3) !important; }
+.mb-block-4 { margin-block-end: var(--space-4) !important; }
+
+.p-inline-1 { padding-inline: var(--space-1) !important; }
+.p-inline-2 { padding-inline: var(--space-2) !important; }
+.p-inline-3 { padding-inline: var(--space-3) !important; }
+.p-inline-4 { padding-inline: var(--space-4) !important; }
+
+.p-block-1 { padding-block: var(--space-1) !important; }
+.p-block-2 { padding-block: var(--space-2) !important; }
+.p-block-3 { padding-block: var(--space-3) !important; }
+.p-block-4 { padding-block: var(--space-4) !important; }
+
 /* Border Utilities */
 .border { border: 1px solid var(--color-border) !important; }
 .border-strong { border: 1px solid var(--color-border-strong) !important; }
