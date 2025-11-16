@@ -45,10 +45,8 @@
 }
 
 /* Modern alternative using auto-fit for better responsiveness */
-@supports (grid-template-columns: repeat(auto-fit, minmax(250px, 1fr))) {
-  .gc-kpis {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  }
+.gc-kpis {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
 .gc-grid {
