@@ -1,20 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 160 160"
-     role="img"
-     aria-labelledby="ts-logo-title ts-logo-desc">
-  <title id="ts-logo-title">Tillerstead mark</title>
-  <desc id="ts-logo-desc">Tile T monogram for Tillerstead LLC.</desc>
-
-  <style>
-    .ts-tile { fill: #0b162d; }
-    .ts-grout { stroke: #f1c46a; }
-  </style>
-
-  <g transform="translate(20,20)" class="ts-grout" stroke-width="8" stroke-linejoin="miter">
-    <rect x="0"   y="0"   width="40" height="40" class="ts-tile" />
-    <rect x="50"  y="0"   width="40" height="40" class="ts-tile" />
-    <rect x="100" y="0"   width="40" height="40" class="ts-tile" />
-    <rect x="50"  y="50"  width="40" height="40" class="ts-tile" />
-    <rect x="50"  y="100" width="40" height="40" class="ts-tile" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-label="Tillerstead tile T mark">
+  <style>.t-mark{stroke:var(--color-accent,#8b6f47);stroke-width:8;stroke-linejoin:miter;fill:var(--color-dark-primary,#1a1a1a)}</style>
+  <g class="t-mark" transform="translate(20,20)">
+    <rect x="0" y="0" width="40" height="40"/>
+    <rect x="50" y="0" width="40" height="40"/>
+    <rect x="100" y="0" width="40" height="40"/>
+    <rect x="50" y="50" width="40" height="40"/>
+    <rect x="50" y="100" width="40" height="40"/>
   </g>
 </svg>
