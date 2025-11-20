@@ -5,28 +5,54 @@
   </head>
 
   <body class="site-body ts-page ts-theme {{ page.body_class | default: '' }}">
-    <!-- Accessibility skip link -->
-    <a class="skip-link" href="#main">Skip to main content</a>
+    <!-- Accessibility: Skip to main content link -->
+    <a class="skip-link" href="#main" tabindex="1">Skip to main content</a>
 
+    <!-- Status banner (construction, alerts, etc.) -->
     {% include construction-banner.html %}
+
+    <!-- Page header with navigation -->
     {% include header.html %}
-    <main id="main" class="site-main ts-section ts-surface" role="main">
+
+    <!-- Main content area -->
+    <main id="main" class="site-main ts-section ts-surface" role="main" tabindex="-1">
+      
+      <!-- Breadcrumb navigation (hidden on homepage) -->
       {%- include breadcrumbs.html -%}
+
+      <!-- Page hero section (unless hidden) -->
       {%- unless page.hide_hero -%}
         {%- include page-hero.html -%}
       {%- endunless -%}
 
+      <!-- Page content: full-width or contained -->
       {% if page.is_home or page.full_width %}
         {{ content }}
       {% else %}
-        <article class="page-content section">
+        <article class="page-content section" itemscope itemtype="https://schema.org/WebPage">
+          <meta itemprop="name" content="{{ page.title | default: site.title }}">
+          {% if page.description %}
+            <meta itemprop="description" content="{{ page.description }}">
+          {% endif %}
           <div class="container">
             {{ content }}
           </div>
         </article>
       {% endif %}
+
     </main>
+
+    <!-- Page footer -->
     {% include footer.html %}
+
+    <!-- Scripts (deferred for performance) -->
     {% include scripts.html %}
+
+    <!-- Structured data for current page (if provided in front-matter) -->
+    {% if page.structured_data %}
+      <script type="application/ld+json">
+        {{ page.structured_data | jsonify }}
+      </script>
+    {% endif %}
   </body>
 </html>

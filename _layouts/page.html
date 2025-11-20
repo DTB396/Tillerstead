@@ -3,22 +3,59 @@ layout: default
 hide_hero: true
 ---
 
-<section class="ts-section ts-surface section">
+<section class="ts-section ts-surface section page-section" itemscope itemtype="https://schema.org/WebPage">
+  <!-- Metadata for search engines -->
+  <meta itemprop="name" content="{{ page.title | default: site.title }}">
+  {% if page.description %}
+    <meta itemprop="description" content="{{ page.description }}">
+  {% endif %}
+  <meta itemprop="url" content="{{ page.url | absolute_url }}">
+
   <div class="container shell">
-    <article class="prose">
+    <article class="prose" role="article">
+      
+      <!-- Page header -->
       {% if page.title and page.show_title != false %}
-        <header class="stack-sm">
-          <h1>{{ page.title }}</h1>
+        <header class="page-header stack-sm">
+          <h1 class="page-title">{{ page.title }}</h1>
 
           {% if page.description %}
-            <p class="lead">{{ page.description }}</p>
+            <p class="page-lead lead">{{ page.description }}</p>
+          {% endif %}
+
+          <!-- Optional: Author and publish date metadata -->
+          {% if page.author or page.date %}
+            <div class="page-meta text-small" role="doc-credits">
+              {% if page.author %}
+                <span>By <strong>{{ page.author }}</strong></span>
+              {% endif %}
+              {% if page.date %}
+                <span>Published <time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: "%B %-d, %Y" }}</time></span>
+              {% endif %}
+            </div>
           {% endif %}
         </header>
       {% endif %}
 
-      {{ content }}
+      <!-- Page content -->
+      <div class="page-body">
+        {{ content }}
+      </div>
+
+      <!-- Optional: Author bio or byline -->
+      {% if page.author_bio %}
+        <footer class="page-footer stack-lg">
+          <hr class="divider">
+          <div class="author-bio" role="doc-afterword">
+            <h3 class="text-small">About the Author</h3>
+            <p>{{ page.author_bio }}</p>
+          </div>
+        </footer>
+      {% endif %}
+
     </article>
   </div>
 </section>
 
+<!-- Call-to-action: Request estimate or next steps -->
 {% include cta-estimate.html %}

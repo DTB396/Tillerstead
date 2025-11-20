@@ -1,24 +1,32 @@
 {%- comment -%}
-  Breadcrumbs
-  - Uses page.breadcrumb_title or page.title for the last item
-  - Hides on the homepage or if page.breadcrumb == false
+  Breadcrumb Navigation
+  - Omitted on homepage or when page.breadcrumb == false
+  - Uses schema.org BreadcrumbList for SEO
+  - Accessible with aria-label and proper landmark roles
 {%- endcomment -%}
 
 {%- if page.url == "/" or page.breadcrumb == false -%}
-  {%- comment -%}No breadcrumbs on home or when explicitly disabled{%- endcomment -%}
+  {%- comment -%}Hidden on home or when disabled{%- endcomment -%}
 {%- else -%}
   {%- assign path = page.url | replace: 'index.html', '' -%}
   {%- assign segments = path | split: '/' -%}
 
-  <nav class="breadcrumbs" aria-label="Breadcrumb">
-    <ol class="breadcrumbs-list" itemscope itemtype="https://schema.org/BreadcrumbList">
+  <nav class="breadcrumbs" aria-label="Page breadcrumbs">
+    <ol class="breadcrumbs-list"
+        itemscope
+        itemtype="https://schema.org/BreadcrumbList"
+        role="list">
+      
       {%- assign position = 1 -%}
 
-      <!-- Home -->
+      <!-- Home Link -->
       <li itemprop="itemListElement"
           itemscope
-          itemtype="https://schema.org/ListItem">
-        <a itemprop="item" href="{{ '/' | relative_url }}">
+          itemtype="https://schema.org/ListItem"
+          role="listitem">
+        <a itemprop="item"
+           href="{{ '/' | relative_url }}"
+           class="breadcrumb-link">
           <span itemprop="name">Home</span>
         </a>
         <meta itemprop="position" content="{{ position }}">
@@ -27,6 +35,7 @@
       {%- assign position = position | plus: 1 -%}
       {%- assign current_path = "" -%}
 
+      <!-- Path segments -->
       {%- for segment in segments -%}
         {%- if segment == "" -%}
           {%- continue -%}
@@ -43,8 +52,12 @@
 
         <li itemprop="itemListElement"
             itemscope
-            itemtype="https://schema.org/ListItem">
-          <a itemprop="item" href="{{ current_path | append:'/' | relative_url }}" {%- if is_last -%} aria-current="page"{%- endif -%}>
+            itemtype="https://schema.org/ListItem"
+            role="listitem">
+          <a itemprop="item"
+             href="{{ current_path | append: '/' | relative_url }}"
+             class="breadcrumb-link"
+             {%- if is_last %} aria-current="page"{%- endif %}>
             <span itemprop="name">{{ label }}</span>
           </a>
           <meta itemprop="position" content="{{ position }}">
@@ -52,6 +65,7 @@
 
         {%- assign position = position | plus: 1 -%}
       {%- endfor -%}
+
     </ol>
   </nav>
 {%- endif -%}

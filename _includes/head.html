@@ -5,6 +5,7 @@
 
 <!-- Performance & Security -->
 <meta http-equiv="x-dns-prefetch-control" content="on">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
 
 <title>
   {% if page.seo_title %}
@@ -18,6 +19,7 @@
 
 {%- assign meta_description = page.description | default: site.description | default: 'Tillerstead LLC provides monthly property maintenance, remodeling, and waterproof tile installations for South Jersey homeowners, landlords, and small commercial spaces.' -%}
 <meta name="description" content="{{ meta_description | escape }}">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
 {%- assign meta_keywords = page.keywords | default: site.keywords -%}
 {% if meta_keywords %}
@@ -34,45 +36,52 @@
 
 {% if page.noindex %}
   <meta name="robots" content="noindex, nofollow">
+{% else %}
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 {% endif %}
 
+<!-- Canonical URL for SEO -->
 {% if site.url %}
   <link rel="canonical" href="{{ page.url | replace: 'index.html','' | absolute_url }}">
 {% endif %}
 
-<!-- Theme / icons -->
+<!-- Theme / Icons -->
 <meta name="theme-color" content="#020617">
-<link rel="icon" type="image/svg+xml" href="{{ '/assets/img/logo/tillerstead-favicon.svg' | relative_url }}">
+<link rel="icon" type="image/svg+xml" href="{{ '/assets/img/logo/tillerstead-favicon.svg' | relative_url }}" sizes="any">
+<link rel="icon" type="image/x-icon" href="{{ '/favicon.ico' | relative_url }}">
 <link rel="apple-touch-icon" href="{{ '/apple-touch-icon.png' | relative_url }}">
-<link rel="manifest" href="{{ '/manifest.webmanifest' | relative_url }}">
+<link rel="manifest" href="{{ '/site.webmanifest' | relative_url }}">
 <link rel="mask-icon" href="{{ '/safari-pinned-tab.svg' | relative_url }}" color="#020617">
 
-{%- comment -%}
-Open Graph / Twitter: use per-page overrides if present,
-otherwise fall back to global defaults from _config.yml
-{%- endcomment -%}
-
+<!-- Open Graph / Social Meta -->
 {%- assign og_title = page.seo_title | default: page.title | default: site.title -%}
 {%- assign og_description = meta_description -%}
 {%- assign og_image = page.og_image | default: site.default_og_image | default: '/assets/img/og.jpg' -%}
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="{{ og_title }}">
-<meta property="og:description" content="{{ og_description | escape }}">
+<meta property="og:title" content="{{ og_title | truncate: 60 }}">
+<meta property="og:description" content="{{ og_description | escape | truncate: 160 }}">
 <meta property="og:site_name" content="Tillerstead LLC">
 <meta property="og:locale" content="en_US">
+
 {% if site.url %}
   {% assign og_url = page.url | replace: 'index.html','' %}
   <meta property="og:url" content="{{ site.url }}{{ og_url }}">
 {% endif %}
+
 <meta property="og:image" content="{{ og_image | absolute_url }}">
+<meta property="og:image:alt" content="Tillerstead LLC - Property Maintenance, Remodeling & Tile in South Jersey">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 
+<!-- Twitter / X Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="{{ og_title }}">
-<meta name="twitter:description" content="{{ og_description | escape }}">
+<meta name="twitter:title" content="{{ og_title | truncate: 70 }}">
+<meta name="twitter:description" content="{{ og_description | escape | truncate: 160 }}">
 <meta name="twitter:image" content="{{ og_image | absolute_url }}">
+<meta name="twitter:image:alt" content="Tillerstead LLC - Property Maintenance, Remodeling & Tile in South Jersey">
 
-<!-- Business contact microdata helpers -->
+<!-- Business Contact Microdata -->
 <meta property="business:contact_data:street_address" content="{{ site.company.address_line | default: '' }}">
 <meta property="business:contact_data:locality" content="{{ site.company.address_locality | default: '' }}">
 <meta property="business:contact_data:region" content="{{ site.company.address_region | default: 'NJ' }}">
@@ -83,47 +92,109 @@ otherwise fall back to global defaults from _config.yml
   <meta property="business:contact_data:website" content="{{ site.url }}">
 {% endif %}
 
-<!-- DNS prefetch for performance -->
-
-<!-- Preload critical CSS for better performance -->
-<link rel="preload" href="{{ '/assets/styles/tokens.css' | relative_url }}" as="style">
-<link rel="stylesheet" href="{{ '/assets/styles/tokens.css' | relative_url }}">
-
-<!-- Fonts with optimized loading -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<!-- Performance: DNS Prefetch & Preconnect -->
+<link rel="dns-prefetch" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- Preload Critical CSS -->
+<link rel="preload" href="{{ '/assets/css/tokens.css' | relative_url }}" as="style">
+<link rel="preload" href="{{ '/assets/css/base.css' | relative_url }}" as="style">
+
+<!-- Fonts: Optimized Loading with Font Display -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..800&family=Manrope:wght@500..800&family=IBM+Plex+Mono:wght@400;500&display=swap"
-      rel="stylesheet">
+      rel="stylesheet"
+      media="print"
+      onload="this.media='all'">
 <noscript>
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..800&family=Manrope:wght@500..800&family=IBM+Plex+Mono:wght@400;500&display=swap"
         rel="stylesheet">
 </noscript>
 
-<!-- Modernized CSS Architecture - Consolidated and organized -->
-<link rel="stylesheet" href="{{ '/assets/css/base.css' | relative_url }}">
-<link rel="stylesheet" href="{{ '/assets/css/layout.css' | relative_url }}">
-<link rel="stylesheet" href="{{ '/assets/css/components.css' | relative_url }}">
+<!-- CSS Architecture - Organized by Layer -->
+<link rel="stylesheet" href="{{ '/assets/css/tokens.css' | relative_url }}" media="screen">
+<link rel="stylesheet" href="{{ '/assets/css/base.css' | relative_url }}" media="screen">
+<link rel="stylesheet" href="{{ '/assets/css/layout.css' | relative_url }}" media="screen">
+<link rel="stylesheet" href="{{ '/assets/css/components.css' | relative_url }}" media="screen">
 
-<!-- Special components (kept separate for specific use cases) -->
-<link rel="stylesheet" href="{{ '/assets/css/pattern-showcase.css' | relative_url }}">
-<link rel="stylesheet" href="{{ '/assets/css/construction-banner.css' | relative_url }}">
+<!-- Special Components -->
+<link rel="stylesheet" href="{{ '/assets/css/pattern-showcase.css' | relative_url }}" media="screen">
+<link rel="stylesheet" href="{{ '/assets/css/construction-banner.css' | relative_url }}" media="screen">
 
-<!-- Page-specific styles -->
+<!-- Page-Specific Styles -->
 {% if page.styles %}
   {% for href in page.styles %}
     <link rel="stylesheet"
-          href="{{ href | relative_url }}?v={{ site.version | default: site.github.build_revision | default: '10' }}">
+          href="{{ href | relative_url }}?v={{ site.assets_version | default: '1.0' }}"
+          media="screen">
   {% endfor %}
 {% endif %}
 
-<!-- Structured data -->
+<!-- Structured Data / JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "@id": "{{ site.url }}/#contractor",
+  "name": "Tillerstead LLC",
+  "alternateName": "Tillerstead",
+  "description": "{{ meta_description | escape }}",
+  "url": "{{ site.url }}/",
+  "image": "{{ site.default_og_image | absolute_url }}",
+  "telephone": "{{ site.company.phone_link }}",
+  "email": "{{ site.company.email }}",
+  "priceRange": "$$",
+  "areaServed": [
+    {
+      "@type": "State",
+      "name": "New Jersey"
+    },
+    {
+      "@type": "City",
+      "name": "Atlantic County",
+      "addressRegion": "NJ"
+    },
+    {
+      "@type": "City",
+      "name": "Ocean County",
+      "addressRegion": "NJ"
+    },
+    {
+      "@type": "City",
+      "name": "Cape May County",
+      "addressRegion": "NJ"
+    }
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "{{ site.company.address_line }}",
+    "addressLocality": "{{ site.company.address_locality }}",
+    "addressRegion": "{{ site.company.address_region }}",
+    "postalCode": "{{ site.company.address_postal_code }}",
+    "addressCountry": "US"
+  },
+  "serviceType": [
+    "Tile installation and waterproofing",
+    "Kitchen and bathroom remodeling",
+    "Monthly property maintenance",
+    "Drywall and finish carpentry"
+  ]
+}
+</script>
+
+<!-- Page-Specific Structured Data -->
 {% if page.schema %}
   {% for schema in page.schema %}
     <script type="application/ld+json">
-      {{ schema | jsonify | replace: '\\/', '/' }}
+      {{ schema | jsonify }}
     </script>
   {% endfor %}
 {% endif %}
 
-<!-- Loading screen: DISABLED - was causing 10 second blank page due to font loading issues -->
-<!-- <script src="{{ '/assets/js/loading-screen.js' | relative_url }}?v={{ site.version | default: site.github.build_revision | default: '10' }}"></script> -->
+<!-- Accessibility & User Experience Enhancements -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Tillerstead">
+
+<!-- Preload for improved performance on first visit -->
+<link rel="preload" as="image" href="{{ '/assets/img/logo/tillerstead-logo-header.svg' | relative_url }}">

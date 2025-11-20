@@ -1,37 +1,63 @@
 {%- comment -%}
-  Global and per-page scripts
-  - contrast.js: high-visibility contrast system (WCAG AAA)
-  - main.js: site-wide behaviors (nav, theme toggle, smooth scroll, forms)
-  - page.scripts: optional array of additional script paths in front matter
-  
-  IMPORTANT: Each script should only be loaded ONCE.
-  Duplicate script tags can cause infinite loops and crash Safari on iOS.
+  Global and per-page scripts with modern loading strategies
+  - defer: Non-blocking, executes in order
+  - crossorigin: CORS security
+  - Integrity: Subresource Integrity (when using CDN)
+  - Cache busting via assets_version
+
+  IMPORTANT: Each script loaded only ONCE to prevent conflicts.
 {%- endcomment -%}
 
-<script
-  defer
-  src="{{ '/assets/js/contrast.js' | relative_url }}?v={{ site.version | default: site.github.build_revision | default: '10' }}"
-  crossorigin="anonymous">
+<!-- Navigation / Interactivity -->
+<script defer
+        src="{{ '/assets/js/nav-toggle.js' | relative_url }}?v={{ site.assets_version | default: '1.0' }}"
+        crossorigin="anonymous"
+        integrity="">
 </script>
 
-<script
-  defer
-  src="{{ '/assets/js/main.js' | relative_url }}?v={{ site.version | default: site.github.build_revision | default: '10' }}"
-  crossorigin="anonymous">
+<!-- Main site behaviors -->
+<script defer
+        src="{{ '/assets/js/main.js' | relative_url }}?v={{ site.assets_version | default: '1.0' }}"
+        crossorigin="anonymous">
 </script>
 
-<!-- Boss Theme Interactions -->
-<script
-  defer
-  src="{{ '/assets/js/boss-interactions.js' | relative_url }}?v={{ site.version | default: site.github.build_revision | default: '10' }}"
-  crossorigin="anonymous">
+<!-- Accessibility enhancements -->
+<script defer
+        src="{{ '/assets/js/accessibility.js' | relative_url }}?v={{ site.assets_version | default: '1.0' }}"
+        crossorigin="anonymous">
 </script>
 
+<!-- Contrast / Theme toggle (if enabled) -->
+{% if site.theme.animations_enabled %}
+  <script defer
+          src="{{ '/assets/js/animation-controller.js' | relative_url }}?v={{ site.assets_version | default: '1.0' }}"
+          crossorigin="anonymous">
+  </script>
+{% endif %}
+
+<!-- Reduced motion detection -->
+<script>
+  (function() {
+    'use strict';
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.documentElement.classList.add('prefers-reduced-motion');
+    }
+  })();
+</script>
+
+<!-- Page-specific scripts -->
 {% if page.scripts %}
   {% for src in page.scripts %}
-    <script
-      defer
-      src="{{ src | relative_url }}?v={{ site.version | default: site.github.build_revision | default: '10' }}">
+    <script defer
+            src="{{ src | relative_url }}?v={{ site.assets_version | default: '1.0' }}"
+            crossorigin="anonymous">
     </script>
   {% endfor %}
 {% endif %}
+
+<!-- No-JS fallback message -->
+<noscript>
+  <style>
+    .js-required { display: none; }
+  </style>
+</noscript>
