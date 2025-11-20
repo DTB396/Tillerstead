@@ -92,7 +92,7 @@
   const contrastList = panel.querySelector('[data-contrast-list]');
   const seoPre = panel.querySelector('[data-seo]');
   const contrastData = renderContrast(contrastList);
-  const seoData = renderSEO(seoPre);
+  renderSEO(seoPre);
 
   panel.addEventListener('click', (e) => {
     if (e.target.matches('[data-close]')) {

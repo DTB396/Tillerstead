@@ -221,7 +221,7 @@
       e.preventDefault();
       const enabled = !document.documentElement.classList.contains('high-contrast');
       applyHighContrast(enabled);
-      try { localStorage.setItem(HC_KEY, enabled ? '1' : '0'); } catch (_) {}
+    try { localStorage.setItem(HC_KEY, enabled ? '1' : '0'); } catch (_) { /* ignore */ }
     } else if (e.code === 'KeyA') {
       e.preventDefault();
       const hasFlag = localStorage.getItem('ts:audit') === '1';

@@ -1,18 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" role="img" aria-labelledby="tillerstead-inverse-title tillerstead-inverse-desc">
-  <title id="tillerstead-inverse-title">Tillerstead LLC logo (inverse)</title>
-  <desc id="tillerstead-inverse-desc">Inverse logo with translucent emerald tile field, roof mark, and white wordmark.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 720" role="img" aria-labelledby="tillerstead-inverse-title tillerstead-inverse-desc">
+  <title id="tillerstead-inverse-title">Tillerstead logo (inverse)</title>
+  <desc id="tillerstead-inverse-desc">Tile T mark in deep green with a brass outline above a brass Tillerstead wordmark for dark backgrounds.</desc>
   <style>
-    .field{fill:var(--color-primary,#00a86b)}
-    .mark{fill:var(--color-surface-elevated,#fff)}
-    .word-main{fill:var(--color-surface-elevated,#fff);font:700 72px Georgia,'Times New Roman',serif}
-    .word-sub{fill:var(--color-surface-elevated,#fff);font:400 42px Georgia,'Times New Roman',serif}
+    .tile{fill:#0d3b2c;stroke:#c99a3f;stroke-width:16;stroke-linejoin:miter;stroke-linecap:square}
+    .word{fill:#c99a3f;font:700 90px 'Montserrat','Helvetica Neue',Arial,sans-serif;letter-spacing:3px;text-anchor:middle}
   </style>
-  <rect x="110" y="40" width="420" height="420" rx="4" class="field" opacity=".08"/>
-  <path class="mark" d="M250 120 320 60 390 120V300H250Z"/>
-  <path class="mark" transform="rotate(-22 360 280)" d="M360 230 410 300 340 330 290 270Z"/>
-  <g transform="translate(80 500)">
-    <text x="0" y="0" class="word-main">Tiller</text>
-    <text x="220" y="0" class="word-main">stead</text>
-    <text x="220" y="64" class="word-sub">LLC</text>
+  <g transform="translate(140 70)">
+    <rect class="tile" x="0" y="0" width="120" height="120" rx="6"/>
+    <rect class="tile" x="140" y="0" width="120" height="120" rx="6"/>
+    <rect class="tile" x="280" y="0" width="120" height="120" rx="6"/>
+    <rect class="tile" x="140" y="140" width="120" height="120" rx="6"/>
+    <rect class="tile" x="140" y="280" width="120" height="120" rx="6"/>
   </g>
+  <text x="320" y="620" class="word">TILLERSTEAD</text>
 </svg>
