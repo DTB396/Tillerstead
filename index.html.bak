@@ -157,10 +157,10 @@ hero_kpis:
       <p class="eyebrow">Connect</p>
       <h2 id="contact-title">Welcome—let's begin together</h2>
       <p>
-        Share your vision for remodeling, tile work, or property care and we'll arrange a visit. Serving our South Jersey
-        community across Atlantic, Ocean, and Cape May Counties with presence and purpose. Most consultations scheduled within 3 days.
+        Tell us about your remodel, tile project, or maintenance needs and we’ll coordinate a visit. Serving Atlantic
+        County with regular trips to Ocean and Cape May Counties. Most consultations are scheduled within 3 business days.
       </p>
-      <p class="text-muted">Grounded consultations with no pressure. You'll receive a clear, written scope honoring your timeline and budget.</p>
+      <p class="text-muted">No-pressure consultations. You’ll receive a written scope with timeline and budget ranges.</p>
       <div class="contact__actions">
         <a class="btn btn--primary" href="mailto:info@tillerstead.com">info@tillerstead.com</a>
         <a class="btn btn--ghost" href="{{ '/contact/' | relative_url }}">Go to the contact page</a>
