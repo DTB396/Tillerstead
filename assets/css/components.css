@@ -53,7 +53,8 @@ button.btn {
 
 .btn-secondary:hover,
 .btn-secondary:focus-visible {
-  background: rgba(0, 168, 107, 0.08);
+  background: var(--color-primary-soft);
+  border-color: var(--color-primary-strong);
   transform: translateY(-2px);
 }
 
@@ -67,7 +68,7 @@ button.btn {
 .btn-ghost:hover,
 .btn-ghost:focus-visible {
   background: var(--color-surface-elevated);
-  border-color: var(--color-primary);
+  border-color: var(--color-accent);
 }
 
 .btn-small {
@@ -129,15 +130,17 @@ button.btn {
 
 .hero-eyebrow,
 .ts-eyebrow {
-  display: inline-block;
-  padding: 0.4rem 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.45rem 1.15rem;
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  background: rgba(0, 168, 107, 0.08);
-  border-left: 3px solid var(--color-primary);
-  border-radius: 0.35rem;
+  background: rgba(201, 154, 63, 0.18);
+  border: 1px solid rgba(201, 154, 63, 0.36);
+  border-radius: var(--radius-pill);
   color: var(--color-primary);
   transition: all var(--transition-short);
   width: fit-content;
@@ -145,8 +148,8 @@ button.btn {
 
 .hero-eyebrow:hover,
 .ts-eyebrow:hover {
-  background: rgba(0, 168, 107, 0.12);
-  border-left-color: var(--color-accent);
+  background: rgba(201, 154, 63, 0.24);
+  border-color: rgba(201, 154, 63, 0.5);
 }
 
 .hero-summary,
@@ -199,7 +202,7 @@ textarea:focus,
 select:focus {
   outline: none;
   border-color: var(--color-primary);
-  box-shadow: 0 0 0 3px rgba(0, 168, 107, 0.1);
+  box-shadow: 0 0 0 3px rgba(13, 59, 44, 0.15);
 }
 
 textarea {

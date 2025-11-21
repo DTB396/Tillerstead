@@ -301,7 +301,7 @@ article figcaption {
   align-items: center;
   gap: 0.5rem;
   border-radius: var(--ts-radius-pill);
-  border: 1px solid rgba(16, 35, 61, 0.22);
+  border: 1px solid rgba(23, 31, 20, 0.2);
   background: transparent;
   cursor: pointer;
   transition:
@@ -322,8 +322,8 @@ article figcaption {
 
 .nav-toggle:hover,
 .nav-toggle:focus-visible {
-  background: rgba(16, 35, 61, 0.12);
-  border-color: rgba(16, 35, 61, 0.28);
+  background: rgba(201, 154, 63, 0.18);
+  border-color: rgba(201, 154, 63, 0.4);
 }
 
 .nav-toggle:active {
