@@ -53,12 +53,12 @@ main.site-main {
 
 .container,
 .ts-section-inner {
-  max-width: min(100vw, 1720px);
+  max-width: min(1200px, 90vw);
   margin-inline: auto;
-  padding-inline: clamp(2.5rem, 8vw, 5rem);
+  padding-inline: clamp(2rem, 6vw, 3.5rem);
   border-radius: 2rem;
   box-shadow: var(--shadow-soft);
-  background: var(--gradient-section);
+  background: linear-gradient(135deg, #f8f6ee 0%, #ece7d9 100%);
 }
 
 .section,
@@ -66,8 +66,7 @@ main.site-main {
   padding-block: clamp(3rem, 6vw, 5rem);
   border-radius: 2rem;
   box-shadow: var(--shadow-soft);
-  background: var(--gradient-section);
-  /* Performance: CSS containment */
+  background: linear-gradient(135deg, #f8f6ee 0%, #ece7d9 100%);
   contain: layout style paint;
   contain-intrinsic-size: auto 500px;
 }

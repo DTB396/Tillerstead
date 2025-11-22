@@ -25,10 +25,11 @@ hero_bg_pattern: "sacred-tile"
 ---
 {% comment %} Hero rendered by unified-hero include via front-matter above {% endcomment %}
 
-<section class="hero hero--center" aria-labelledby="home-hero-title" data-animate="reveal" style="background: var(--color-bg); border-radius: 2.5rem; box-shadow: var(--shadow-lift);">
-  <div class="container hero__grid hero__grid--centered">
+<section class="hero hero--center" aria-labelledby="home-hero-title" data-animate="reveal" style="position: relative; border-radius: 2.5rem; box-shadow: var(--shadow-lift); overflow: hidden; background: var(--gradient-surface-alt);">
+  <div class="hero-bg-pattern" style="position: absolute; inset: 0; z-index: 0; opacity: 0.22; pointer-events: none; background: url('/assets/img/patterns/sacred-tile.svg') center/cover no-repeat;"></div>
+  <div class="container hero__grid hero__grid--centered" style="position: relative; z-index: 1;">
     <div class="hero__content hero__content--center">
-      <div class="hero__logo" aria-label="Tillerstead LLC logo" style="border-radius: 1.5rem; box-shadow: var(--shadow-soft); background: var(--color-bg);">
+      <div class="hero__logo" aria-label="Tillerstead LLC logo" style="border-radius: 1.5rem; box-shadow: var(--shadow-soft); background: var(--gradient-primary);">
         {% include logo-hero.html %}
       </div>
       <p class="eyebrow text-primary" style="color: var(--color-primary);">Licensed NJ Home Improvement Contractor</p>
@@ -36,7 +37,7 @@ hero_bg_pattern: "sacred-tile"
       <p class="lead text-muted">
         Tillerstead LLC delivers waterproof tile assemblies, organized remodels, and proactive maintenance for homes, rentals, and businesses in Atlantic, Ocean, and Cape May Counties. Every project is documented, transparent, and built to earn your trust.
       </p>
-      <ul class="hero__stats" aria-label="Credentials and guarantees" style="background: var(--color-bg); border-radius: 1.25rem; box-shadow: var(--shadow-soft); padding: 1rem 2rem;">
+      <ul class="hero__stats" aria-label="Credentials and guarantees" style="background: linear-gradient(135deg, #f8f6ee 0%, #ece7d9 100%); border-radius: 1.25rem; box-shadow: var(--shadow-soft); padding: 1rem 2rem;">
         <li><strong class="text-accent">Documentation:</strong> 100% written scopes, waterproofing details & change orders</li>
         <li><strong class="text-accent">Response time:</strong> &lt;24 hours for active clients</li>
         <li><strong class="text-accent">Licensing:</strong> NJ HIC #13VH10808800, fully insured</li>
@@ -63,10 +64,10 @@ hero_bg_pattern: "sacred-tile"
             <a class="btn btn--ghost" href="{{ '/contact/' | relative_url }}">Request a quote</a>
           </div>
         </div>
-        <div class="gallery-strip__grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; border-radius: 1.25rem; background: var(--color-bg); box-shadow: var(--shadow-soft);">
+        <div class="gallery-strip__grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; border-radius: 1.25rem; background: linear-gradient(135deg, #f8f6ee 0%, #ece7d9 100%); box-shadow: var(--shadow-soft);">
           {% assign preview_items = gallery_strip | slice: 0, 4 %}
           {% for item in preview_items %}
-            <figure class="gallery-strip__item" style="border-radius: 1rem; box-shadow: var(--shadow-soft); background: var(--color-bg);">
+            <figure class="gallery-strip__item" style="border-radius: 1rem; box-shadow: var(--shadow-soft); background: linear-gradient(135deg, #f8f6ee 0%, #ece7d9 100%);">
               <img src="{{ item.file | relative_url }}"
                    alt="{{ item.alt | default: item.title | escape }} in {{ item.location | default: 'South Jersey' }}"
                    loading="lazy"
@@ -179,13 +180,13 @@ hero_bg_pattern: "sacred-tile"
 
 <section class="section section--highlight" aria-labelledby="assurance-title" data-animate="reveal" style="border-radius: 2rem; box-shadow: var(--shadow-soft);">
   <div class="container assurance" style="display: flex; justify-content: center;">
-    <div style="background: var(--gradient-surface-alt); border-radius: 1.5rem; box-shadow: var(--shadow-soft); padding: 2rem; text-align: center;">
+    <div style="background: linear-gradient(135deg, #f8f6ee 0%, #ece7d9 100%); border-radius: 1.5rem; box-shadow: var(--shadow-soft); padding: 2rem; text-align: center;">
       <p class="eyebrow text-primary" style="color: var(--color-primary);">Owner-operated accountability</p>
       <h2 id="assurance-title" class="heading-2 text-primary">Direct communication with the craftsman on every project</h2>
       <p class="text-muted">
         No project managers, no middlemen—just transparent collaboration from consultation through final walkthrough. You get responsive answers, meticulous documentation, and the peace of mind that comes from working with a licensed professional who stands behind every detail. All work is performed and overseen by the owner for maximum accountability.
       </p>
-      <ul class="assurance__list" style="background: var(--gradient-section); border-radius: 1.25rem; box-shadow: var(--shadow-soft); padding: 1rem 2rem;">
+      <ul class="assurance__list" style="background: linear-gradient(135deg, #f8f6ee 0%, #ece7d9 100%); border-radius: 1.25rem; box-shadow: var(--shadow-soft); padding: 1rem 2rem;">
         <li><span class="text-accent">Documented scopes</span> with waterproofing specifications & change-order terms</li>
         <li><span class="text-accent">Daily progress photos</span> & maintained job-site cleanliness</li>
         <li><span class="text-accent">Licensed NJ HIC #13VH10808800</span>, fully insured</li>
