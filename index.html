@@ -38,10 +38,10 @@ hero_bg_pattern: "sacred-tile"
         Tillerstead LLC delivers waterproof tile assemblies, organized remodels, and proactive maintenance for homes, rentals, and businesses in Atlantic, Ocean, and Cape May Counties. Every project is documented, transparent, and built to earn your trust.
       </p>
       <ul class="hero__stats" aria-label="Credentials and guarantees" style="background: linear-gradient(135deg, #f8f6ee 0%, #ece7d9 100%); border-radius: 1.25rem; box-shadow: var(--shadow-soft); padding: 1rem 2rem;">
-        <li><strong class="text-accent">Documentation:</strong> 100% written scopes, waterproofing details & change orders</li>
-        <li><strong class="text-accent">Response time:</strong> &lt;24 hours for active clients</li>
-        <li><strong class="text-accent">Licensing:</strong> NJ HIC #13VH10808800, fully insured</li>
-        <li><strong class="text-accent">Warranty:</strong> 2-year labor warranty on all installations</li>
+          <li><strong class="text-accent text-green">Documentation:</strong> 100% written scopes, waterproofing details & change orders</li>
+          <li><strong class="text-accent text-green">Response time:</strong> &lt;24 hours for active clients</li>
+          <li><strong class="text-accent text-green">Licensing:</strong> NJ HIC #13VH10808800, fully insured</li>
+          <li><strong class="text-accent text-green">Satisfaction:</strong> 5-star client reviews, verified on Thumbtack & Google</li>
       </ul>
       <div class="hero__actions hero__actions--center">
         <a class="btn btn--primary" href="{{ '/contact/' | relative_url }}">Request a consultation</a>
@@ -81,7 +81,7 @@ hero_bg_pattern: "sacred-tile"
                 {% if item.location %}<span class="text-accent">&bull; {{ item.location }}</span>{% endif %}
               </figcaption>
             </figure>
-          {% endfor %}
+                  {% if item.title %}<strong class="text-white">{{ item.title }}</strong>{% endif %}
         </div>
       </div>
     </div>
@@ -222,9 +222,9 @@ hero_bg_pattern: "sacred-tile"
         No project managers, no middlemen—just transparent collaboration from consultation through final walkthrough. You get responsive answers, meticulous documentation, and the peace of mind that comes from working with a licensed professional who stands behind every detail. All work is performed and overseen by the owner for maximum accountability.
       </p>
       <ul class="assurance__list" style="background: linear-gradient(135deg, #f8f6ee 0%, #ece7d9 100%); border-radius: 1.25rem; box-shadow: var(--shadow-soft); padding: 1rem 2rem;">
-        <li><span class="text-accent">Documented scopes</span> with waterproofing specifications & change-order terms</li>
-        <li><span class="text-accent">Daily progress photos</span> & maintained job-site cleanliness</li>
-        <li><span class="text-accent">Licensed NJ HIC #13VH10808800</span>, fully insured</li>
+          <li><span class="text-accent text-green">Documented scopes</span> with waterproofing specifications & change-order terms</li>
+          <li><span class="text-accent text-green">Daily progress photos</span> & maintained job-site cleanliness</li>
+          <li><span class="text-accent text-green">Licensed NJ HIC #13VH10808800</span>, fully insured</li>
       </ul>
       <div class="hero__actions">
         <a class="btn btn--primary" href="{{ '/reviews/' | relative_url }}">Read client reviews</a>
@@ -235,7 +235,40 @@ hero_bg_pattern: "sacred-tile"
 </section>
 
 {% include portfolio-highlights.html %}
-
+<!-- Inline portfolio highlights with four cards for alignment -->
+<section class="section" aria-labelledby="gallery-title">
+  <div class="container">
+    <div class="section-header">
+      <p class="eyebrow">Recent work</p>
+      <h2 id="gallery-title">Portfolio highlights</h2>
+      <p>From waterproof tile assemblies to full remodeling projects—each documented with photos and detailed scopes.</p>
+    </div>
+    {% assign items = site.data.portfolio_highlights.highlights | default: site.data.portfolio_highlights %}
+    {% if items and items.size > 0 %}
+      {% assign preview_items = items | slice: 0, 4 %}
+      <ul class="cards cards--4col">
+        {% for item in preview_items %}
+          <li class="card card--portfolio">
+            <div class="card-media" style="--ar: {{ item.ar | default: '4/3' }}">
+              <img src="{{ item.file | relative_url }}"
+                   alt="{{ item.alt | escape }}"
+                   loading="lazy"
+                   decoding="async">
+            </div>
+            <div class="card-content">
+              {% if item.category %}<span class="card-category">{{ item.category }}</span>{% endif %}
+              {% if item.title %}<h3 class="card-title">{{ item.title }}</h3>{% endif %}
+              {% if item.desc %}<p class="card-desc">{{ item.desc }}</p>{% endif %}
+            </div>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+    <div class="section-action">
+      <a href="/portfolio/" class="btn btn--primary">View full portfolio</a>
+    </div>
+  </div>
+</section>
 {% include reviews-highlights.html %}
 
 {% include blog-highlights.html %}

@@ -32,14 +32,13 @@ Usage examples:
               <div class="service-card__icon" aria-hidden="true" data-icon="{{ service_icon }}">
                 {% case service_icon %}
                   {% when 'tile' %}
-                    <!-- Tile grid icon with brand strokes -->
-                    <svg viewBox="0 0 40 40" width="40" height="40" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-                      <rect x="5" y="5" width="10" height="10" rx="2" />
-                      <rect x="25" y="5" width="10" height="10" rx="2" />
-                      <rect x="5" y="25" width="10" height="10" rx="2" />
-                      <rect x="25" y="25" width="10" height="10" rx="2" />
-                      <path class="accent" d="M15 10h10M10 15v10M25 15v10M15 25h10" />
-                    </svg>
+                      <!-- Solid tile install icon -->
+                      <svg viewBox="0 0 40 40" width="40" height="40" aria-hidden="true" focusable="false">
+                        <rect x="5" y="5" width="10" height="10" rx="2" fill="currentColor" />
+                        <rect x="25" y="5" width="10" height="10" rx="2" fill="currentColor" />
+                        <rect x="5" y="25" width="10" height="10" rx="2" fill="currentColor" />
+                        <rect x="25" y="25" width="10" height="10" rx="2" fill="currentColor" />
+                      </svg>
                   {% when 'remodeling' %}
                     <svg viewBox="0 0 34 32" stroke-linecap="round" stroke-linejoin="round" focusable="false" aria-hidden="true">
                       <path d="M3 28h28" />
