@@ -12,20 +12,22 @@
   <meta itemprop="description" content="Property maintenance and remodeling with tile specialty for South Jersey homeowners, landlords, and small commercial properties.">
   <meta itemprop="areaServed" content="Atlantic County NJ, Ocean County NJ, Cape May County NJ">
 
-  <div class="container footer-grid">
-    <section class="footer-section footer-brand" aria-labelledby="footer-brand-heading">
+  <div class="container footer-grid" style="background: var(--gradient-surface, linear-gradient(135deg, #f8f6ee 0%, #ece7d9 100%)); border-radius: var(--radius-lg, 2rem); box-shadow: var(--shadow-soft);">
+    <section class="footer-section footer-brand" aria-labelledby="footer-brand-heading" role="region">
       <h2 id="footer-brand-heading" class="sr-only">Tillerstead LLC</h2>
       <a href="{{ '/' | relative_url }}"
          class="footer-brand"
          aria-label="Tillerstead LLC Home"
          itemprop="url"
          rel="home">
-        <svg class="footer-logo-img" viewBox="0 0 660 240" role="img" aria-labelledby="footerLogoTitle footerLogoDesc">
-          <title id="footerLogoTitle">Tillerstead LLC</title>
-          <desc id="footerLogoDesc">Tillerstead wordmark and tile mark.</desc>
-          <use href="#logo-full-mono" />
-        </svg>
-        <span class="footer-name" itemprop="name">Tillerstead</span>
+        <img
+          src="{{ '/assets/img/logo/tillerstead-logo-header.svg' | relative_url }}"
+          class="footer-logo-img"
+          alt="Tillerstead LLC"
+          width="220"
+          height="80"
+          loading="lazy"
+          decoding="async">
       </a>
       <p class="footer-text footer-tagline">
         <strong>Property Maintenance &middot; Remodeling &middot; Tile</strong><br>

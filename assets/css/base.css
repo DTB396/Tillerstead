@@ -1,19 +1,20 @@
 /* ============================================
-   Tillerstead Base Styles (base.css)
+  Tillerstead Base Styles (base.css)
    
-   Foundation styles: resets, typography, HTML elements
+  Foundation styles: resets, typography, HTML5 elements
    
-   This file contains:
-   - CSS resets and box-sizing
-   - Root HTML and body styles
-   - Typography (headings, paragraphs, lists)
-   - Links and basic interactive elements
-   - Accessibility helpers (sr-only, skip-link)
-   - Motion preferences
+  This file contains:
+  - CSS resets and box-sizing
+  - Root HTML and body styles
+  - Typography (headings, paragraphs, lists)
+  - Links and basic interactive elements
+  - Accessibility helpers (sr-only, skip-link)
+  - Motion preferences
+  - Modern CSS3 features (flex, grid, custom properties)
    
-   Add new base-level styles here when they apply to
-   raw HTML elements or global typography.
-   ============================================ */
+  Add new base-level styles here when they apply to
+  raw HTML elements or global typography.
+  ============================================ */
 
 /* ============================================
    Token Compatibility Mappings
@@ -26,17 +27,20 @@
   --ts-primary-soft: var(--color-primary-soft);
   --ts-accent: var(--color-accent);
   --ts-accent-soft: var(--color-accent-soft);
-  
   --ts-bg: var(--color-bg);
   --ts-surface: var(--color-surface);
   --ts-surface-elevated: var(--color-surface-elevated);
   --ts-surface-muted: var(--color-surface-muted);
   --ts-surface-highlight: var(--color-surface-highlight);
-  
   --ts-heading: var(--color-heading);
   --ts-text: var(--color-text);
   --ts-text-muted: var(--color-text-muted);
   --ts-text-subtle: var(--color-text-subtle);
+  /* Modern CSS3 tokens */
+  --radius-lg: 2rem;
+  --gradient-surface: linear-gradient(135deg, #f8f6ee 0%, #ece7d9 100%);
+  --shadow-soft: 0 2px 8px rgba(0,0,0,0.08);
+}
   
   --ts-border: var(--color-border);
   --ts-border-strong: var(--color-border-strong);
@@ -71,7 +75,7 @@
   --ts-focus-ring: var(--focus-ring);
   
   /* Color scheme */
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 html.light {
@@ -98,7 +102,17 @@ body {
   font-family: var(--ts-font-sans);
   font-size: 1rem;
   line-height: 1.65;
-  background: var(--ts-bg);
+  background-color: var(--ts-bg);
+  background-image:
+    radial-gradient(circle at 20% 18%, rgba(201, 154, 63, 0.08), transparent 42%),
+    radial-gradient(circle at 82% 6%, rgba(13, 59, 44, 0.08), transparent 40%),
+    linear-gradient(135deg, rgba(13, 59, 44, 0.05), rgba(201, 154, 63, 0.06)),
+    var(--bg-pattern-svg);
+  background-size: auto, auto, 100% 100%, var(--bg-pattern-size);
+  background-repeat: no-repeat, no-repeat, no-repeat, repeat;
+  background-position: center, center, center, center;
+  background-attachment: fixed;
+  background-blend-mode: normal, normal, multiply, soft-light;
   color: var(--ts-text);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -367,7 +381,7 @@ select:focus-visible {
     display: none !important;
   }
 }
-
+  padding: 2rem 2.5rem;
 /* ============================================
    High Contrast Mode Support
    ============================================ */

@@ -12,10 +12,10 @@ Breadcrumb Navigation Component
   {%- assign path = page.url | replace: 'index.html', '' -%}
   {%- assign segments = path | split: '/' -%}
 
-  <nav class="breadcrumbs" aria-label="Page navigation">
+  <nav class="breadcrumbs" aria-label="Breadcrumb" role="navigation">
     <ol class="breadcrumbs-list"
-        itemscope
-        itemtype="https://schema.org/BreadcrumbList">
+      itemscope
+      itemtype="https://schema.org/BreadcrumbList">
 
       {%- assign position = 1 -%}
 

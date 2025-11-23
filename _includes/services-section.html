@@ -1,54 +1,91 @@
 {% comment %}
-Reusable Services Section Include
-- Provides scannable overview of core service categories
-- Accepts optional heading override via include params
-- Embeds lightweight structured data for individual Service items
-Usage: {% include services-section.html %}
+Services Section Include (optimized, improved)
+- Scannable overview of service categories
+- Accepts optional override params: eyebrow, heading, summary, cta_services_label, cta_portfolio_label
+- Structured data: OfferCatalog + Service items
+Usage examples:
+  {% include services-section.html %}
+  {% include services-section.html heading="Professional Tile & Remodeling" eyebrow="Core capabilities" %}
 {% endcomment %}
-<section id="services" class="section" aria-labelledby="services-title">
-  <div class="container">
-    <div class="section__intro">
-      <p class="eyebrow">What we deliver</p>
-      <h2 id="services-title">Craftsmanship built to handle shore life</h2>
-      <p>
-        Waterproof tile assemblies, clean remodeling finishes, and a maintenance mindset keep rentals, second homes,
-        and storefronts on schedule. Design consultations align look, budget, and timeline before work starts.
-      </p>
-    </div>
+{% assign eyebrow = include.eyebrow | default: 'What we deliver' %}
+{% assign heading = include.heading | default: 'Craftsmanship built to handle shore life' %}
+{% assign summary = include.summary | default: 'Waterproof tile assemblies, clean remodeling finishes, and a maintenance mindset keep rentals, second homes, and storefronts on schedule. Design consultations align look, budget, and timeline before work starts.' %}
+{% assign cta_services_label = include.cta_services_label | default: 'View full services' %}
+{% assign cta_portfolio_label = include.cta_portfolio_label | default: 'See recent projects' %}
+<section id="services" class="section" aria-labelledby="services-title" aria-describedby="services-summary" itemscope itemtype="https://schema.org/OfferCatalog">
+  <meta itemprop="name" content="Services Overview">
+  <div class="container" style="background: linear-gradient(135deg, #f8f6ee 0%, #ece7d9 100%); border-radius: 2rem; box-shadow: var(--shadow-soft);">
+    <header class="section__intro">
+      <p class="eyebrow">{{ eyebrow }}</p>
+      <h2 id="services-title">{{ heading }}</h2>
+      <p id="services-summary">{{ summary }}</p>
+    </header>
     {% assign services = site.data.services.services | default: site.data.services %}
     {% if services and services.size > 0 %}
-      <div class="service-grid" itemscope itemtype="https://schema.org/OfferCatalog">
+      <div class="service-grid" role="list" aria-label="Primary service offerings" style="background: linear-gradient(135deg, #f8f6ee 0%, #ece7d9 100%); border-radius: 1.5rem;">
         {% for s in services %}
-          <article class="service-card" itemprop="itemListElement" itemscope itemtype="https://schema.org/Service">
-            <div class="service-card__header">
-              {% if s.icon %}
-                <div class="service-card__icon" aria-hidden="true">{{ s.icon }}</div>
-              {% endif %}
-              <div>
-                <p class="service-card__eyebrow">Specialized service</p>
-                <h3 class="service-card__title" itemprop="name">{{ s.name }}</h3>
+          <article class="service-card" role="listitem" itemprop="itemListElement" itemscope itemtype="https://schema.org/Service" aria-labelledby="service-{{ s.id | default: forloop.index }}-title" style="background: linear-gradient(135deg, #f8f6ee 0%, #ece7d9 100%); border-radius: 1.25rem; box-shadow: var(--shadow-soft);">
+            <meta itemprop="name" content="{{ s.name }}">
+            {% if s.description %}<meta itemprop="description" content="{{ s.description }}">{% endif %}
+            <header class="service-card__header">
+              {% assign service_icon = s.icon | default: s.id %}
+              <div class="service-card__icon" aria-hidden="true" data-icon="{{ service_icon }}">
+                {% case service_icon %}
+                  {% when 'tile' %}
+                    <!-- Tile grid icon with brand strokes -->
+                    <svg viewBox="0 0 40 40" width="40" height="40" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                      <rect x="5" y="5" width="10" height="10" rx="2" />
+                      <rect x="25" y="5" width="10" height="10" rx="2" />
+                      <rect x="5" y="25" width="10" height="10" rx="2" />
+                      <rect x="25" y="25" width="10" height="10" rx="2" />
+                      <path class="accent" d="M15 10h10M10 15v10M25 15v10M15 25h10" />
+                    </svg>
+                  {% when 'remodeling' %}
+                    <svg viewBox="0 0 34 32" stroke-linecap="round" stroke-linejoin="round" focusable="false" aria-hidden="true">
+                      <path d="M3 28h28" />
+                      <path d="M7 28v-9.5a2 2 0 0 1 .74-1.55l8.26-6.64a2 2 0 0 1 2.5 0l8.26 6.64A2 2 0 0 1 27 18.5V28" />
+                      <path class="accent" d="M13 28v-6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v6" />
+                      <path d="M4 13l13-10 13 10" />
+                    </svg>
+                  {% when 'maintenance' %}
+                    <svg viewBox="0 0 32 32" stroke-linecap="round" stroke-linejoin="round" focusable="false" aria-hidden="true">
+                      <path d="M16 29s10-4.5 10-13V7.5L16 3 6 7.5V16c0 8.5 10 13 10 13z" />
+                      <path class="accent" d="M11 16l3 3 6-6" />
+                    </svg>
+                  {% else %}
+                    <svg viewBox="0 0 32 32" stroke-linecap="round" stroke-linejoin="round" focusable="false" aria-hidden="true">
+                      <circle cx="16" cy="16" r="10" />
+                      <path class="accent" d="M16 10v12M10 16h12" />
+                    </svg>
+                {% endcase %}
               </div>
-            </div>
+              <div class="service-card__header-text">
+                <p class="service-card__eyebrow">Specialized service</p>
+                <h3 id="service-{{ s.id | default: forloop.index }}-title" class="service-card__title">{{ s.name }}</h3>
+              </div>
+            </header>
             {% if s.description %}
-              <p class="service-card__desc" itemprop="description">{{ s.description }}</p>
+              <p class="service-card__desc">{{ s.description }}</p>
             {% endif %}
             {% if s.points %}
-              <ul class="service-card__list" aria-label="{{ s.name }} service highlights">
+              <ul class="service-card__list" aria-label="{{ s.name }} highlights">
                 {% for p in s.points %}
                   <li class="service-card__item">{{ p }}</li>
                 {% endfor %}
               </ul>
             {% endif %}
             {% if s.url %}
-              <a class="service-card__link" href="{{ s.url | relative_url }}">Explore {{ s.name | downcase }} →</a>
+              <a class="service-card__link" href="{{ s.url | relative_url }}" itemprop="url" aria-label="Explore {{ s.name }} service">
+                Explore {{ s.name | downcase }} <span aria-hidden="true">&rarr;</span>
+              </a>
             {% endif %}
           </article>
         {% endfor %}
       </div>
     {% endif %}
-    <div class="hero__actions">
-      <a class="btn" href="{{ '/services/' | relative_url }}">View full services</a>
-      <a class="btn btn-ghost" href="{{ '/portfolio/' | relative_url }}">See recent projects</a>
+    <div class="hero__actions" aria-label="Service section actions">
+      <a class="btn" href="{{ '/services/' | relative_url }}">{{ cta_services_label }}</a>
+      <a class="btn btn-ghost" href="{{ '/portfolio/' | relative_url }}">{{ cta_portfolio_label }}</a>
     </div>
   </div>
 </section>

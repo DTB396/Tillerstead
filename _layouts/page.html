@@ -3,7 +3,7 @@ layout: default
 hide_hero: true
 ---
 
-<section class="ts-section ts-surface section page-section" itemscope itemtype="https://schema.org/WebPage">
+<main class="ts-section ts-surface section page-section" itemscope itemtype="https://schema.org/WebPage" role="main" tabindex="-1">
   <!-- Metadata for search engines -->
   <meta itemprop="name" content="{{ page.title | default: site.title }}">
   {% if page.description %}
@@ -16,7 +16,7 @@ hide_hero: true
       
       <!-- Page header -->
       {% if page.title and page.show_title != false %}
-        <header class="page-header stack-sm">
+        <header class="page-header stack-sm" role="banner">
           <h1 class="page-title">{{ page.title }}</h1>
 
           {% if page.description %}

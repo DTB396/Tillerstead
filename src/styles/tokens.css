@@ -4,19 +4,23 @@
    ============================================ */
 
 :root {
+/* Modern CSS3 tokens and design system */
+:root {
   /* ===========================
      Color Tokens
      =========================== */
   
   /* Brand Colors - Emerald & Gold/Brass */
+  /* Brand Colors - Emerald & Gold/Brass (CSS3 variables) */
   --color-primary: #1ac87a;           /* Emerald green - vibrant, energetic */
   --color-primary-strong: #0fa868;    /* Deep emerald - for depth */
   --color-primary-soft: rgba(26, 200, 122, 0.16);
-  --color-accent: #d8b25a;            /* Gold/brass - warm, premium */
+   --color-accent: #7a5c1c;            /* Dark gold for better text readability */
   --color-accent-soft: rgba(216, 178, 90, 0.22);
   --color-khaki: #a9967a;             /* Khaki - earthy neutral accent */
   
   /* Navy Background Variant (DEFAULT) - Professional and Sophisticated */
+  /* Navy Background Variant (DEFAULT) - Professional and Sophisticated (CSS3) */
   --color-bg: #0a1628;                /* Deep navy - elegant, trustworthy */
   --color-surface: #0a1628;
   --color-surface-elevated: #0f2240;  /* Lighter navy for elevation */
@@ -24,6 +28,7 @@
   --color-surface-highlight: #1a365d; /* Rich navy highlight */
   
   /* Alternative: Near-Black Background - Bold and Modern */
+  /* Alternative: Near-Black Background - Bold and Modern (CSS3) */
   /* To use near-black variant, uncomment these and comment navy above:
   --color-bg: #0b0f14;
   --color-surface: #0b0f14;
@@ -33,8 +38,9 @@
   */
 
   /* Text Colors - Enhanced for WCAG AAA (7:1) contrast */
-  --color-heading: #ffffff;
-  --color-text: #ffffff;
+  /* Text Colors - Enhanced for WCAG AAA (7:1) contrast (CSS3) */
+   --color-heading: #ffffff;
+   --color-text: #222222;
   --color-text-muted: #e2e8f0;
   --color-text-subtle: #cbd5e1;
 
@@ -111,7 +117,7 @@
 .heading-4 { font-size: var(--heading-4); font-weight: 700; line-height: 1.2; color: var(--color-heading); }
 
 .text-primary { color: var(--color-primary) !important; }
-.text-accent { color: var(--color-accent) !important; }
+.text-accent { color: var(--color-heading) !important; }
 .text-muted { color: var(--color-text-muted) !important; }
 .text-subtle { color: var(--color-text-subtle) !important; }
 

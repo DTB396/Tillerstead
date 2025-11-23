@@ -40,7 +40,7 @@ main.site-main {
 }
 
 .ts-surface {
-  background: var(--color-surface);
+  background: var(--gradient-surface);
 }
 
 .site-main {
@@ -53,30 +53,41 @@ main.site-main {
 
 .container,
 .ts-section-inner {
-  max-width: var(--ts-shell-width);
+  max-width: min(1200px, 90vw);
   margin-inline: auto;
-  padding-inline: clamp(1.25rem, 4vw, 2.5rem);
+  padding-inline: clamp(2rem, 6vw, 3.5rem);
+  border-radius: 2rem;
+  box-shadow: var(--shadow-soft);
+  background: linear-gradient(135deg, #f8f6ee 0%, #ece7d9 100%);
 }
 
 .section,
 .ts-section {
   padding-block: clamp(3rem, 6vw, 5rem);
-  /* Performance: CSS containment */
+  border-radius: 2rem;
+  box-shadow: var(--shadow-soft);
+  background: linear-gradient(135deg, #f8f6ee 0%, #ece7d9 100%);
   contain: layout style paint;
   contain-intrinsic-size: auto 500px;
 }
 
 .ts-section--muted {
-  background: var(--ts-surface-elevated);
+  background: var(--gradient-surface-alt);
+  border-radius: 2rem;
+  box-shadow: var(--shadow-soft);
 }
 
 .ts-section-header,
-.section-header {
+.section-header,
+.ts-section-header {
   max-width: 58rem;
   margin: 0 auto var(--ts-space-6);
   text-align: center;
+  border-radius: 1.5rem;
+  box-shadow: var(--shadow-soft);
+  background: var(--gradient-surface-alt);
+  padding: 2rem;
 }
-
 .ts-eyebrow,
 .section-eyebrow {
   display: inline-flex;
@@ -175,6 +186,11 @@ main.site-main {
 .page-content .container {
   display: grid;
   gap: clamp(2rem, 4vw, 3rem);
+  border-radius: 2rem;
+  box-shadow: var(--shadow-soft);
+  background: var(--gradient-section);
+  max-width: min(100vw, 1680px);
+  padding-inline: clamp(2.5rem, 8vw, 5rem);
 }
 
 .page-header {
@@ -242,7 +258,7 @@ article figcaption {
 }
 
 .site-main > .page-content .container {
-  max-width: min(var(--ts-shell-width), 1180px);
+  max-width: min(100vw, 1320px);
 }
 
 /* ============================================
@@ -282,7 +298,8 @@ article figcaption {
   flex-shrink: 0;
 }
 
-.site-logo-img {
+.site-logo-img,
+.site-logo-svg {
   width: clamp(100px, 14vw, 148px);
   max-height: 52px;
   height: auto;
@@ -301,7 +318,7 @@ article figcaption {
   align-items: center;
   gap: 0.5rem;
   border-radius: var(--ts-radius-pill);
-  border: 1px solid rgba(16, 35, 61, 0.22);
+  border: 1px solid rgba(23, 31, 20, 0.2);
   background: transparent;
   cursor: pointer;
   transition:
@@ -322,8 +339,8 @@ article figcaption {
 
 .nav-toggle:hover,
 .nav-toggle:focus-visible {
-  background: rgba(16, 35, 61, 0.12);
-  border-color: rgba(16, 35, 61, 0.28);
+  background: rgba(201, 154, 63, 0.18);
+  border-color: rgba(201, 154, 63, 0.4);
 }
 
 .nav-toggle:active {
@@ -538,7 +555,8 @@ body.nav-open {
     gap: var(--ts-space-4);
   }
 
-  .site-logo-img {
+  .site-logo-img,
+  .site-logo-svg {
     width: clamp(120px, 14vw, 148px);
   }
 

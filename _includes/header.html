@@ -1,4 +1,6 @@
 <header class="site-header ts-header ts-theme" role="banner" itemscope itemtype="https://schema.org/Organization">
+  <!-- Accessibility: Skip to main content link -->
+  <a class="skip-link" href="#main" tabindex="1">Skip to main content</a>
   <meta itemprop="name" content="{{ site.title }}">
   <meta itemprop="url" content="{{ site.url }}">
   <meta itemprop="logo" content="{{ site.logo | absolute_url }}">
@@ -8,14 +10,19 @@
     <div class="ts-brand">
       <a class="site-logo"
          href="{{ '/' | relative_url }}"
-         aria-label="{{ site.title | default: 'Tillerstead LLC' }} - Return to homepage"
+         aria-label="Tillerstead LLC - Return to homepage"
          rel="home">
-        <svg class="site-logo-img" viewBox="0 0 660 240" role="img" aria-labelledby="headerLogoTitle headerLogoDesc">
-          <title id="headerLogoTitle">{{ site.title | default: 'Tillerstead LLC' }}</title>
-          <desc id="headerLogoDesc">Tillerstead logo showing tile mark and wordmark.</desc>
-          <use href="#logo-full" />
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="48" height="48" role="img" aria-label="Tillerstead favicon mark" focusable="false" style="display:block;">
+          <title>Tillerstead favicon</title>
+          <style>.tile{fill:#0d3b2c;stroke:#c99a3f;stroke-width:4;stroke-linejoin:miter;stroke-linecap:square}</style>
+          <g transform="translate(6 6)">
+            <rect class="tile" x="0" y="0" width="16" height="16" rx="2"/>
+            <rect class="tile" x="20" y="0" width="16" height="16" rx="2"/>
+            <rect class="tile" x="40" y="0" width="16" height="16" rx="2"/>
+            <rect class="tile" x="20" y="20" width="16" height="16" rx="2"/>
+            <rect class="tile" x="20" y="40" width="16" height="16" rx="2"/>
+          </g>
         </svg>
-        <span class="sr-only">{{ site.title }}</span>
       </a>
     </div>
 
@@ -28,10 +35,11 @@
            role="presentation"></div>
 
       <!-- Primary Navigation -->
-      <nav id="site-nav"
-           class="site-nav"
-           aria-label="Primary navigation"
-           aria-expanded="false">
+          <nav id="site-nav"
+            class="site-nav"
+            aria-label="Primary navigation"
+            aria-expanded="false"
+            role="navigation">
         
         <!-- Mobile drawer header -->
         <div class="site-nav-drawer-header">
@@ -87,11 +95,11 @@
     <div class="site-header-actions" role="group" aria-label="Site actions">
       <!-- Call Button -->
       <a class="call-btn btn btn--secondary"
-         href="tel:{{ site.company.phone_link | default: '+16096659350' }}"
-         aria-label="Call Tillerstead at {{ site.company.phone_display | default: '(609) 665-9350' }}"
+         href="tel:{{ site.company.phone_link | default: '+16098628808' }}"
+         aria-label="Call Tillerstead at {{ site.company.phone_display | default: '(609) 862-8808' }}"
          rel="nofollow">
         <span class="call-btn-display" aria-hidden="false">
-          {{ site.company.phone_display | default: '(609) 665-9350' }}
+          {{ site.company.phone_display | default: '(609) 862-8808' }}
         </span>
       </a>
 

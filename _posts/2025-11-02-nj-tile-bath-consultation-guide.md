@@ -1,7 +1,7 @@
----
 layout: post
 title: "Your First Tile/Bath Consultation in NJ: What to Expect & How to Prep"
 description: "A simple 15-minute prep guide for South Jersey homeowners—photos to take, measurements to grab, and how Tillerstead builds a clean, fair proposal for tile and bathroom projects."
+accessibility: "All content is structured with semantic headings and lists for screen reader compatibility."
 ---
 
 If you’ve never hired a property maintenance or remodeling contractor in New Jersey, the first consult can feel like a mystery. The goal with **Tillerstead LLC** is simple: a calm walkthrough, clear expectations, and a proposal that reflects your real space—not guesswork.
@@ -10,7 +10,7 @@ This guide shows you how to prep in about **15 minutes** so your consultation (i
 
 ---
 
-## What we look at (and why it matters)
+## What We Look At (and Why It Matters)
 
 During a tile or bathroom consultation, we’re not just “eyeballing it.” We’re checking the things that decide whether your project lasts:
 
@@ -31,7 +31,7 @@ During a tile or bathroom consultation, we’re not just “eyeballing it.” We
 
 ---
 
-## Five photos to take before we talk
+## Five Photos to Take Before We Talk
 
 Good photos let us give you a realistic starting estimate without playing phone-tag. Aim for:
 

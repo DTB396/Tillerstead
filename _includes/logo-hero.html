@@ -3,5 +3,47 @@
   <svg class="ts-logo-svg-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 240" width="320" height="128" role="img" aria-labelledby="tsLogoTitleFull" focusable="false">
     <title id="tsLogoTitleFull">Tillerstead LLC – Tile • Remodeling • Property Maintenance</title>
     <use href="#logo-full" />
+  <svg
+    class="ts-logo-svg-full"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 660 240"
+    width="340"
+    height="140"
+    role="img"
+    aria-labelledby="tsLogoTitleFull">
+    <title id="tsLogoTitleFull">Tillerstead LLC – Tile • Remodeling • Property Maintenance</title>
+    <defs>
+      <!-- Emerald tile gradient -->
+      <linearGradient id="emeraldTile" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#1ac87a" />
+        <stop offset="100%" stop-color="#0fa868" />
+      </linearGradient>
+      <!-- Gold grout gradient -->
+      <linearGradient id="goldGrout" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#ffd700" />
+        <stop offset="100%" stop-color="#d8b25a" />
+      </linearGradient>
+      <!-- Soft tile shadow -->
+      <filter id="tileShadow" x="-10%" y="-10%" width="120%" height="120%">
+        <feDropShadow dx="0" dy="2" stdDeviation="2.5" flood-color="#1ac87a" flood-opacity="0.18" />
+      </filter>
+      <!-- Wordmark shadow -->
+      <filter id="wordShadow" x="-5%" y="-5%" width="110%" height="110%">
+        <feDropShadow dx="0" dy="2" stdDeviation="1.5" flood-color="#d8b25a" flood-opacity="0.12" />
+      </filter>
+    </defs>
+    <!-- Tile grid -->
+    <g class="ts-logo-mark" stroke="url(#goldGrout)" stroke-width="6" stroke-linejoin="miter">
+      <rect x="20"  y="26"  width="40" height="40" rx="7" fill="url(#emeraldTile)" filter="url(#tileShadow)" />
+      <rect x="70"  y="26"  width="40" height="40" rx="7" fill="url(#emeraldTile)" filter="url(#tileShadow)" />
+      <rect x="120" y="26"  width="40" height="40" rx="7" fill="url(#emeraldTile)" filter="url(#tileShadow)" />
+      <rect x="70"  y="76"  width="40" height="40" rx="7" fill="url(#emeraldTile)" filter="url(#tileShadow)" />
+      <rect x="70"  y="126" width="40" height="40" rx="7" fill="url(#emeraldTile)" filter="url(#tileShadow)" />
+    </g>
+    <!-- Wordmark with subtle shadow -->
+    <text x="210" y="82" class="ts-logo-word" font-size="48" font-weight="700" fill="#0a1628" filter="url(#wordShadow)">TILLERSTEAD</text>
+    <!-- Tagline and license -->
+    <text x="210" y="122" class="ts-logo-tag" font-size="20" font-weight="500" fill="#d8b25a">Tile • Remodeling • Property Maintenance</text>
+    <text x="210" y="150" class="ts-logo-tag" font-size="16" font-weight="500" fill="#009b6b">NJ Licensed HIC #13VH10808800</text>
   </svg>
 </div>

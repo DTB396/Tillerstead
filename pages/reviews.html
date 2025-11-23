@@ -17,20 +17,20 @@ hero_kpis:
   - label: "Service"
     text: "Respectful of your property and schedule"
 ---
-<section class="ts-section ts-surface page-reviews" aria-label="Client reviews">
+<main class="ts-section ts-surface page-reviews" aria-label="Client reviews" role="main" tabindex="-1">
   <div class="container">
-    <div class="reviews-grid">
+    <section class="reviews-grid" aria-label="Reviews grid">
       {% for review in site.data.reviews %}
-      <article class="ts-card review-card">
-        <p class="review-body">"{{ review.text }}"</p>
-        <p class="review-meta">
-          <span class="review-name">{{ review.name }}</span>
+      <article class="ts-card review-card card card--review" role="region" aria-labelledby="review-{{ forloop.index }}-name">
+        <blockquote class="review-body">{{ review.text }}</blockquote>
+        <footer class="review-meta">
+          <span class="review-name" id="review-{{ forloop.index }}-name">{{ review.name }}</span>
           {% if review.project %}&middot; <span class="review-project">{{ review.project }}</span>{% endif %}
           {% if review.source %}&middot; <span class="review-source">{{ review.source }}</span>{% endif %}
-        </p>
+        </footer>
       </article>
       {% endfor %}
-    </div>
+    </section>
 
     <aside class="review-cta" aria-label="Share your experience">
       <h2>Have We Worked Together?</h2>

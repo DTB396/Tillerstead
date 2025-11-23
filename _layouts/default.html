@@ -34,7 +34,6 @@
         {%- assign crumbs = crumbs | append: '{"@type":"ListItem","position":' | append: crumb_position | append: ',"name":"Home","item":"' | append: site.url | append: '/"}' -%}
         {%- assign crumb_position = crumb_position | plus: 1 -%}
         {%- assign current_path = '' -%}
-        {%- for segment in segments -%}
           {%- if segment == '' -%}{% continue %}{%- endif -%}
           {%- assign current_path = current_path | append: '/' | append: segment -%}
           {%- assign is_last = forloop.last -%}
@@ -74,6 +73,7 @@
     </main>
 
     <!-- Page footer -->
+        <!DOCTYPE html>
     {% include footer.html %}
 
     <!-- Scripts (deferred for performance) -->
