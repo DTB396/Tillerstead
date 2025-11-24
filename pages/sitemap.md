@@ -70,4 +70,4 @@ sitemap_sections:
   </p>
 </section>
 
-{% include sitemap-sections.html sections=page.sitemap_sections %}
+{% include sitemap-sections.html %}

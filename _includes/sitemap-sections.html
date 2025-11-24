@@ -1,6 +1,6 @@
-{% if include.sections %}
+{% if page.sitemap_sections %}
   <div class="section-grid sitemap-grid" aria-label="Sitemap links">
-    {% for section in include.sections %}
+    {% for section in page.sitemap_sections %}
       <section class="ts-card" aria-labelledby="sitemap-{{ section.title | slugify }}">
         <h3 id="sitemap-{{ section.title | slugify }}">{{ section.title }}</h3>
         <ul class="link-list">
