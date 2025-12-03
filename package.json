@@ -13,7 +13,8 @@
     "watch:css": "sass src/scss/theme.scss:assets/css/theme-compiled.css --watch --no-source-map",
     "build": "npm run build:css",
     "build:site": "npm run build:css && bundle exec jekyll build",
-    "images:webp": "node scripts/convert-images-to-webp.js"
+    "images:webp": "node scripts/convert-images-to-webp.js",
+    "slugify": "node scripts/slugify.js"
   },
   "devDependencies": {
     "eslint": "8.57.0",
