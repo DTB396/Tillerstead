@@ -23,7 +23,7 @@
   position: relative;
   overflow: visible;
   padding: clamp(3rem, 7vw, 5rem) 0;
-  background: var(--gradient-section);
+  background: var(--gradient-surface);
 }
 
 .page-home .hero .hero-surface {
@@ -32,7 +32,7 @@
   border-radius: 2rem;
   border: 1px solid var(--color-border);
   box-shadow: var(--shadow-lift);
-  background: var(--color-surface);
+  background: var(--color-surface-elevated);
   padding: clamp(2rem, 4vw, 3rem);
   position: relative;
   overflow: visible;
@@ -92,7 +92,7 @@
   border-radius: var(--radius-lg);
   border: 1px solid var(--color-border);
   overflow: hidden;
-  background: var(--color-surface-elevated);
+  background: var(--color-surface);
   box-shadow: var(--shadow-soft);
 }
 
@@ -155,11 +155,10 @@
   width: min(360px, 64vw);
   margin-inline: auto;
   padding: 0;
-  border-radius: 0;
-  background: var(--color-primary);
-  background: var(--color-primary-strong);
-  border: none;
-  box-shadow: none;
+  border-radius: var(--radius-lg);
+  background: var(--gradient-primary);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-lift);
   isolation: isolate;
   overflow: visible;
   display: flex;
@@ -211,7 +210,7 @@
 }
 
 .hero__stats-panel {
-  background: linear-gradient(135deg, #f8f6ee 0%, #ece7d9 100%);
+  background: var(--color-surface);
   border-radius: 1.25rem;
   box-shadow: var(--shadow-soft);
   padding: 1.35rem 1.65rem;
@@ -354,7 +353,7 @@
 
 /* Card base shared across homepage sections */
 .ts-card {
-  background: var(--color-surface);
+  background: var(--color-surface-elevated);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   padding: clamp(1.25rem, 3vw, 1.75rem);
@@ -372,7 +371,7 @@
 }
 
 .ts-service-card {
-  background: linear-gradient(145deg, #ffffff 0%, #f1f4f9 100%);
+  background: var(--color-surface);
 }
 
 .ts-service-card__header {
@@ -381,16 +380,15 @@
   gap: var(--space-3);
 }
 
-.ts-service-card__icon {
-  width: 3rem;
-  height: 3rem;
-  display: grid;
-  place-items: center;
-  border-radius: 0.9rem;
-  background: rgba(0, 166, 166, 0.12);
-  background: rgba(24, 178, 121, 0.14);
-  color: var(--color-accent);
-}
+  .ts-service-card__icon {
+    width: 3rem;
+    height: 3rem;
+    display: grid;
+    place-items: center;
+    border-radius: 0.9rem;
+    background: var(--color-primary-soft);
+    color: var(--color-primary);
+  }
 
 .ts-service-card__eyebrow {
   font-size: 0.75rem;
@@ -868,32 +866,25 @@
 .ts-testimonials__logo:hover,
 .ts-testimonials__logo:focus-visible {
   filter: grayscale(0);
-  color: #00e3e3;
-  border-color: rgba(0, 166, 166, 0.55);
-  background: rgba(0, 166, 166, 0.14);
+  color: var(--color-primary);
+  border-color: var(--color-border-strong);
+  background: var(--color-primary-soft);
 }
 
 .eyebrow--on-dark {
-  background: rgba(0, 166, 166, 0.18);
-  color: #b8f3f3;
-  color: #9df1d2;
-  border-color: rgba(24, 178, 121, 0.55);
-  background: rgba(24, 178, 121, 0.14);
-}
-
-.eyebrow--on-dark {
-  background: rgba(24, 178, 121, 0.22);
-  color: #c6f7e1;
-  border-left-color: #ffffff;
+  background: var(--color-primary-soft);
+  color: var(--color-text);
+  border-color: var(--color-border);
+  border-left-color: var(--color-accent);
 }
 
 /* ============================================
   Homepage Section Refinements (Assurance / Contact / Card Media AR)
   ============================================ */
-.assurance { --assurance-bg: linear-gradient(135deg, #f8f6ee 0%, #ece7d9 100%); }
+.assurance { --assurance-bg: var(--color-surface-elevated); }
 .assurance { background: var(--assurance-bg); border-radius: var(--radius-xl); box-shadow: var(--shadow-soft); padding: var(--space-6) var(--space-4); }
 .assurance__list { list-style: none; margin: var(--space-4) 0 var(--space-4); padding: 0; display: grid; gap: .75rem; }
-.assurance__list li { background: linear-gradient(135deg, rgba(13,59,44,.06), rgba(201,154,63,.08)); padding: .9rem 1.1rem; border-radius: 1rem; border-left: 4px solid var(--color-accent); }
+.assurance__list li { background: linear-gradient(135deg, rgba(28,179,148,0.12), rgba(201,162,74,0.12)); padding: .9rem 1.1rem; border-radius: 1rem; border-left: 4px solid var(--color-accent); }
 
 .contact__grid { display: grid; gap: clamp(1.5rem,3vw,2.5rem); align-items: start; }
 @media (min-width: 860px) { .contact__grid { grid-template-columns: 2fr 1fr; } }

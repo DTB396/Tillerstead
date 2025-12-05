@@ -23,6 +23,8 @@ body.site-body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background: var(--color-bg);
+  color: var(--color-text);
 }
 
 main.site-main {
@@ -55,26 +57,28 @@ main.site-main {
 .ts-section-inner {
   max-width: min(1200px, 90vw);
   margin-inline: auto;
-  padding-inline: clamp(2rem, 6vw, 3.5rem);
-  border-radius: 2rem;
+  padding-inline: clamp(1.5rem, 5vw, 3rem);
+  border-radius: var(--radius-xl);
   box-shadow: var(--shadow-soft);
-  background: linear-gradient(135deg, #f8f6ee 0%, #ece7d9 100%);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
 }
 
 .section,
 .ts-section {
-  padding-block: clamp(3rem, 6vw, 5rem);
-  border-radius: 2rem;
+  padding-block: var(--section-padding-y);
+  border-radius: var(--radius-xl);
   box-shadow: var(--shadow-soft);
-  background: linear-gradient(135deg, #f8f6ee 0%, #ece7d9 100%);
+  background: var(--color-surface);
   contain: layout style paint;
   contain-intrinsic-size: auto 500px;
 }
 
 .ts-section--muted {
-  background: var(--gradient-surface-alt);
-  border-radius: 2rem;
+  background: var(--color-surface-elevated);
+  border-radius: var(--radius-xl);
   box-shadow: var(--shadow-soft);
+  border: 1px solid var(--color-border);
 }
 
 .ts-section-header,
@@ -83,10 +87,7 @@ main.site-main {
   max-width: 58rem;
   margin: 0 auto var(--ts-space-6);
   text-align: center;
-  border-radius: 1.5rem;
-  box-shadow: var(--shadow-soft);
-  background: var(--gradient-surface-alt);
-  padding: 2rem;
+  padding: 1.5rem;
 }
 .ts-eyebrow,
 .section-eyebrow {
@@ -99,9 +100,9 @@ main.site-main {
   text-transform: uppercase;
   font-weight: 600;
   color: var(--ts-text-subtle);
-  background: rgba(16, 35, 61, 0.08);
+  background: rgba(201, 162, 74, 0.08);
   border-radius: var(--ts-radius-pill);
-  border: 1px solid rgba(16, 35, 61, 0.14);
+  border: 1px solid rgba(201, 162, 74, 0.2);
   margin-bottom: var(--ts-space-3);
 }
 
@@ -328,7 +329,7 @@ article figcaption {
   align-items: center;
   gap: 0.5rem;
   border-radius: var(--ts-radius-pill);
-  border: 1px solid rgba(23, 31, 20, 0.2);
+  border: 1px solid var(--color-border);
   background: transparent;
   cursor: pointer;
   transition:
@@ -441,7 +442,7 @@ article figcaption {
   justify-content: space-between;
   margin-bottom: var(--ts-space-4);
   padding-bottom: var(--ts-space-3);
-  border-bottom: 1px solid rgba(16, 35, 61, 0.14);
+  border-bottom: 1px solid var(--color-border);
 }
 
 .nav-drawer-label {
@@ -459,7 +460,7 @@ article figcaption {
   gap: 0.5rem;
   padding: 0.35rem 0.75rem;
   background: transparent;
-  border: 1px solid rgba(16, 35, 61, 0.2);
+  border: 1px solid var(--color-border);
   border-radius: var(--ts-radius-pill);
   color: var(--ts-text-muted);
   font-size: 0.875rem;
@@ -476,8 +477,8 @@ article figcaption {
 
 .nav-close:hover,
 .nav-close:focus-visible {
-  background: rgba(16, 35, 61, 0.08);
-  border-color: rgba(16, 35, 61, 0.28);
+  background: rgba(201, 162, 74, 0.12);
+  border-color: var(--color-border-strong);
   color: var(--ts-text);
 }
 
@@ -505,7 +506,7 @@ article figcaption {
 }
 
 .site-menu li {
-  border-bottom: 1px solid rgba(16, 35, 61, 0.12);
+  border-bottom: 1px solid var(--color-border);
 }
 
 .site-menu li:last-child {
@@ -531,7 +532,7 @@ article figcaption {
 .site-menu a:hover,
 .site-menu a:focus-visible {
   color: var(--ts-text);
-  background: rgba(16, 35, 61, 0.08);
+  background: var(--color-primary-soft);
   padding-left: 0.75rem;
 }
 
@@ -719,8 +720,8 @@ body.nav-open {
 
 .site-footer {
   position: relative;
-  background: var(--ts-surface-elevated);
-  border-top: 1px solid var(--ts-divider);
+  background: var(--color-surface-elevated);
+  border-top: 1px solid var(--color-border);
   padding-block: clamp(2.5rem, 5vw, 3.5rem);
 }
 
@@ -814,7 +815,7 @@ body.nav-open {
   width: 2.5rem;
   height: 2.5rem;
   border-radius: var(--ts-radius-pill);
-  background: rgba(16, 35, 61, 0.08);
+  background: rgba(201, 162, 74, 0.12);
   color: var(--ts-text-muted);
   transition:
     background var(--ts-transition-fast),

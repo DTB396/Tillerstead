@@ -19,10 +19,10 @@
     </header>
 
     {% if services and services != empty %}
-      <div class="ts-services__grid" role="list">
+      <ul class="cards cards--3col ts-services__grid" role="list">
         {% for raw in services %}
           {%- assign service_tagline = raw.tagline -%}
-          {%- assign service_details = raw.details -%}
+          {%- assign service_details = raw.details | default: raw.points -%}
 
           {%- if raw contains '|' -%}
             {%- assign parts = raw | split: '|' -%}
@@ -43,15 +43,26 @@
             {%- assign service_url        = raw.url -%}
           {%- endif -%}
 
-          {% include ts-service-card.html
-            icon=service_icon_key
-            title=service_title
-            description=service_description
-            tagline=service_tagline
-            details=service_details
-            url=service_url %}
+          {%- assign service_details_list = service_details -%}
+          {%- if service_details_list and service_details_list contains '|' -%}
+            {%- assign service_details_list = service_details_list | split: '|' -%}
+          {%- elsif service_details_list and service_details_list contains ';' -%}
+            {%- assign service_details_list = service_details_list | split: ';' -%}
+          {%- elsif service_details_list and service_details_list contains ',' -%}
+            {%- assign service_details_list = service_details_list | split: ',' -%}
+          {%- endif -%}
+
+          <li>
+            {% include ts-service-card.html
+              icon=service_icon_key
+              title=service_title
+              description=service_description
+              tagline=service_tagline
+              details=service_details_list
+              url=service_url %}
+          </li>
         {% endfor %}
-      </div>
+      </ul>
     {% endif %}
 
     <nav class="ts-services__actions" aria-label="Service actions">
