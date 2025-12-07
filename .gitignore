@@ -7,7 +7,6 @@ vendor/bundle/
 
 # Node modules
 node_modules/
-package-lock.json
 
 # OS noise
 .DS_Store
@@ -16,8 +15,7 @@ Thumbs.db
 # Backup files
 *.backup
 
-node_modules/
-package-lock.json
+
 
 # Pattern conversion tool (build artifact)
 convert-pattern.js

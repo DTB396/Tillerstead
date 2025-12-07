@@ -16,7 +16,7 @@ bundle install
 npm install
 
 # Build the site
-npm run build:site   # runs Sass build + bundle exec jekyll build
+npm run build        # runs Sass build + bundle exec jekyll build
 ```
 
 If `scripts/activate-ruby.ps1` cannot find RubyInstaller it will stop with a helpful message that includes the download URL. Once activated, the terminal echoes the Ruby version so you know the environment is ready.
@@ -36,6 +36,14 @@ A fast, client-safe static site for Tillerstead LLC, built with Jekyll and a han
 - **Ruby & Bundler** for Jekyll (`bundle install`).
 - **Node.js & npm** for tooling (`npm install`).
 - **Sass** and **Sharp** are installed via `npm install`; no global installs required.
+
+## Local / Codespaces dev
+- **Codespaces:** Opening the repo in GitHub Codespaces auto-builds a dev container with Ruby 3.2 and Node 20. Dependencies install via `bundle install` + `npm install` after the container is created.
+- **Local machines:** Install Ruby 3.2 and Node 20, then run `bundle install && npm install` in the project root.
+- **Run the dev server:** `npm run dev` serves Jekyll on `http://127.0.0.1:4000` with LiveReload (`4000`/`35729` forwarded in Codespaces).
+- **Build once:** `npm run build` compiles CSS and runs `bundle exec jekyll build`.
+- **Test locally:** `npm run test` rebuilds the site and runs HTML checks via HTMLProofer. External link checks are disabled to keep runs offline-friendly.
+- **Note:** Playwright/browser-based screenshot tooling is not installed in Codespaces for this repo—skip any screenshot capture steps.
 
 ## Getting Started
 1. Install dependencies:
@@ -66,9 +74,13 @@ A fast, client-safe static site for Tillerstead LLC, built with Jekyll and a han
 ## Production Build
 - Generate a full site (including CSS compilation) with:
   ```sh
-  npm run build:site
+  npm run build
   ```
 - The built site appears in `_site/` and is ready to deploy to any static host (Netlify config is available in `netlify.toml`).
+
+## Automation
+- **CI:** GitHub Actions (`.github/workflows/ci.yml`) runs `npm run lint` plus `npm run test` on every push/PR and uploads `_site` as an artifact.
+- **Pages + previews:** `.github/workflows/pages.yml` builds the site for production pushes to `main` and publishes preview deployments for pull requests. Preview URLs show up on the PR checks tab; forked PRs may skip previews if repository permissions restrict deployments.
 
 ## Project Structure
 ```

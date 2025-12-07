@@ -1,89 +1,45 @@
 name: CI
 
 on:
-  pull_request:
+  push:
     branches: [ main ]
+  pull_request:
 
 jobs:
-  build:
+  build-and-test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - name: Set up Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: '18'
-
-      - name: Generate package-lock if missing
-        run: |
-          if [ ! -f package-lock.json ]; then
-            npm install --package-lock-only
-            echo "Generated package-lock.json"
-          else
-            echo "package-lock.json already exists"
-          fi
-
-      - name: Upload package-lock.json artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: package-lock
-          path: package-lock.json
-
-      - name: Install npm deps
-        run: |
-          if [ -f package-lock.json ]; then
-            npm ci
-          else
-            npm install
-          fi
-
-      - name: Lint (ESLint + HTMLHint)
-        run: npm run lint
-
-      - name: Build CSS
-        run: npm run build
-
-      - name: Install Ruby & Bundler
+      - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.2'
           bundler: '2.4.19'
           bundler-cache: true
 
-      - name: Bundle install
-        run: bundle install
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
 
-      - name: Jekyll build
+      - name: Install npm dependencies
+        run: npm ci
+
+      - name: Lint frontend files
+        run: npm run lint
+
+      - name: Build site and run HTML checks
         env:
           JEKYLL_ENV: production
-        run: bundle exec jekyll build
+        run: npm run test
 
-      - name: Smoke test - Verify CSS files exist in build
-        run: |
-          echo "Checking for critical CSS files in _site..."
-          test -f _site/assets/styles/tokens.css || { echo "ERROR: tokens.css not found in build"; exit 1; }
-          test -f _site/assets/css/theme-compiled.css || { echo "ERROR: theme-compiled.css not found in build"; exit 1; }
-          echo "✓ Critical CSS files found"
-
-      - name: Smoke test - Verify homepage is built correctly
-        run: |
-          echo "Checking homepage build..."
-          if grep -q "layout: default" _site/index.html; then
-            echo "ERROR: Homepage contains unprocessed Jekyll front-matter"
-            echo "This indicates Jekyll did not process the file correctly"
-            exit 1
-          fi
-          if ! grep -q "<link rel=\"stylesheet\"" _site/index.html; then
-            echo "ERROR: Homepage missing CSS link tags"
-            exit 1
-          fi
-          if ! grep -qi "<!doctype html>" _site/index.html; then
-            echo "ERROR: Homepage missing DOCTYPE"
-            exit 1
-          fi
-          echo "✓ Homepage built correctly"
-      
-      - name: Note deprecated loading screen
-        run: |
-          echo "Loading screen assets removed (Nov 2025) - skipping legacy check"
+      - name: Upload built site artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-build
+          path: _site
+          if-no-files-found: error
