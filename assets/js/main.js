@@ -1,8 +1,9 @@
 /* main.js — Tillerstead
-   - Responsive, accessible nav (ESC, outside click, resize)
+   - Responsive, accessible nav (ESC, outside click, resize, touch)
    - High contrast mode toggle with localStorage
    - Smooth anchor scrolling (respects reduced motion)
    - Static-host form handling (GitHub Pages) + Netlify passthrough
+   - Modern browser support with fallbacks
 */
 (() => {
   const $ = (s, c = document) => c.querySelector(s);
@@ -18,14 +19,17 @@
   const navClose = header ? header.querySelector("[data-nav-close]") : null;
   const navOverlay = header ? header.querySelector("[data-nav-overlay]") : null;
   let lastFocus = null;
+  let touchStartX = 0;
+  let touchStartY = 0;
   const BP_DESKTOP = 920; // matches SCSS breakpoint for drawer
+  const SWIPE_THRESHOLD = 50; // minimum swipe distance in pixels
 
   const isNavOpen = () => !!navShell && navShell.classList.contains("is-open");
+  const isMobileView = () => window.innerWidth < BP_DESKTOP;
 
   const syncAria = (open) => {
-    if (nav) nav.setAttribute("aria-expanded", String(open));
-    if (navToggle) navToggle.setAttribute("aria-expanded", String(open));
     if (navToggle) {
+      navToggle.setAttribute("aria-expanded", String(open));
       navToggle.setAttribute(
         "aria-label",
         open ? "Close navigation menu" : "Open navigation menu",
@@ -68,24 +72,33 @@
   };
 
   const outsideClick = (e) => {
-    if (!isNavOpen()) return;
+    if (!isNavOpen() || !isMobileView()) return;
     if (header && header.contains(e.target)) return;
     closeNav();
   };
 
   const openNav = () => {
-    if (!nav || !navShell) return;
+    if (!nav || !navShell || !isMobileView()) return;
     lastFocus = document.activeElement;
     navShell.classList.add("is-open");
     nav.classList.add("is-open");
     syncAria(true);
     document.body.classList.add("nav-open");
 
+    // Focus first interactive element
     const firstLink = $("a, button", nav);
-    if (firstLink) firstLink.focus();
+    if (firstLink) {
+      // Use requestAnimationFrame to ensure drawer is visible before focusing
+      requestAnimationFrame(() => {
+        if (firstLink && typeof firstLink.focus === "function") {
+          firstLink.focus();
+        }
+      });
+    }
 
     document.addEventListener("keydown", trapFocus);
     document.addEventListener("keydown", onKeydownEsc);
+    // Use capture phase for outside click to catch before other handlers
     document.addEventListener("click", outsideClick, true);
   };
 
@@ -102,28 +115,68 @@
 
     const focusTarget = lastFocus || navToggle || document.body;
     if (focusTarget && typeof focusTarget.focus === "function") {
-      focusTarget.focus();
+      // Use requestAnimationFrame for smooth focus transition
+      requestAnimationFrame(() => {
+        focusTarget.focus();
+      });
     }
   };
 
+  // Toggle button click handler
   if (navToggle) {
-    navToggle.addEventListener("click", () => {
+    navToggle.addEventListener("click", (e) => {
+      e.stopPropagation();
       isNavOpen() ? closeNav() : openNav();
     });
   }
 
-  if (navClose) navClose.addEventListener("click", closeNav);
-  if (navOverlay) navOverlay.addEventListener("click", closeNav);
+  // Close button click handler
+  if (navClose) {
+    navClose.addEventListener("click", (e) => {
+      e.stopPropagation();
+      closeNav();
+    });
+  }
+
+  // Overlay click handler
+  if (navOverlay) {
+    navOverlay.addEventListener("click", (e) => {
+      e.stopPropagation();
+      closeNav();
+    });
+  }
 
   // Close nav on link click (mobile only)
   if (nav) {
     nav.addEventListener("click", (e) => {
       const link = e.target.closest("a");
       if (!link) return;
-      if (window.innerWidth < BP_DESKTOP && isNavOpen()) {
+      if (isMobileView() && isNavOpen()) {
         closeNav();
       }
     });
+  }
+
+  // Touch events for swipe-to-close gesture
+  if (nav && "ontouchstart" in window) {
+    nav.addEventListener("touchstart", (e) => {
+      if (!isNavOpen()) return;
+      touchStartX = e.touches[0].clientX;
+      touchStartY = e.touches[0].clientY;
+    }, { passive: true });
+
+    nav.addEventListener("touchend", (e) => {
+      if (!isNavOpen()) return;
+      const touchEndX = e.changedTouches[0].clientX;
+      const touchEndY = e.changedTouches[0].clientY;
+      const deltaX = touchEndX - touchStartX;
+      const deltaY = touchEndY - touchStartY;
+
+      // Swipe right to close (only if horizontal swipe is dominant)
+      if (deltaX > SWIPE_THRESHOLD && Math.abs(deltaX) > Math.abs(deltaY)) {
+        closeNav();
+      }
+    }, { passive: true });
   }
 
   // Close nav if resized to desktop
@@ -131,11 +184,25 @@
   window.addEventListener("resize", () => {
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(() => {
-      if (window.innerWidth >= BP_DESKTOP && isNavOpen()) {
+      if (!isMobileView() && isNavOpen()) {
         closeNav();
       }
     }, 120);
   });
+
+  // Handle orientation change on mobile devices
+  if ("onorientationchange" in window) {
+    window.addEventListener("orientationchange", () => {
+      if (isNavOpen()) {
+        // Give browser time to recalculate layout
+        setTimeout(() => {
+          if (!isMobileView()) {
+            closeNav();
+          }
+        }, 200);
+      }
+    });
+  }
 
   /* =========================
      HIGH CONTRAST MODE TOGGLE
