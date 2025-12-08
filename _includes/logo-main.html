@@ -1,5 +1,5 @@
 {%- comment -%}
-Main Tillerstead logo include.
+Main Tillerstead logo include - optimized for all device types.
 
 Params:
 - class: classes for the link wrapper
@@ -31,12 +31,16 @@ Params:
 <a href="{{ '/' | relative_url }}"
    class="{{ logo_link_classes }}"
    rel="home"
-   aria-label="Tillerstead LLC home">
+   aria-label="Tillerstead LLC home"
+   itemprop="url">
   <img class="{{ logo_img_classes }}"
        src="{{ logo_src | relative_url }}"
        data-logo-light="{{ logo_src_light | relative_url }}"
        data-logo-dark="{{ logo_src_dark | relative_url }}"
        alt="{{ logo_alt }}"
+       width="240"
+       height="56"
        loading="eager"
-       decoding="async">
+       decoding="async"
+       itemprop="logo">
 </a>
