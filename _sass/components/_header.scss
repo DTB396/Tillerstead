@@ -146,7 +146,7 @@
 .site-header-actions {
   display: flex;
   align-items: center;
-  gap: var(--space-2);
+  gap: var(--ts-spacing-sm);
   flex-shrink: 0;
 }
 
@@ -323,7 +323,7 @@
   /* Layout: brand on left, actions/toggle on right */
   .site-header-inner {
     padding: 0.75rem clamp(1rem, 4vw, 1.5rem);
-    gap: var(--space-2);
+    gap: var(--ts-spacing-sm);
   }
 
   /* Key: drawer lives in its own fixed layer, not as a flex column */
@@ -456,7 +456,7 @@
     flex-direction: column;
     width: 100%;
     gap: 0.5rem;
-    margin-top: var(--space-3);
+    margin-top: var(--ts-spacing-md);
   }
 
   .site-menu .nav-link {
@@ -474,7 +474,7 @@
   .nav-cta,
   .nav-item--phone {
     display: block !important;
-    margin-top: var(--space-2);
+    margin-top: var(--ts-spacing-sm);
 
     a {
       width: 100%;
