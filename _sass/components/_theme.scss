@@ -252,7 +252,7 @@ ol {
   .btn + .call-btn,
   .call-btn + .call-btn {
     margin-inline-start: 0;
-    margin-block-start: var(--space-2);
+    margin-block-start: var(--ts-spacing-sm);
   }
 }
 
@@ -401,7 +401,7 @@ ol {
   padding: clamp(1.5rem, 4vw, 3rem);
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--space-6);
+  gap: var(--ts-spacing-xl);
   position: relative;
   z-index: 1;
 }
@@ -414,7 +414,7 @@ ol {
   background: #0f2240;
   color: #e6efff;
   padding: var(--section-padding-y) clamp(1.25rem, 4vw, 2.5rem);
-  margin-top: var(--space-8);
+  margin-top: var(--ts-spacing-2xl);
   border-top: 0;
 }
 
@@ -519,7 +519,7 @@ footer address {
 // ============================================
 
 .form-group {
-  margin-bottom: var(--space-4);
+  margin-bottom: var(--ts-spacing-lg);
 }
 
 .form-label {
@@ -588,7 +588,7 @@ footer address {
 .text-subtle  { color: var(--ts-color-muted) !important; }
 .text-primary { color: var(--ts-color-primary) !important; }
 
-.mt-4 { margin-top: var(--space-4) !important; }
-.mb-4 { margin-bottom: var(--space-4) !important; }
+.mt-4 { margin-top: var(--ts-spacing-lg) !important; }
+.mb-4 { margin-bottom: var(--ts-spacing-lg) !important; }
 
 // (add more utilities here as you discover you actually use them)
