@@ -76,16 +76,14 @@
     </div>
 
     <aside class="ts-hero__aside" aria-label="Tile specialist highlights">
-      {% if hero_project %}
-        <figure class="ts-hero__project">
-          <img src="{{ hero_project.src | default: '/assets/img/tillerstead-work/bathrooms/bathroom-marble-floor-finish.jpg' | relative_url }}"
-            alt="{{ hero_project.alt | default: 'Custom tile shower installation with brass fixtures' }}"
-            loading="eager" fetchpriority="high" decoding="async" width="1200" height="800">
-          {% if hero_project.caption %}
-            <figcaption>{{ hero_project.caption }}</figcaption>
-          {% endif %}
-        </figure>
-      {% endif %}
+      <figure class="ts-hero__project">
+        <img src="{{ hero_project.src | default: '/assets/img/tillerstead-work/bathrooms/bathroom-marble-floor-finish.jpg' | relative_url }}"
+          alt="{{ hero_project.alt | default: 'Custom tile shower installation with brass fixtures' }}"
+          loading="eager" fetchpriority="high" decoding="async" width="1200" height="800">
+        {% if hero_project.caption %}
+          <figcaption>{{ hero_project.caption }}</figcaption>
+        {% endif %}
+      </figure>
 
       {% assign hero_facts = include.facts | default: page.hero_facts %}
       {% if hero_facts %}
