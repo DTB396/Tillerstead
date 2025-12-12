@@ -23,9 +23,7 @@
 <meta name="geo.region" content="US-NJ">
 <meta name="geo.placename" content="{{ site.company.address_locality | default: 'Atlantic County' }}, New Jersey">
 <meta name="format-detection" content="telephone=no">
-{% if site.company.hic %}
-  <meta name="license" content="New Jersey Home Improvement Contractor License #{{ site.company.hic }}">
-{% endif %}
+{%- comment -%} License meta removed to avoid UI and SEO clutter {%- endcomment -%}
 
 {% if page.noindex %}
   <meta name="robots" content="noindex, nofollow">
