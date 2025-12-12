@@ -1,0 +1,57 @@
+{% assign hero_badge = include.badge | default: page.hero_badge | default: 'Licensed NJ Home Improvement Contractor' %}
+{% assign hero_eyebrow = include.eyebrow | default: page.hero_eyebrow | default: 'Licensed & Documented' %}
+{% assign hero_title = include.title | default: page.hero_title | default: page.title | default: site.title %}
+{% assign hero_summary = include.summary | default: page.hero_summary | default: page.description | default: site.tagline %}
+{% assign hero_kpis = include.kpis | default: page.hero_kpis %}
+{% assign hero_primary_url = include.primary_url | default: page.hero_primary_url | default: '/contact/' %}
+{% assign hero_primary_label = include.primary_label | default: page.hero_primary_label | default: 'Request a consultation' %}
+{% assign hero_secondary_url = include.secondary_url | default: page.hero_secondary_url | default: '/portfolio/' %}
+{% assign hero_secondary_label = include.secondary_label | default: page.hero_secondary_label | default: 'View recent work' %}
+
+{% assign primary_href = hero_primary_url %}
+{% unless primary_href contains '://' or primary_href contains 'mailto:' or primary_href contains 'tel:' or primary_href | slice: 0, 1 == '#' %}
+  {% assign primary_href = primary_href | relative_url %}
+{% endunless %}
+
+{% assign secondary_href = hero_secondary_url %}
+{% unless secondary_href contains '://' or secondary_href contains 'mailto:' or secondary_href contains 'tel:' or secondary_href | slice: 0, 1 == '#' %}
+  {% assign secondary_href = secondary_href | relative_url %}
+{% endunless %}
+
+<header class="hero" aria-label="Page hero">
+  <div class="container hero__content">
+    <div class="hero-home__body">
+      {% if hero_badge %}
+        <div class="hero__cred-bar">
+          <span class="hero__cred-badge">{{ hero_badge }}</span>
+        </div>
+      {% endif %}
+
+      {% if hero_eyebrow %}<p class="ts-eyebrow mb-3">{{ hero_eyebrow }}</p>{% endif %}
+
+      <h1 class="hero__title">{{ hero_title }}</h1>
+
+      {% if hero_summary %}
+        <p class="hero__lead">{{ hero_summary }}</p>
+      {% endif %}
+
+      {% if hero_kpis %}
+        <section class="hero__stats-panel" aria-label="Key points">
+          <ul class="hero__stats-list">
+            {% for metric in hero_kpis %}
+              <li>
+                {% if metric.label %}<strong class="text-accent">{{ metric.label }}:</strong>{% endif %}
+                {% if metric.text %} {{ metric.text }}{% endif %}
+              </li>
+            {% endfor %}
+          </ul>
+        </section>
+      {% endif %}
+
+      <nav class="hero__actions" aria-label="Primary actions">
+        {% if hero_primary_url %}<a class="btn btn--primary" href="{{ primary_href }}">{{ hero_primary_label }}</a>{% endif %}
+        {% if hero_secondary_url %}<a class="btn btn--ghost" href="{{ secondary_href }}">{{ hero_secondary_label }}</a>{% endif %}
+      </nav>
+    </div>
+  </div>
+</header>

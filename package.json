@@ -1,0 +1,47 @@
+{
+  "/**": [
+    "SEO: Tooling keeps code style consistent, preventing issues that harm search engine crawlability.",
+    "Accessibility: Linting enforces semantic HTML and ARIA patterns flagged by recommended configs.",
+    "Performance: Formatter and linters ensure minimal bundle size by avoiding stray assets and whitespace.",
+    "Safety: Dependencies are pinned to exact versions to avoid supply-chain surprises."
+  ],
+  "private": true,
+  "scripts": {
+    "jekyll": "ruby vendor/gems/jekyll/bin/jekyll",
+    "lint": "eslint . && htmlhint *.html && stylelint \"**/*.{css,scss}\"",
+    "lint:css": "stylelint \"**/*.{css,scss}\"",
+    "lint:css:fix": "stylelint \"**/*.{css,scss}\" --fix",
+    "format": "prettier --write .",
+    "build:css": "node scripts/build-css.js",
+    "watch:css": "sass --load-path=_sass assets/css/main.scss:assets/css/main.css --watch --no-source-map",
+    "start": "npm run build && npm run serve",
+    "dev": "npm run build:css && npm run jekyll -- build && http-server _site -p 4000 -c-1",
+    "dev:watch": "concurrently \"npm run watch:css\" \"npm run jekyll -- build --watch\" \"http-server _site -p 4000 -c-1\"",
+    "build": "npm run build:css && npm run jekyll -- build",
+    "serve": "http-server _site -p 4000 -c-1",
+    "build:site": "npm run build",
+    "build:full": "npm run build:css && npm run build:logos && npm run jekyll -- build",
+    "build:logos": "node scripts/generate-png-logos.js",
+    "test": "npm run build && node scripts/check-links.js",
+    "images:webp": "node scripts/convert-images-to-webp.js",
+    "slugify": "node scripts/slugify.js",
+    "sync:thumbtack": "node scripts/sync_thumbtack_reviews.js"
+  },
+  "devDependencies": {
+    "concurrently": "8.2.2",
+    "cheerio": "1.0.0-rc.12",
+    "eslint": "8.57.0",
+    "eslint-config-standard": "17.1.0",
+    "eslint-plugin-import": "2.29.1",
+    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-promise": "6.2.0",
+    "js-yaml": "4.1.0",
+    "htmlhint": "1.1.4",
+    "prettier": "3.3.2",
+    "sass": "^1.77.8",
+    "sharp": "0.34.5",
+    "stylelint": "^16.10.0",
+    "stylelint-config-standard-scss": "^13.1.0",
+    "stylelint-scss": "^6.8.1"
+  }
+}

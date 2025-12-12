@@ -1,0 +1,248 @@
+/* ============================================
+   Container & Layout System
+   Flexible container and wrapper utilities
+   ============================================ */
+
+/* Base Container */
+.container,
+.ts-container {
+  width: 100%;
+  max-width: var(--shell-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: clamp(1rem, 4vw, 2.5rem);
+  padding-right: clamp(1rem, 4vw, 2.5rem);
+}
+
+/* Container Variants */
+.container-narrow {
+  max-width: 960px;
+}
+
+.container-wide {
+  max-width: 1440px;
+}
+
+.container-full {
+  max-width: 100%;
+}
+
+.container-prose {
+  max-width: 72ch;
+}
+
+/* Section Wrapper */
+.section,
+.ts-section {
+  position: relative;
+  padding-top: var(--section-padding-y);
+  padding-bottom: var(--section-padding-y);
+}
+
+.section-inner,
+.ts-section-inner {
+  max-width: var(--shell-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: clamp(1rem, 4vw, 2.5rem);
+  padding-right: clamp(1rem, 4vw, 2.5rem);
+}
+
+/* Section Variants */
+.section-compact {
+  padding-top: clamp(2rem, 4vw, 3rem);
+  padding-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+.section-spacious {
+  padding-top: clamp(4rem, 8vw, 6rem);
+  padding-bottom: clamp(4rem, 8vw, 6rem);
+}
+
+/* Section Backgrounds */
+.section-primary {
+  background: var(--ts-gradient-primary);
+  color: var(--ts-white);
+  
+  * {
+    color: inherit;
+  }
+}
+
+.section-muted {
+  background: var(--ts-color-surface-muted);
+}
+
+.section-elevated {
+  background: var(--ts-color-surface-elevated);
+}
+
+.section-gradient {
+  background: var(--ts-gradient-surface);
+  position: relative;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: var(--ts-bg-pattern);
+    background-size: var(--ts-bg-pattern-size);
+    background-repeat: repeat;
+    opacity: var(--ts-bg-pattern-opacity);
+    pointer-events: none;
+  }
+}
+
+/* Flow Layout - Consistent vertical spacing */
+.flow > * + * {
+  margin-top: var(--flow-space, 1.5rem);
+}
+
+.flow-sm {
+  --flow-space: 1rem;
+}
+
+.flow-md {
+  --flow-space: 1.5rem;
+}
+
+.flow-lg {
+  --flow-space: 2.5rem;
+}
+
+.flow-xl {
+  --flow-space: 3.5rem;
+}
+
+/* Stack Layout */
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--stack-gap, 1.5rem);
+}
+
+.stack-sm {
+  --stack-gap: 1rem;
+}
+
+.stack-md {
+  --stack-gap: 1.5rem;
+}
+
+.stack-lg {
+  --stack-gap: 2.5rem;
+}
+
+.stack-xl {
+  --stack-gap: 3.5rem;
+}
+
+/* Cluster Layout - Horizontal grouping with wrapping */
+.cluster {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--cluster-gap, 1rem);
+  align-items: center;
+}
+
+.cluster-sm {
+  --cluster-gap: 0.5rem;
+}
+
+.cluster-md {
+  --cluster-gap: 1rem;
+}
+
+.cluster-lg {
+  --cluster-gap: 1.5rem;
+}
+
+.cluster-center {
+  justify-content: center;
+}
+
+.cluster-end {
+  justify-content: flex-end;
+}
+
+.cluster-between {
+  justify-content: space-between;
+}
+
+/* Center Layout */
+.center-content {
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.center-x {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Sidebar Layout */
+.sidebar {
+  display: grid;
+  gap: var(--section-gap);
+  
+  @media (min-width: 960px) {
+    grid-template-columns: 1fr 2fr;
+    
+    &.sidebar-right {
+      grid-template-columns: 2fr 1fr;
+    }
+  }
+}
+
+/* Switcher Layout - Responsive columns */
+.switcher {
+  display: grid;
+  gap: var(--section-gap);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+}
+
+/* Cover Layout - Full viewport sections */
+.cover {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--section-padding-y) 0;
+}
+
+.cover-half {
+  min-height: 50vh;
+}
+
+/* Aspect Ratio Boxes */
+.aspect-square {
+  aspect-ratio: 1 / 1;
+}
+
+.aspect-video {
+  aspect-ratio: 16 / 9;
+}
+
+.aspect-wide {
+  aspect-ratio: 21 / 9;
+}
+
+.aspect-portrait {
+  aspect-ratio: 3 / 4;
+}
+
+/* Responsive Utilities */
+@media (max-width: 640px) {
+  .container,
+  .ts-container {
+    padding-left: clamp(1rem, 5vw, 1.5rem);
+    padding-right: clamp(1rem, 5vw, 1.5rem);
+  }
+  
+  .section,
+  .ts-section {
+    padding-top: clamp(2rem, 6vw, 3rem);
+    padding-bottom: clamp(2rem, 6vw, 3rem);
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "name": "Tillerstead Site",
+  "image": "mcr.microsoft.com/devcontainers/ruby:3.2",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "20"
+    }
+  },
+  "postCreateCommand": "bundle config set --local path vendor/bundle && bundle install --jobs 4 && npm ci",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+      },
+      "extensions": [
+        "shopify.ruby-lsp",
+        "rebornix.ruby",
+        "esbenp.prettier-vscode"
+      ]
+    }
+  },
+  "forwardPorts": [4000, 35729],
+  "portsAttributes": {
+    "4000": {
+      "label": "Jekyll",
+      "onAutoForward": "notify"
+    },
+    "35729": {
+      "label": "LiveReload",
+      "onAutoForward": "ignore"
+    }
+  },
+  "remoteUser": "vscode"
+}

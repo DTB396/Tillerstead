@@ -1,0 +1,117 @@
+<!-- Core meta -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+<!-- Performance: DNS prefetch for external resources -->
+<link rel="dns-prefetch" href="https://fonts.googleapis.com">
+<link rel="dns-prefetch" href="https://fonts.gstatic.com">
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+{%- assign meta_description = page.description | default: site.description | default: 'Tillerstead LLC provides monthly property maintenance, remodeling, and waterproof tile installations for South Jersey homeowners, landlords, and small commercial spaces.' -%}
+<meta name="description" content="{{ meta_description | escape }}">
+
+{%- assign meta_keywords = page.keywords | default: site.keywords -%}
+{% if meta_keywords %}
+  <meta name="keywords" content="{{ meta_keywords | join: ', ' }}">
+{% endif %}
+
+<meta name="author" content="{{ site.company.owner | default: 'Tillerstead LLC' }}">
+<meta name="geo.region" content="US-NJ">
+<meta name="geo.placename" content="{{ site.company.address_locality | default: 'Atlantic County' }}, New Jersey">
+<meta name="format-detection" content="telephone=no">
+{%- comment -%} License meta removed to avoid UI and SEO clutter {%- endcomment -%}
+
+{% if page.noindex %}
+  <meta name="robots" content="noindex, nofollow">
+{% else %}
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+{% endif %}
+
+<!-- Canonical URL -->
+{% if site.url %}
+  <link rel="canonical" href="{{ page.url | replace: 'index.html','' | absolute_url }}">
+{% endif %}
+
+<!-- Theme / Icons -->
+<meta name="theme-color" content="#0b1421" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<link rel="icon" type="image/svg+xml" href="{{ '/assets/img/logo/tillerstead-favicon.svg' | relative_url }}" sizes="any">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/img/logo/tillerstead-logo-mark.svg' | relative_url }}">
+<link rel="manifest" href="{{ '/manifest.webmanifest' | relative_url }}">
+<link rel="mask-icon" href="{{ '/assets/img/logo/tillerstead-logo-mark.svg' | relative_url }}" color="#1cb394">
+{% include ts-icon-sprite.html %}
+
+<!-- Performance: Preload critical assets -->
+<link rel="preload" as="image" href="{{ '/assets/img/logo/tillerstead-logo-header.svg' | relative_url }}" fetchpriority="high">
+<link rel="preload" as="style" href="{{ '/assets/css/main.css' | relative_url }}">
+{% if page.is_home or page.hero_image %}
+  <link rel="preload" as="image" href="{{ page.hero_image | default: '/assets/img/hero-bg.jpg' | relative_url }}" fetchpriority="high">
+{% endif %}
+
+<!-- Open Graph / Social -->
+{%- assign og_title = page.seo_title | default: page.title | default: site.title -%}
+{%- assign og_description = meta_description -%}
+{%- assign og_image = page.og_image | default: site.default_og_image | default: '/assets/img/og.jpg' -%}
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ og_title | truncate: 60 }}">
+<meta property="og:description" content="{{ og_description | escape | truncate: 160 }}">
+<meta property="og:site_name" content="Tillerstead LLC">
+<meta property="og:locale" content="en_US">
+{% if site.url %}
+  {% assign og_url = page.url | replace: 'index.html','' %}
+  <meta property="og:url" content="{{ site.url }}{{ og_url }}">
+{% endif %}
+<meta property="og:image" content="{{ og_image | absolute_url }}">
+<meta property="og:image:alt" content="Tillerstead LLC - Property Maintenance, Remodeling & Tile in South Jersey">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ og_title | truncate: 70 }}">
+<meta name="twitter:description" content="{{ og_description | escape | truncate: 160 }}">
+<meta name="twitter:image" content="{{ og_image | absolute_url }}">
+<meta name="twitter:image:alt" content="Tillerstead LLC - Property Maintenance, Remodeling & Tile in South Jersey">
+
+<!-- Business contact microdata -->
+<meta property="business:contact_data:street_address" content="{{ site.company.address_line | default: '' }}">
+<meta property="business:contact_data:locality" content="{{ site.company.address_locality | default: '' }}">
+<meta property="business:contact_data:region" content="{{ site.company.address_region | default: 'NJ' }}">
+<meta property="business:contact_data:postal_code" content="{{ site.company.address_postal_code | default: '' }}">
+<meta property="business:contact_data:country_name" content="United States">
+<meta property="business:contact_data:phone_number" content="{{ site.company.phone_display | default: '(609) 862-8808' }}">
+{% if site.url %}
+  <meta property="business:contact_data:website" content="{{ site.url }}">
+{% endif %}
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<!-- Preload primary font weights for faster LCP -->
+{% if site.fonts and site.fonts.local_preload %}
+  <link rel="preload" as="font" type="font/woff2" href="{{ '/assets/fonts/inter-600.woff2' | relative_url }}" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="{{ '/assets/fonts/inter-700.woff2' | relative_url }}" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="{{ '/assets/fonts/montserrat-700.woff2' | relative_url }}" crossorigin>
+{% endif %}
+
+<!-- Styles (compiled Sass) -->
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" media="screen">
+
+{% if page.styles %}
+  {% for style in page.styles %}
+    <link rel="stylesheet" href="{{ style | relative_url }}" media="screen">
+  {% endfor %}
+{% endif %}
+
+{% if page.schema %}
+  {% for schema in page.schema %}
+    <script type="application/ld+json">
+      {{ schema | jsonify }}
+    </script>
+  {% endfor %}
+{% endif %}

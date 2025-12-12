@@ -1,0 +1,98 @@
+<form
+  name="{{ include.form_name | default: 'contact-short' }}"
+  id="{{ include.form_id | default: 'contact-form-short' }}"
+  class="contact-form contact-form--short"
+  method="post"
+  action="/success/"          <!-- FIX: real Netlify redirect -->
+  data-netlify="true"
+  netlify-honeypot="_trap_short"
+  aria-live="polite"
+>
+  <!-- Netlify-required -->
+  <input type="hidden" name="form-name" value="{{ include.form_name | default: 'contact-short' }}">
+
+  <!-- Honeypot -->
+  <p class="sr-only">
+    <label for="_trap_short">Do not fill this field</label>
+    <input id="_trap_short" name="_trap_short" type="text" tabindex="-1" autocomplete="off">
+  </p>
+
+  <div class="form-grid">
+    <div class="form-field">
+      <label for="{{ include.prefix }}name-short">
+        Name <span aria-hidden="true">*</span>
+      </label>
+      <input
+        id="{{ include.prefix }}name-short"
+        name="name"
+        type="text"
+        required
+        autocomplete="name"
+        placeholder="Your name"
+      >
+    </div>
+
+    <div class="form-field">
+      <label for="{{ include.prefix }}email-short">
+        Email <span aria-hidden="true">*</span>
+      </label>
+      <input
+        id="{{ include.prefix }}email-short"
+        name="email"
+        type="email"
+        required
+        autocomplete="email"
+        inputmode="email"
+        placeholder="you@example.com"
+      >
+    </div>
+
+    <div class="form-field">
+      <label for="{{ include.prefix }}phone-short">
+        Phone
+      </label>
+      <input
+        id="{{ include.prefix }}phone-short"
+        name="phone"
+        type="tel"
+        autocomplete="tel"
+        inputmode="tel"
+        placeholder="{{ site.company.phone_display | default: '(609) 862-8808' }}"
+      >
+    </div>
+
+    <div class="form-field">
+      <label for="{{ include.prefix }}project-type-short">Project type</label>
+      <select id="{{ include.prefix }}project-type-short" name="project_type">
+        <option value="">Select an option</option>
+        <option>Monthly Maintenance Plan</option>
+        <option>Kitchen or Bathroom Remodel</option>
+        <option>Tile Installation (shower, floor, backsplash)</option>
+        <option>Repairs / Service Call</option>
+        <option>Flooring installation</option>
+        <option>Other / Not sure yet</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="form-field">
+    <label for="{{ include.prefix }}details-short">
+      Project details <span aria-hidden="true">*</span>
+    </label>
+    <textarea
+      id="{{ include.prefix }}details-short"
+      name="details"
+      rows="4"
+      required
+      placeholder="Share a quick overview of your project or maintenance request."
+    ></textarea>
+  </div>
+
+  <p class="form-note">
+    I’ll review your request personally and follow up with clear next steps. Your information is used only to respond and prepare your estimate.
+  </p>
+
+  <button type="submit" class="btn btn-primary">
+    {{ include.button_label | default: 'Send my request' }}
+  </button>
+</form>

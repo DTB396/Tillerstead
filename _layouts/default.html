@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>
+      {% if page.seo_title %}
+        {{ page.seo_title }}
+      {% elsif page.title %}
+        {{ page.title }} | {{ site.tagline | default: 'Tillerstead LLC' }}
+      {% else %}
+        {{ site.title }} | {{ site.tagline | default: 'Property Maintenance, Remodeling & Tile in South Jersey' }}
+      {% endif %}
+    </title>
+    {% include head.html %}
+  </head>
+
+  <body class="site-body ts-page ts-theme {{ page.body_class | default: '' }}">
+    <!-- Accessibility: Skip to main content link -->
+    <a class="skip-link" href="#main" tabindex="1">Skip to main content</a>
+
+    {%- comment -%} Inline logo sprite to avoid extra request {%- endcomment -%}
+    {%- include logo-sprite-inline.html -%}
+
+    {%- comment -%}Construction banner removed (deprecated).{%- endcomment -%}
+
+    <!-- Page header with navigation -->
+    {% include header.html %}
+
+    <!-- Main content area -->
+    <main id="main" class="site-main ts-section ts-surface" role="main" tabindex="-1">
+      
+      {% if page.url != '/'
+        and page.url != '/index.html'
+        and page.is_home != true
+        and page.breadcrumb != false
+        and page.show_breadcrumbs != false %}
+        {% include ts-breadcrumbs.html %}
+      {% endif %}
+
+      <!-- Page hero section (unless hidden) -->
+      {%- if page.hide_hero != true -%}
+        {%- include page-hero.html -%}
+      {%- endif -%}
+
+      <!-- Page content: full-width or contained -->
+      {% if page.is_home or page.full_width %}
+        {{ content }}
+      {% else %}
+        <article class="page-content section" itemscope itemtype="https://schema.org/WebPage">
+          <meta itemprop="name" content="{{ page.title | default: site.title }}">
+          {% if page.description %}
+            <meta itemprop="description" content="{{ page.description }}">
+          {% endif %}
+          <div class="container">
+            {{ content }}
+          </div>
+        </article>
+      {% endif %}
+
+    </main>
+
+    <!-- Page footer -->
+    {% include footer.html %}
+
+    <!-- Scripts (deferred for performance) -->
+    {% include scripts.html %}
+
+    <!-- Structured Data for SEO -->
+    {% include schema-local-business.html %}
+    {% if page.include_faq_schema %}
+      {% include schema-faq.html %}
+    {% endif %}
+
+    <!-- Structured data for current page (if provided in front-matter) -->
+    {% if page.structured_data %}
+      <script type="application/ld+json">
+        {{ page.structured_data | jsonify }}
+      </script>
+    {% endif %}
+  </body>
+</html>

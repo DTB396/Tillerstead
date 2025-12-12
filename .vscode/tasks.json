@@ -1,0 +1,36 @@
+{
+  // Task for running Thumbtack sync from Codespaces without terminal typing.
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Sync Thumbtack Reviews",
+      "type": "shell",
+      "command": "npm run sync:thumbtack",
+      "problemMatcher": [],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      }
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Dev server",
+      "type": "shell",
+      "command": "npm run dev",
+      "group": "build",
+      "isBackground": true,
+      "problemMatcher": []
+    },
+    {
+      "label": "Build site",
+      "type": "npm",
+      "script": "build",
+      "group": "build"
+    },
+    {
+      "label": "Test site",
+      "type": "npm",
+      "script": "test",
+      "group": "test"
+    }
+  ]
+}

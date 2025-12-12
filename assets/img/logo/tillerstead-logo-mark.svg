@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 174 174" role="img" aria-label="Tillerstead tile mark">
+  <style>
+    .logo-tile{fill:#0d3b2c;stroke:#c99a3f;stroke-width:10;stroke-linejoin:round;stroke-linecap:round}
+  </style>
+  <g class="logo-mark" transform="translate(5 5)">
+    <rect class="logo-tile" x="0" y="0" width="42" height="42" rx="6" />
+    <rect class="logo-tile" x="60" y="0" width="42" height="42" rx="6" />
+    <rect class="logo-tile" x="120" y="0" width="42" height="42" rx="6" />
+    <rect class="logo-tile" x="60" y="60" width="42" height="42" rx="6" />
+    <rect class="logo-tile" x="60" y="120" width="42" height="42" rx="6" />
+  </g>
+</svg>

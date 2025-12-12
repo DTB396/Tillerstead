@@ -1,0 +1,60 @@
+---
+layout: default
+title: "Tillerstead Blog | Tile, Bath & Remodel Notes"
+permalink: /blog/
+description: "Clear, contractor-grade guidance for tile, bath, and remodel projects in South Jersey — waterproofing systems, layouts, materials, and timelines explained plainly."
+body_class: page-blog
+hero_eyebrow: "Insights & Field Notes"
+hero_title: "Project Notes & Product Insights"
+hero_summary: >
+  Field-tested guidance on waterproofing systems, tile layout, and realistic timelines —
+  written for South Jersey homeowners who care about quality work and a fair process.
+  Expect contractor-grade detail in plain language — what to watch for, what to ask,
+  and when to push pause until the plan is right.
+---
+
+<section class="ts-section ts-surface section blog-index" aria-labelledby="blog-heading">
+  <div class="container blog-shell">
+    {% assign posts_sorted = site.posts | sort: "date" | reverse %}
+
+    {% if posts_sorted.size == 0 %}
+      <p class="microcopy center mt-2">
+        No articles are live yet. Project notes and product breakdowns will be published
+        as recent jobs are documented and photographed.
+      </p>
+    {% else %}
+      <ul class="cards blog-cards mt-2 unstyled" aria-label="Tillerstead articles on tile, bath, and remodel work">
+        {% for post in posts_sorted %}
+          <li class="ts-card card blog-card stack-sm">
+            <header class="blog-card-header">
+              <h2 class="blog-card-title">
+                <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+              </h2>
+              <p class="blog-card-meta">
+                <small>
+                  {{ post.date | date: "%B %e, %Y" }}
+                  {% if post.category %}
+                    &nbsp;•&nbsp; {{ post.category }}
+                  {% endif %}
+                </small>
+              </p>
+            </header>
+
+            {% if post.description %}
+              <p class="lead blog-card-excerpt">
+                {{ post.description }}
+              </p>
+            {% endif %}
+
+            <p class="blog-card-cta">
+              <a class="btn btn-ghost" href="{{ post.url | relative_url }}">
+                Read article &rarr;
+              </a>
+            </p>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
+  </div>
+</section>

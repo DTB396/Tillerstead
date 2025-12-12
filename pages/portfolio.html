@@ -1,0 +1,266 @@
+﻿---
+layout: default
+description: "Showers, floors, backsplashes, drywall repairs, prep, trim, and caulk work completed with proper substrate prep, waterproofing, and clean finishes."
+body_class: page-portfolio
+hero_eyebrow: "Portfolio"
+hero_title: "Recent Tile & Finish Work Across South Jersey"
+hero_summary: >
+  Recent waterproof shower, floor, and backsplash installations completed for New Jersey general contractors.
+  Clean layouts, code-compliant assemblies, and reliable schedules.
+ 
+---
+
+{% include ts-portfolio.html %}
+
+{% assign projects = site.data.portfolio.projects | default: [] %}
+{% assign total_projects = projects | size | plus: 0 %}
+{% assign fallback_src = '/assets/img/tillerstead-work/bathrooms/bathroom-marble-floor-finish.jpg' | relative_url %}
+{% assign fallback_alt = 'Documented project photo from Tillerstead LLC' %}
+{% assign fallback_caption = 'Waterproof tile, remodeling, and maintenance scopes completed across South Jersey.' %}
+
+<section class="ts-section ts-surface portfolio-page">
+  <div class="container">
+  <!-- Filters -->
+  <div class="filters" role="tablist" aria-label="Portfolio filters">
+    <button class="chip is-active" role="tab" aria-selected="true" data-filter="all">All</button>
+    <button class="chip" role="tab" aria-selected="false" data-filter="showers">Showers</button>
+    <button class="chip" role="tab" aria-selected="false" data-filter="backsplashes">Backsplashes</button>
+    <button class="chip" role="tab" aria-selected="false" data-filter="floors">Floors</button>
+    <button class="chip" role="tab" aria-selected="false" data-filter="repairs">Repairs</button>
+  </div>
+
+  <!-- Slider -->
+  <div class="gallery-slider" id="gallery-slider" aria-live="polite">
+    <figure class="slide">
+      <div class="slide-media">
+        <picture id="slide-picture">
+          <source id="slide-source-webp" type="image/webp">
+          <img id="slide-image"
+               src="{{ fallback_src }}"
+               alt="{{ fallback_alt | escape }}"
+               width="1280"
+               height="960"
+               loading="lazy"
+               decoding="async">
+        </picture>
+      </div>
+      <figcaption class="slide-caption">
+        <p id="slide-caption-text">{{ fallback_caption }}</p>
+      </figcaption>
+    </figure>
+
+    <div class="slider-footer">
+      <span class="slide-meta" id="slide-meta">
+        {% if total_projects == 0 %}
+          All work
+        {% else %}
+          All work Â· 1 of {{ total_projects }}
+        {% endif %}
+      </span>
+
+      <div class="slider-controls" aria-label="Slide controls">
+        <button type="button" class="slider-arrow prev" aria-label="Previous photo">â€¹</button>
+        <button type="button" class="slider-arrow next" aria-label="Next photo">â€º</button>
+      </div>
+    </div>
+
+    <div class="slider-dots" id="slider-dots" aria-hidden="true"></div>
+  </div>
+
+  <section class="portfolio-actions">
+    <div class="btn-row">
+      <a class="btn btn-primary" href="{{ '/contact/' | relative_url }}">Get Free NJ Estimate</a>
+      <a class="btn btn-ghost" href="tel:+16098628808">Call (609) 862-8808</a>
+    </div>
+  </section>
+  </div>
+</section>
+
+<script>
+/* Image data â€“ shared with slider and initial markup via _data/portfolio.yml */
+const PROJECTS = {{ projects | jsonify | replace: '</', '<\/'} };
+</script>
+
+<script>
+(function () {
+  const $ = (s, c = document) => c.querySelector(s);
+  const $$ = (s, c = document) => Array.from(c.querySelectorAll(s));
+
+  const BASE = "{{ '/assets/img/' | relative_url }}";
+
+  const slider = $('#gallery-slider');
+  const imgEl = $('#slide-image');
+  const captionEl = $('#slide-caption-text');
+  const metaEl = $('#slide-meta');
+  const dotsEl = $('#slider-dots');
+  const prevBtn = $('.slider-arrow.prev');
+  const nextBtn = $('.slider-arrow.next');
+  const chips = $$('.chip');
+
+  const TAG_LABELS = {
+    all: 'All work',
+    showers: 'Showers & wet areas',
+    backsplashes: 'Backsplashes',
+    floors: 'Floors & large-format tile',
+    repairs: 'Repairs & punchlist rescue'
+  };
+
+  let currentFilter = 'all';
+  let slides = [];
+  let index = 0;
+  let autoplayId = null;
+  const AUTOPLAY_MS = 3200;
+
+  function setFilter(filter) {
+    currentFilter = filter || 'all';
+    slides = currentFilter === 'all'
+      ? PROJECTS.slice()
+      : PROJECTS.filter(p => (p.tags || []).includes(currentFilter));
+
+    if (!slides.length) {
+      slider.setAttribute('aria-busy', 'true');
+      return;
+    }
+    slider.removeAttribute('aria-busy');
+    index = 0;
+    syncChips();
+    buildDots();
+    showSlide(0);
+    restartAutoplay();
+    updateUrlFilter();
+  }
+
+  function syncChips() {
+    chips.forEach(chip => {
+      const active = chip.dataset.filter === currentFilter;
+      chip.classList.toggle('is-active', active);
+      chip.setAttribute('aria-selected', active ? 'true' : 'false');
+    });
+  }
+
+  function buildDots() {
+    dotsEl.innerHTML = '';
+    slides.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.type = 'button';
+      dot.className = 'slider-dot';
+      dot.dataset.index = i;
+      dot.addEventListener('click', () => {
+        showSlide(i);
+        restartAutoplay();
+      });
+      dotsEl.appendChild(dot);
+    });
+  }
+
+  function preloadNext() {
+    if (!slides.length) return;
+    const nextIdx = (index + 1) % slides.length;
+    const nextSlide = slides[nextIdx];
+    const img = new Image();
+    img.src = BASE + nextSlide.file;
+  }
+
+  function showSlide(newIndex) {
+    if (!slides.length) return;
+    index = (newIndex + slides.length) % slides.length;
+    const slide = slides[index];
+    const sourceEl = document.getElementById('slide-source-webp');
+    const hasWebp = !!slide.file_webp;
+    if (sourceEl) {
+      if (hasWebp) {
+        sourceEl.srcset = BASE + slide.file_webp;
+      } else {
+        sourceEl.removeAttribute('srcset');
+      }
+    }
+    imgEl.src = BASE + slide.file; // Primary (jpg or webp). If webp-only older browsers may not show; acceptable given support.
+    imgEl.alt = slide.alt || '';
+    captionEl.textContent = slide.caption || '';
+    metaEl.textContent = `${TAG_LABELS[currentFilter] || 'All work'} Â· ${index + 1} of ${slides.length}`;
+
+    $$('.slider-dot', dotsEl).forEach(dot => {
+      dot.classList.toggle('is-active', Number(dot.dataset.index) === index);
+    });
+
+    preloadNext();
+  }
+
+  function nextSlide() {
+    showSlide(index + 1);
+  }
+
+  function prevSlide() {
+    showSlide(index - 1);
+  }
+
+  function startAutoplay() {
+    if (autoplayId || slides.length <= 1) return;
+    autoplayId = setInterval(nextSlide, AUTOPLAY_MS);
+  }
+
+  function stopAutoplay() {
+    if (!autoplayId) return;
+    clearInterval(autoplayId);
+    autoplayId = null;
+  }
+
+  function restartAutoplay() {
+    stopAutoplay();
+    startAutoplay();
+  }
+
+  function updateUrlFilter() {
+    const url = new URL(window.location);
+    if (currentFilter === 'all') {
+      url.searchParams.delete('filter');
+    } else {
+      url.searchParams.set('filter', currentFilter);
+    }
+    history.replaceState(null, '', url);
+  }
+
+  // Event listeners
+  nextBtn.addEventListener('click', () => {
+    nextSlide();
+    restartAutoplay();
+  });
+
+  prevBtn.addEventListener('click', () => {
+    prevSlide();
+    restartAutoplay();
+  });
+
+  slider.addEventListener('mouseenter', stopAutoplay);
+  slider.addEventListener('mouseleave', startAutoplay);
+  slider.addEventListener('focusin', stopAutoplay);
+  slider.addEventListener('focusout', startAutoplay);
+
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') {
+      nextSlide();
+      restartAutoplay();
+    } else if (e.key === 'ArrowLeft') {
+      prevSlide();
+      restartAutoplay();
+    }
+  });
+
+  chips.forEach(chip => {
+    if (!chip.dataset.filter) {
+      chip.dataset.filter = (chip.textContent || '').toLowerCase();
+    }
+    chip.addEventListener('click', () => setFilter(chip.dataset.filter));
+  });
+
+  // Initial filter from URL or hash
+  const params = new URL(window.location).searchParams;
+  const initialFilter =
+    params.get('filter') ||
+    (window.location.hash || '').replace('#', '') ||
+    'all';
+
+  setFilter(initialFilter);
+})();
+</script>
+

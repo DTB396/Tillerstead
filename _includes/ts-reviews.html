@@ -1,0 +1,8 @@
+{%- comment -%}
+Legacy wrapper: routes to ts-testimonials.html for backwards compatibility.
+{%- endcomment -%}
+{% include ts-testimonials.html 
+  reviews=include.reviews 
+  heading=include.heading 
+  eyebrow=include.eyebrow 
+  limit=include.limit %}

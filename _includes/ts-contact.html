@@ -1,0 +1,83 @@
+<!-- Unified Contact Section -->
+<section class="ts-contact" aria-labelledby="ts-contact-title">
+  <div class="container ts-contact__grid">
+    <div class="ts-contact__copy">
+      <span class="eyebrow">Licensed NJ Contractor</span>
+      <h2 id="ts-contact-title" class="heading-2">Get Your Free South Jersey Estimate</h2>
+      <p><strong>Serving Atlantic, Ocean & Cape May Counties</strong> with professional tile installation, bathroom remodeling, and property maintenance. Most consultations scheduled within 24-48 hours—emergency service available.</p>
+      <p class="text-muted">You'll receive a detailed written proposal covering materials, timelines, waterproofing specs, and transparent pricing. Licensed HIC #13VH10808800, fully insured, owner-operated. <strong>No pressure, no hidden fees, no surprises.</strong></p>
+      <form
+        class="ts-contact__form"
+        name="homepage-contact"
+        method="post"
+        action="/contact/"
+        data-netlify="true"
+        data-contact-form
+        data-contact-email="{{ site.company.email }}"
+        data-contact-phone="{{ site.company.phone_display }}"
+        netlify-honeypot="bot-field"
+        aria-describedby="ts-contact-title"
+      >
+        <input type="hidden" name="form-name" value="homepage-contact">
+        <p class="sr-only">
+          <label for="bot-field">Do not fill this field</label>
+          <input id="bot-field" name="bot-field" type="text" tabindex="-1" autocomplete="off">
+        </p>
+        <div class="ts-contact__fields">
+          <label class="ts-contact__field">
+            <span>Name</span>
+            <input type="text" name="name" required autocomplete="name" aria-required="true" placeholder="Your full name">
+          </label>
+          <label class="ts-contact__field">
+            <span>Email</span>
+            <input type="email" name="email" required autocomplete="email" aria-required="true" inputmode="email" placeholder="you@example.com">
+          </label>
+          <label class="ts-contact__field">
+            <span>Phone</span>
+            <input type="tel" name="phone" required autocomplete="tel" aria-required="true" inputmode="tel" placeholder="{{ site.company.phone_display | default: '(609) 862-8808' }}">
+          </label>
+          <label class="ts-contact__field">
+            <span>Property Type</span>
+            <select name="property_type" required aria-required="true" aria-label="Property type">
+              <option value="">Select your property type</option>
+              <option>Single-family home (owner-occupied)</option>
+              <option>Rental property / landlord</option>
+              <option>Vacation rental / Shore house</option>
+              <option>Multi-unit residential</option>
+              <option>Condo / townhouse</option>
+              <option>Small commercial / retail</option>
+              <option>Real estate staging / flip</option>
+            </select>
+          </label>
+          <label class="ts-contact__field">
+            <span>Project Urgency</span>
+            <select name="project_urgency" required aria-required="true" aria-label="Project timeline">
+              <option value="">When do you need this done?</option>
+              <option>Emergency / ASAP (water damage, failed tile)</option>
+              <option>Within 1-2 weeks</option>
+              <option>Within 1 month</option>
+              <option>Within 2-3 months</option>
+              <option>Planning / not urgent</option>
+            </select>
+          </label>
+          <label class="ts-contact__field ts-contact__field--full">
+            <span>Project details</span>
+            <textarea name="message" rows="4" required aria-required="true" placeholder="Share the scope, address or area, and timing."></textarea>
+          </label>
+        </div>
+        <div class="form-status sr-only" aria-live="polite" data-form-status></div>
+        <button type="submit" class="btn btn--primary ts-contact__submit">Send my request</button>
+      </form>
+    </div>
+    <aside class="ts-contact__panel" aria-label="Company details">
+      <h3>Company Details</h3>
+      <dl>
+        <dt>Name:</dt><dd>Tillerstead LLC</dd>
+        <dt>License:</dt><dd>NJ HIC #13VH10808800</dd>
+        <dt>Address:</dt><dd>325 E. Jimmie Leeds Road, Suite 7-333, Galloway, NJ 08205</dd>
+        <dt>Email:</dt><dd><a href="mailto:info@tillerstead.com">info@tillerstead.com</a></dd>
+        <dt>Phone:</dt><dd><a href="tel:+16098628808">(609) 862-8808</a></dd>
+      </dl>
+    </aside>
+  </div>
+</section>

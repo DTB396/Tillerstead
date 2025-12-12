@@ -1,0 +1,38 @@
+---
+layout: default
+title: "Reviews & Testimonials"
+description: "Verified tile, remodel, and property-upkeep reviews for Tillerstead in South Jersey."
+permalink: /reviews/
+body_class: page-reviews
+hero_eyebrow: Verified Client Feedback
+hero_title: Reviews & Testimonials
+hero_summary: >
+  Real reviews pulled from live platforms like Thumbtack so you can see how Tillerstead works with homeowners,
+  landlords, and project partners across South Jersey.
+
+<header class="section-header" aria-label="Reviews intro">
+  <p class="eyebrow">Live social proof</p>
+  <h2 class="heading-2">What to expect when you hire Tillerstead</h2>
+  <p class="lead">
+    These testimonials pull directly from public sources like Thumbtack to keep the feedback transparent and current.
+    Run <code>node scripts/sync_thumbtack_reviews.js</code> to refresh the data file before publishing.
+  </p>
+</header>
+
+{% include ts-testimonials.html
+  heading="What clients say about Tillerstead"
+  eyebrow="Verified Reviews"
+%}
+
+<section class="review-cta" aria-label="See more reviews">
+  <div class="ts-card card card--review">
+    <h3>See the latest on Thumbtack</h3>
+    <p>
+      Thumbtack hosts badges, photos, and fresh ratings as projects are completed. Visit the live profile for the most
+      up-to-date details, or run the sync script to pull them here.
+    </p>
+    <a class="btn btn--primary" href="https://www.thumbtack.com/nj/absecon/tile/tillerstead-llc/service/547437618353160199" target="_blank" rel="noopener">
+      View Thumbtack profile
+    </a>
+  </div>
+</section>

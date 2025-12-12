@@ -1,0 +1,100 @@
+﻿{% assign summary = include.summary | default: page.services_summary | default: 'Every scope starts with layout math, flood-tested waterproofing, and photos you can hand to a lender, tenant, or GC. No shortcuts, no sliver tiles unless the plan leaves no other choice.' %}
+{% assign services = include.services | default: page.services | default: site.data.services.services %}
+{% assign services_gallery = include.gallery | default: page.services_gallery %}
+
+{%- comment -%}
+  CORE CAPABILITIES section for Tillerstead homepage.
+  Supports:
+  - String format: "paint|Title|Description|/url|Tagline|Details"
+  - Object format: { "icon": "...", "title": "...", "description": "...", "url": "...", "tagline": "...", "details": "..." }
+{%- endcomment -%}
+
+<section class="ts-services ts-section" aria-labelledby="ts-services-title">
+  <div class="container">
+    <header class="ts-services__header">
+      <p class="eyebrow text-accent">Precise layouts & tight, waterproof tile assemblies</p>
+      <h2 id="ts-services-title" class="heading-2 text-primary">
+        Precise tile installations for homeowners, landlords &amp; partner contractors.
+      </h2>
+      <p class="lead">{{ summary }}</p>
+    </header>
+
+    {% if services and services != empty %}
+      <ul class="ts-services__grid" role="list">
+        {% for raw in services %}
+          {%- assign service_tagline = raw.tagline -%}
+          {%- assign service_details = raw.details | default: raw.points -%}
+
+          {%- if raw contains '|' -%}
+            {%- assign parts = raw | split: '|' -%}
+            {%- assign service_icon_key   = parts[0] | strip -%}
+            {%- assign service_title      = parts[1] | strip -%}
+            {%- assign service_description= parts[2] | strip -%}
+            {%- assign service_url        = parts[3] | strip -%}
+            {%- if parts.size > 4 -%}
+              {%- assign service_tagline = parts[4] | strip -%}
+            {%- endif -%}
+            {%- if parts.size > 5 -%}
+              {%- assign service_details = parts[5] | strip -%}
+            {%- endif -%}
+          {%- else -%}
+            {%- assign service_icon_key   = raw.icon -%}
+            {%- assign service_title      = raw.title -%}
+            {%- assign service_description= raw.description -%}
+            {%- assign service_url        = raw.url -%}
+          {%- endif -%}
+
+          {%- assign service_details_list = service_details -%}
+          {%- if service_details_list and service_details_list contains '|' -%}
+            {%- assign service_details_list = service_details_list | split: '|' -%}
+          {%- elsif service_details_list and service_details_list contains ';' -%}
+            {%- assign service_details_list = service_details_list | split: ';' -%}
+          {%- elsif service_details_list and service_details_list contains ',' -%}
+            {%- assign service_details_list = service_details_list | split: ',' -%}
+          {%- endif -%}
+
+          <li>
+            {% include ts-service-card.html
+              icon=service_icon_key
+              title=service_title
+              description=service_description
+              tagline=service_tagline
+              details=service_details_list
+              url=service_url %}
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
+    <nav class="ts-services__actions" aria-label="Service actions">
+      <a class="btn btn--primary" href="/contact/">Book a waterproofing walkthrough</a>
+      <a class="btn btn--ghost" href="/portfolio/">Review recent math &amp; installs</a>
+    </nav>
+
+    <p class="ts-services__note">
+      TCNA-guided installs, daily documentation, and respectful job-sites from demo through punch.
+    </p>
+
+    {% if services_gallery %}
+      <div class="ts-services__gallery" aria-label="Recent tile work examples">
+        {% for photo in services_gallery %}
+          <figure class="ts-services__photo">
+            <img src="{{ photo.src | relative_url }}" alt="{{ photo.alt | default: 'Tile installation detail' }}">
+            {% if photo.caption %}
+              <figcaption>{{ photo.caption }}</figcaption>
+            {% endif %}
+          </figure>
+        {% endfor %}
+      </div>
+    {% else %}
+      <div class="ts-services__gallery" aria-label="Recent tile work examples">
+        <figure class="ts-services__photo">
+          <img src="{{ '/assets/img/tillerstead-work/bathrooms/bathroom-marble-shower-niche.jpg' | relative_url }}"
+               alt="Marble-look shower with mosaic niche and window returns.">
+          <figcaption>Curbless shower rebuild with sealed shelf, window trims, and waterproof proof photos.</figcaption>
+        </figure>
+             </div>
+    {% endif %}
+  </div>
+</section>
+

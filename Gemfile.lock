@@ -1,0 +1,18 @@
+PATH
+  remote: vendor/gems/jekyll
+  specs:
+    jekyll (999.0.0)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+
+PLATFORMS
+  x64-mingw-ucrt
+  x86_64-linux
+
+DEPENDENCIES
+  jekyll!
+
+BUNDLED WITH
+   2.4.19

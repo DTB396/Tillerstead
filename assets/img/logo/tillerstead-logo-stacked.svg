@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 320" role="img" aria-label="Tillerstead stacked logo">
+  <style>
+    .logo-tile{fill:#0d3b2c;stroke:#c99a3f;stroke-width:9;stroke-linejoin:round;stroke-linecap:round}
+    .logo-word{fill:#0d3b2c;font:800 32px 'Inter','Manrope',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;letter-spacing:1.2px;text-anchor:middle}
+    .logo-sub{fill:#0d3b2c;font:600 14px 'Inter','Manrope',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;opacity:.9;text-anchor:middle}
+    .logo-sub-small{font-size:12px}
+  </style>
+  <g class="logo-mark" transform="translate(58 24)">
+    <rect class="logo-tile" x="0" y="0" width="36" height="36" rx="6" />
+    <rect class="logo-tile" x="50" y="0" width="36" height="36" rx="6" />
+    <rect class="logo-tile" x="100" y="0" width="36" height="36" rx="6" />
+    <rect class="logo-tile" x="50" y="50" width="36" height="36" rx="6" />
+    <rect class="logo-tile" x="50" y="100" width="36" height="36" rx="6" />
+  </g>
+  <text class="logo-word" x="130" y="204">TILLERSTEAD</text>
+  <text class="logo-sub" x="130" y="234">Tile • Remodeling • Property Maintenance</text>
+  <text class="logo-sub logo-sub-small" x="130" y="258">NJ Licensed HIC #13VH10808800</text>
+</svg>
