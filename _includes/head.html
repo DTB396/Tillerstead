@@ -51,6 +51,28 @@
 <!-- Performance: Preload critical assets -->
 <link rel="preload" as="image" href="{{ '/assets/img/logo/tillerstead-logo-header.svg' | relative_url }}" fetchpriority="high">
 <link rel="preload" as="style" href="{{ '/assets/css/main.css' | relative_url }}">
+
+{% comment %}
+  Preload hero image for improved LCP across pages.
+  Priority order:
+  1) Use page.hero_project.src when provided in front-matter
+  2) For homepage, use default bathroom marble floor finish
+{% endcomment %}
+{% assign preload_hero = nil %}
+{% if page.hero_project and page.hero_project.src %}
+  {% assign preload_hero = page.hero_project.src %}
+{% elsif page.url == '/' or page.is_home %}
+  {% assign preload_hero = '/assets/img/tillerstead-work/bathrooms/bathroom-marble-floor-finish.jpg' %}
+{% endif %}
+{% if preload_hero %}
+  {% assign preload_hero_webp = preload_hero | replace: '.jpg', '.webp' %}
+  <link rel="preload"
+        as="image"
+        href="{{ preload_hero | relative_url }}"
+        imagesrcset="{{ preload_hero_webp | relative_url }} 1x"
+        imagesizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 1200px"
+        fetchpriority="high">
+{% endif %}
 {% assign hero_preload_image = page.hero_image | default: site.hero_default_image | default: site.default_og_image %}
 {% if (page.is_home or page.hero_image) and hero_preload_image %}
   <link rel="preload" as="image" href="{{ hero_preload_image | relative_url }}" fetchpriority="high">

@@ -43,7 +43,7 @@
 
       {% if hero_eyebrow %}<p class="ts-hero__eyebrow">{{ hero_eyebrow }}</p>{% endif %}
 
-      <h1 id="home-hero-title" class="ts-hero__title">{{ hero_title }}</h1>
+        <h1 id="home-hero-title" class="ts-hero__title">{{ hero_title }}</h1>
 
       {% if hero_summary %}
         <p class="ts-hero__lede">{{ hero_summary }}</p>
@@ -86,7 +86,7 @@
     <aside class="ts-hero__aside" aria-label="Tile specialist highlights">
       <figure class="ts-hero__project">
         <img src="{{ hero_project_img }}"
-          alt="{{ hero_project_alt }}"
+          alt="{{ hero_project_alt | default: 'Marble bathroom floor finish by Tillerstead' }}"
           loading="eager" fetchpriority="high" decoding="async" width="1200" height="800">
         {% if hero_project_caption %}
           <figcaption>{{ hero_project_caption }}</figcaption>
