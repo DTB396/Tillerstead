@@ -109,6 +109,7 @@ let reconverted = 0;
 
     try {
       await sharp(file)
+        .rotate()
         .webp({ quality: QUALITY, effort: 4 })
         .toFile(out);
       if (exists && FORCE) {

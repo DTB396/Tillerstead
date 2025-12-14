@@ -1,4 +1,10 @@
-﻿highlights:
+highlights:
+  - file: "/assets/img/tillerstead-work/bathrooms/bathroom-remodel-finished.webp"
+    alt: "Finished bathroom remodel with tile shower, marble trim, and curated fixtures"
+    category: "Remodels"
+    title: "Full Bathroom Remodel"
+    desc: "Waterproof tile, polished stone, and curated hardware ready for the client walkthrough."
+    ar: "4/3"
   - file: "/assets/img/tillerstead-work/bathrooms/bathroom-marble-floor-finish.jpg"
     alt: "Finished marble-look bathroom with curbless shower entry"
     category: "Showers"
@@ -23,4 +29,3 @@
     title: "Waterproof Floor Prep"
     desc: "Ditra membrane bonded to the slab with layout snapped before the first tile is set."
     ar: "4/3"
-

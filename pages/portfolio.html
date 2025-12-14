@@ -26,6 +26,7 @@ hero_summary: >
     <button class="chip" role="tab" aria-selected="false" data-filter="showers">Showers</button>
     <button class="chip" role="tab" aria-selected="false" data-filter="backsplashes">Backsplashes</button>
     <button class="chip" role="tab" aria-selected="false" data-filter="floors">Floors</button>
+    <button class="chip" role="tab" aria-selected="false" data-filter="remodels">Remodels</button>
     <button class="chip" role="tab" aria-selected="false" data-filter="repairs">Repairs</button>
   </div>
 
@@ -102,6 +103,7 @@ const PROJECTS = {{ projects | jsonify | replace: '</', '<\/'} };
     showers: 'Showers & wet areas',
     backsplashes: 'Backsplashes',
     floors: 'Floors & large-format tile',
+    remodels: 'Remodels & full bathroom scopes',
     repairs: 'Repairs & punchlist rescue'
   };
 
@@ -263,4 +265,3 @@ const PROJECTS = {{ projects | jsonify | replace: '</', '<\/'} };
   setFilter(initialFilter);
 })();
 </script>
-

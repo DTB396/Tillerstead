@@ -73,6 +73,31 @@ projects:
     file_webp: tillerstead-work/bathrooms/bathroom-threshold-leveling-progress.webp
     alt: Threshold marble being leveled between tile and carpet
     caption: "Threshold control - custom stone, laser checks, and clean transition to carpet."
+  - id: remodel-progress-1
+    tags:
+      - remodels
+      - showers
+    file: tillerstead-work/bathrooms/bathroom-remodel-progress-1.webp
+    file_webp: tillerstead-work/bathrooms/bathroom-remodel-progress-1.webp
+    alt: Remodel prep work with walls cleared to studs and plumbing roughed in
+    caption: "Demo & prep - walls stripped, plumbing roughed, and layout lines locked before tile."
+  - id: remodel-progress-2
+    tags:
+      - remodels
+      - floors
+    file: tillerstead-work/bathrooms/bathroom-remodel-progress-2.webp
+    file_webp: tillerstead-work/bathrooms/bathroom-remodel-progress-2.webp
+    alt: Subfloor materials, membranes, and layout strings in a remodel scope
+    caption: "Subfloor prep - membranes fastened, level checks complete, and tile layout snapped."
+  - id: remodel-finished
+    tags:
+      - remodels
+      - showers
+      - floors
+    file: tillerstead-work/bathrooms/bathroom-remodel-finished.webp
+    file_webp: tillerstead-work/bathrooms/bathroom-remodel-finished.webp
+    alt: Finished bathroom remodel with tile shower, marble trim, and curated fixtures
+    caption: "Finished remodel - waterproof tile, polished stone, and hardware ready for commissioning."
   - id: ceiling-repair
     tags:
       - repairs
@@ -80,5 +105,4 @@ projects:
     file_webp: tillerstead-work/repairs/ceiling-repair.webp
     alt: Finished ceiling repair with skimmed patch
     caption: "Ceiling repair - patched, skimmed, and sanded for paint."
-
 

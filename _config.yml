@@ -55,7 +55,7 @@ company:
 logo: /assets/img/logo/tillerstead-logo-header.svg
 # Use existing project imagery for social + hero preloads
 default_og_image: /assets/img/social/tillerstead-showcase.jpg
-hero_default_image: /assets/img/tillerstead-work/bathrooms/bathroom-accent-wall-and-shower.jpg
+hero_default_image: /assets/img/tillerstead-work/bathrooms/bathroom-remodel-finished.webp
 
 # Cache-busting helper
 assets_version: "2025-11-23.1"
