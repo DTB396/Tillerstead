@@ -1,4 +1,3 @@
-cat << 'EOF' > scripts/reset_github_actions.sh
 #!/usr/bin/env bash
 set -euo pipefail
 
@@ -29,4 +28,3 @@ gh api \
 
 echo "GitHub Actions history cleared."
 echo "NOTE: This does not modify code or workflows."
-EOF
