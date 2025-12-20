@@ -259,6 +259,9 @@
   font-style: italic;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .ts-card {
     transition: none !important;
   }
 
