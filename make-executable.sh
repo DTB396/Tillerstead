@@ -1,9 +1,9 @@
 #!/bin/bash
 # Make build scripts executable
 
-chmod +x /workspaces/Tillerstead/rebuild.sh
-chmod +x /workspaces/Tillerstead/quick-build.sh
-chmod +x /workspaces/Tillerstead/scripts/generate-png-logos.js
+chmod +x /workspaces/Tillerstead-live/rebuild.sh
+chmod +x /workspaces/Tillerstead-live/quick-build.sh
+chmod +x /workspaces/Tillerstead-live/scripts/generate-png-logos.js
 
 echo "✅ Scripts are now executable"
 echo ""
