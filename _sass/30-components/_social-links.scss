@@ -7,8 +7,8 @@
 .social-links {
   --social-pill-size: 2.5rem;
   --social-gap: 0.75rem;
-  --social-border: var(--ts-color-border-strong, rgba(12, 40, 54, 0.2));
-  --social-bg: var(--ts-color-surface-elevated, rgba(255, 255, 255, 0.9));
+  --social-border: var(--ts-color-border-strong, rgb(12, 40, 54, 0.2));
+  --social-bg: var(--ts-color-surface-elevated, rgb(255, 255, 255, 0.9));
   --social-icon-color: var(--ts-color-heading, #12212c);
 
   display: inline-flex;
@@ -65,7 +65,7 @@
   border-color: var(--ts-color-primary);
   color: var(--ts-color-primary);
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(13, 154, 170, 0.15);
+  box-shadow: 0 8px 20px rgb(13, 154, 170, 0.15);
 }
 
 .social-icon {
@@ -76,17 +76,17 @@
 
 /* Header context: High-contrast for navigation bar */
 .social-links--header {
-  --social-border: rgba(255, 255, 255, 0.3);
-  --social-bg: rgba(255, 255, 255, 0.1);
+  --social-border: rgb(255, 255, 255, 0.3);
+  --social-bg: rgb(255, 255, 255, 0.1);
   --social-icon-color: var(--ts-white, #ffffff);
 }
 
 .social-links--header .social-link:hover,
 .social-links--header .social-link:focus-visible {
-  background: rgba(255, 255, 255, 0.25);
-  border-color: rgba(255, 255, 255, 0.6);
+  background: rgb(255, 255, 255, 0.25);
+  border-color: rgb(255, 255, 255, 0.6);
   color: var(--ts-white);
-  box-shadow: 0 6px 16px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 6px 16px rgb(255, 255, 255, 0.2);
 }
 
 /* Drawer / mobile navigation context */
@@ -103,26 +103,26 @@
   .social-link {
    --social-bg: var(--ts-color-surface, #ffffff);
    --social-icon-color: var(--ts-color-heading, #12212c);
-   --social-border: var(--ts-color-border-strong, rgba(12, 40, 54, 0.2));
+   --social-border: var(--ts-color-border-strong, rgb(12, 40, 54, 0.2));
   }
 }
 
 /* Footer context: Brand-compliant styling */
 .social-links--footer {
-  --social-border: rgba(255, 255, 255, 0.35);
-  --social-bg: rgba(255, 255, 255, 0.1);
-  --social-icon-color: rgba(255, 255, 255, 0.9);
+  --social-border: rgb(255, 255, 255, 0.35);
+  --social-bg: rgb(255, 255, 255, 0.1);
+  --social-icon-color: rgb(255, 255, 255, 0.9);
 
   margin-top: 1rem;
 }
 
 .social-links--footer .social-link:hover,
 .social-links--footer .social-link:focus-visible {
-  background: rgba(127, 209, 255, 0.25);
-  border-color: rgba(127, 209, 255, 0.6);
+  background: rgb(127, 209, 255, 0.25);
+  border-color: rgb(127, 209, 255, 0.6);
   color: #7fd1ff;
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(127, 209, 255, 0.3);
+  box-shadow: 0 6px 16px rgb(127, 209, 255, 0.3);
 }
 
 /* Responsive sizing */

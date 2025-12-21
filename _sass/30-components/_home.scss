@@ -42,12 +42,16 @@
   margin-top: clamp(1.25rem, 2.2vw, 2rem);
 }
 
-/* Hero (home) — keep text dark, accents emerald */
+/* Hero (home) — integrates with premium hero base styles */
 .page-home .ts-hero {
-  background: transparent;
+  /* Remove background override to use premium SVG pattern */
+
+  /* background: transparent; */
   color: var(--ts-color-text);
-  padding: 0;
-  display: block;
+
+  /* padding: 0; - Let premium hero handle padding */
+
+  /* display: block; - Let premium hero handle display */
 }
 
 .page-home .ts-hero__inner {

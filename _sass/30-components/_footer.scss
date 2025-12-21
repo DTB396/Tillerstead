@@ -8,7 +8,7 @@
   color: var(--footer-text, #f7fafc);
   padding-block: clamp(2.25rem, 5vw, 4rem);
   padding-inline: clamp(1.25rem, 4vw, 2.5rem);
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  border-top: 1px solid rgb(255, 255, 255, 0.12);
   line-height: 1.7;
 }
 
@@ -66,12 +66,12 @@
 .site-footer.ts-footer .footer-license-badge {
   font-size: 0.75rem;
   margin: 0;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgb(255, 255, 255, 0.85);
 }
 
 .site-footer.ts-footer .footer-desc {
   margin: 1rem 0 0;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgb(255, 255, 255, 0.9);
   font-size: 0.95rem;
   line-height: 1.6;
 }
@@ -103,7 +103,7 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: rgba(255, 255, 255, 0.95);
+  color: rgb(255, 255, 255, 0.95);
   margin: 0 0 0.5rem;
 }
 
@@ -121,7 +121,7 @@
 }
 
 .site-footer.ts-footer .footer-link {
-  color: rgba(255, 255, 255, 0.88);
+  color: rgb(255, 255, 255, 0.88);
   font-weight: 400;
   text-decoration: none;
   transition: color var(--transition-fast);
@@ -140,7 +140,7 @@
 .site-footer.ts-footer .footer-link--phone,
 .site-footer.ts-footer .footer-link--email {
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.95);
+  color: rgb(255, 255, 255, 0.95);
   word-break: break-all;
 }
 
@@ -160,7 +160,7 @@
 
 .site-footer.ts-footer address {
   font-style: normal;
-  color: rgba(255, 255, 255, 0.88);
+  color: rgb(255, 255, 255, 0.88);
   line-height: 1.7;
   word-break: break-word;
 }
@@ -176,22 +176,22 @@
 
 .site-footer.ts-footer .footer-subnote {
   margin: 1rem 0 0;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgb(255, 255, 255, 0.8);
   font-size: 0.875rem;
   line-height: 1.6;
 }
 
 .site-footer.ts-footer .footer-subnote strong {
-  color: rgba(255, 255, 255, 0.95);
+  color: rgb(255, 255, 255, 0.95);
 }
 
 /* Footer Bottom */
 .site-footer.ts-footer .footer-bottom {
   margin-top: clamp(2rem, 4vw, 3rem);
   padding-top: 1.5rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  border-top: 1px solid rgb(255, 255, 255, 0.12);
   text-align: center;
-  color: rgba(255, 255, 255, 0.92);
+  color: rgb(255, 255, 255, 0.92);
   font-size: 0.875rem;
 }
 
@@ -201,7 +201,7 @@
 
 .site-footer.ts-footer .footer-licensing {
   margin: 0 0 1rem;
-  color: rgba(255, 255, 255, 0.95);
+  color: rgb(255, 255, 255, 0.95);
   font-size: 0.9rem;
   line-height: 1.7;
   
@@ -213,7 +213,7 @@
 
 .site-footer.ts-footer .footer-compliance-note {
   margin: 0 0 1rem;
-  color: rgba(255, 255, 255, 0.88);
+  color: rgb(255, 255, 255, 0.88);
   font-size: 0.85rem;
   line-height: 1.6;
   
@@ -233,7 +233,7 @@
 .site-footer.ts-footer .footer-legal-note {
   margin: 0.5rem 0 1rem;
   font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.88);
+  color: rgb(255, 255, 255, 0.88);
   
   small {
     color: inherit;
@@ -245,7 +245,7 @@
 }
 
 .site-footer.ts-footer .footer-bottom .footer-link {
-  color: rgba(255, 255, 255, 0.85);
+  color: rgb(255, 255, 255, 0.85);
   margin: 0 0.5rem;
   font-weight: 500;
   text-decoration: underline dotted;

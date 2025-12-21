@@ -205,8 +205,8 @@
   /* Depth gradient (cards, surfaces) */
   --gradient-depth: linear-gradient(
     180deg,
-    rgba(255, 255, 255, 0.05) 0%,
-    rgba(255, 255, 255, 0) 100%
+    rgb(255, 255, 255, 0.05) 0%,
+    rgb(255, 255, 255, 0) 100%
   );
 
   /* Applied gradients */
