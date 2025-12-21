@@ -33,11 +33,11 @@ function scanFile(filePath) {
       definitions: [],
       usages: []
     };
-    
+
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
       const lineNum = i + 1;
-      
+
       // Find definitions: --prop:
       const defMatch = line.match(/^\s*(--[a-z][a-z0-9-]*)\s*:/);
       if (defMatch) {
@@ -46,9 +46,9 @@ function scanFile(filePath) {
           results.definitions.push({ line: lineNum, prop: propName, text: line.trim() });
         }
       }
-      
+
       // Find usages: var(--prop)
-      const varMatches = line.matchAll(/var\((--[a-z][a-z0-9-]*)[,\)]/g);
+      const varMatches = line.matchAll(/var\((--[a-z][a-z0-9-]*)[,)]/g);
       for (const match of varMatches) {
         const propName = match[1];
         if (!hasValidPrefix(propName)) {
@@ -56,7 +56,7 @@ function scanFile(filePath) {
         }
       }
     }
-    
+
     return results;
   } catch (err) {
     console.error(`Error scanning ${filePath}:`, err.message);
@@ -75,7 +75,7 @@ async function main() {
 
   try {
     const scssFiles = await glob('**/*.scss', { cwd: sassDir, absolute: true });
-    
+
     console.log(`Scanning ${scssFiles.length} SCSS files...\n`);
 
     const allDefinitions = new Map();
@@ -85,10 +85,10 @@ async function main() {
     for (const file of scssFiles) {
       const results = scanFile(file);
       const relativePath = path.relative(sassDir, file);
-      
+
       if (results.definitions.length > 0 || results.usages.length > 0) {
         fileResults.push({ file: relativePath, ...results });
-        
+
         // Collect unique properties
         results.definitions.forEach(d => {
           if (!allDefinitions.has(d.prop)) {
@@ -96,7 +96,7 @@ async function main() {
           }
           allDefinitions.get(d.prop).push({ file: relativePath, line: d.line });
         });
-        
+
         results.usages.forEach(u => {
           if (!allUsages.has(u.prop)) {
             allUsages.set(u.prop, []);
@@ -108,7 +108,7 @@ async function main() {
 
     // Report
     console.log('═══════════════════════════════════════════════════\n');
-    console.log(`📊 SUMMARY:`);
+    console.log('📊 SUMMARY:');
     console.log(`   Files with issues: ${fileResults.length}`);
     console.log(`   Unique unprefixed definitions: ${allDefinitions.size}`);
     console.log(`   Unique unprefixed usages: ${allUsages.size}`);
@@ -126,7 +126,7 @@ async function main() {
     fileResults.slice(0, 15).forEach(({ file, definitions, usages }) => {
       const total = definitions.length + usages.length;
       console.log(`\n${file} (${total} violations)`);
-      
+
       if (definitions.length > 0) {
         console.log(`  Definitions (${definitions.length}):`);
         definitions.slice(0, 5).forEach(d => {
@@ -134,7 +134,7 @@ async function main() {
         });
         if (definitions.length > 5) console.log(`    ... and ${definitions.length - 5} more`);
       }
-      
+
       if (usages.length > 0) {
         console.log(`  Usages (${usages.length}):`);
         const uniqueUsages = [...new Set(usages.map(u => u.prop))];
@@ -152,7 +152,7 @@ async function main() {
 
     console.log('\n\n═══════════════════════════════════════════════════');
     console.log('Run: npm run lint:css for full stylelint report');
-    
+
   } catch (err) {
     console.error('✗ Scan failed:', err.message);
     process.exit(1);

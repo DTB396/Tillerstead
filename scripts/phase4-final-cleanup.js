@@ -19,7 +19,7 @@ const sassDir = path.resolve(__dirname, '..', '_sass');
 function fixColorFunctions(content) {
   let fixed = 0;
   let updated = content;
-  
+
   // Modern space-separated rgb with slash alpha: rgb(r g b / a) → rgb(r, g, b, a)
   const modernRgbPattern = /rgb\((\d+)\s+(\d+)\s+(\d+)\s*\/\s*([\d.]+)\)/g;
   const rgbMatches = updated.match(modernRgbPattern);
@@ -27,7 +27,7 @@ function fixColorFunctions(content) {
     updated = updated.replace(modernRgbPattern, 'rgb($1, $2, $3, $4)');
     fixed += rgbMatches.length;
   }
-  
+
   // Modern space-separated hsl with slash alpha: hsl(h s l / a) → hsl(h, s, l, a)
   const modernHslPattern = /hsl\(([\d.]+)\s+([\d.]+%)\s+([\d.]+%)\s*\/\s*([\d.]+)\)/g;
   const hslMatches = updated.match(modernHslPattern);
@@ -35,7 +35,7 @@ function fixColorFunctions(content) {
     updated = updated.replace(modernHslPattern, 'hsl($1, $2, $3, $4)');
     fixed += hslMatches.length;
   }
-  
+
   return { content: updated, fixed };
 }
 
@@ -44,7 +44,7 @@ function fixColorFunctions(content) {
  */
 function fixKeyframeNames(content) {
   let fixed = 0;
-  
+
   const keyframeMap = {
     'fadeInUp': 'fade-in-up',
     'fadeIn': 'fade-in',
@@ -54,7 +54,7 @@ function fixKeyframeNames(content) {
     'zoomIn': 'zoom-in',
     'zoomOut': 'zoom-out'
   };
-  
+
   for (const [oldName, newName] of Object.entries(keyframeMap)) {
     // Fix @keyframes definition
     const keyframesRegex = new RegExp(`@keyframes\\s+${oldName}\\b`, 'g');
@@ -62,7 +62,7 @@ function fixKeyframeNames(content) {
       content = content.replace(keyframesRegex, `@keyframes ${newName}`);
       fixed++;
     }
-    
+
     // Fix animation property usage
     const animationRegex = new RegExp(`(animation(?:-name)?:\\s*)${oldName}\\b`, 'g');
     if (animationRegex.test(content)) {
@@ -70,7 +70,7 @@ function fixKeyframeNames(content) {
       fixed++;
     }
   }
-  
+
   return { content, fixed };
 }
 
@@ -79,15 +79,15 @@ function fixKeyframeNames(content) {
  */
 function fixAriaProperties(content) {
   let fixed = 0;
-  
+
   // These are valid CSS pseudo-classes but stylelint doesn't recognize them
   // We'll add stylelint-disable comments for these
   const lines = content.split('\n');
   const newLines = [];
-  
+
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i];
-    
+
     // Check if line has aria-hidden or aria-live as CSS property
     if (line.match(/^\s+(aria-hidden|aria-live):\s*/)) {
       // Add disable comment before the line
@@ -95,14 +95,14 @@ function fixAriaProperties(content) {
       newLines.push(`${indent}/* stylelint-disable-next-line property-no-unknown */`);
       fixed++;
     }
-    
+
     newLines.push(line);
   }
-  
+
   if (fixed > 0) {
     content = newLines.join('\n');
   }
-  
+
   return { content, fixed };
 }
 
@@ -114,26 +114,26 @@ function processFile(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     const originalContent = content;
     let totalFixed = 0;
-    
+
     // Apply all fixes
     const colorResult = fixColorFunctions(content);
     content = colorResult.content;
     totalFixed += colorResult.fixed;
-    
+
     const keyframeResult = fixKeyframeNames(content);
     content = keyframeResult.content;
     totalFixed += keyframeResult.fixed;
-    
+
     const ariaResult = fixAriaProperties(content);
     content = ariaResult.content;
     totalFixed += ariaResult.fixed;
-    
+
     // Write back if changed
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
       return totalFixed;
     }
-    
+
     return 0;
   } catch (err) {
     console.error(`Error processing ${filePath}:`, err.message);
@@ -152,7 +152,7 @@ async function main() {
 
   try {
     const scssFiles = await glob('**/*.scss', { cwd: sassDir, absolute: true });
-    
+
     console.log(`Processing ${scssFiles.length} SCSS files...\n`);
 
     let totalFixed = 0;

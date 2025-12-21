@@ -23,42 +23,42 @@ const themeFiles = [
  */
 function getPrefix(propName) {
   const prop = propName.replace(/^--/, '');
-  
+
   // Skip if already prefixed
   if (prop.match(/^(ts-|tiller-|color-|spacing-|font-|z-|breakpoint-)/)) {
     return null;
   }
-  
+
   // Typography (including text size scale)
   if (prop.match(/^(text-|heading|line|letter|weight|family)/)) {
     return 'font-';
   }
-  
+
   // Color-like properties (comprehensive)
   if (prop.match(/^(neon|sunset|hot|lime|electric|cyber|cool|brand|warm|navy|cartoon|comic|bubble|golden|success|attention|warning|danger|error|info|retro|pow|boom|zap|shadow-|gradient|bg-|pattern|surface-|alert|slate)/)) {
     return 'color-';
   }
-  
+
   // Layout
   if (prop.match(/^(layout|container-|shell)/)) {
     return 'tiller-';
   }
-  
+
   // Effects and outlines
   if (prop.match(/^(shadow-|radius|ease|duration|outline)/)) {
     return 'tiller-';
   }
-  
+
   // Spacing (including hero, section, card)
   if (prop.match(/^(space-|container|gap|flow|stack|cluster|hero-|section-|card-)/)) {
     return 'spacing-';
   }
-  
+
   // Transitions
   if (prop.match(/^transition/)) {
     return 'tiller-';
   }
-  
+
   return null;
 }
 
@@ -70,16 +70,14 @@ function fixThemeFile(filePath) {
     const content = fs.readFileSync(filePath, 'utf8');
     const lines = content.split('\n');
     let changed = 0;
-    
+
     const newLines = lines.map(line => {
       // Match property definition
       const match = line.match(/^(\s*)(--[a-z][a-z0-9-]*)(\s*:)/);
       if (match) {
-        const indent = match[1];
         const propName = match[2];
-        const colon = match[3];
         const prefix = getPrefix(propName);
-        
+
         if (prefix) {
           const newPropName = `--${prefix}${propName.substring(2)}`;
           changed++;
@@ -88,11 +86,11 @@ function fixThemeFile(filePath) {
       }
       return line;
     });
-    
+
     if (changed > 0) {
       fs.writeFileSync(filePath, newLines.join('\n'), 'utf8');
     }
-    
+
     return changed;
   } catch (err) {
     console.error(`Error fixing ${filePath}:`, err.message);
@@ -110,7 +108,7 @@ function main() {
   console.log('╚════════════════════════════════════════════════════╝\n');
 
   let total = 0;
-  
+
   for (const file of themeFiles) {
     if (fs.existsSync(file)) {
       const fixed = fixThemeFile(file);
@@ -122,9 +120,9 @@ function main() {
     }
   }
 
-  console.log(`\n╔════════════════════════════════════════════════════╗`);
-  console.log(`║  Fix Complete                                      ║`);
-  console.log(`╚════════════════════════════════════════════════════╝`);
+  console.log('\n╔════════════════════════════════════════════════════╗');
+  console.log('║  Fix Complete                                      ║');
+  console.log('╚════════════════════════════════════════════════════╝');
   console.log(`  Total definitions fixed: ${total}\n`);
   console.log('Next: npm run lint:css');
 }

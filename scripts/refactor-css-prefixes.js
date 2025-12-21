@@ -80,7 +80,7 @@ function refactorFile(filePath) {
       // Match both definitions (--prop:) and usages (var(--prop))
       const defRegex = new RegExp(`\\b${oldProp.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}:`, 'g');
       const varRegex = new RegExp(`var\\(${oldProp.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\)`, 'g');
-      
+
       if (defRegex.test(content) || varRegex.test(content)) {
         content = content.replace(defRegex, `${newProp}:`);
         content = content.replace(varRegex, `var(${newProp})`);
@@ -110,7 +110,7 @@ async function main() {
   try {
     // Find all SCSS files
     const scssFiles = await glob('**/*.scss', { cwd: sassDir, absolute: true });
-    
+
     console.log(`Found ${scssFiles.length} SCSS files\n`);
 
     let totalChanges = 0;
@@ -124,8 +124,8 @@ async function main() {
       }
     }
 
-    console.log(`\n========================================`);
-    console.log(`✓ Refactor Complete`);
+    console.log('\n========================================');
+    console.log('✓ Refactor Complete');
     console.log(`  Files modified: ${filesModified}/${scssFiles.length}`);
     console.log(`  Total property updates: ${totalChanges}`);
   } catch (err) {

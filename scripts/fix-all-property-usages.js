@@ -26,10 +26,10 @@ const propertyMappings = {
   '--social-instagram': '--tiller-social-instagram',
   '--social-youtube': '--tiller-social-youtube',
   '--social-yelp': '--tiller-social-yelp',
-  
+
   // Layout
   '--layout-max': '--spacing-layout-max',
-  
+
   // Tokens - gradients and patterns
   '--gradient-primary': '--tiller-gradient-primary',
   '--gradient-accent': '--tiller-gradient-accent',
@@ -38,7 +38,7 @@ const propertyMappings = {
   '--bg-pattern': '--color-bg-pattern',
   '--bg-pattern-size': '--color-bg-pattern-size',
   '--bg-pattern-opacity': '--color-bg-pattern-opacity',
-  
+
   // 90s theme colors
   '--neon-teal-50': '--color-neon-teal-50',
   '--neon-teal-100': '--color-neon-teal-100',
@@ -86,7 +86,7 @@ const propertyMappings = {
   '--cool-gray-700': '--color-cool-gray-700',
   '--cool-gray-800': '--color-cool-gray-800',
   '--cool-gray-900': '--color-cool-gray-900',
-  
+
   // Comic/cartoon patterns
   '--comic-dot-pattern': '--tiller-comic-dot-pattern',
   '--comic-outline-thick': '--tiller-comic-outline-thick',
@@ -95,7 +95,7 @@ const propertyMappings = {
   '--bubble-bg': '--color-bubble-bg',
   '--bubble-border': '--color-bubble-border',
   '--bubble-shadow': '--color-bubble-shadow',
-  
+
   // Cartoon theme
   '--cartoon-blue-light': '--tiller-cartoon-blue-light',
   '--cartoon-blue': '--tiller-cartoon-blue',
@@ -114,7 +114,7 @@ const propertyMappings = {
   '--cartoon-pink': '--tiller-cartoon-pink',
   '--cartoon-outline': '--tiller-cartoon-outline',
   '--cartoon-shadow': '--tiller-cartoon-shadow',
-  
+
   // Hybrid theme
   '--brand-teal-50': '--tiller-brand-teal-50',
   '--brand-teal-100': '--tiller-brand-teal-100',
@@ -133,9 +133,9 @@ function generateNumberedMappings() {
     { base: '--warm-gray', prefix: 'color' },
     { base: '--navy', prefix: 'color' },
   ];
-  
+
   const numbers = [50, 100, 200, 300, 400, 500, 600, 700, 800, 900];
-  
+
   for (const { base, prefix } of patterns) {
     for (const num of numbers) {
       propertyMappings[`${base}-${num}`] = `--${prefix}-${base.substring(2)}-${num}`;
@@ -152,24 +152,24 @@ function fixFileUsages(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let changesMade = 0;
-    
+
     for (const [oldProp, newProp] of Object.entries(propertyMappings)) {
       const escapedOld = oldProp.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-      
+
       // Fix var(--old) references
       const varRegex = new RegExp(`var\\(${escapedOld}([,\\)])`, 'g');
-      
+
       if (varRegex.test(content)) {
         content = content.replace(varRegex, `var(${newProp}$1`);
         changesMade++;
       }
     }
-    
+
     if (changesMade > 0) {
       fs.writeFileSync(filePath, content, 'utf8');
       return changesMade;
     }
-    
+
     return 0;
   } catch (err) {
     console.error(`Error fixing ${filePath}:`, err.message);
@@ -188,7 +188,7 @@ async function main() {
 
   try {
     const scssFiles = await glob('**/*.scss', { cwd: sassDir, absolute: true });
-    
+
     console.log(`Processing ${scssFiles.length} SCSS files...\n`);
     console.log(`Mapping ${Object.keys(propertyMappings).length} property references...\n`);
 

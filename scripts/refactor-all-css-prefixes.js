@@ -16,57 +16,57 @@ const sassDir = path.resolve(__dirname, '..', '_sass');
  */
 function getPrefixForProperty(propName) {
   const prop = propName.replace(/^--/, '');
-  
+
   // Already prefixed
   if (prop.match(/^(ts|tiller|color|spacing|font|z|breakpoint)-/)) {
     return null;
   }
-  
+
   // Color-related
   if (prop.match(/^(stone|ink|emerald|neon|sunset|hot|lime|purple|shadow|navy|red|green|blue|yellow|orange|pink|gray|grey|teal|violet|indigo|cyan|magenta|amber|rose|surface|bg|background|foreground|border|divider)/)) {
     return 'color-';
   }
-  
+
   // Spacing/layout (including space- variants)
   if (prop.match(/^(space|container|section|card|gutter|grid|spacing|pad|padding|margin|gap|hero|layout|shell|width|height|max|min|size)/)) {
     return 'spacing-';
   }
-  
+
   // Typography (including text- variants)
   if (prop.match(/^(font|heading|line|text|letter|weight|family)/)) {
     return 'font-';
   }
-  
+
   // Borders/radius
   if (prop.match(/^(radius|rounded|border-radius)/)) {
     return 'tiller-';
   }
-  
+
   // Transitions/animations
   if (prop.match(/^(transition|duration|timing|animation|delay|ease)/)) {
     return 'tiller-';
   }
-  
+
   // Shadows/effects
   if (prop.match(/(shadow|glow|ring|elevation|focus|outline)/)) {
     return 'tiller-';
   }
-  
+
   // Theme-specific (footer, header, hero, etc.)
   if (prop.match(/^(footer|header|hero|nav|menu|sidebar|modal|dialog|toast|notification|overlay|backdrop)/)) {
     return 'tiller-';
   }
-  
+
   // Z-index
   if (prop.match(/^z-/)) {
     return 'z-';
   }
-  
+
   // Breakpoints
   if (prop.match(/^(breakpoint|bp|screen)/)) {
     return 'breakpoint-';
   }
-  
+
   // Default to tiller-
   return 'tiller-';
 }
@@ -81,15 +81,15 @@ function hasValidPrefix(propName) {
 /**
  * Refactor file content - add prefixes to unprefixed properties
  */
-function refactorFileContent(content, filePath) {
+function refactorFileContent(content, _filePath) {
   const lines = content.split('\n');
   const updates = new Map();
-  
+
   // First pass: Find all custom property definitions
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i];
     const match = line.match(/^\s*(--[a-z][a-z0-9-]*)\s*:/);
-    
+
     if (match) {
       const propName = match[1];
       if (!hasValidPrefix(propName)) {
@@ -101,26 +101,26 @@ function refactorFileContent(content, filePath) {
       }
     }
   }
-  
+
   if (updates.size === 0) {
     return { content, changesMade: 0 };
   }
-  
+
   // Second pass: Replace all occurrences (definitions and usages)
   let updatedContent = content;
   let changesMade = 0;
-  
+
   for (const [oldProp, newProp] of updates.entries()) {
     // Escape special regex characters
     const escapedOld = oldProp.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    
+
     // Replace definitions: --prop:
     const defRegex = new RegExp(`\\b${escapedOld}:`, 'g');
     // Replace usages: var(--prop)
     const varRegex = new RegExp(`var\\(${escapedOld}\\)`, 'g');
     // Replace usages with fallback: var(--prop,
     const varFallbackRegex = new RegExp(`var\\(${escapedOld},`, 'g');
-    
+
     if (defRegex.test(updatedContent) || varRegex.test(updatedContent) || varFallbackRegex.test(updatedContent)) {
       updatedContent = updatedContent.replace(defRegex, `${newProp}:`);
       updatedContent = updatedContent.replace(varRegex, `var(${newProp})`);
@@ -128,7 +128,7 @@ function refactorFileContent(content, filePath) {
       changesMade++;
     }
   }
-  
+
   return { content: updatedContent, changesMade };
 }
 
@@ -139,13 +139,13 @@ function refactorFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
     const { content: updatedContent, changesMade } = refactorFileContent(content, filePath);
-    
+
     if (changesMade > 0) {
       fs.writeFileSync(filePath, updatedContent, 'utf8');
       console.log(`✓ ${path.relative(sassDir, filePath).padEnd(45)} (${changesMade} properties)`);
       return changesMade;
     }
-    
+
     return 0;
   } catch (err) {
     console.error(`✗ Error refactoring ${filePath}:`, err.message);
@@ -164,7 +164,7 @@ async function main() {
 
   try {
     const scssFiles = await glob('**/*.scss', { cwd: sassDir, absolute: true });
-    
+
     console.log(`Found ${scssFiles.length} SCSS files\n`);
     console.log('Refactoring...\n');
 
@@ -184,7 +184,7 @@ async function main() {
     console.log('╚════════════════════════════════════════════════════╝');
     console.log(`  Files modified: ${filesModified}/${scssFiles.length}`);
     console.log(`  Total property updates: ${totalChanges}\n`);
-    
+
     console.log('Next step: npm run lint:css to verify');
   } catch (err) {
     console.error('✗ Refactor failed:', err.message);

@@ -8,16 +8,16 @@
 
   function initReadMore() {
     const readMoreButtons = document.querySelectorAll('.ts-testimonial__read-more');
-    
+
     readMoreButtons.forEach(button => {
       button.addEventListener('click', function(e) {
         e.preventDefault();
-        
+
         const testimonial = this.closest('.ts-testimonial');
         const preview = testimonial.querySelector('.ts-testimonial__quote-preview');
         const full = testimonial.querySelector('.ts-testimonial__quote-full');
         const isExpanded = this.getAttribute('aria-expanded') === 'true';
-        
+
         if (isExpanded) {
           // Collapse
           preview.style.display = 'block';

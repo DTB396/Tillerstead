@@ -65,7 +65,7 @@ const variableMap = {
   '--success-bg': '--ts-color-success-bg',
   '--warning': '--ts-color-warning',
   '--warning-bg': '--ts-color-warning-bg',
-  
+
   // Social component (local scoped variables need renaming too)
   '--social-pill-size': '--tiller-social-pill-size',
   '--social-gap': '--tiller-social-gap',
@@ -89,7 +89,7 @@ function fixFile(filePath) {
       const varFallbackRegex = new RegExp(`var\\(${escapedOld},`, 'g');
       // Also replace direct property assignments: --old-var:
       const defRegex = new RegExp(`^(\\s*)${escapedOld}:`, 'gm');
-      
+
       if (varRegex.test(content) || varFallbackRegex.test(content) || defRegex.test(content)) {
         content = content.replace(varRegex, `var(${newVar})`);
         content = content.replace(varFallbackRegex, `var(${newVar},`);
@@ -121,7 +121,7 @@ async function main() {
 
   try {
     const scssFiles = await glob('**/*.scss', { cwd: sassDir, absolute: true });
-    
+
     console.log(`Scanning ${scssFiles.length} SCSS files...\n`);
 
     let totalChanges = 0;
