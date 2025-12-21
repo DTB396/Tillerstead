@@ -19,7 +19,7 @@ body.ts-theme {
 
 /* Section Block — Modular, accessible, and responsive */
 .ts-section {
-  padding-block: var(--section-pad-y, var(--section-padding-y, 3rem));
+  padding-block: var(--spacing-section-pad-y, var(--spacing-section-padding-y, 3rem));
 
   /* Uses design tokens for vertical rhythm; see _tokens.scss */
 }

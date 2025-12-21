@@ -76,8 +76,8 @@
 
 .btn-primary:hover:not(:disabled),
 .btn-primary:focus-visible,
-.btn--primary:hover:not(:disabled),
-.btn--primary:focus-visible {
+.btn--color-primary:hover:not(:disabled),
+.btn--color-primary:focus-visible {
   background: var(--ts-color-primary-bg-hover);
   box-shadow: 0 12px 28px var(--color-shadow-soft), 0 0 0 3px rgb(13, 154, 170, 0.2);
 }
@@ -105,16 +105,16 @@
 
 .btn-secondary:hover:not(:disabled)::before,
 .btn-secondary:focus-visible::before,
-.btn--secondary:hover:not(:disabled)::before,
-.btn--secondary:focus-visible::before {
+.btn--color-secondary:hover:not(:disabled)::before,
+.btn--color-secondary:focus-visible::before {
   transform: scaleX(1);
   transform-origin: left;
 }
 
 .btn-secondary:hover:not(:disabled),
 .btn-secondary:focus-visible,
-.btn--secondary:hover:not(:disabled),
-.btn--secondary:focus-visible {
+.btn--color-secondary:hover:not(:disabled),
+.btn--color-secondary:focus-visible {
   border-color: var(--ts-color-primary-strong);
   color: var(--ts-color-heading);
 }
@@ -132,8 +132,8 @@
 
 .btn-accent:hover:not(:disabled),
 .btn-accent:focus-visible,
-.btn--accent:hover:not(:disabled),
-.btn--accent:focus-visible {
+.btn--color-accent:hover:not(:disabled),
+.btn--color-accent:focus-visible {
   border-color: var(--ts-color-primary);
   background: var(--ts-color-surface-highlight);
   box-shadow: 0 4px 12px var(--color-shadow-soft);
@@ -152,7 +152,7 @@
 }
 
 .btn-ghost::before,
-.btn--ghost::before,
+.btn--tiller-ghost::before,
 .btn-outline::before,
 .btn.ghost::before {
   content: '';

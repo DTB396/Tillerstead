@@ -11,9 +11,9 @@
   position: relative;
   background: var(--color-bubble-bg);
   border: var(--tiller-comic-outline-thick) solid var(--color-bubble-border);
-  border-radius: var(--radius-bubble);
-  padding: var(--space-4) var(--space-6);
-  box-shadow: var(--shadow-comic-md);
+  border-radius: var(--tiller-radius-bubble);
+  padding: var(--spacing-space-4) var(--spacing-space-6);
+  box-shadow: var(--color-shadow-comic-md);
   font-family: var(--font-display);
   font-weight: var(--font-semibold);
   max-width: 400px;
@@ -47,7 +47,7 @@
 /* Thought bubble variant */
 .thought-bubble {
   border-style: dashed;
-  border-radius: var(--radius-2xl);
+  border-radius: var(--tiller-radius-2xl);
 }
 
 .thought-bubble::after,
@@ -93,15 +93,15 @@
   display: inline-block;
   font-family: var(--font-display);
   font-weight: var(--font-black);
-  font-size: var(--text-3xl);
+  font-size: var(--font-text-3xl);
   color: var(--ts-text-on-color);
-  padding: var(--space-4) var(--space-8);
-  background: var(--pow-yellow);
+  padding: var(--spacing-space-4) var(--spacing-space-8);
+  background: var(--tiller-pow-yellow);
   border: var(--tiller-comic-outline-thick) solid var(--color-cool-gray-900);
   text-transform: uppercase;
   letter-spacing: 0.05em;
   transform: rotate(-3deg);
-  box-shadow: var(--shadow-comic-lg);
+  box-shadow: var(--color-shadow-comic-lg);
   
   /* Jagged edges */
   clip-path: polygon(
@@ -112,14 +112,14 @@
   );
 }
 
-.comic-burst.pow { background: var(--pow-yellow); }
-.comic-burst.boom { background: var(--boom-orange); }
-.comic-burst.zap { background: var(--zap-purple); }
+.comic-burst.pow { background: var(--tiller-pow-yellow); }
+.comic-burst.boom { background: var(--tiller-boom-orange); }
+.comic-burst.zap { background: var(--tiller-zap-purple); }
 
 /* Small action badges */
 .action-badge {
   display: inline-block;
-  padding: var(--space-2) var(--space-4);
+  padding: var(--spacing-space-2) var(--spacing-space-4);
   background: var(--color-cyber-yellow-500);
   border: var(--tiller-comic-outline-medium) solid var(--color-cool-gray-900);
   border-radius: var(--ts-radius-md);
@@ -128,9 +128,9 @@
   font-size: var(--font-size-sm);
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  box-shadow: var(--shadow-comic-sm);
+  box-shadow: var(--color-shadow-comic-sm);
   transform: rotate(-2deg);
-  transition: transform var(--duration-fast) var(--ease-bounce);
+  transition: transform var(--tiller-duration-fast) var(--tiller-ease-bounce);
 }
 
 .action-badge:hover {
@@ -145,16 +145,16 @@
   background: var(--ts-surface-raised);
   border: var(--tiller-comic-outline-thick) solid var(--color-cool-gray-900);
   border-radius: var(--ts-radius-xl);
-  padding: var(--space-6);
-  box-shadow: var(--shadow-comic-md);
-  transition: all var(--duration-normal) var(--ease-bounce);
+  padding: var(--spacing-space-6);
+  box-shadow: var(--color-shadow-comic-md);
+  transition: all var(--tiller-duration-normal) var(--tiller-ease-bounce);
   position: relative;
   overflow: visible;
 }
 
 .card-comic:hover {
   transform: translateY(-8px) rotate(1deg);
-  box-shadow: var(--shadow-comic-lg);
+  box-shadow: var(--color-shadow-comic-lg);
 }
 
 /* Corner accent */
@@ -174,7 +174,7 @@
 
 /* Card with gradient background */
 .card-comic-gradient {
-  background: var(--gradient-ocean);
+  background: var(--tiller-gradient-ocean);
   color: var(--ts-text-on-color);
   border-color: var(--color-neon-teal-700);
 }
@@ -187,29 +187,29 @@
   font-family: var(--font-display);
   font-weight: var(--font-bold);
   font-size: var(--font-size-base);
-  padding: var(--space-3) var(--space-6);
+  padding: var(--spacing-space-3) var(--spacing-space-6);
   background: var(--color-neon-teal-500);
   color: var(--ts-text-on-color);
   border: var(--tiller-comic-outline-thick) solid var(--color-cool-gray-900);
   border-radius: var(--ts-radius-lg);
-  box-shadow: var(--shadow-comic-sm);
+  box-shadow: var(--color-shadow-comic-sm);
   cursor: pointer;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  transition: all var(--duration-fast) var(--ease-bounce);
+  transition: all var(--tiller-duration-fast) var(--tiller-ease-bounce);
   text-decoration: none;
   display: inline-block;
 }
 
 .btn-comic:hover {
   transform: translateY(-3px);
-  box-shadow: var(--shadow-comic-md);
+  box-shadow: var(--color-shadow-comic-md);
   background: var(--color-neon-teal-600);
 }
 
 .btn-comic:active {
   transform: translateY(1px);
-  box-shadow: var(--shadow-comic-sm);
+  box-shadow: var(--color-shadow-comic-sm);
 }
 
 /* Button variants */
@@ -249,14 +249,14 @@
 /* Large hero button */
 .btn-comic-hero {
   font-size: var(--font-size-xl);
-  padding: var(--space-5) var(--space-10);
+  padding: var(--spacing-space-5) var(--spacing-space-10);
   border-width: 4px;
 }
 
 /* Small inline button */
 .btn-comic-sm {
   font-size: var(--font-size-sm);
-  padding: var(--space-2) var(--space-4);
+  padding: var(--spacing-space-2) var(--spacing-space-4);
   border-width: 2px;
 }
 
@@ -266,8 +266,8 @@
 
 .hero-comic {
   position: relative;
-  padding: var(--space-20) var(--space-6);
-  background: var(--gradient-ocean);
+  padding: var(--spacing-space-20) var(--spacing-space-6);
+  background: var(--tiller-gradient-ocean);
   border-bottom: var(--tiller-comic-outline-thick) solid var(--color-cool-gray-900);
   overflow: hidden;
 }
@@ -296,7 +296,7 @@
   text-shadow: 
     3px 3px 0 var(--color-cool-gray-900),
     6px 6px 0 rgb(0, 0, 0, 0.2);
-  margin-bottom: var(--space-6);
+  margin-bottom: var(--spacing-space-6);
 }
 
 .hero-comic-subtitle {
@@ -305,7 +305,7 @@
   color: var(--ts-text-on-color);
   font-weight: var(--font-medium);
   max-width: 600px;
-  margin-bottom: var(--space-8);
+  margin-bottom: var(--spacing-space-8);
 }
 
 /* ===========================
@@ -315,17 +315,17 @@
 .badge-comic {
   display: inline-flex;
   align-items: center;
-  gap: var(--space-2);
-  padding: var(--space-2) var(--space-4);
+  gap: var(--spacing-space-2);
+  padding: var(--spacing-space-2) var(--spacing-space-4);
   background: var(--color-cyber-yellow-400);
   border: var(--tiller-comic-outline-medium) solid var(--color-cool-gray-900);
-  border-radius: var(--radius-full);
+  border-radius: var(--tiller-radius-full);
   font-family: var(--font-display);
   font-weight: var(--font-bold);
   font-size: var(--font-size-sm);
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  box-shadow: var(--shadow-comic-sm);
+  box-shadow: var(--color-shadow-comic-sm);
 }
 
 .badge-comic-teal { background: var(--color-neon-teal-400); }
@@ -340,7 +340,7 @@
 
 .section-header-comic {
   position: relative;
-  margin-bottom: var(--space-12);
+  margin-bottom: var(--spacing-space-12);
   text-align: center;
 }
 
@@ -351,11 +351,11 @@
   color: var(--color-neon-teal-600);
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  margin-bottom: var(--space-3);
+  margin-bottom: var(--spacing-space-3);
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: var(--space-2);
+  gap: var(--spacing-space-2);
 }
 
 .section-title-comic {
@@ -366,7 +366,7 @@
   text-transform: uppercase;
   letter-spacing: 0.02em;
   line-height: 1.2;
-  margin-bottom: var(--space-4);
+  margin-bottom: var(--spacing-space-4);
   position: relative;
   display: inline-block;
 }
@@ -380,8 +380,8 @@
   transform: translateX(-50%);
   width: 80%;
   height: 6px;
-  background: var(--gradient-retro);
-  border-radius: var(--radius-full);
+  background: var(--tiller-gradient-retro);
+  border-radius: var(--tiller-radius-full);
 }
 
 /* ===========================
@@ -424,7 +424,7 @@
   clip-path: polygon(
     50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%
   );
-  box-shadow: var(--shadow-comic-sm);
+  box-shadow: var(--color-shadow-comic-sm);
 }
 
 /* ===========================
@@ -432,7 +432,7 @@
    =========================== */
 
 .hover-pop {
-  transition: transform var(--duration-fast) var(--ease-bounce);
+  transition: transform var(--tiller-duration-fast) var(--tiller-ease-bounce);
 }
 
 .hover-pop:hover {
@@ -440,11 +440,11 @@
 }
 
 .hover-glow {
-  transition: box-shadow var(--duration-normal) var(--ease-smooth);
+  transition: box-shadow var(--tiller-duration-normal) var(--tiller-ease-smooth);
 }
 
 .hover-glow:hover {
-  box-shadow: var(--shadow-glow-teal);
+  box-shadow: var(--color-shadow-glow-teal);
 }
 
 .hover-wiggle {
@@ -472,7 +472,7 @@
 }
 
 .border-rounded-comic {
-  border-radius: var(--radius-bubble);
+  border-radius: var(--tiller-radius-bubble);
 }
 
 .rotate-left { transform: rotate(-2deg); }

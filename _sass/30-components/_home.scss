@@ -4,7 +4,7 @@
    ========================================================================== */
 
 .page-home {
-  --layout-max: var(--spacing-container);
+  --tiller-layout-max: var(--spacing-container);
 }
 
 .page-home .site-main {
@@ -55,13 +55,13 @@
 }
 
 .page-home .ts-hero__inner {
-  max-inline-size: var(--container, 1100px);
+  max-inline-size: var(--spacing-container, 1100px);
   margin-inline: auto;
-  padding-block: var(--section-pad-y, clamp(2.5rem, 6vb, 5.25rem));
+  padding-block: var(--spacing-section-pad-y, clamp(2.5rem, 6vb, 5.25rem));
   padding-inline: clamp(1rem, 4vi, 1.75rem);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 22.5rem), 1fr));
-  gap: var(--gutter, clamp(1.5rem, 3.5vi, 2.5rem));
+  gap: var(--spacing-gutter, clamp(1.5rem, 3.5vi, 2.5rem));
   align-items: start;
 }
 

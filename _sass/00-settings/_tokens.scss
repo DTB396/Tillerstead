@@ -238,22 +238,22 @@
   --color-border: var(--ts-color-border);
   --color-border-strong: var(--ts-color-border-strong);
   --color-divider: var(--ts-color-divider);
-  --gradient-primary: var(--ts-gradient-primary);
-  --gradient-accent: var(--ts-gradient-accent);
-  --gradient-surface: var(--ts-gradient-surface);
-  --shadow-lift: var(--ts-shadow-lift);
-  --bg-pattern: var(--ts-bg-pattern);
-  --bg-pattern-size: var(--ts-bg-pattern-size);
-  --bg-pattern-opacity: var(--ts-bg-pattern-opacity);
+  --color-gradient-primary: var(--ts-gradient-primary);
+  --color-gradient-accent: var(--ts-gradient-accent);
+  --color-gradient-surface: var(--ts-gradient-surface);
+  --color-shadow-lift: var(--ts-shadow-lift);
+  --color-bg-pattern: var(--ts-bg-pattern);
+  --color-bg-pattern-size: var(--ts-bg-pattern-size);
+  --color-bg-pattern-opacity: var(--ts-bg-pattern-opacity);
 
-  --space-1: var(--ts-spacing-xs);
-  --space-2: var(--ts-spacing-sm);
-  --space-3: var(--ts-spacing-md);
-  --space-4: var(--ts-spacing-lg);
-  --space-5: var(--ts-spacing-xl);
-  --space-6: var(--ts-spacing-2xl);
-  --space-7: calc(var(--ts-spacing-2xl) + 1rem);
-  --space-8: var(--ts-spacing-3xl);
+  --spacing-space-1: var(--ts-spacing-xs);
+  --spacing-space-2: var(--ts-spacing-sm);
+  --spacing-space-3: var(--ts-spacing-md);
+  --spacing-space-4: var(--ts-spacing-lg);
+  --spacing-space-5: var(--ts-spacing-xl);
+  --spacing-space-6: var(--ts-spacing-2xl);
+  --spacing-space-7: calc(var(--ts-spacing-2xl) + 1rem);
+  --spacing-space-8: var(--ts-spacing-3xl);
 
   --ts-radius-sm: var(--ts-radius-sm);
   --ts-radius-md: var(--ts-radius-md);

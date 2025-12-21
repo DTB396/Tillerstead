@@ -18,63 +18,63 @@
      =========================== */
   
   /* Primary: Cartoon Blue (Bugs Bunny sky, classic backdrop) */
-  --cartoon-blue-light: #87CEEB;    /* Sky blue */
-  --cartoon-blue: #4A90E2;          /* Primary blue */
-  --cartoon-blue-dark: #2E5C8A;     /* Deep blue */
-  --cartoon-blue-deeper: #1A3A5C;   /* Navy accent */
+  --color-cartoon-blue-light: #87CEEB;    /* Sky blue */
+  --color-cartoon-blue: #4A90E2;          /* Primary blue */
+  --color-cartoon-blue-dark: #2E5C8A;     /* Deep blue */
+  --color-cartoon-blue-deeper: #1A3A5C;   /* Navy accent */
   
   /* Secondary: Fire Engine Red (Looney Tunes energy) */
-  --cartoon-red-light: #FF6B6B;     /* Light red */
-  --cartoon-red: #E63946;           /* Classic red */
-  --cartoon-red-dark: #C1292E;      /* Deep red */
-  --cartoon-red-darker: #8B1E23;    /* Burgundy */
+  --color-cartoon-red-light: #FF6B6B;     /* Light red */
+  --color-cartoon-red: #E63946;           /* Classic red */
+  --color-cartoon-red-dark: #C1292E;      /* Deep red */
+  --color-cartoon-red-darker: #8B1E23;    /* Burgundy */
   
   /* Accent: Golden Yellow (Tweety Bird, classic highlight) */
-  --cartoon-yellow-light: #FFE066;  /* Light yellow */
-  --cartoon-yellow: #FFCA28;        /* Primary yellow */
-  --cartoon-yellow-dark: #F4A400;   /* Gold */
-  --cartoon-yellow-darker: #C17900; /* Deep gold */
+  --color-cartoon-yellow-light: #FFE066;  /* Light yellow */
+  --color-cartoon-yellow: #FFCA28;        /* Primary yellow */
+  --color-cartoon-yellow-dark: #F4A400;   /* Gold */
+  --color-cartoon-yellow-darker: #C17900; /* Deep gold */
   
   /* Support: Grass Green (Fresh, classic cartoon grass) */
-  --cartoon-green-light: #90EE90;   /* Light green */
-  --cartoon-green: #4CAF50;         /* Primary green */
-  --cartoon-green-dark: #388E3C;    /* Deep green */
+  --color-cartoon-green-light: #90EE90;   /* Light green */
+  --color-cartoon-green: #4CAF50;         /* Primary green */
+  --color-cartoon-green-dark: #388E3C;    /* Deep green */
   
   /* Support: Inky Black (Outline, text, graphic punch) */
-  --cartoon-black: #1A1A1A;         /* True cartoon black */
-  --cartoon-gray-dark: #2C3E50;     /* Charcoal */
-  --cartoon-gray: #555555;          /* Medium gray */
-  --cartoon-gray-light: #95A5A6;    /* Light gray */
+  --color-cartoon-black: #1A1A1A;         /* True cartoon black */
+  --color-cartoon-gray-dark: #2C3E50;     /* Charcoal */
+  --color-cartoon-gray: #555555;          /* Medium gray */
+  --color-cartoon-gray-light: #95A5A6;    /* Light gray */
   
   /* Support: Pure White (Highlights, backgrounds) */
-  --cartoon-white: #FFFFFF;         /* Pure white */
-  --cartoon-off-white: #F8F9FA;     /* Slightly off */
-  --cartoon-cream: #FFF8DC;         /* Cream/cornsilk */
+  --color-cartoon-white: #FFFFFF;         /* Pure white */
+  --color-cartoon-off-white: #F8F9FA;     /* Slightly off */
+  --color-cartoon-cream: #FFF8DC;         /* Cream/cornsilk */
 
   /* ===========================
      🎭 VINTAGE TV COLORS
      Inspired by mid-century color TV palettes
      =========================== */
   
-  --retro-orange: #FF6F00;          /* 60s orange */
-  --retro-teal: #00897B;            /* 70s teal */
-  --retro-purple: #7B1FA2;          /* Rare accent */
-  --retro-pink: #E91E63;            /* Rare highlight */
+  --color-retro-orange: #FF6F00;          /* 60s orange */
+  --color-retro-teal: #00897B;            /* 70s teal */
+  --color-retro-purple: #7B1FA2;          /* Rare accent */
+  --color-retro-pink: #E91E63;            /* Rare highlight */
 
   /* ===========================
      📺 SURFACE SYSTEM
      Clean, graphic, cel-animation inspired
      =========================== */
   
-  --surface-paper: var(--tiller-cartoon-off-white);
-  --surface-white: var(--tiller-cartoon-white);
-  --surface-cream: var(--tiller-cartoon-cream);
-  --surface-blue-tint: #E3F2FD;     /* Light blue wash */
-  --surface-yellow-tint: #FFF9C4;   /* Light yellow wash */
+  --color-surface-paper: var(--tiller-cartoon-off-white);
+  --color-surface-white: var(--tiller-cartoon-white);
+  --color-surface-cream: var(--tiller-cartoon-cream);
+  --color-surface-blue-tint: #E3F2FD;     /* Light blue wash */
+  --color-surface-yellow-tint: #FFF9C4;   /* Light yellow wash */
   
   /* Shadows (animation cel style) */
-  --shadow-cartoon: rgb(0, 0, 0, 0.25);
-  --shadow-cartoon-soft: rgb(0, 0, 0, 0.15);
+  --color-shadow-cartoon: rgb(0, 0, 0, 0.25);
+  --color-shadow-cartoon-soft: rgb(0, 0, 0, 0.15);
 
   /* ===========================
      ✍️ TEXT & OUTLINES
@@ -83,16 +83,16 @@
   
   --ts-color-text: var(--tiller-cartoon-black);
   --ts-color-muted: var(--tiller-cartoon-gray-dark);
-  --text-muted: var(--tiller-cartoon-gray);
-  --text-on-blue: var(--tiller-cartoon-white);
-  --text-on-red: var(--tiller-cartoon-white);
-  --text-on-yellow: var(--tiller-cartoon-black);
+  --font-text-muted: var(--tiller-cartoon-gray);
+  --font-text-on-blue: var(--tiller-cartoon-white);
+  --font-text-on-red: var(--tiller-cartoon-white);
+  --font-text-on-yellow: var(--tiller-cartoon-black);
   
   /* Classic thick outlines */
-  --outline-thick: 4px;
-  --outline-medium: 3px;
-  --outline-thin: 2px;
-  --outline-color: var(--tiller-cartoon-black);
+  --tiller-outline-thick: 4px;
+  --tiller-outline-medium: 3px;
+  --tiller-outline-thin: 2px;
+  --tiller-outline-color: var(--tiller-cartoon-black);
 
   /* ===========================
      🎨 SEMANTIC MAPPING
@@ -135,28 +135,28 @@
      =========================== */
   
   /* Sky gradient (classic cartoon backdrop) */
-  --gradient-sky: linear-gradient(
+  --color-gradient-sky: linear-gradient(
     180deg,
     var(--tiller-cartoon-blue-light) 0%,
     var(--tiller-cartoon-blue) 100%
   );
   
   /* Sunset gradient (dramatic, vintage) */
-  --gradient-sunset: linear-gradient(
+  --color-gradient-sunset: linear-gradient(
     180deg,
     var(--tiller-cartoon-yellow) 0%,
     var(--tiller-retro-orange) 100%
   );
   
   /* Bold diagonal (graphic punch) */
-  --gradient-diagonal-blue: linear-gradient(
+  --color-gradient-diagonal-blue: linear-gradient(
     135deg,
     var(--tiller-cartoon-blue-light) 0%,
     var(--tiller-cartoon-blue-dark) 100%
   );
   
   /* Bold diagonal red (energy) */
-  --gradient-diagonal-red: linear-gradient(
+  --color-gradient-diagonal-red: linear-gradient(
     135deg,
     var(--tiller-cartoon-red-light) 0%,
     var(--tiller-cartoon-red-dark) 100%
@@ -168,13 +168,13 @@
      =========================== */
   
   /* Border radius (rounded but not too soft) */
-  --radius-cartoon: 8px;
-  --radius-cartoon-lg: 16px;
-  --radius-cartoon-xl: 24px;
+  --tiller-radius-cartoon: 8px;
+  --tiller-radius-cartoon-lg: 16px;
+  --tiller-radius-cartoon-xl: 24px;
   --ts-radius-pill: 9999px;
   
   /* Speech bubble specific */
-  --radius-bubble: 16px 16px 16px 4px;
+  --tiller-radius-bubble: 16px 16px 16px 4px;
 
   /* ===========================
      ✨ CARTOON SHADOWS
@@ -182,15 +182,15 @@
      =========================== */
   
   /* Classic offset shadow (animation cel style) */
-  --shadow-cel-sm: 3px 3px 0 var(--tiller-cartoon-black);
-  --shadow-cel-md: 5px 5px 0 var(--tiller-cartoon-black);
-  --shadow-cel-lg: 8px 8px 0 var(--tiller-cartoon-black);
-  --shadow-cel-xl: 12px 12px 0 var(--tiller-cartoon-black);
+  --color-shadow-cel-sm: 3px 3px 0 var(--tiller-cartoon-black);
+  --color-shadow-cel-md: 5px 5px 0 var(--tiller-cartoon-black);
+  --color-shadow-cel-lg: 8px 8px 0 var(--tiller-cartoon-black);
+  --color-shadow-cel-xl: 12px 12px 0 var(--tiller-cartoon-black);
   
   /* Soft shadow (modern touch) */
-  --shadow-soft: 0 2px 8px rgb(0, 0, 0, 0.1);
-  --shadow-medium: 0 4px 16px rgb(0, 0, 0, 0.15);
-  --shadow-strong: 0 8px 24px rgb(0, 0, 0, 0.2);
+  --color-shadow-soft: 0 2px 8px rgb(0, 0, 0, 0.1);
+  --color-shadow-medium: 0 4px 16px rgb(0, 0, 0, 0.15);
+  --color-shadow-strong: 0 8px 24px rgb(0, 0, 0, 0.2);
 
   /* ===========================
      ✍️ TYPOGRAPHY SYSTEM
@@ -209,12 +209,12 @@
   --font-size-base: 1rem;      /* 16px */
   --font-size-lg: 1.125rem;    /* 18px */
   --font-size-xl: 1.25rem;     /* 20px */
-  --text-2xl: 1.5rem;     /* 24px */
-  --text-3xl: 1.875rem;   /* 30px */
-  --text-4xl: 2.25rem;    /* 36px */
-  --text-5xl: 3rem;       /* 48px */
-  --text-6xl: 3.75rem;    /* 60px */
-  --text-7xl: 4.5rem;     /* 72px */
+  --font-text-2xl: 1.5rem;     /* 24px */
+  --font-text-3xl: 1.875rem;   /* 30px */
+  --font-text-4xl: 2.25rem;    /* 36px */
+  --font-text-5xl: 3rem;       /* 48px */
+  --font-text-6xl: 3.75rem;    /* 60px */
+  --font-text-7xl: 4.5rem;     /* 72px */
   
   /* Weights */
   --font-normal: 400;
@@ -228,30 +228,30 @@
      Snappy, bouncy, cartoon physics
      =========================== */
   
-  --ease-cartoon: cubic-bezier(0.68, -0.55, 0.265, 1.55);  /* Bounce */
-  --ease-snap: cubic-bezier(0.4, 0, 0.6, 1);               /* Snappy */
-  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);             /* Smooth */
+  --tiller-ease-cartoon: cubic-bezier(0.68, -0.55, 0.265, 1.55);  /* Bounce */
+  --tiller-ease-snap: cubic-bezier(0.4, 0, 0.6, 1);               /* Snappy */
+  --tiller-ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);             /* Smooth */
   
-  --duration-snap: 150ms;
-  --duration-normal: 250ms;
-  --duration-slow: 400ms;
+  --tiller-duration-snap: 150ms;
+  --tiller-duration-normal: 250ms;
+  --tiller-duration-slow: 400ms;
 
   /* ===========================
      📏 SPACING SCALE
      Consistent rhythm
      =========================== */
   
-  --space-1: 0.25rem;   /* 4px */
-  --space-2: 0.5rem;    /* 8px */
-  --space-3: 0.75rem;   /* 12px */
-  --space-4: 1rem;      /* 16px */
-  --space-5: 1.25rem;   /* 20px */
-  --space-6: 1.5rem;    /* 24px */
-  --space-8: 2rem;      /* 32px */
-  --space-10: 2.5rem;   /* 40px */
-  --space-12: 3rem;     /* 48px */
-  --space-16: 4rem;     /* 64px */
-  --space-20: 5rem;     /* 80px */
+  --spacing-space-1: 0.25rem;   /* 4px */
+  --spacing-space-2: 0.5rem;    /* 8px */
+  --spacing-space-3: 0.75rem;   /* 12px */
+  --spacing-space-4: 1rem;      /* 16px */
+  --spacing-space-5: 1.25rem;   /* 20px */
+  --spacing-space-6: 1.5rem;    /* 24px */
+  --spacing-space-8: 2rem;      /* 32px */
+  --spacing-space-10: 2.5rem;   /* 40px */
+  --spacing-space-12: 3rem;     /* 48px */
+  --spacing-space-16: 4rem;     /* 64px */
+  --spacing-space-20: 5rem;     /* 80px */
 
   /* ===========================
      📐 Z-INDEX SCALE
@@ -267,11 +267,11 @@
      📦 CONTAINER WIDTHS
      =========================== */
   
-  --container-sm: 640px;
-  --container-md: 768px;
-  --container-lg: 1024px;
-  --container-xl: 1280px;
-  --container: var(--spacing-container-lg);
+  --tiller-container-sm: 640px;
+  --tiller-container-md: 768px;
+  --tiller-container-lg: 1024px;
+  --tiller-container-xl: 1280px;
+  --spacing-container: var(--spacing-container-lg);
 }
 
 /* ===========================

@@ -4,14 +4,14 @@
   ============================================ */
 
 .nj-statewide {
-  padding-block: var(--section-pad-y, clamp(2.5rem, 6vb, 5.25rem));
+  padding-block: var(--spacing-section-pad-y, clamp(2.5rem, 6vb, 5.25rem));
   padding-inline: 0;
   border-block-start: 1px solid rgb(255, 255, 255, 0.10);
   container-type: inline-size;
 }
 
 .nj-wrap {
-  max-inline-size: var(--container, 1100px);
+  max-inline-size: var(--spacing-container, 1100px);
   margin-inline: auto;
   padding-inline: clamp(1rem, 4vi, 1.75rem);
 }
@@ -50,7 +50,7 @@
 
 .nj-grid {
   display: grid;
-  gap: var(--grid-gap, clamp(1rem, 2.5vi, 1.5rem));
+  gap: var(--spacing-grid-gap, clamp(1rem, 2.5vi, 1.5rem));
   margin-block-start: clamp(1.5rem, 3vb, 2rem);
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 17.5rem), 1fr));
 }
@@ -66,7 +66,7 @@
   border-radius: 18px;
   padding: 16px;
   background: linear-gradient(180deg, rgb(255, 255, 255, 0.04), rgb(255, 255, 255, 0.02));
-  box-shadow: var(--shadow-soft, 0 2px 8px rgb(0,0,0,0.04));
+  box-shadow: var(--color-shadow-soft, 0 2px 8px rgb(0,0,0,0.04));
 
   h3 {
    margin: 0 0 8px;

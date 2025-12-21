@@ -23,13 +23,13 @@
      =========================== */
   
   /* Tile Professional Teal - Main brand identity */
-  --brand-teal-50: #e0f2f7;
-  --brand-teal-100: #b3dce8;
-  --brand-teal-400: #2ba9ba;      /* Lighter accent */
-  --brand-teal-500: #0d9aaa;      /* Primary brand */
-  --brand-teal-600: #0a7f8d;      /* Hover state */
-  --brand-teal-700: #086470;      /* Deep emphasis */
-  --brand-teal-900: #053d45;      /* Dark text */
+  --color-brand-teal-50: #e0f2f7;
+  --color-brand-teal-100: #b3dce8;
+  --color-brand-teal-400: #2ba9ba;      /* Lighter accent */
+  --color-brand-teal-500: #0d9aaa;      /* Primary brand */
+  --color-brand-teal-600: #0a7f8d;      /* Hover state */
+  --color-brand-teal-700: #086470;      /* Deep emphasis */
+  --color-brand-teal-900: #053d45;      /* Dark text */
 
   /* ===========================
      🌅 NOSTALGIC WARMTH
@@ -37,20 +37,20 @@
      =========================== */
   
   /* Sunset Coral (not too orange, not too pink) */
-  --sunset-50: #fff5f2;
-  --sunset-100: #ffe4dc;
-  --sunset-400: #ff9d7d;
-  --sunset-500: #ff8461;          /* Warm accent */
-  --sunset-600: #e86f4e;          /* Hover */
-  --sunset-700: #c85a3d;          /* Deep */
+  --color-sunset-50: #fff5f2;
+  --color-sunset-100: #ffe4dc;
+  --color-sunset-400: #ff9d7d;
+  --color-sunset-500: #ff8461;          /* Warm accent */
+  --color-sunset-600: #e86f4e;          /* Hover */
+  --color-sunset-700: #c85a3d;          /* Deep */
 
   /* Golden Hour (warm, inviting) */
-  --golden-50: #fffbeb;
-  --golden-100: #fef3c7;
-  --golden-400: #fbbf24;
-  --golden-500: #f59e0b;          /* Accent gold */
-  --golden-600: #d97706;          /* Rich gold */
-  --golden-700: #b45309;          /* Deep bronze */
+  --color-golden-50: #fffbeb;
+  --color-golden-100: #fef3c7;
+  --color-golden-400: #fbbf24;
+  --color-golden-500: #f59e0b;          /* Accent gold */
+  --color-golden-600: #d97706;          /* Rich gold */
+  --color-golden-700: #b45309;          /* Deep bronze */
 
   /* ===========================
      🎪 STRATEGIC ENERGY POPS
@@ -58,39 +58,39 @@
      =========================== */
   
   /* Success Green (fresh, positive) */
-  --success-50: #ecfdf5;
-  --success-100: #d1fae5;
-  --success-500: #10b981;
-  --success-600: #059669;
-  --success-700: #047857;
+  --color-success-50: #ecfdf5;
+  --color-success-100: #d1fae5;
+  --color-success-500: #10b981;
+  --color-success-600: #059669;
+  --color-success-700: #047857;
 
   /* Attention Yellow (badges, highlights) */
-  --attention-50: #fffbeb;
-  --attention-400: #fcd34d;
-  --attention-500: #fbbf24;
-  --attention-600: #f59e0b;
+  --color-attention-50: #fffbeb;
+  --color-attention-400: #fcd34d;
+  --color-attention-500: #fbbf24;
+  --color-attention-600: #f59e0b;
 
   /* Alert Coral (not aggressive, just clear) */
-  --alert-50: #fef2f2;
-  --alert-500: #ef4444;
-  --alert-600: #dc2626;
-  --alert-700: #b91c1c;
+  --color-alert-50: #fef2f2;
+  --color-alert-500: #ef4444;
+  --color-alert-600: #dc2626;
+  --color-alert-700: #b91c1c;
 
   /* ===========================
      📐 REFINED NEUTRALS
      Clean, professional foundation
      =========================== */
   
-  --slate-50: #f8fafc;
-  --slate-100: #f1f5f9;
-  --slate-200: #e2e8f0;
-  --slate-300: #cbd5e1;
-  --slate-400: #94a3b8;
-  --slate-500: #64748b;
-  --slate-600: #475569;
-  --slate-700: #334155;
-  --slate-800: #1e293b;
-  --slate-900: #0f172a;
+  --color-slate-50: #f8fafc;
+  --color-slate-100: #f1f5f9;
+  --color-slate-200: #e2e8f0;
+  --color-slate-300: #cbd5e1;
+  --color-slate-400: #94a3b8;
+  --color-slate-500: #64748b;
+  --color-slate-600: #475569;
+  --color-slate-700: #334155;
+  --color-slate-800: #1e293b;
+  --color-slate-900: #0f172a;
 
   /* ===========================
      🎨 SEMANTIC MAPPING
@@ -181,7 +181,7 @@
      =========================== */
   
   /* Hero gradient (professional depth) */
-  --gradient-hero: linear-gradient(
+  --color-gradient-hero: linear-gradient(
     135deg,
     var(--tiller-brand-teal-600) 0%,
     var(--tiller-brand-teal-700) 60%,
@@ -189,21 +189,21 @@
   );
 
   /* Warm accent gradient (nostalgic touch) */
-  --gradient-warm: linear-gradient(
+  --color-gradient-warm: linear-gradient(
     135deg,
     var(--color-sunset-400) 0%,
     var(--tiller-golden-500) 100%
   );
 
   /* Sunrise gradient (optimistic sections) */
-  --gradient-sunrise: linear-gradient(
+  --color-gradient-sunrise: linear-gradient(
     90deg,
     var(--tiller-golden-400) 0%,
     var(--color-sunset-500) 100%
   );
 
   /* Depth gradient (cards, surfaces) */
-  --gradient-depth: linear-gradient(
+  --color-gradient-depth: linear-gradient(
     180deg,
     rgb(255, 255, 255, 0.05) 0%,
     rgb(255, 255, 255, 0) 100%
@@ -221,19 +221,19 @@
      =========================== */
   
   /* Soft shadows (most common) */
-  --shadow-xs: 0 1px 2px rgb(0, 0, 0, 0.05);
+  --color-shadow-xs: 0 1px 2px rgb(0, 0, 0, 0.05);
   --ts-shadow-soft: 0 2px 4px rgb(0, 0, 0, 0.06);
   --ts-shadow-soft: 0 4px 8px rgb(0, 0, 0, 0.08);
   --ts-shadow-lift: 0 8px 16px rgb(0, 0, 0, 0.10);
-  --shadow-xl: 0 12px 24px rgb(0, 0, 0, 0.12);
+  --color-shadow-xl: 0 12px 24px rgb(0, 0, 0, 0.12);
 
   /* Cartoon offset (use sparingly for badges/buttons) */
-  --shadow-comic-sm: 3px 3px 0 var(--tiller-slate-900);
-  --shadow-comic-md: 5px 5px 0 var(--tiller-slate-900);
+  --color-shadow-comic-sm: 3px 3px 0 var(--tiller-slate-900);
+  --color-shadow-comic-md: 5px 5px 0 var(--tiller-slate-900);
 
   /* Color glows (subtle brand accents) */
-  --shadow-glow-teal: 0 0 20px rgb(13, 154, 170, 0.2);
-  --shadow-glow-warm: 0 0 20px rgb(245, 158, 11, 0.2);
+  --color-shadow-glow-teal: 0 0 20px rgb(13, 154, 170, 0.2);
+  --color-shadow-glow-warm: 0 0 20px rgb(245, 158, 11, 0.2);
 
   /* Applied shadows */
   --ts-color-shadow-light: rgb(0, 0, 0, 0.04);
@@ -267,16 +267,16 @@
   --font-size-4xl: 2.75rem;
   --font-size-5xl: 3.25rem;
 
-  --heading-1: clamp(2.45rem, 4vw, 3.75rem);
-  --heading-2: clamp(2rem, 3vw, 3rem);
-  --heading-3: clamp(1.45rem, 2.2vw, 2.1rem);
-  --heading-4: clamp(1.2rem, 1.7vw, 1.45rem);
-  --heading-5: clamp(1.05rem, 1.6vw, 1.25rem);
-  --heading-6: clamp(0.92rem, 1.4vw, 1.05rem);
+  --font-heading-1: clamp(2.45rem, 4vw, 3.75rem);
+  --font-heading-2: clamp(2rem, 3vw, 3rem);
+  --font-heading-3: clamp(1.45rem, 2.2vw, 2.1rem);
+  --font-heading-4: clamp(1.2rem, 1.7vw, 1.45rem);
+  --font-heading-5: clamp(1.05rem, 1.6vw, 1.25rem);
+  --font-heading-6: clamp(0.92rem, 1.4vw, 1.05rem);
 
-  --line-height-base: 1.65;
-  --line-height-tight: 1.2;
-  --line-height-relaxed: 1.85;
+  --font-line-height-base: 1.65;
+  --font-line-height-tight: 1.2;
+  --font-line-height-relaxed: 1.85;
 
   --font-normal: 400;
   --font-medium: 500;
@@ -299,19 +299,19 @@
   --ts-spacing-4xl: 6rem;     /* 96px */
   --ts-spacing-5xl: 8rem;     /* 128px */
 
-  --space-1: 0.25rem;   /* 4px */
-  --space-2: 0.5rem;    /* 8px */
-  --space-3: 0.75rem;   /* 12px */
-  --space-4: 1rem;      /* 16px */
-  --space-5: 1.25rem;   /* 20px */
-  --space-6: 1.5rem;    /* 24px */
-  --space-7: 2rem;      /* 32px */
-  --space-8: 2.5rem;    /* 40px */
+  --spacing-space-1: 0.25rem;   /* 4px */
+  --spacing-space-2: 0.5rem;    /* 8px */
+  --spacing-space-3: 0.75rem;   /* 12px */
+  --spacing-space-4: 1rem;      /* 16px */
+  --spacing-space-5: 1.25rem;   /* 20px */
+  --spacing-space-6: 1.5rem;    /* 24px */
+  --spacing-space-7: 2rem;      /* 32px */
+  --spacing-space-8: 2.5rem;    /* 40px */
 
-  --hero-padding-mobile: clamp(3rem, 5vw, 4rem);
-  --hero-padding-desktop: clamp(4rem, 8vw, 6rem);
-  --section-spacing: clamp(3rem, 6vw, 5rem);
-  --card-spacing: clamp(1.5rem, 3vw, 2.5rem);
+  --spacing-hero-padding-mobile: clamp(3rem, 5vw, 4rem);
+  --spacing-hero-padding-desktop: clamp(4rem, 8vw, 6rem);
+  --spacing-section-spacing: clamp(3rem, 6vw, 5rem);
+  --spacing-card-spacing: clamp(1.5rem, 3vw, 2.5rem);
 
   /* ===========================
      🎨 BORDER RADIUS
@@ -323,9 +323,9 @@
   --ts-radius-md: 0.75rem;    /* 12px */
   --ts-radius-lg: 1rem;       /* 16px */
   --ts-radius-xl: 1.5rem;     /* 24px */
-  --radius-2xl: 2rem;      /* 32px */
+  --tiller-radius-2xl: 2rem;      /* 32px */
   --ts-radius-pill: 9999px;
-  --radius-large: 22px;
+  --tiller-radius-large: 22px;
 
   --ts-radius-sm: var(--tiller-radius-sm);
   --ts-radius-md: var(--tiller-radius-md);
@@ -339,16 +339,16 @@
      Smooth, snappy, professional
      =========================== */
   
-  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
-  --ease-snappy: cubic-bezier(0.4, 0, 0.6, 1);
-  --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  --tiller-ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --tiller-ease-snappy: cubic-bezier(0.4, 0, 0.6, 1);
+  --tiller-ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
-  --duration-fast: 150ms;
-  --duration-normal: 250ms;
-  --duration-slow: 400ms;
+  --tiller-duration-fast: 150ms;
+  --tiller-duration-normal: 250ms;
+  --tiller-duration-slow: 400ms;
 
-  --transition-fast: 160ms ease;
-  --transition-med: 240ms ease;
+  --tiller-transition-fast: 160ms ease;
+  --tiller-transition-med: 240ms ease;
 
   --focus-ring: 0 0 0 3px rgb(13, 154, 170, 0.35);
 
@@ -356,24 +356,24 @@
      📐 LAYOUT & CONTAINERS
      =========================== */
   
-  --container: 1100px;
-  --container-sm: 640px;
-  --container-md: 768px;
-  --container-lg: 1024px;
-  --container-xl: 1280px;
-  --container-2xl: 1536px;
+  --spacing-container: 1100px;
+  --tiller-container-sm: 640px;
+  --tiller-container-md: 768px;
+  --tiller-container-lg: 1024px;
+  --tiller-container-xl: 1280px;
+  --tiller-container-2xl: 1536px;
 
-  --layout-max: 1320px;
-  --layout-wide: 1440px;
-  --layout-narrow: 960px;
-  --shell-width: var(--tiller-layout-max);
-  --container-gutter: clamp(1rem, 4vw, 2.5rem);
+  --tiller-layout-max: 1320px;
+  --tiller-layout-wide: 1440px;
+  --tiller-layout-narrow: 960px;
+  --tiller-shell-width: var(--tiller-layout-max);
+  --tiller-container-gutter: clamp(1rem, 4vw, 2.5rem);
 
-  --section-pad-y: clamp(2.5rem, 6vi, 5.25rem);
-  --section-padding-y: var(--spacing-section-pad-y);
-  --section-gap: clamp(1.4rem, 2.6vw, 2.6rem);
+  --spacing-section-pad-y: clamp(2.5rem, 6vi, 5.25rem);
+  --spacing-section-padding-y: var(--spacing-section-pad-y);
+  --spacing-section-gap: clamp(1.4rem, 2.6vw, 2.6rem);
   
-  --card-pad: clamp(1.125rem, 2vi, 1.625rem);
+  --spacing-card-pad: clamp(1.125rem, 2vi, 1.625rem);
   --gutter: clamp(1.5rem, 3.5vi, 2.5rem);
   --grid-gap: clamp(1.5rem, 3vi, 2.5rem);
   --header-height: 76px;
@@ -389,19 +389,19 @@
   --footer-text: var(--tiller-slate-100);
   --footer-text-muted: var(--tiller-slate-400);
   --footer-link: var(--tiller-brand-teal-400);
-  --footer-link-hover: var(--brand-teal-300);
+  --footer-link-hover: var(--color-brand-teal-300);
   --footer-border: rgb(203, 213, 225, 0.2);
   --ts-footer-link: var(--tiller-brand-teal-400);
-  --ts-footer-link-hover: var(--brand-teal-300);
+  --ts-footer-link-hover: var(--color-brand-teal-300);
   --ts-footer-success: var(--tiller-success-100);
 
   /* ===========================
      🎭 HERO SECTION
      =========================== */
   
-  --hero-bg: var(--tiller-gradient-hero);
-  --hero-text: #ffffff;
-  --hero-text-muted: rgb(255, 255, 255, 0.85);
+  --spacing-hero-bg: var(--tiller-gradient-hero);
+  --spacing-hero-text: #ffffff;
+  --spacing-hero-text-muted: rgb(255, 255, 255, 0.85);
 
   /* ===========================
      📦 BACKGROUND PATTERNS
@@ -449,14 +449,14 @@
   --color-border: var(--ts-color-border);
   --color-border-strong: var(--ts-color-border-strong);
   --color-divider: var(--ts-color-divider);
-  --gradient-primary: var(--ts-gradient-primary);
-  --gradient-accent: var(--ts-gradient-accent);
-  --gradient-surface: var(--ts-gradient-surface);
-  --shadow-lift: var(--ts-shadow-lift);
-  --shadow-soft: var(--ts-shadow-soft);
-  --bg-pattern: var(--ts-bg-pattern);
-  --bg-pattern-size: var(--ts-bg-pattern-size);
-  --bg-pattern-opacity: var(--ts-bg-pattern-opacity);
+  --color-gradient-primary: var(--ts-gradient-primary);
+  --color-gradient-accent: var(--ts-gradient-accent);
+  --color-gradient-surface: var(--ts-gradient-surface);
+  --color-shadow-lift: var(--ts-shadow-lift);
+  --color-shadow-soft: var(--ts-shadow-soft);
+  --color-bg-pattern: var(--ts-bg-pattern);
+  --color-bg-pattern-size: var(--ts-bg-pattern-size);
+  --color-bg-pattern-opacity: var(--ts-bg-pattern-opacity);
 
   --ts-radius-md: var(--ts-radius-md);
   --ts-radius-lg: var(--ts-radius-lg);

@@ -11,7 +11,7 @@
   container-type: inline-size;
   container-name: main;
   inline-size: 100%;
-  max-inline-size: var(--container, 1100px);
+  max-inline-size: var(--spacing-container, 1100px);
   margin-inline: auto;
   padding-inline: clamp(1rem, 4vi, 1.75rem);
 }
@@ -28,7 +28,7 @@
 
 /* Shell: for full-width sections with consistent padding */
 .shell {
-  max-inline-size: var(--container, 1100px);
+  max-inline-size: var(--spacing-container, 1100px);
   margin-inline: auto;
   padding-inline: clamp(1rem, 4vi, 1.75rem);
   inline-size: 100%;
@@ -38,12 +38,12 @@
 .section,
 .ts-section {
   inline-size: 100%;
-  padding-block: var(--section-pad-y, clamp(2.5rem, 6vi, 5.25rem));
+  padding-block: var(--spacing-section-pad-y, clamp(2.5rem, 6vi, 5.25rem));
 }
 
 .section-inner,
 .ts-section-inner {
-  max-inline-size: var(--container, 1100px);
+  max-inline-size: var(--spacing-container, 1100px);
   margin-inline: auto;
   padding-inline: clamp(1rem, 4vi, 1.75rem);
 }
@@ -80,7 +80,7 @@
 }
 
 /* Flow utility: vertical spacing between children */
-.flow > * + * { margin-block-start: var(--flow-space, var(--ts-spacing-md)); }
+.flow > * + * { margin-block-start: var(--spacing-flow-space, var(--ts-spacing-md)); }
 .flow-sm      { --flow-space: var(--ts-spacing-sm); }
 .flow-md      { --flow-space: var(--ts-spacing-md); }
 
@@ -88,7 +88,7 @@
 .stack {
   display: flex;
   flex-direction: column;
-  gap: var(--stack-gap, var(--ts-spacing-md));
+  gap: var(--spacing-stack-gap, var(--ts-spacing-md));
 }
 .stack-sm { --stack-gap: var(--ts-spacing-sm); }
 .stack-md { --stack-gap: var(--ts-spacing-md); }
@@ -98,7 +98,7 @@
 .cluster {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--cluster-gap, var(--ts-spacing-sm));
+  gap: var(--spacing-cluster-gap, var(--ts-spacing-sm));
   align-items: center;
 }
 .cluster-md { --cluster-gap: var(--ts-spacing-md); }
@@ -111,7 +111,7 @@
 /* Switcher: responsive grid for feature/CTA layouts */
 .switcher {
   display: grid;
-  gap: var(--gutter, clamp(1.5rem, 3.5vi, 2.5rem));
+  gap: var(--spacing-gutter, clamp(1.5rem, 3.5vi, 2.5rem));
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
 }
 
@@ -137,8 +137,8 @@
 /* Auto-responsive grid with customizable min column width */
 .grid-auto {
   display: grid;
-  gap: var(--grid-gap, clamp(1.5rem, 3vi, 2.5rem));
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--grid-min, 18rem)), 1fr));
+  gap: var(--spacing-grid-gap, clamp(1.5rem, 3vi, 2.5rem));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--spacing-grid-min, 18rem)), 1fr));
 }
 
 /* Adaptive card layout using container queries (TCNA 2024: responsive design) */
@@ -156,7 +156,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-block: var(--section-padding-y, 4rem);
+  padding-block: var(--spacing-section-padding-y, 4rem);
 }
 .cover-half { min-height: 50vh; }
 
@@ -231,7 +231,7 @@
 @media (max-width: 920px) {
   .stack,
   .cluster {
-   gap: var(--stack-gap-mobile, var(--ts-spacing-sm));
+   gap: var(--spacing-stack-gap-mobile, var(--ts-spacing-sm));
   }
 
   .hide-mobile {

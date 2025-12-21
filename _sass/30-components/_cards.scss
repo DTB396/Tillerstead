@@ -9,7 +9,7 @@
   margin: 0;
   padding: 0;
   display: grid;
-  gap: var(--grid-gap, 1.25rem);
+  gap: var(--spacing-grid-gap, 1.25rem);
   container-type: inline-size;
   container-name: cards;
 }
@@ -28,7 +28,7 @@
   display: flex;
   flex-direction: column;
   gap: var(--ts-spacing-md);
-  padding: var(--card-pad, clamp(1.25rem, 3vw, 2rem));
+  padding: var(--spacing-card-pad, clamp(1.25rem, 3vw, 2rem));
   border-radius: var(--ts-radius-xl);
   border: 2px solid var(--ts-color-border);
   background: linear-gradient(135deg, var(--ts-color-surface-elevated) 0%, color-mix(in srgb, var(--ts-color-surface-elevated) 95%, var(--ts-color-primary) 5%) 100%);

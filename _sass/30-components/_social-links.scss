@@ -46,11 +46,11 @@
   color: var(--tiller-social-icon-color);
   text-decoration: none;
   transition:
-   background var(--transition-fast, 160ms ease),
-   border-color var(--transition-fast, 160ms ease),
-   color var(--transition-fast, 160ms ease),
-   box-shadow var(--transition-fast, 160ms ease),
-   transform var(--transition-fast, 160ms ease);
+   background var(--tiller-transition-fast, 160ms ease),
+   border-color var(--tiller-transition-fast, 160ms ease),
+   color var(--tiller-transition-fast, 160ms ease),
+   box-shadow var(--tiller-transition-fast, 160ms ease),
+   transform var(--tiller-transition-fast, 160ms ease);
   outline: none;
 
   &:focus-visible {
