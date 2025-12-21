@@ -226,6 +226,7 @@
   display: grid;
   gap: var(--grid-gap);
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  align-items: start;
 }
 
 .ts-testimonial {
@@ -237,6 +238,7 @@
   display: flex;
   flex-direction: column;
   gap: var(--ts-spacing-sm);
+  height: 100%;
 }
 
 .ts-testimonial__quote {
@@ -244,10 +246,47 @@
   padding: 0;
   border-left: 3px solid color-mix(in srgb, var(--ts-color-primary) 70%, transparent);
   padding-left: 1rem;
+  flex: 1;
 }
 
 .ts-testimonial__quote-text {
   color: var(--ts-color-text);
+  position: relative;
+  
+  &.is-truncated {
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.ts-testimonial__read-more {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.25rem 0.75rem;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--ts-color-primary);
+  background: transparent;
+  border: 1px solid var(--ts-color-primary);
+  border-radius: var(--ts-radius-pill);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  
+  &:hover {
+    background: color-mix(in srgb, var(--ts-color-primary) 10%, transparent);
+    transform: translateY(-1px);
+  }
+  
+  &:focus-visible {
+    outline: 2px solid var(--ts-color-primary);
+    outline-offset: 2px;
+  }
 }
 
 .ts-testimonial__stars {

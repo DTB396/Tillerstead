@@ -17,7 +17,15 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizelegibility;
-  scroll-behavior: smooth;
+  
+  /* Respect user motion preferences */
+  @media (prefers-reduced-motion: reduce) {
+    scroll-behavior: auto;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    scroll-behavior: smooth;
+  }
 }
 
 /* Ensure full viewport coverage and remove default spacing */

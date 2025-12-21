@@ -1,0 +1,156 @@
+/* ============================================
+  Mobile Optimization & Responsive Refinements
+  WCAG AA Compliant, Touch-Optimized, Smooth Performance
+  ============================================ */
+
+/* Mobile viewport optimizations */
+@media (max-width: 920px) {
+  /* Ensure proper margins and padding */
+  .container {
+    padding-inline: clamp(1rem, 4vw, 1.5rem);
+  }
+  
+  /* Section spacing */
+  .ts-section,
+  .section {
+    padding-block: clamp(2rem, 6vw, 3rem);
+  }
+  
+  /* Hero spacing */
+  .ts-hero {
+    padding-block: clamp(2.5rem, 8vw, 4rem);
+  }
+  
+  /* Headings responsive sizing */
+  .heading-1,
+  h1 {
+    font-size: clamp(1.75rem, 6vw, 2.5rem);
+    line-height: 1.2;
+  }
+  
+  .heading-2,
+  h2 {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    line-height: 1.25;
+  }
+  
+  .heading-3,
+  h3 {
+    font-size: clamp(1.25rem, 4vw, 1.5rem);
+    line-height: 1.3;
+  }
+  
+  /* Button full-width on small screens */
+  .btn-group,
+  .ts-hero__actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+    
+    .btn {
+      width: 100%;
+      text-align: center;
+      justify-content: center;
+    }
+  }
+  
+  /* Card grid optimization */
+  .ts-testimonials__grid,
+  .card-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  
+  /* Improved touch targets */
+  a, button, [role="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Navigation improvements */
+  .site-nav.is-open {
+    overscroll-behavior: contain;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  /* Even tighter spacing */
+  .container {
+    padding-inline: 1rem;
+  }
+  
+  .ts-section,
+  .section {
+    padding-block: 2rem;
+  }
+  
+  /* Stack hero facts vertically */
+  .ts-hero__facts {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .ts-hero__fact {
+    width: 100%;
+  }
+}
+
+/* Tablet landscape */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Optimize for tablet viewing */
+  .ts-testimonials__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .container {
+    padding-inline: clamp(1.5rem, 4vw, 2rem);
+  }
+}
+
+/* Performance optimizations for mobile */
+@media (hover: none) and (pointer: coarse) {
+  /* Remove hover effects on touch devices */
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  /* Optimize animations for mobile */
+  .btn:active {
+    transform: scale(0.98);
+  }
+  
+  /* Disable will-change on mobile to save memory */
+  .btn,
+  .card,
+  .ts-testimonial {
+    will-change: auto;
+  }
+}
+
+/* Safe area insets for modern mobile browsers */
+@supports (padding: env(safe-area-inset-left)) {
+  body {
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+  
+  .site-header-inner {
+    padding-left: max(clamp(0.9rem, 4vw, 1.75rem), env(safe-area-inset-left));
+    padding-right: max(clamp(0.9rem, 4vw, 1.75rem), env(safe-area-inset-right));
+  }
+}
+
+/* Landscape mobile orientation */
+@media (max-height: 500px) and (orientation: landscape) {
+  .site-nav {
+    padding-block: 1rem;
+    overflow-y: auto;
+  }
+  
+  .ts-hero {
+    min-height: auto;
+    padding-block: 2rem;
+  }
+}

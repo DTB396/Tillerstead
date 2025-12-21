@@ -1,29 +1,29 @@
 hero:
   eyebrow: "Licensed NJ HIC #13VH10808800 · TCNA 2024 Compliant"
-  title: "Licensed NJ Tile Contractor - Zero Leaking Showers, EVER"
+  title: "Tile & Waterproofing Done Right, Backed by Standards"
   subtitle: "TCNA-Compliant Installations • 47 Photos Per Project • 2-Year Warranty"
-  summary: "Professional tile installations, flood-tested waterproofing, and code-compliant remodeling for South Jersey property owners. Every substrate measured, every waterproofing layer documented, every detail guaranteed—because your bathroom shouldn't be a gamble."
+  summary: "Professional tile installations, flood-tested waterproofing, and code-compliant remodeling for South Jersey. Every substrate measured, every waterproofing layer documented, every detail guaranteed—because precision matters."
   primary:
-    label: "Get Free Estimate (24-Hour Response)"
+    label: "Get Free Estimate"
     url: /contact/
   secondary:
-    label: "See Typical Project Costs"
-    url: /pricing/
+    label: "View Our Work"
+    url: /portfolio/
   facts:
     - icon: "badge"
       label: "NJ HIC Licensed"
       text: "#13VH10808800"
     - icon: "ruler"
-      label: "Standards"
-      text: "TCNA 2024 / ANSI A108"
+      label: "TCNA Standards"
+      text: "2024 / ANSI A108"
     - icon: "map"
-      label: "Service Area"
+      label: "South Jersey"
       text: "Atlantic, Ocean, Cape May"
   highlights:
-    - "Substrate flatness measured (1/8\" in 10'), never assumed"
-    - "Waterproofing flood-tested per ASTM E2947 before tile"
-    - "95% thinset coverage for large-format tile (TCNA-recommended)"
-    - "Photo documentation suitable for lenders, insurance, and GCs"
+    - "Substrate flatness measured to 1/8\" in 10'"
+    - "Waterproofing flood-tested per ASTM E2947"
+    - "95% thinset coverage for large-format tile"
+    - "Photo documentation for insurance & lenders"
 
 services:
   eyebrow: "TCNA-Compliant Layouts & Waterproof Assemblies (Nerdy? Yes. Necessary? Absolutely.)"

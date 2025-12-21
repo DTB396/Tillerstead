@@ -146,7 +146,13 @@
   .site-header-actions .site-header-social,
   .site-header-actions .call-btn,
   .site-header-actions .header-cta {
-   display: none;
+   display: none !important;
+  }
+  
+  /* Ensure nav toggle is visible and properly positioned */
+  .nav-toggle {
+   display: inline-flex !important;
+   z-index: 1500;
   }
 
   .site-nav {

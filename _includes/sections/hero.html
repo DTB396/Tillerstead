@@ -44,10 +44,12 @@
         <div class="ts-hero__facts">
           {% for fact in hero.facts %}
             <div class="ts-hero__fact">
-              <span class="ts-hero__fact-icon">{{ fact.icon }}</span>
-              <div>
-                <strong>{{ fact.label }}</strong>
-                <span>{{ fact.text }}</span>
+              <svg class="ts-hero__fact-icon" width="24" height="24" aria-hidden="true" focusable="false">
+                <use href="#icon-{{ fact.icon }}"></use>
+              </svg>
+              <div class="ts-hero__fact-content">
+                <strong class="ts-hero__fact-label">{{ fact.label }}</strong>
+                <span class="ts-hero__fact-text">{{ fact.text }}</span>
               </div>
             </div>
           {% endfor %}

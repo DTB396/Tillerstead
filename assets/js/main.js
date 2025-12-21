@@ -114,4 +114,24 @@
   // =========================
   // (Add form handling logic here as needed, following OUTPUT_RULES.md)
 
+  // =========================
+  // TESTIMONIAL READ MORE
+  // - Expands truncated testimonials
+  // - Accessible button toggle
+  // =========================
+  document.querySelectorAll('[data-read-more]').forEach(button => {
+    button.addEventListener('click', function() {
+      const quoteText = this.previousElementSibling;
+      if (quoteText && quoteText.classList.contains('is-truncated')) {
+        quoteText.classList.remove('is-truncated');
+        this.textContent = 'Read Less';
+        this.setAttribute('aria-label', 'Show less of review');
+      } else if (quoteText) {
+        quoteText.classList.add('is-truncated');
+        this.textContent = 'Read More';
+        this.setAttribute('aria-label', 'Read full review');
+      }
+    });
+  });
+
 })();

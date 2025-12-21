@@ -45,13 +45,21 @@
               {% endif %}
             {% endif %}
             <li class="nav-item" role="listitem">
-              <a href="{{ item.url | relative_url }}"
-                 class="nav-link{% if is_current %} active{% endif %}"
-                 style="display:inline-flex;align-items:center;padding:0.5rem 0.75rem;white-space:nowrap;text-transform:none;"
-                 {% if is_current %} aria-current="page"{% endif %}
-                 aria-label="{{ item.title | escape }}">
-                {{ item.title }}
-              </a>
+              {% if item.children %}
+                <span class="nav-link nav-link--parent{% if is_current %} active{% endif %}"
+                     style="display:inline-flex;align-items:center;padding:0.5rem 0.75rem;white-space:nowrap;text-transform:none;cursor:default;"
+                     aria-label="{{ item.title | escape }}">
+                  {{ item.title }}
+                </span>
+              {% else %}
+                <a href="{{ item.url | relative_url }}"
+                   class="nav-link{% if is_current %} active{% endif %}"
+                   style="display:inline-flex;align-items:center;padding:0.5rem 0.75rem;white-space:nowrap;text-transform:none;"
+                   {% if is_current %} aria-current="page"{% endif %}
+                   aria-label="{{ item.title | escape }}">
+                  {{ item.title }}
+                </a>
+              {% endif %}
             </li>
           {% endfor %}
           <li class="nav-cta nav-cta--drawer">

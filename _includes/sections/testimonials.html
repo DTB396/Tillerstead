@@ -13,9 +13,21 @@
 
     <div class="ts-testimonials__grid" role="list">
       {% for review in site.data.reviews.reviews | slice: 0, 3 %}
+        {% assign word_count = review.quote_html | strip_html | number_of_words %}
+        {% assign needs_truncate = false %}
+        {% if word_count > 80 %}
+          {% assign needs_truncate = true %}
+        {% endif %}
         <article class="ts-testimonial" role="listitem">
           <blockquote class="ts-testimonial__quote">
-            <div class="ts-testimonial__quote-text">{{ review.quote_html }}</div>
+            <div class="ts-testimonial__quote-text{% if needs_truncate %} is-truncated{% endif %}" data-testimonial-text>
+              {{ review.quote_html }}
+            </div>
+            {% if needs_truncate %}
+            <button type="button" class="ts-testimonial__read-more" data-read-more aria-label="Read full review">
+              Read More
+            </button>
+            {% endif %}
           </blockquote>
           <div class="ts-testimonial__rating">
             <div class="ts-testimonial__stars">

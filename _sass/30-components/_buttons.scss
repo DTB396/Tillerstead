@@ -10,9 +10,9 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  padding-block: 0.875rem;
-  padding-inline: 1.75rem;
-  font-size: 1rem;
+  padding-block: clamp(0.75rem, 2vw, 0.875rem);
+  padding-inline: clamp(1.25rem, 3vw, 1.75rem);
+  font-size: clamp(0.9rem, 2vw, 1rem);
   font-weight: 600;
   font-family: var(--font-sans);
   line-height: 1.2;
@@ -23,7 +23,8 @@
   position: relative;
   white-space: nowrap;
   transition: background var(--transition-fast), color var(--transition-fast), 
-          border-color var(--transition-fast), transform var(--transition-fast);
+          border-color var(--transition-fast), transform var(--transition-fast),
+          box-shadow var(--transition-fast);
   min-inline-size: 2.5em;
   min-block-size: 2.5em;
   user-select: none;
@@ -31,6 +32,12 @@
   transform: translateZ(0);
   backface-visibility: hidden;
   will-change: transform;
+  
+  /* Touch target minimum 44x44px */
+  @media (hover: none) and (pointer: coarse) {
+    min-width: 44px;
+    min-height: 44px;
+  }
 }
 
 /* Focus ring — WCAG 2.1 AA compliant, visible on keyboard navigation */
