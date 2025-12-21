@@ -57,6 +57,11 @@
   {% endfor %}
 {% endif %}
 
+<!-- Scroll animations -->
+<script defer
+  src="{{ '/assets/js/scroll-animations.js' | relative_url }}?v={{ site.assets_version | default: '1.0' }}"
+  crossorigin="anonymous"></script>
+
 <!-- No-JS fallback: Hides elements requiring JavaScript, per accessibility standards -->
 <noscript>
   <style>

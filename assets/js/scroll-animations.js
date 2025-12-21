@@ -2,7 +2,7 @@
  * Scroll-Triggered Animations
  * Performant viewport detection with Intersection Observer
  * Respects prefers-reduced-motion
- * 
+ *
  * Usage: Add data-animate attribute to any element
  * <div data-animate="fade-in-up" data-animate-delay="200">Content</div>
  */
@@ -12,7 +12,7 @@
 
   // Respect user's motion preferences
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  
+
   if (prefersReducedMotion) {
     // Skip animations but still make elements visible
     document.querySelectorAll('[data-animate]').forEach(el => {
@@ -24,7 +24,7 @@
 
   // Get all elements to animate
   const animatedElements = document.querySelectorAll('[data-animate]');
-  
+
   if (!animatedElements.length) {
     return;
   }
@@ -42,12 +42,12 @@
       if (entry.isIntersecting) {
         const element = entry.target;
         const delay = parseInt(element.dataset.animateDelay) || 0;
-        
+
         // Apply animation with delay
         setTimeout(() => {
           element.classList.add('is-animated');
         }, delay);
-        
+
         // Stop observing once animated
         observer.unobserve(element);
       }
@@ -72,7 +72,7 @@
         rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
         rect.right <= (window.innerWidth || document.documentElement.clientWidth)
       );
-      
+
       if (isInViewport) {
         const delay = parseInt(element.dataset.animateDelay) || 0;
         setTimeout(() => {
