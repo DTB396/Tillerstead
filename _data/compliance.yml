@@ -1,0 +1,71 @@
+# Compliance & Legal Data
+# Authority: NJ HIC regulations, TCNA 2024, NJ Consumer Fraud Act
+# Reference: /.ai/COMPLIANCE.md, /.ai/DOMAIN.md
+
+license:
+  number: "13VH10808800"
+  status: "Active"
+  issuer: "New Jersey Division of Consumer Affairs"
+  type: "Home Improvement Contractor"
+  trades:
+    - "Carpentry"
+    - "Ceramic Tile"
+    - "Waterproofing"
+  verified: true
+  last_verified: "2024-06-01"
+
+business:
+  legal_name: "Tillerstead LLC"
+  trade_name: "Tillerstead"
+  owner: "Tyler (Owner-Operator)"
+  service_area: "South Jersey (Atlantic, Ocean, Cape May Counties)"
+  
+standards:
+  tcna: "TCNA 2024 Handbook for Ceramic, Glass, and Stone Tile Installation"
+  ansi:
+    - "ANSI A108.10 (Waterproofing)"
+    - "ANSI A118.10 (Waterproofing Membranes)"
+    - "ANSI A118.15 (Improved Modified Dry-Set Cement Mortar)"
+  astm:
+    - "ASTM E2947 (Flood Testing)"
+    - "ASTM C627 (Floor Assembly Deflection)"
+  osha:
+    - "OSHA 1926.1153 (Silica Dust)"
+    - "OSHA 1926.501 (Fall Protection)"
+
+insurance:
+  general_liability: "$1M per occurrence / $2M aggregate"
+  workers_comp: "Fully Compliant"
+  coverage:
+    - "Property Damage"
+    - "Bodily Injury"
+    - "Completed Operations"
+
+warranty:
+  workmanship_years: 2
+  workmanship_description: "Installation workmanship including substrate preparation, waterproofing, tile setting, and grout application"
+  exclusions:
+    - "Normal wear and tear"
+    - "Improper maintenance"
+    - "Impact damage or homeowner modifications"
+    - "Manufacturer material defects (covered by manufacturer warranty)"
+
+note: "Tillerstead LLC is a New Jersey-licensed home improvement contractor specializing in tile, waterproofing, and bathroom remodeling. All work is performed to TCNA 2024 standards and fully compliant with NJ HIC regulations. We provide transparent estimates, detailed scope documentation, and rigorous quality assurance—no shortcuts, no surprises."
+
+license_info: "NJ HIC #13VH10808800 · Fully Insured · TCNA 2024 Compliant · Serving South Jersey"
+
+disclosure: "Licensed New Jersey Home Improvement Contractor #13VH10808800. All contracts include mandatory 3-day right of rescission per NJ Consumer Fraud Act (N.J.S.A. 56:8-136)."
+
+payment_terms: "Maximum 10% deposit or $1,000 (whichever is less). Progress payments tied to verifiable completion milestones. Minimum 10% retained until substantial completion."
+
+three_day_rescission: "You, the buyer, may cancel this transaction at any time prior to midnight of the third business day after the date of this transaction. See the attached notice of cancellation form for an explanation of this right."
+
+# Legacy keys for backwards compatibility
+hic_license_number: "13VH10808800"
+hic_license_status: "Active"
+hic_license_issuer: "New Jersey Division of Consumer Affairs"
+hic_license_type: "Home Improvement Contractor"
+hic_license_compliance: "Full compliance with NJ Consumer Fraud Act (N.J.S.A. 56:8-136 et seq.) and all TCNA installation standards."
+hic_license_verified: true
+hic_license_last_verified: "2024-06-01"
+hic_license_notes: "Tillerstead LLC operates under NJ HIC #13VH10808800, with license status and compliance independently verified and monitored for client assurance. All work is performed to TCNA 2024 standards and New Jersey regulatory requirements, ensuring technical precision, transparency, and consumer protection."

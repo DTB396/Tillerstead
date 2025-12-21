@@ -1,39 +1,126 @@
 hero:
-  eyebrow: Welcome
-  title: Quality Tile Work
-  summary: Professional tile installation and remodeling services.
+  eyebrow: "Licensed NJ HIC #13VH10808800 · TCNA 2024 Compliant"
+  title: "Tile Work That Outlasts the Mortgage"
+  summary: "TCNA-compliant tile installations, waterproof shower assemblies, and code-compliant remodeling for South Jersey property owners. Substrate flatness verified, waterproofing flood-tested, and every detail documented—because 'probably fine' isn't a plan."
   primary:
-    label: View Portfolio
-    url: /portfolio/
-  secondary:
-    label: Contact Us
+    label: "Request TCNA Consultation"
     url: /contact/
+  secondary:
+    label: "See Documented Installations"
+    url: /portfolio/
+  facts:
+    - label: "NJ HIC Licensed"
+      text: "#13VH10808800"
+    - label: "Standards"
+      text: "TCNA 2024 / ANSI A108"
+    - label: "Service Area"
+      text: "Atlantic, Ocean, Cape May"
+  highlights:
+    - "Substrate flatness measured (1/8\" in 10'), never assumed"
+    - "Waterproofing flood-tested per ASTM E2947 before tile"
+    - "95% thinset coverage for large-format tile (TCNA-recommended)"
+    - "Photo documentation suitable for lenders, insurance, and GCs"
 
 services:
-  eyebrow: Our Services
-  title: What We Offer
-  summary: Tile, bath, and remodeling for homes and businesses.
+  eyebrow: "TCNA-Compliant Layouts & Waterproof Assemblies"
+  title: "Installations Engineered for Longevity, Compliance, and Visual Precision"
+  summary: "Every project begins with substrate assessment, flood-tested waterproofing, and photo documentation suitable for lenders, tenants, or general contractors. No shortcuts. No sliver tiles unless geometry leaves no alternative. TCNA-compliant, NJ HIC-licensed, owner-operated."
   cards:
     - icon: tile
-      title: Tile Installation
-      description: Expert tile work for floors, walls, and showers.
+      title: "Tile That Doesn't Crack"
+      description: "TCNA-compliant installation of ceramic, porcelain, and natural stone. Substrate flatness verified to ANSI A108 standards—never assumed. Waterproofing passes ASTM flood tests. Every detail engineered to prevent costly failures."
+      details:
+        - "Waterproof showers with ANSI A118.10 membranes, flood-tested and documented"
+        - "Heated floors with UL-listed systems and verified thermal coverage"
+        - "Large-format tile (≥15\") installed for 95% mortar coverage (TCNA-recommended)"
+        - "Precision layout geometry for visual harmony and minimal cuts"
+      url: "/services/#tile"
+    - icon: stone
+      title: "Slabs & Premium Stonework"
+      description: "Marble, granite, and gauged porcelain slabs installed with ANSI A118.15 thinset. Book-matched, sealed, and detailed for decades of durability—never risking your investment with shortcuts."
+      details:
+        - "Book-matched marble installations with seamless veining"
+        - "6mm porcelain slab panels set to manufacturer specifications"
+        - "Natural stone sealed with ASTM-compliant sealers"
+        - "Fireplace surrounds engineered for thermal expansion and code compliance"
+      url: "/services/#stone"
+    - icon: waterproofing
+      title: "Waterproofing (The Critical Layer)"
+      description: "Schluter KERDI, Hydroban, and RedGard systems installed to manufacturer and TCNA standards. Flood tested, photo-documented, and certified for insurance and code compliance. 'Waterproof' means proven, not promised."
+      details:
+        - "ANSI A118.10 compliant waterproofing membranes"
+        - "Flood testing with photographic documentation before tile"
+        - "Seam and penetration details executed per manufacturer guidelines"
+        - "Documentation package for insurance and warranty claims"
+      url: "/services/#waterproofing"
+  actions:
+    primary:
+      label: "Request TCNA-Compliant Walkthrough"
+      url: /contact/
+    secondary:
+      label: "See Documented Installs & Technical Details"
+      url: /portfolio/
+  note: "All work meets or exceeds TCNA 2024 standards. Daily documentation, transparent communication, and NJ HIC compliance from demolition to punch-list."
 
 process:
-  eyebrow: Our Process
-  title: How We Work
-  summary: Step-by-step approach for lasting results.
+  eyebrow: "How We Work"
+  title: "Transparent, Code-Compliant Craftsmanship—From Initial Walk-Through to Final Closeout"
+  summary: "No hidden fees. No surprise change orders. No ghosting. Every phase documented, communicated, and executed to TCNA standards with full NJ HIC compliance."
   steps:
-    - title: Consultation
-      description: We assess your needs and provide recommendations.
+    - title: "On-Site Assessment & TCNA Review"
+      description: "Complimentary, NJ HIC-licensed walk-through. We evaluate substrate conditions, moisture levels, and code compliance per TCNA guidelines—ensuring your project starts with a documented, standards-based foundation."
+      icon: clipboard
+    - title: "Detailed Scope, Materials & Written Approval"
+      description: "Written scope specifying ANSI A108 installation methods, waterproofing assemblies, and all materials—plus clear change-order terms. You approve every detail, with full transparency on timelines and deliverables."
+      icon: document
+    - title: "Professional Execution & Closeout Documentation"
+      description: "Work proceeds with daily photo documentation, dust control, and site protection. At completion, you receive a closeout package: warranty, care instructions, and optional maintenance plan—ensuring lasting performance and peace of mind."
+      icon: check-circle
 
 materials:
-  eyebrow: Materials
-  title: What We Use
-  summary: High-quality products for every project.
+  eyebrow: "Materials & Standards"
+  title: "TCNA-Specified Products—Not 'Whatever's on the Truck'"
+  summary: "Every material specified by performance rating, not brand loyalty. ANSI-certified thinsets, ASTM-tested waterproofing, and UL-listed electrical—because code compliance isn't negotiable."
   items:
     - icon: tile
-      title: Tile & Stone
-      description: Durable, beautiful finishes for your space.
+      title: "ANSI-Certified Thinsets & Grouts"
+      description: "C2-rated modified thinsets with ISO 13007 certification for large-format and natural stone. Never generic 'all-purpose' mortars. Grouts selected for stain resistance, joint width, and traffic exposure."
       points:
-        - Premium brands
-        - Professional installation
+        - "Mapei Kerabond/Keralastic, Laticrete 254/333, or Ardex X5"
+        - "Epoxy grout for commercial applications and shower floors"
+        - "Sealer selection based on stone porosity and maintenance expectations"
+    - icon: waterproofing
+      title: "ANSI A118.10 Waterproofing Systems"
+      description: "Schluter KERDI, Laticrete Hydroban, or Custom RedGard—never 'red paint from the box store.' All systems flood-tested per ASTM E2947 and documented before tile installation."
+      points:
+        - "Schluter KERDI for bonded sheet membrane reliability"
+        - "Laticrete Hydroban for liquid-applied versatility"
+        - "Seam and penetration details per manufacturer and TCNA guidelines"
+    - icon: stone
+      title: "Natural Stone & Gauged Porcelain Slabs"
+      description: "Premium marble, granite, and 6mm porcelain panels sourced from regional distributors. All stone sealed with ASTM-compliant impregnating sealers—never topical coatings that yellow or peel."
+      points:
+        - "Book-matched marble for seamless veining continuity"
+        - "Gauged porcelain panels for large-format applications"
+        - "Honed, polished, or leathered finishes per project aesthetic"
+
+testimonials:
+  eyebrow: "Client Testimonials"
+  title: "What Property Owners Say About Our Work"
+  limit: 3
+  reviews:
+    - id: thumbtack-ahmed-a-2025-07-20-2
+    - id: thumbtack-maria-j-2025-05-06-3
+    - id: thumbtack-alexandra-s-2025-08-19-1
+
+cta:
+  eyebrow: "Ready to Start Your Project?"
+  title: "Request a TCNA-Compliant Consultation"
+  summary: "Get a transparent scope, written estimate, and detailed timeline—no pressure, no gimmicks. Just honest assessment and code-compliant craftsmanship."
+  primary:
+    label: "Schedule Free Walk-Through"
+    url: /contact/
+  secondary:
+    label: "View Portfolio & Process"
+    url: /portfolio/
+  note: "NJ HIC #13VH10808800 · Licensed, Insured, TCNA-Compliant · Serving South Jersey"

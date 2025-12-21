@@ -53,21 +53,7 @@ primary:
       - id: nj-hic-license
         title: NJ HIC License & Compliance
         url: /nj-hic-license/
-        match: /nj-hic-license/ - id: counties
-    title: Service Areas
-    children:
-      - id: atlantic-county
-        title: Atlantic County NJ
-        url: /atlantic-county-nj/
-        match: /atlantic-county-nj/
-      - id: ocean-county
-        title: Ocean County NJ
-        url: /ocean-county-nj/
-        match: /ocean-county-nj/
-      - id: cape-may-county
-        title: Cape May County NJ
-        url: /cape-may-county-nj/
-        match: /cape-may-county-nj/
+        match: /nj-hic-license/
   - id: download-guide
     title: Free NJ Tile Guide
     url: /download/nj-tile-guide/
