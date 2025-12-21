@@ -1,0 +1,435 @@
+/* ============================================
+   🎨 Tillerstead 90s Modern Design System
+   Vibrant, playful, professional—like if a tile contractor 
+   had a secret identity as a comic book superhero.
+   
+   Color Philosophy: Bold 90s energy meets modern refinement
+   WCAG 2.1 AA compliance maintained throughout
+   ============================================ */
+
+@use "sass:math";
+@use "contrast" as *;
+
+:root {
+  color-scheme: light dark;
+
+  /* ===========================
+     🌈 90s VIBRANT CORE PALETTE
+     Electric, optimistic, memorable
+     =========================== */
+  
+  /* Primary: Electric Teal (90s MTV vibes) */
+  --neon-teal-50: #e0f2fe;
+  --neon-teal-100: #b3e5fc;
+  --neon-teal-400: #00acc1;
+  --neon-teal-500: #0097a7;
+  --neon-teal-600: #00838f;
+  --neon-teal-700: #006064;
+  
+  /* Secondary: Sunset Orange (Nickelodeon energy) */
+  --sunset-orange-50: #fff3e0;
+  --sunset-orange-100: #ffe0b2;
+  --sunset-orange-400: #ffa726;
+  --sunset-orange-500: #ff9800;
+  --sunset-orange-600: #fb8c00;
+  --sunset-orange-700: #f57c00;
+  
+  /* Accent: Hot Pink (Saved by the Bell aesthetic) */
+  --hot-pink-50: #fce4ec;
+  --hot-pink-100: #f8bbd0;
+  --hot-pink-400: #ec407a;
+  --hot-pink-500: #e91e63;
+  --hot-pink-600: #d81b60;
+  --hot-pink-700: #c2185b;
+  
+  /* Support: Lime Green (Fresh Prince vibes) */
+  --lime-green-50: #f1f8e9;
+  --lime-green-100: #dcedc8;
+  --lime-green-400: #9ccc65;
+  --lime-green-500: #8bc34a;
+  --lime-green-600: #7cb342;
+  --lime-green-700: #689f38;
+  
+  /* Support: Electric Purple (90s tech aesthetic) */
+  --electric-purple-50: #f3e5f5;
+  --electric-purple-100: #e1bee7;
+  --electric-purple-400: #ab47bc;
+  --electric-purple-500: #9c27b0;
+  --electric-purple-600: #8e24aa;
+  --electric-purple-700: #7b1fa2;
+  
+  /* Support: Cyber Yellow (Caution tape chic) */
+  --cyber-yellow-50: #fffde7;
+  --cyber-yellow-100: #fff9c4;
+  --cyber-yellow-400: #ffee58;
+  --cyber-yellow-500: #ffeb3b;
+  --cyber-yellow-600: #fdd835;
+  --cyber-yellow-700: #fbc02d;
+
+  /* ===========================
+     📐 REFINED NEUTRALS
+     Clean backdrop for vibrant accents
+     =========================== */
+  
+  --cool-gray-50: #f8fafc;
+  --cool-gray-100: #f1f5f9;
+  --cool-gray-200: #e2e8f0;
+  --cool-gray-300: #cbd5e1;
+  --cool-gray-400: #94a3b8;
+  --cool-gray-500: #64748b;
+  --cool-gray-600: #475569;
+  --cool-gray-700: #334155;
+  --cool-gray-800: #1e293b;
+  --cool-gray-900: #0f172a;
+
+  /* ===========================
+     🎨 COMIC BOOK SYSTEM
+     Halftone dots, speech bubbles, POW effects!
+     =========================== */
+  
+  --comic-dot-pattern: 
+    radial-gradient(circle at 50% 50%, var(--neon-teal-500) 1px, transparent 1px);
+  --comic-outline-thick: 3px;
+  --comic-outline-medium: 2px;
+  --comic-outline-thin: 1px;
+  
+  /* Speech bubble colors */
+  --bubble-bg: #ffffff;
+  --bubble-border: var(--cool-gray-900);
+  --bubble-shadow: rgba(0, 0, 0, 0.25);
+  
+  /* Comic action effects */
+  --pow-yellow: var(--cyber-yellow-500);
+  --boom-orange: var(--sunset-orange-500);
+  --zap-purple: var(--electric-purple-500);
+
+  /* ===========================
+     🌟 GRADIENT SYSTEMS
+     90s-inspired but modern execution
+     =========================== */
+  
+  /* Sunrise gradient (optimistic, energetic) */
+  --gradient-sunrise: linear-gradient(
+    135deg,
+    var(--sunset-orange-400) 0%,
+    var(--hot-pink-500) 50%,
+    var(--electric-purple-600) 100%
+  );
+  
+  /* Ocean gradient (trustworthy, professional) */
+  --gradient-ocean: linear-gradient(
+    135deg,
+    var(--neon-teal-400) 0%,
+    var(--neon-teal-600) 50%,
+    var(--electric-purple-700) 100%
+  );
+  
+  /* Retro gradient (90s throwback) */
+  --gradient-retro: linear-gradient(
+    90deg,
+    var(--hot-pink-500) 0%,
+    var(--sunset-orange-500) 25%,
+    var(--cyber-yellow-500) 50%,
+    var(--lime-green-500) 75%,
+    var(--neon-teal-500) 100%
+  );
+  
+  /* Neon glow gradient (eye-catching) */
+  --gradient-neon: linear-gradient(
+    45deg,
+    var(--electric-purple-500) 0%,
+    var(--hot-pink-500) 33%,
+    var(--sunset-orange-500) 66%,
+    var(--cyber-yellow-500) 100%
+  );
+
+  /* ===========================
+     🎯 SEMANTIC COLOR MAPPING
+     Vibrant but professional application
+     =========================== */
+  
+  /* Primary Brand (Teal - trustworthy tile expert) */
+  --ts-color-primary: var(--neon-teal-600);
+  --ts-color-primary-hover: var(--neon-teal-700);
+  --ts-color-primary-light: var(--neon-teal-400);
+  --ts-color-primary-soft: var(--neon-teal-50);
+  
+  /* Secondary Brand (Orange - energetic, warm) */
+  --ts-color-secondary: var(--sunset-orange-500);
+  --ts-color-secondary-hover: var(--sunset-orange-600);
+  --ts-color-secondary-light: var(--sunset-orange-400);
+  --ts-color-secondary-soft: var(--sunset-orange-50);
+  
+  /* Accent (Pink - memorable, fun) */
+  --ts-color-accent: var(--hot-pink-500);
+  --ts-color-accent-hover: var(--hot-pink-600);
+  --ts-color-accent-light: var(--hot-pink-400);
+  --ts-color-accent-soft: var(--hot-pink-50);
+  
+  /* Success (Lime - positive, fresh) */
+  --ts-color-success: var(--lime-green-600);
+  --ts-color-success-bg: var(--lime-green-50);
+  --ts-color-success-text: var(--lime-green-700);
+  
+  /* Warning (Yellow - attention without alarm) */
+  --ts-color-warning: var(--cyber-yellow-600);
+  --ts-color-warning-bg: var(--cyber-yellow-50);
+  --ts-color-warning-text: #7c5e10;
+  
+  /* Error (Hot Pink - visible but not scary) */
+  --ts-color-error: #d81b60;
+  --ts-color-error-bg: var(--hot-pink-50);
+  --ts-color-error-text: #c2185b;
+
+  /* ===========================
+     📄 SURFACE SYSTEM
+     Clean, modern, lets colors pop
+     =========================== */
+  
+  --ts-surface-base: var(--cool-gray-50);
+  --ts-surface-raised: #ffffff;
+  --ts-surface-overlay: rgba(255, 255, 255, 0.95);
+  --ts-surface-tinted-teal: rgba(0, 151, 167, 0.05);
+  --ts-surface-tinted-orange: rgba(255, 152, 0, 0.05);
+  --ts-surface-tinted-pink: rgba(233, 30, 99, 0.05);
+  
+  /* ===========================
+     ✍️ TEXT SYSTEM
+     High contrast for readability
+     =========================== */
+  
+  --ts-text-primary: var(--cool-gray-900);
+  --ts-text-secondary: var(--cool-gray-700);
+  --ts-text-muted: var(--cool-gray-500);
+  --ts-text-on-color: #ffffff;
+  --ts-text-on-light: var(--cool-gray-900);
+  
+  /* ===========================
+     🖌️ BORDER & OUTLINE SYSTEM
+     Comic book inspired
+     =========================== */
+  
+  --ts-border-thin: 1px solid var(--cool-gray-200);
+  --ts-border-medium: 2px solid var(--cool-gray-300);
+  --ts-border-thick: 3px solid var(--cool-gray-900);
+  --ts-border-comic: 3px solid var(--cool-gray-900);
+  --ts-border-accent: 2px solid var(--neon-teal-500);
+  
+  /* ===========================
+     ✨ SHADOW SYSTEM
+     Depth with personality
+     =========================== */
+  
+  /* Soft shadows (subtle elevation) */
+  --shadow-xs: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.10);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.12);
+  
+  /* Comic shadows (bold, graphic) */
+  --shadow-comic-sm: 
+    3px 3px 0 var(--cool-gray-900);
+  --shadow-comic-md: 
+    5px 5px 0 var(--cool-gray-900);
+  --shadow-comic-lg: 
+    8px 8px 0 var(--cool-gray-900);
+  
+  /* Colored glow shadows (90s neon effect) */
+  --shadow-glow-teal: 
+    0 0 20px rgba(0, 151, 167, 0.4),
+    0 0 40px rgba(0, 151, 167, 0.2);
+  --shadow-glow-pink: 
+    0 0 20px rgba(233, 30, 99, 0.4),
+    0 0 40px rgba(233, 30, 99, 0.2);
+  --shadow-glow-orange: 
+    0 0 20px rgba(255, 152, 0, 0.4),
+    0 0 40px rgba(255, 152, 0, 0.2);
+
+  /* ===========================
+     📏 SPACING SCALE
+     Consistent rhythm
+     =========================== */
+  
+  --space-1: 0.25rem;   /* 4px */
+  --space-2: 0.5rem;    /* 8px */
+  --space-3: 0.75rem;   /* 12px */
+  --space-4: 1rem;      /* 16px */
+  --space-5: 1.25rem;   /* 20px */
+  --space-6: 1.5rem;    /* 24px */
+  --space-8: 2rem;      /* 32px */
+  --space-10: 2.5rem;   /* 40px */
+  --space-12: 3rem;     /* 48px */
+  --space-16: 4rem;     /* 64px */
+  --space-20: 5rem;     /* 80px */
+  --space-24: 6rem;     /* 96px */
+
+  /* ===========================
+     🎭 TYPOGRAPHY TOKENS
+     Bold, readable, playful
+     =========================== */
+  
+  --font-display: "Fredoka", "Comic Sans MS", "Arial Rounded", sans-serif;
+  --font-body: "Inter", -apple-system, system-ui, sans-serif;
+  --font-mono: "Fira Code", "Courier New", monospace;
+  
+  --text-xs: 0.75rem;     /* 12px */
+  --text-sm: 0.875rem;    /* 14px */
+  --text-base: 1rem;      /* 16px */
+  --text-lg: 1.125rem;    /* 18px */
+  --text-xl: 1.25rem;     /* 20px */
+  --text-2xl: 1.5rem;     /* 24px */
+  --text-3xl: 1.875rem;   /* 30px */
+  --text-4xl: 2.25rem;    /* 36px */
+  --text-5xl: 3rem;       /* 48px */
+  --text-6xl: 3.75rem;    /* 60px */
+  --text-7xl: 4.5rem;     /* 72px */
+  
+  /* Font weights */
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+  --font-black: 900;
+
+  /* ===========================
+     🎪 ANIMATION TOKENS
+     Bouncy, playful, smooth
+     =========================== */
+  
+  --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-snappy: cubic-bezier(0.4, 0, 0.6, 1);
+  
+  --duration-fast: 150ms;
+  --duration-normal: 300ms;
+  --duration-slow: 500ms;
+  --duration-slower: 700ms;
+
+  /* ===========================
+     🎨 BORDER RADIUS
+     Friendly, approachable curves
+     =========================== */
+  
+  --radius-sm: 0.25rem;   /* 4px */
+  --radius-md: 0.5rem;    /* 8px */
+  --radius-lg: 0.75rem;   /* 12px */
+  --radius-xl: 1rem;      /* 16px */
+  --radius-2xl: 1.5rem;   /* 24px */
+  --radius-3xl: 2rem;     /* 32px */
+  --radius-full: 9999px;  /* Pill */
+  
+  /* Comic bubble radius */
+  --radius-bubble: 1.5rem 1.5rem 1.5rem 0.25rem;
+
+  /* ===========================
+     📐 Z-INDEX SCALE
+     Predictable layering
+     =========================== */
+  
+  --z-base: 0;
+  --z-dropdown: 1000;
+  --z-sticky: 1100;
+  --z-overlay: 1200;
+  --z-modal: 1300;
+  --z-popover: 1400;
+  --z-toast: 1500;
+  --z-tooltip: 1600;
+
+  /* ===========================
+     🎯 CONTAINER WIDTHS
+     Responsive, readable
+     =========================== */
+  
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1280px;
+  --container-2xl: 1536px;
+  
+  --container: var(--container-lg);
+  --container-narrow: var(--container-md);
+  --container-wide: var(--container-xl);
+}
+
+/* ===========================
+   🌙 DARK MODE OVERRIDES
+   (Optional - for night owls)
+   =========================== */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ts-surface-base: var(--cool-gray-900);
+    --ts-surface-raised: var(--cool-gray-800);
+    --ts-text-primary: var(--cool-gray-50);
+    --ts-text-secondary: var(--cool-gray-300);
+    --ts-text-muted: var(--cool-gray-400);
+    
+    /* Vibrant colors stay vibrant in dark mode! */
+    --ts-color-primary: var(--neon-teal-400);
+    --ts-color-secondary: var(--sunset-orange-400);
+    --ts-color-accent: var(--hot-pink-400);
+    
+    /* Comic shadows inverse */
+    --shadow-comic-sm: -3px -3px 0 var(--cool-gray-100);
+    --shadow-comic-md: -5px -5px 0 var(--cool-gray-100);
+    --shadow-comic-lg: -8px -8px 0 var(--cool-gray-100);
+  }
+}
+
+/* ===========================
+   🎨 UTILITY CLASSES
+   Quick access to system
+   =========================== */
+
+.gradient-sunrise { background: var(--gradient-sunrise); }
+.gradient-ocean { background: var(--gradient-ocean); }
+.gradient-retro { background: var(--gradient-retro); }
+.gradient-neon { background: var(--gradient-neon); }
+
+.shadow-comic-sm { box-shadow: var(--shadow-comic-sm); }
+.shadow-comic-md { box-shadow: var(--shadow-comic-md); }
+.shadow-comic-lg { box-shadow: var(--shadow-comic-lg); }
+
+.glow-teal { box-shadow: var(--shadow-glow-teal); }
+.glow-pink { box-shadow: var(--shadow-glow-pink); }
+.glow-orange { box-shadow: var(--shadow-glow-orange); }
+
+.border-comic { border: var(--ts-border-comic); }
+.border-accent { border: var(--ts-border-accent); }
+
+/* ===========================
+   💫 SPECIAL EFFECTS
+   90s nostalgia meets modern polish
+   =========================== */
+
+/* Halftone dot pattern */
+.halftone-bg {
+  background-image: 
+    radial-gradient(circle at 25% 25%, var(--neon-teal-500) 2px, transparent 2px),
+    radial-gradient(circle at 75% 75%, var(--sunset-orange-500) 2px, transparent 2px);
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
+}
+
+/* Comic book speed lines */
+.speed-lines {
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 10px,
+    var(--neon-teal-500) 10px,
+    var(--neon-teal-500) 12px
+  );
+}
+
+/* Neon text effect */
+.text-neon {
+  color: var(--cyber-yellow-500);
+  text-shadow: 
+    0 0 10px rgba(255, 235, 59, 0.8),
+    0 0 20px rgba(255, 235, 59, 0.6),
+    0 0 30px rgba(255, 235, 59, 0.4);
+}
+
+/* ============================================
+   🎉 END OF 90S MODERN DESIGN SYSTEM
+   ============================================ */
