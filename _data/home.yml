@@ -1,35 +1,35 @@
 hero:
-  eyebrow: "🏅 Licensed NJ HIC #13VH10808800 · 📐 TCNA 2024 Compliant"
+  eyebrow: "Licensed NJ HIC #13VH10808800 · TCNA 2024 Compliant"
   title: "Licensed NJ Tile Contractor - Zero Leaking Showers, EVER"
   subtitle: "TCNA-Compliant Installations • 47 Photos Per Project • 2-Year Warranty"
   summary: "Professional tile installations, flood-tested waterproofing, and code-compliant remodeling for South Jersey property owners. Every substrate measured, every waterproofing layer documented, every detail guaranteed—because your bathroom shouldn't be a gamble."
   primary:
-    label: "🔥 GET FREE ESTIMATE (24-HOUR RESPONSE)"
+    label: "Get Free Estimate (24-Hour Response)"
     url: /contact/
   secondary:
-    label: "💰 SEE TYPICAL PROJECT COSTS"
+    label: "See Typical Project Costs"
     url: /pricing/
   facts:
-    - icon: "🏅"
+    - icon: "badge"
       label: "NJ HIC Licensed"
       text: "#13VH10808800"
-    - icon: "📐"
+    - icon: "ruler"
       label: "Standards"
       text: "TCNA 2024 / ANSI A108"
-    - icon: "🗺️"
+    - icon: "map"
       label: "Service Area"
       text: "Atlantic, Ocean, Cape May"
   highlights:
-    - "🎯 Substrate flatness measured (1/8\" in 10'), never assumed"
-    - "💧 Waterproofing flood-tested per ASTM E2947 before tile"
-    - "📏 95% thinset coverage for large-format tile (TCNA-recommended)"
-    - "📸 Photo documentation suitable for lenders, insurance, and GCs"
+    - "Substrate flatness measured (1/8\" in 10'), never assumed"
+    - "Waterproofing flood-tested per ASTM E2947 before tile"
+    - "95% thinset coverage for large-format tile (TCNA-recommended)"
+    - "Photo documentation suitable for lenders, insurance, and GCs"
 
 services:
-  eyebrow: "🔬 TCNA-Compliant Layouts & Waterproof Assemblies (Nerdy? Yes. Necessary? Absolutely.)"
+  eyebrow: "TCNA-Compliant Layouts & Waterproof Assemblies (Nerdy? Yes. Necessary? Absolutely.)"
   title: "Installations Engineered for Longevity, Compliance, and Visual Precision"
   summary: "Every project begins with substrate assessment, flood-tested waterproofing, and photo documentation suitable for lenders, tenants, or general contractors. No shortcuts. No sliver tiles unless geometry leaves no alternative. TCNA-compliant, NJ HIC-licensed, owner-operated."
-  real_talk: "💬 Real Talk: Most contractors eyeball it. We measure it. They hope it doesn't leak. We flood-test it. They say 'trust us.' We show you photos."
+  real_talk: "Real Talk: Most contractors eyeball it. We measure it. They hope it doesn't leak. We flood-test it. They say 'trust us.' We show you photos."
   cards:
     - icon: tile
       title: "Tile That Doesn't Crack"
@@ -68,10 +68,10 @@ services:
   note: "All work meets or exceeds TCNA 2024 standards. Daily documentation, transparent communication, and NJ HIC compliance from demolition to punch-list."
 
 process:
-  eyebrow: "🛠️ How We Work"
+  eyebrow: "How We Work"
   title: "Transparent, Code-Compliant Craftsmanship—From Initial Walk-Through to Final Closeout"
   summary: "No hidden fees. No surprise change orders. No ghosting. Every phase documented, communicated, and executed to TCNA standards with full NJ HIC compliance."
-  fun_fact: "💡 Pro Tip: If a contractor says 'we don't need to test it,' what they mean is 'we hope you don't notice when it fails.'"
+  fun_fact: "Pro Tip: If a contractor says 'we don't need to test it,' what they mean is 'we hope you don't notice when it fails.'"
   steps:
     - title: "On-Site Assessment & TCNA Review"
       description: "Complimentary, NJ HIC-licensed walk-through. We evaluate substrate conditions, moisture levels, and code compliance per TCNA guidelines—ensuring your project starts with a documented, standards-based foundation."
@@ -84,10 +84,10 @@ process:
       icon: check-circle
 
 materials:
-  eyebrow: "🎯 Materials & Standards"
+  eyebrow: "Materials & Standards"
   title: "TCNA-Specified Products—Not 'Whatever's on the Truck'"
   summary: "Every material specified by performance rating, not brand loyalty. ANSI-certified thinsets, ASTM-tested waterproofing, and UL-listed electrical—because code compliance isn't negotiable."
-  callout: "⚠️ Real Talk: That 'waterproof' paint from the box store? Not actually waterproof for showers. Trust us—we've replaced enough of them to know."
+  callout: "Real Talk: That 'waterproof' paint from the box store? Not actually waterproof for showers. Trust us—we've replaced enough of them to know."
   items:
     - icon: tile
       title: "ANSI-Certified Thinsets & Grouts"

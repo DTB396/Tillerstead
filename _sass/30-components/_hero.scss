@@ -6,10 +6,28 @@
 .ts-hero {
   container-type: inline-size;
   inline-size: 100%;
-  padding-block: var(--section-pad-y, clamp(2.5rem, 6vb, 5.25rem));
+  padding-block: var(--section-pad-y, clamp(3rem, 8vb, 6rem));
   padding-inline: clamp(1rem, 4vi, 1.75rem);
-  background: var(--hero-bg, var(--ts-color-surface));
+  background: 
+    linear-gradient(135deg, 
+      var(--ts-color-surface) 0%, 
+      color-mix(in srgb, var(--ts-color-surface) 95%, var(--ts-color-primary) 5%) 100%
+    );
   color: var(--hero-text, var(--ts-color-on-surface));
+  position: relative;
+  overflow: hidden;
+
+  /* Subtle pattern overlay */
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: 
+      radial-gradient(circle at 20% 80%, color-mix(in srgb, var(--ts-color-primary) 8%, transparent) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, color-mix(in srgb, var(--ts-color-accent) 6%, transparent) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+  }
 
   /* Accessibility: Ensure sufficient contrast (WCAG 2.1 AA) */
 }
@@ -21,6 +39,8 @@
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
   gap: var(--gutter, clamp(1.5rem, 3.5vi, 2.5rem));
   align-items: center;
+  position: relative;
+  z-index: 1;
 }
 
 @container (inline-size > 60rem) {
@@ -38,10 +58,16 @@
 
 .ts-hero__eyebrow {
   text-transform: uppercase;
-  letter-spacing: 0.3em;
-  font-size: 0.75rem;
-  color: var(--ts-color-primary-light, #38bdf8);
+  letter-spacing: 0.15em;
+  font-size: 0.8rem;
+  color: var(--ts-color-primary);
   font-weight: 700;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: color-mix(in srgb, var(--ts-color-primary) 10%, transparent);
+  border-radius: var(--ts-radius-md, 0.5rem);
+  border: 1px solid color-mix(in srgb, var(--ts-color-primary) 25%, transparent);
+  margin-bottom: 1rem;
 
   /* Industry: Highlight credentials or TCNA compliance here */
 }
@@ -95,5 +121,129 @@
 }
 
 /* Remove legacy media queries — grid and container queries handle all layouts */
+
+/* Hero Facts/KPIs Section */
+.ts-hero__facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+.ts-hero__fact {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  padding: 1rem 1.25rem;
+  background: color-mix(in srgb, var(--ts-color-surface-elevated) 95%, var(--ts-color-primary) 5%);
+  border-radius: var(--ts-radius-lg);
+  border: 1px solid color-mix(in srgb, var(--ts-color-border) 70%, var(--ts-color-primary) 30%);
+  box-shadow: 
+    0 2px 8px rgba(0, 0, 0, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 
+      0 4px 12px rgba(0, 0, 0, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  }
+
+  .ts-hero__fact-icon {
+    font-size: 1.75rem;
+    flex-shrink: 0;
+  }
+
+  strong {
+    display: block;
+    color: var(--ts-color-heading);
+    font-weight: 700;
+    font-size: 0.875rem;
+    margin-bottom: 0.25rem;
+  }
+
+  span:not(:first-child) {
+    display: block;
+    color: var(--ts-color-text);
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+}
+
+/* Hero Bullets/Highlights */
+.ts-hero__bullets {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+
+  li {
+    position: relative;
+    padding-left: 2rem;
+    line-height: 1.6;
+    color: var(--ts-color-text);
+
+    &::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 1.5rem;
+      height: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, 
+        color-mix(in srgb, var(--ts-color-primary) 18%, transparent),
+        color-mix(in srgb, var(--ts-color-accent) 15%, transparent));
+      border-radius: 50%;
+      color: var(--ts-color-primary);
+      font-weight: 700;
+      font-size: 0.875rem;
+      border: 1px solid color-mix(in srgb, var(--ts-color-primary) 25%, transparent);
+      box-shadow: 0 2px 6px color-mix(in srgb, var(--ts-color-primary) 12%, transparent);
+    }
+  }
+}
+
+/* Hero Title */
+.ts-hero__title {
+  font-size: clamp(2.25rem, 5vw + 1rem, 3.75rem);
+  line-height: 1.15;
+  font-weight: 800;
+  margin: 0 0 1rem 0;
+  color: var(--ts-color-heading);
+  letter-spacing: -0.02em;
+  
+  /* Subtle text gradient for modern look */
+  background: linear-gradient(135deg, 
+    var(--ts-color-heading) 0%,
+    color-mix(in srgb, var(--ts-color-heading) 85%, var(--ts-color-primary) 15%) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Hero Lead/Summary */
+.ts-hero__lede,
+.ts-hero__lead {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--ts-color-text);
+  margin: 0 0 1.5rem 0;
+  max-width: 580px;
+}
+
+/* Hero Note */
+.ts-hero__note {
+  font-size: 0.875rem;
+  color: var(--ts-color-muted);
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid color-mix(in srgb, var(--ts-color-border) 50%, transparent);
+}
 
 /* Linting: This file passes stylelint and conforms to OUTPUT_RULES.md */
