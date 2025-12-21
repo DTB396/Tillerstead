@@ -11,20 +11,16 @@
     id="{{ section_id }}"
   >
     <div class="container">
-      {# Eyebrow #}
       {% if cta.eyebrow %}
         <p class="eyebrow text-accent">{{ cta.eyebrow }}</p>
       {% endif %}
-      {# Title #}
       {% if cta.title %}
         <h2 id="{{ heading_id }}" class="heading-2">{{ cta.title }}</h2>
       {% endif %}
-      {# Summary/Lead #}
       {% if cta.summary %}
         <p id="{{ summary_id }}" class="lead">{{ cta.summary }}</p>
       {% endif %}
 
-      {# Button Row #}
       <div class="btn-row center" role="group" aria-label="Call to action buttons">
         {% if cta.primary %}
           <a class="btn btn--primary" href="{{ cta.primary.url | relative_url }}">{{ cta.primary.label }}</a>
@@ -34,7 +30,6 @@
         {% endif %}
       </div>
 
-      {# Note/Meta #}
       {% if cta.note %}
         <p class="meta"><small>{{ cta.note }}</small></p>
       {% endif %}
