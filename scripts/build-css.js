@@ -26,7 +26,7 @@ function stripFrontMatter(source) {
     while (end < lines.length && lines[end].trim() !== '---') end++;
     if (end < lines.length) return lines.slice(end + 1).join('\n');
   }
-  return lines.slice(2).join('\n');
+  return source;
 }
 
 /**
