@@ -27,11 +27,11 @@ importedFiles.forEach(f => console.log(`   - ${f}`));
 // Find all SCSS files
 function getAllScssFiles(dir, fileList = []) {
   const files = fs.readdirSync(dir);
-  
+
   files.forEach(file => {
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
-    
+
     if (stat.isDirectory()) {
       getAllScssFiles(filePath, fileList);
     } else if (file.endsWith('.scss')) {
@@ -39,7 +39,7 @@ function getAllScssFiles(dir, fileList = []) {
       fileList.push(relativePath);
     }
   });
-  
+
   return fileList;
 }
 
@@ -59,7 +59,7 @@ const folders = {
   'utilities': '40-utilities'
 };
 
-Object.entries(folders).forEach(([name, folder]) => {
+Object.entries(folders).forEach(([, folder]) => {
   const folderPath = path.join(sassDir, folder);
   if (fs.existsSync(folderPath)) {
     const files = fs.readdirSync(folderPath).filter(f => f.endsWith('.scss'));
