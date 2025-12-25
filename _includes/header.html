@@ -1,80 +1,58 @@
-<header class="site-header ts-header ts-theme" role="banner">
+<header class="site-header ts-header ts-theme">
   <div class="site-header-inner container">
+
     <!-- Brand -->
     <div class="ts-brand">
-      <a
-        class="site-logo"
-        href="{{ '/' | relative_url }}"
-        aria-label="{{ site.title | default: 'Tillerstead LLC' }} - Return to homepage"
-      >
-        <img
-          src="{{ '/assets/img/logo/tillerstead-logo-header.svg' | relative_url }}"
-          alt="{{ site.title | default: 'Tillerstead LLC' }}"
-          class="site-logo-img ts-logo-img"
-          width="160"
-          height="auto"
-          fetchpriority="high"
+      <a class="site-logo" href="{{ '/' | relative_url }}" <!-- The hidden span below provides the accessible name -->
+        >
+        <img src="{{ '/assets/img/logo/tillerstead-logo-header.svg' | relative_url }}"
+          alt="{{ site.title | default: 'Tillerstead LLC' }}" class="site-logo-img ts-logo-img" width="160" <!-- Height
+          removed – let CSS control it -->
+        fetchpriority="high"
         />
-        <!-- Accessible text fallback (not visible) -->
+        <!-- Accessible text fallback (visually hidden) -->
         <span class="site-logo-text sr-only">
           {{ site.title | default: 'Tillerstead LLC' }}
         </span>
       </a>
     </div>
-    
+
     <!-- Primary navigation -->
     <div class="site-nav-shell" data-nav-container>
       <div class="site-nav-backdrop" data-nav-overlay aria-hidden="true"></div>
-      <nav
-        id="site-nav"
-        class="site-nav"
-        aria-label="Primary navigation"
-        aria-expanded="false"
-      >
+
+      <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
         <div class="site-nav-drawer-header">
           <p class="nav-drawer-label">Menu</p>
-          <button
-            type="button"
-            class="nav-close"
-            data-nav-close
-            aria-label="Close navigation menu"
-          >
+
+          <button type="button" class="nav-close" data-nav-close aria-label="Close navigation menu">
+            <!-- Visible label for sighted users -->
             <span class="nav-close-label">Close</span>
             <span class="nav-close-icon" aria-hidden="true">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <line x1="18" y1="6" x2="6" y2="18"></line>
                 <line x1="6" y1="6" x2="18" y2="18"></line>
               </svg>
             </span>
           </button>
         </div>
+
         <ul class="site-menu">
           {% assign nav_items = site.data.navigation.primary %}
           {% for item in nav_items %}
-            {% assign is_current = false %}
+          {% assign is_current = false %}
 
-            {% if item.exact and page.url == item.exact %}
-              {% assign is_current = true %}
-            {% elsif item.match and page.url contains item.match %}
-              {% assign is_current = true %}
-            {% endif %}
+          {% if item.exact and page.url == item.exact %}
+          {% assign is_current = true %}
+          {% elsif item.match and page.url contains item.match %}
+          {% assign is_current = true %}
+          {% endif %}
 
-            <li>
-              <a
-                href="{{ item.url | relative_url }}"
-                {% if is_current %}aria-current="page"{% endif %}
-              >
-                {{ item.title }}
-              </a>
-            </li>
+          <li>
+            <a href="{{ item.url | relative_url }}" {% if is_current %}aria-current="page" {% endif %}>{{ item.title
+              }}</a>
+          </li>
           {% endfor %}
         </ul>
       </nav>
@@ -82,26 +60,18 @@
 
     <!-- Header actions -->
     <div class="site-header-actions">
-      <a
-        class="call-btn btn"
-        href="tel:{{ site.company.phone_link | default: '+16096659350' }}"
-        aria-label="Call Tillerstead at {{ site.company.phone_display | default: '(609) 665-9350' }}"
-      >
+      <a class="call-btn btn" href="tel:{{ site.company.phone_link | default: '+16096659350' }}"
+        aria-label="Call Tillerstead at {{ site.company.phone_display | default: '(609) 665-9350' }}">
         <span aria-hidden="true">{{ site.company.phone_display | default: '(609) 665-9350' }}</span>
       </a>
 
-      <button
-        class="nav-toggle"
-        id="nav-toggle"
-        type="button"
-        aria-controls="site-nav"
-        aria-expanded="false"
-        aria-label="Open navigation menu"
-      >
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false"
+        aria-label="Open navigation menu">
         <span class="nav-toggle-label" aria-hidden="true">Menu</span>
         <span class="nav-toggle-icon" aria-hidden="true">
-          <!-- Lightweight inline SVG hamburger icon -->
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <!-- Inline SVG hamburger icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <line x1="3" y1="6" x2="21" y2="6"></line>
             <line x1="3" y1="12" x2="21" y2="12"></line>
             <line x1="3" y1="18" x2="21" y2="18"></line>
@@ -109,5 +79,6 @@
         </span>
       </button>
     </div>
+
   </div>
 </header>
