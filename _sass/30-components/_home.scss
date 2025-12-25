@@ -21,6 +21,10 @@
   padding-block: var(--spacing-section-pad-y);
   background: transparent;
   border-top: 1px solid color-mix(in srgb, var(--color-stone-200) 86%, transparent);
+
+  /* Performance optimization */
+  content-visibility: auto;
+  contain-intrinsic-size: 0 500px;
 }
 
 .page-home .site-main > section:nth-of-type(even) {
@@ -215,7 +219,7 @@
   width: 28px;
   height: 28px;
   color: var(--ts-color-primary);
-  stroke: currentColor;
+  stroke: currentcolor;
   fill: none;
   stroke-width: 2;
   stroke-linecap: round;
@@ -456,8 +460,3 @@
   }
 }
 
-/* Performance optimization */
-.page-home .site-main > section {
-  content-visibility: auto;
-  contain-intrinsic-size: 0 500px;
-}

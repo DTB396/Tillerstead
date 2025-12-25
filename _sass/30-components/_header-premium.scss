@@ -14,6 +14,11 @@
   border-bottom: 1px solid rgb(0, 0, 0, 0.08);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   will-change: transform, padding;
+
+  /* GPU acceleration for smooth animations */
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  contain: layout style;
 }
 
 /* Scrolled state - compact header */
@@ -452,14 +457,6 @@
   .nav-toggle {
     display: none;
   }
-}
-
-/* GPU acceleration for smooth animations */
-.site-header {
-  transform: translateZ(0);
-  backface-visibility: hidden;
-  will-change: transform;
-  contain: layout style;
 }
 
 .ts-logo,
