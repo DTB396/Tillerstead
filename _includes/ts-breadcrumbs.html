@@ -8,7 +8,7 @@ Tillerstead.com Breadcrumbs Component
 {% unless page.url == '/' or page.url == '/index.html' %}
 {%- assign is_home = page.url == '/' or page.url == '/index.html' -%}
 {%- assign render_breadcrumbs = true -%}
-{%- if is_home or page.show_breadcrumbs == false or page.breadcrumb == false -%}
+{%- if is_home or page.show_breadcrumbs == false -%}
   {%- assign render_breadcrumbs = false -%}
 {%- endif -%}
 

@@ -212,8 +212,9 @@
 /* Z-index hierarchy:
    - Header: 1400
    - Nav toggle: 1500
-   - Overlay: 9998
-   - Mobile drawer: 9999
+   - Nav shell: 9998
+   - Backdrop: 9999
+   - Mobile drawer: 10000
 */
 
 .mobile-nav-shell {
@@ -222,27 +223,29 @@
   inset: 0;
   z-index: 9998; /* Above everything - creates stacking context */
   pointer-events: none; /* Let clicks pass through when closed */
+  visibility: hidden;
+  transition: visibility 0s linear 0.4s; /* Delay hiding until animation completes */
 }
 
 .mobile-nav-shell.is-open {
   pointer-events: auto; /* Enable clicks when open */
+  visibility: visible;
+  transition: visibility 0s linear 0s; /* Show immediately */
 }
 
 .mobile-nav-backdrop {
   position: fixed;
   inset: 0;
-  background: rgb(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(8px);
   opacity: 0;
-  visibility: hidden;
   pointer-events: none;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  z-index: 1; /* Relative to shell (9998 + 1 = 9999) */
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 9999; /* Absolute z-index above shell */
 }
 
 .mobile-nav-shell.is-open .mobile-nav-backdrop {
   opacity: 1;
-  visibility: visible;
   pointer-events: auto;
 }
 
@@ -253,14 +256,15 @@
   bottom: 0;
   width: min(400px, 85vw);
   background: var(--ts-color-surface);
-  box-shadow: -10px 0 60px rgb(0, 0, 0, 0.3);
+  box-shadow: -10px 0 60px rgba(0, 0, 0, 0.3);
   transform: translateX(100%);
   transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  z-index: 2; /* Relative to shell (9998 + 2 = 10000), above backdrop */
+  z-index: 10000; /* Absolute z-index above backdrop */
   display: flex;
   flex-direction: column;
   overflow-y: auto;
   overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
 }
 
 .mobile-nav-shell.is-open .mobile-nav,
@@ -360,7 +364,7 @@
 
   .site-nav--left,
   .site-nav--right {
-    display: none;
+    display: none !important; /* Force hide desktop nav */
   }
 
   .site-branding {
@@ -368,13 +372,13 @@
   }
 
   .nav-toggle {
-    display: flex;
+    display: flex !important; /* Force show mobile toggle */
     grid-column: 3;
     justify-self: end;
   }
 
   .mobile-nav-shell {
-    display: block;
+    display: block !important; /* Force show mobile nav container */
   }
 
   .ts-logo {
@@ -412,6 +416,10 @@
   .mobile-nav-header,
   .mobile-nav-cta {
     padding: 1.25rem 1.5rem;
+  }
+
+  .mobile-menu {
+    padding: 1.5rem 0;
   }
 
   .mobile-nav-link {
