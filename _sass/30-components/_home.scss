@@ -59,18 +59,20 @@
 .page-home .ts-hero__inner {
   max-inline-size: var(--spacing-container, 1100px);
   margin-inline: auto;
-  padding-block: var(--spacing-section-pad-y, clamp(2.5rem, 6vb, 5.25rem));
+  padding-block: clamp(3rem, 8vb, 6rem) clamp(2rem, 5vb, 4rem);
   padding-inline: clamp(1rem, 4vi, 1.75rem);
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 22.5rem), 1fr));
+  grid-template-columns: 1fr;
   gap: var(--spacing-gutter, clamp(1.5rem, 3.5vi, 2.5rem));
-  align-items: start;
+  align-items: center;
+  max-width: 900px;
 }
 
-/* Container query for hero layout */
+/* Remove two-column layout - single column is cleaner for homepage */
 @container (inline-size > 64rem) {
   .page-home .ts-hero__inner {
-    grid-template-columns: 1.6fr minmax(22.5rem, 30rem);
+    grid-template-columns: 1fr;
+    max-width: 900px;
   }
 }
 
@@ -89,6 +91,10 @@
   display: flex;
   flex-direction: column;
   gap: var(--ts-spacing-md);
+  text-align: center;
+  align-items: center;
+  max-width: 800px;
+  margin-inline: auto;
 }
 
 .page-home .ts-hero__brand {
@@ -133,6 +139,7 @@
   color: var(--ts-color-heading);
   font-size: var(--font-heading-1);
   line-height: var(--font-line-height-tight);
+  max-width: 20ch;
 }
 
 .page-home .ts-hero__lede {
@@ -140,6 +147,7 @@
   color: var(--ts-color-muted);
   font-size: var(--font-size-lg);
   line-height: var(--font-line-height-relaxed);
+  max-width: 55ch;
 }
 
 .page-home .ts-hero__actions {
@@ -147,6 +155,7 @@
   flex-wrap: wrap;
   gap: var(--ts-spacing-sm);
   margin-top: var(--ts-spacing-md);
+  justify-content: center;
 }
 
 .page-home .ts-hero__bullets {
@@ -172,6 +181,13 @@
 .page-home .ts-hero__trust-line {
   margin: var(--ts-spacing-md) 0 0;
   color: var(--ts-color-muted);
+  text-align: center;
+  max-width: 65ch;
+}
+
+/* Hide sidebar project image on homepage - causes alignment issues */
+.page-home .ts-hero__aside {
+  display: none;
 }
 
 .page-home .ts-hero__project {
@@ -191,11 +207,12 @@
 
 .page-home .ts-hero__facts {
   list-style: none;
-  margin: var(--ts-spacing-md) 0 0;
+  margin: var(--ts-spacing-lg) auto 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
   gap: clamp(1rem, 2vw, 1.5rem);
+  max-width: 900px;
 }
 
 .page-home .ts-hero__fact {
@@ -243,16 +260,23 @@
   text-transform: uppercase;
 }
 
-.page-home .ts-hero__fact-text {
+.page-home .ts-hero__fact-body {
   margin: 0;
   color: var(--ts-color-muted);
   font-size: var(--font-size-sm);
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
 .page-home .ts-hero__note {
-  margin: var(--ts-spacing-md) 0 0;
+  margin: var(--ts-spacing-lg) auto 0;
   color: var(--ts-color-muted);
+  font-size: var(--font-size-sm);
+  text-align: center;
+  max-width: 65ch;
+  padding: var(--ts-spacing-md);
+  background: rgb(13, 154, 170, 0.04);
+  border-radius: var(--ts-radius-lg);
+  border: 1px solid rgb(13, 154, 170, 0.12);
 }
 
 /* Testimonials */
