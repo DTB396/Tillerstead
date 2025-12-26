@@ -1,9 +1,24 @@
-<header class="site-header ts-header ts-theme" data-header>
+<header class="site-header ts-header ts-theme" role="banner" data-header>
   <div class="site-header-inner container">
 
-    <!-- Brand -->
-    <div class="ts-brand">
-      <a class="site-logo" href="{{ '/' | relative_url }}" aria-label="{{ site.title | default: 'Tillerstead LLC' }} - Home">
+    <!-- Left side navigation (desktop) -->
+    <nav class="site-nav site-nav--left" role="navigation" aria-label="Primary navigation">
+      <ul class="site-menu site-menu--left">
+        <li class="nav-item">
+          <a href="{{ '/services/' | relative_url }}" class="nav-link">Services</a>
+        </li>
+        <li class="nav-item">
+          <a href="{{ '/portfolio/' | relative_url }}" class="nav-link">Our Work</a>
+        </li>
+        <li class="nav-item">
+          <a href="{{ '/recommended-products/' | relative_url }}" class="nav-link">Products</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Center logo -->
+    <div class="site-branding" data-logo>
+      <a class="site-logo ts-logo-link" href="{{ '/' | relative_url }}" aria-label="{{ site.title | default: 'Tillerstead LLC' }} - Home">
         <img src="{{ '/assets/img/logo/tillerstead-logo-header.svg' | relative_url }}"
           alt="Tillerstead" class="site-logo-img ts-logo ts-logo--header" width="220" height="auto" fetchpriority="high" />
         <span class="site-logo-text sr-only">
@@ -12,64 +27,101 @@
       </a>
     </div>
 
-    <!-- Primary navigation -->
-    <div class="site-nav-shell mobile-nav-shell" data-nav-container>
-      <div class="site-nav-backdrop mobile-nav-backdrop" data-nav-overlay aria-hidden="true"></div>
+    <!-- Right side navigation (desktop) -->
+    <nav class="site-nav site-nav--right" role="navigation" aria-label="Secondary navigation">
+      <ul class="site-menu site-menu--right">
+        <li class="nav-item">
+          <a href="{{ '/reviews/' | relative_url }}" class="nav-link">Reviews</a>
+        </li>
+        <li class="nav-item">
+          <a href="{{ '/about/' | relative_url }}" class="nav-link">About</a>
+        </li>
+        <li class="nav-item">
+          <a href="{{ '/contact/' | relative_url }}" class="nav-link">Contact</a>
+        </li>
+      </ul>
+    </nav>
 
-      <nav id="mobile-nav" class="site-nav mobile-nav" aria-label="Primary navigation">
-        <div class="site-nav-drawer-header">
-          <p class="nav-drawer-label">Menu</p>
+    <!-- Mobile menu toggle -->
+    <button type="button"
+      class="nav-toggle"
+      aria-controls="mobile-nav"
+      aria-expanded="false"
+      aria-label="Open navigation menu"
+      data-nav-toggle>
+      <span class="nav-toggle-label" aria-hidden="true">Menu</span>
+      <span class="nav-toggle-icon" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </span>
+    </button>
 
-          <button type="button" class="nav-close" data-nav-close aria-label="Close navigation menu">
-            <span class="nav-close-label">Close</span>
-            <span class="nav-close-icon" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="18" y1="6" x2="6" y2="18"></line>
-                <line x1="6" y1="6" x2="18" y2="18"></line>
-              </svg>
-            </span>
-          </button>
-        </div>
+  </div>
 
-        <ul class="site-menu">
-          {% assign nav_items = site.data.navigation.primary %}
-          {% for item in nav_items %}
-          {% assign is_current = false %}
-          {% if item.exact and page.url == item.exact %}
-          {% assign is_current = true %}
-          {% elsif item.match and page.url contains item.match %}
-          {% assign is_current = true %}
-          {% endif %}
-
-          <li>
-            <a href="{{ item.url | relative_url }}" {% if is_current %}aria-current="page" {% endif %}>{{ item.title }}</a>
-          </li>
-          {% endfor %}
-        </ul>
-      </nav>
-    </div>
-
-    <!-- Header actions -->
-    <div class="site-header-actions">
-      <a class="call-btn btn" href="tel:{{ site.company.phone_link | default: '+16096659350' }}"
-        aria-label="Call Tillerstead at {{ site.company.phone_display | default: '(609) 665-9350' }}">
-        <span aria-hidden="true">{{ site.company.phone_display | default: '(609) 665-9350' }}</span>
-      </a>
-
-      <button class="nav-toggle" id="nav-toggle" type="button" aria-controls="mobile-nav" aria-expanded="false"
-        aria-label="Open navigation menu">
-        <span class="nav-toggle-label" aria-hidden="true">Menu</span>
-        <span class="nav-toggle-icon" aria-hidden="true">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <line x1="3" y1="12" x2="21" y2="12"></line>
-            <line x1="3" y1="18" x2="21" y2="18"></line>
+  <!-- Mobile navigation drawer -->
+  <div class="mobile-nav-shell" data-nav-container>
+    <div class="mobile-nav-backdrop" data-nav-overlay aria-hidden="true"></div>
+    <nav id="mobile-nav" class="mobile-nav" role="navigation" aria-label="Mobile navigation">
+      <div class="mobile-nav-header">
+        <span class="mobile-nav-title">Menu</span>
+        <button type="button" class="nav-close" data-nav-close aria-label="Close menu">
+          <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">
+            <line x1="18" y1="6" x2="6" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <line x1="6" y1="6" x2="18" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
           </svg>
-        </span>
-      </button>
-    </div>
+        </button>
+      </div>
+      
+      <ul class="mobile-menu">
+        <li class="mobile-nav-item">
+          <a href="{{ '/services/' | relative_url }}" class="mobile-nav-link{% if page.url contains '/services/' %} active{% endif %}">
+            Services
+          </a>
+        </li>
+        
+        <li class="mobile-nav-item">
+          <a href="{{ '/portfolio/' | relative_url }}" class="mobile-nav-link{% if page.url contains '/portfolio/' %} active{% endif %}">
+            Our Work
+          </a>
+        </li>
+        
+        <li class="mobile-nav-item">
+          <a href="{{ '/recommended-products/' | relative_url }}" class="mobile-nav-link{% if page.url contains '/recommended-products/' or page.url contains '/products/' %} active{% endif %}">
+            Products
+          </a>
+        </li>
+        
+        <li class="mobile-nav-item">
+          <a href="{{ '/reviews/' | relative_url }}" class="mobile-nav-link{% if page.url contains '/reviews/' %} active{% endif %}">
+            Reviews
+          </a>
+        </li>
+        
+        <li class="mobile-nav-item">
+          <a href="{{ '/about/' | relative_url }}" class="mobile-nav-link{% if page.url contains '/about/' %} active{% endif %}">
+            About
+          </a>
+        </li>
+        
+        <li class="mobile-nav-item">
+          <a href="{{ '/contact/' | relative_url }}" class="mobile-nav-link{% if page.url contains '/contact/' %} active{% endif %}">
+            Contact
+          </a>
+        </li>
+      </ul>
 
+      <div class="mobile-nav-cta">
+        <a class="btn btn--primary btn--block" href="{{ '/contact/' | relative_url }}">
+          Request Estimate
+        </a>
+        <a class="btn btn--ghost btn--block" href="tel:{{ site.company.phone_link | default: '+16096659350' }}">
+          Call {{ site.company.phone_display | default: '(609) 665-9350' }}
+        </a>
+      </div>
+    </nav>
   </div>
 </header>
