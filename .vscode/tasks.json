@@ -3,6 +3,20 @@
   "version": "2.0.0",
   "tasks": [
     {
+      "label": "STONE: Audit + Fix (Premium restore)",
+      "type": "shell",
+      "command": "pwsh",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "${workspaceFolder}/scripts/ts-90-stone-audit-and-fix.ps1",
+        "-SandboxPath",
+        "${workspaceFolder}/../tillerstead-sandbox"
+      ],
+      "problemMatcher": [],
+      "group": "build"
       "label": "Sync Thumbtack Reviews",
       "type": "shell",
       "command": "npm run sync:thumbtack",
