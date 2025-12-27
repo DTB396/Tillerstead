@@ -31,7 +31,7 @@ Priority:
 2) site.description
 3) fallback string
 {%- endcomment -%}
-{%- assign meta_description = page.description | default: site.description | default: "NJ HIC #13VH12057400.
+{%- assign meta_description = page.description | default: site.description | default: "New Jersey HIC #13VH12057400.
 Tillerstead: TCNA-compliant tile, stone, and waterproofing by licensed professionals. No shortcuts—just technical
 excellence." -%}
 <meta name="description" content="{{ meta_description | strip_html | strip_newlines | escape | truncate: 160 }}">
@@ -46,7 +46,7 @@ Support either:
 {%- endcomment -%}
 {%- assign _kw = page.keywords | default: site.keywords -%}
 {%- if _kw == nil or _kw == "" -%}
-{%- assign _kw = "tile, stone, waterproofing, NJ HIC, TCNA, bathroom remodeling, Atlantic County, Tillerstead" -%}
+{%- assign _kw = "tile, stone, waterproofing, New Jersey HIC, TCNA, bathroom remodeling, Atlantic County, Tillerstead" -%}
 {%- endif -%}
 {%- if _kw.first -%}
 <meta name="keywords" content="{{ _kw | join: ', ' | escape }}">
@@ -54,9 +54,9 @@ Support either:
 <meta name="keywords" content="{{ _kw | escape }}">
 {%- endif -%}
 
-<meta name="author" content="{{ site.company.owner | default: 'Tillerstead LLC (NJ HIC #13VH12057400)' | escape }}">
+<meta name="author" content="{{ site.company.owner | default: 'Tillerstead LLC (New Jersey HIC #13VH12057400)' | escape }}">
 <meta name="geo.region" content="US-NJ">
-<meta name="geo.placename" content="{{ site.company.address_locality | default: 'Atlantic County' | escape }}, NJ">
+<meta name="geo.placename" content="{{ site.company.address_locality | default: 'Atlantic County' | escape }}, New Jersey">
 <meta name="format-detection" content="telephone=no">
 
 {% if page.noindex %}
@@ -113,7 +113,7 @@ You can store these in _config.yml if you want (site.theme_color_dark/light).
 <meta property="og:url" content="{{ canonical_url }}">
 <meta property="og:image" content="{{ og_image_abs }}">
 <meta property="og:image:alt"
-  content="{{ site.og_image_alt | default: 'Tillerstead LLC - TCNA-compliant tile & stone, NJ HIC #13VH12057400' | escape }}">
+  content="{{ site.og_image_alt | default: 'Tillerstead LLC - TCNA-compliant tile & stone, New Jersey HIC #13VH12057400' | escape }}">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 
@@ -122,7 +122,7 @@ You can store these in _config.yml if you want (site.theme_color_dark/light).
 <meta name="twitter:description" content="{{ og_description | strip_html | strip_newlines | truncate: 160 | escape }}">
 <meta name="twitter:image" content="{{ og_image_abs }}">
 <meta name="twitter:image:alt"
-  content="{{ site.og_image_alt | default: 'Tillerstead LLC - TCNA-compliant tile & stone, NJ HIC #13VH12057400' | escape }}">
+  content="{{ site.og_image_alt | default: 'Tillerstead LLC - TCNA-compliant tile & stone, New Jersey HIC #13VH12057400' | escape }}">
 
 <!-- Business contact microdata -->
 <meta property="business:contact_data:street_address" content="{{ site.company.address_line | default: '' | escape }}">

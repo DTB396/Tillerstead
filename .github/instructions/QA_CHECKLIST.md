@@ -3,7 +3,7 @@
 > 🔗 **SUPPLEMENTS CENTRALIZED GOVERNANCE**  
 > This checklist augments **[`/.ai/OUTPUT_RULES.md`](../../.ai/OUTPUT_RULES.md)** and the Tillerstead compliance system.  
 > For code quality, accessibility, and legal standards, always reference the authoritative `.ai/` directory.  
-> This file details human-driven verification for TCNA/NJ HIC compliance and conversion optimization.
+> This file details human-driven verification for TCNA/New Jersey HIC compliance and conversion optimization.
 
 ---
 
@@ -43,7 +43,7 @@ bundle exec jekyll build
 ## Images & Media
 - [ ] Homepage card images: no cumulative layout shift; `object-fit: cover` applied
 - [ ] Portfolio slider: fallback image renders, next/prev swaps are smooth
-- [ ] Alt text: descriptive, specific, and NJ HIC-compliant (sample at least 3 images)
+- [ ] Alt text: descriptive, specific, and New Jersey HIC-compliant (sample at least 3 images)
 - [ ] Large images use `loading="lazy"` and `srcset` for responsive loading
 
 ## Accessibility (WCAG 2.1 AA)
@@ -57,7 +57,7 @@ bundle exec jekyll build
 - [ ] Each key page: unique `<title>` (50–60 chars) and meta description (150–160 chars)
 - [ ] Canonical link: resolves to pretty URL (no `.html`)
 - [ ] Open Graph: default OG image loads, correct dimensions and alt text
-- [ ] Business JSON-LD: present in `<head>` on all pages, matches NJ HIC license and contact info
+- [ ] Business JSON-LD: present in `<head>` on all pages, matches New Jersey HIC license and contact info
 - [ ] BreadcrumbList JSON-LD: renders only on non-home pages
 - [ ] ContactPage structured data: included and valid on contact page
 
@@ -73,9 +73,9 @@ bundle exec jekyll build
 - [ ] Icons: SVGs under `assets/img/logo/`; PNGs at 192/256/384/512px under `assets/img/icons/` (if present)
 
 ## Content & Copy
-- [ ] Services: language is specific, NJ-focused, and cites TCNA/NJ HIC standards where relevant
+- [ ] Services: language is specific, New Jersey-focused, and cites TCNA/New Jersey HIC standards where relevant
 - [ ] Heading hierarchy: single `<h1>` per page, logical `<h2>`–`<h6>` structure
-- [ ] Phone number and NJ HIC license: visible in footer and contact sections
+- [ ] Phone number and New Jersey HIC license: visible in footer and contact sections
 
 ## Optional/Nice-to-Have
 - [ ] Manifest icons: use purpose-made PNGs in all required sizes under `assets/img/icons/`

@@ -1,6 +1,6 @@
 /* ==========================================================================
   Performance Layer — Modern CSS Optimizations
-  TCNA/NJ HIC-Compliant Rendering, Containment, and Animation
+  TCNA/New Jersey HIC-Compliant Rendering, Containment, and Animation
   ========================================================================== */
 
 /* Off-screen content: minimize layout/paint cost, per TCNA 2024 §5.2.1 */
@@ -88,6 +88,6 @@ body {
 /* --- Compliance Notes ---
 - All selectors use kebab-case per OUTPUT_RULES.md
 - No duplicate or overlapping rules; categories clarified for maintainability
-- All optimizations reference TCNA 2024, NJ HIC, and WCAG 2.1 AA where applicable
+- All optimizations reference TCNA 2024, New Jersey HIC, and WCAG 2.1 AA where applicable
 - Alt text and responsive image requirements enforced at HTML level (see DOMAIN.md)
 */

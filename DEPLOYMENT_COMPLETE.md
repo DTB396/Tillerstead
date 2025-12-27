@@ -77,8 +77,8 @@
 - **Impact:** Cleaner, less redundant (company name in logo)
 
 **2. License Badge Streamlined** ✅
-- **Before:** `NJ Licensed HIC #13VH10808800`
-- **After:** `NJ HIC #13VH10808800`
+- **Before:** `New Jersey licensed HIC #13VH10808800`
+- **After:** `New Jersey HIC #13VH10808800`
 - **Impact:** More concise, less cluttered on mobile
 
 **3. Logo Changed to Mark-Only** ✅
@@ -164,7 +164,7 @@
 - Code references (ANSI A108, A118.10) verified
 - Brand guidelines maintained
 
-### ✅ NJ HIC Compliance
+### ✅ New Jersey HIC Compliance
 - License number displayed: #13VH10808800
 - Required disclosures present
 - Consumer protection standards met

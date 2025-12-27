@@ -1,12 +1,12 @@
 # Portfolio slider entries for /portfolio/
-# Updated with AVAILABLE images - conversion-optimized for NJ tile jobs
+# Updated with AVAILABLE images - conversion-optimized for New Jersey tile jobs
 
 projects:
   - id: bathroom-complete
     tags: [showers, floors]
     file: tillerstead-work/bathrooms/after-entry-shot.jpg
     alt: Completed bathroom tile installation by Tillerstead LLC—TCNA-compliant waterproofing and professional finish
-    caption: "Code-compliant bathroom installation: waterproof assembly per ANSI A118.10, expansion joints per TCNA EJ171, and NJ HIC #13VH10808800 licensed work."
+    caption: "Code-compliant bathroom installation: waterproof assembly per ANSI A118.10, expansion joints per TCNA EJ171, and New Jersey HIC #13VH10808800 licensed work."
 
   - id: lft-vanity-wall
     tags: [showers]

@@ -11,8 +11,8 @@
 This adapter enforces all rules from:
 
 1. **`SYSTEM.md`** — Master behavioral contract, project context, and operational guardrails
-2. **`STYLE.md`** — Brand voice, persuasive copy, and positioning (48 Laws, TCNA/NJ HIC authority)
-3. **`DOMAIN.md`** — TCNA 2024 standards, NJ HIC compliance, technical best practices
+2. **`STYLE.md`** — Brand voice, persuasive copy, and positioning (48 Laws, TCNA/New Jersey HIC authority)
+3. **`DOMAIN.md`** — TCNA 2024 standards, New Jersey HIC compliance, technical best practices
 4. **`COMPLIANCE.md`** — Legal, accessibility, and consumer protection requirements
 5. **`OUTPUT_RULES.md`** — Code quality, naming, formatting, and commit conventions
 
@@ -177,7 +177,7 @@ Lighthouse: 92 Performance, 100 Accessibility.
 - Never commit sensitive data, credentials, or client info.
 - Never delete files or run destructive commands without explicit confirmation.
 - Always check `.gitignore` and sanitize all user-facing content.
-- Follow OWASP and NJ HIC/TCNA standards for security and compliance.
+- Follow OWASP and New Jersey HIC/TCNA standards for security and compliance.
 - Optimize assets and prevent unnecessary bloat.
 
 ---
@@ -206,5 +206,5 @@ Lighthouse: 92 Performance, 100 Accessibility.
 **Last Updated**: December 20, 2025  
 **Tool**: Codex-based agents (Cursor, Replit, autonomous)  
 **Authority**: SYSTEM.md + all domain files  
-**Key Capability**: Repository access, command execution, autonomous operation, TCNA/NJ HIC compliance
+**Key Capability**: Repository access, command execution, autonomous operation, TCNA/New Jersey HIC compliance
 

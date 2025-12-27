@@ -5,9 +5,9 @@
 > This directory contains **legacy instruction files**. All authoritative rules, technical standards, and operational guidance are maintained in the centralized AI governance system:
 >
 > - [`/.ai/SYSTEM.md`](../../.ai/SYSTEM.md): Master behavioral contract, project context, and operational rules
-> - [`/.ai/STYLE.md`](../../.ai/STYLE.md): Brand voice, persuasion, and copywriting standards (48 Laws, TCNA/NJ HIC positioning)
-> - [`/.ai/DOMAIN.md`](../../.ai/DOMAIN.md): Technical authority, TCNA 2024, NJ HIC compliance, and trade expertise
-> - [`/.ai/COMPLIANCE.md`](../../.ai/COMPLIANCE.md): Legal boundaries, NJ Consumer Fraud Act, accessibility, and regulatory requirements
+> - [`/.ai/STYLE.md`](../../.ai/STYLE.md): Brand voice, persuasion, and copywriting standards (48 Laws, TCNA/New Jersey HIC positioning)
+> - [`/.ai/DOMAIN.md`](../../.ai/DOMAIN.md): Technical authority, TCNA 2024, New Jersey HIC compliance, and trade expertise
+> - [`/.ai/COMPLIANCE.md`](../../.ai/COMPLIANCE.md): Legal boundaries, New Jersey Consumer Fraud Act, accessibility, and regulatory requirements
 > - [`/.ai/OUTPUT_RULES.md`](../../.ai/OUTPUT_RULES.md): Code quality, naming, formatting, and asset standards
 > - [`/.ai/COPILOT.md`](../../.ai/COPILOT.md): GitHub Copilot adaptation (inherits all above)
 > - [`/.ai/GPT.md`](../../.ai/GPT.md): ChatGPT adaptation
@@ -52,7 +52,7 @@ The legacy system suffered from:
 **The `/.ai/` structure delivers:**
 - **Single source of truth:** All rules, standards, and procedures in one place
 - **Explicit hierarchy:** SYSTEM.md → domain/quality/compliance → tool adapters
-- **Technical authority:** TCNA/NJ HIC standards, legal compliance, and accessibility
+- **Technical authority:** TCNA/New Jersey HIC standards, legal compliance, and accessibility
 - **Easy maintenance:** Update once, propagate everywhere
 
 ---
@@ -88,4 +88,4 @@ The legacy system suffered from:
 
 ---
 
-**All content, links, and procedures must comply with TCNA 2024, NJ HIC, and accessibility standards as defined in `/.ai/`.**
+**All content, links, and procedures must comply with TCNA 2024, New Jersey HIC, and accessibility standards as defined in `/.ai/`.**

@@ -1,6 +1,6 @@
 # CSS Architecture: Path A
 
-Tillerstead’s CSS architecture is engineered for maintainability, technical transparency, and strict compliance with TCNA 2024 and NJ HIC standards. This “Path A” structure ensures every layer has a clear, auditable responsibility, with all design tokens centralized for consistency and regulatory traceability.
+Tillerstead’s CSS architecture is engineered for maintainability, technical transparency, and strict compliance with TCNA 2024 and New Jersey HIC standards. This “Path A” structure ensures every layer has a clear, auditable responsibility, with all design tokens centralized for consistency and regulatory traceability.
 
 ## Directory Structure
 
@@ -36,7 +36,7 @@ Tillerstead’s CSS architecture is engineered for maintainability, technical tr
 - **Incremental Utilities:**  
     Utilities reside in `40-utilities` only. Structural spacing and layout logic remain in `20-layout` to prevent duplication and ensure maintainability.
 - **Accessibility & Compliance:**  
-    All classes, tokens, and patterns are documented for accessibility and legal compliance per NJ Consumer Fraud Act and WCAG 2.2 AA. Alt text, ARIA labels, and semantic markup are mandatory.
+    All classes, tokens, and patterns are documented for accessibility and legal compliance per New Jersey Consumer Fraud Act and WCAG 2.2 AA. Alt text, ARIA labels, and semantic markup are mandatory.
 
 ---
 

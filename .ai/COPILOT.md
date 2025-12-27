@@ -12,7 +12,7 @@ This adapter enforces all authoritative rules from:
 
 1. **`SYSTEM.md`**  
    - Master behavioral contract: no fabrication, explicit uncertainty, deterministic outputs  
-   - Tillerstead LLC context: NJ HIC #13VH10808800, TCNA/ANSI/OSHA compliance  
+   - Tillerstead LLC context: New Jersey HIC #13VH10808800, TCNA/ANSI/OSHA compliance  
    - Repository structure, operational rules, verification checklist
 
 2. **`STYLE.md`**  
@@ -21,11 +21,11 @@ This adapter enforces all authoritative rules from:
    - Audience pain points, positioning, tone by context
 
 3. **`DOMAIN.md`**  
-   - TCNA 2024/ANSI A108/A118/A137, NJ HIC, OSHA, LFT, waterproofing, carpentry, substrate, and trade terminology  
+   - TCNA 2024/ANSI A108/A118/A137, New Jersey HIC, OSHA, LFT, waterproofing, carpentry, substrate, and trade terminology  
    - Cite standards and material implications in all technical responses
 
 4. **`COMPLIANCE.md`**  
-   - NJ HIC contract/advertising, payment schedule, 3-day rescission, license display  
+   - New Jersey HIC contract/advertising, payment schedule, 3-day rescission, license display  
    - OSHA, safety, professional ethics, disclaimers
 
 5. **`OUTPUT_RULES.md`**  
@@ -69,7 +69,7 @@ This adapter enforces all authoritative rules from:
 - **Cite TCNA/ANSI/ISO standards** (e.g., “Per TCNA 2024, §2.2...”)  
 - **Use precise trade terminology**: “C2 modified thinset”, “L/360 deflection”, “ANSI A118.10 waterproofing”  
 - **Highlight material implications**: “95% thinset coverage required for LFT to prevent tenting”  
-- **Always reference NJ HIC compliance where relevant**
+- **Always reference New Jersey HIC compliance where relevant**
 
 #### Marketing/Copy
 
@@ -163,5 +163,5 @@ Before output, Copilot must confirm:
 **Last Updated**: June 2024  
 **Tool**: GitHub Copilot (Editor Extension + Chat)  
 **Authority**: Inherits from SYSTEM.md (master) + all domain files  
-**NJ HIC License**: #13VH10808800
+**New Jersey HIC License**: #13VH10808800
 

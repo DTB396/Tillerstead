@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Your First Tile/Bath Consultation in NJ: What to Expect & How to Prep"
+title: "Your First Tile/Bath Consultation in New Jersey: What to Expect & How to Prep"
 description: "A 15-minute prep guide for South Jersey homeowners—photos, measurements, and how Tillerstead delivers TCNA-compliant, transparent proposals for tile and bathroom projects."
-accessibility: "All content uses semantic headings, lists, and descriptive links for screen reader compatibility and NJ HIC compliance."
+accessibility: "All content uses semantic headings, lists, and descriptive links for screen reader compatibility and New Jersey HIC compliance."
 ---
 
 If you’ve never hired a licensed home improvement contractor in New Jersey, your first consultation can feel opaque. **Tillerstead LLC** makes it straightforward: a calm walkthrough, clear expectations, and a proposal based on your real space—not guesswork or “ballpark” numbers.
 
-This guide shows you how to prep in **15 minutes** for a consultation (Atlantic County and all South Jersey) that’s efficient, accurate, and fully NJ HIC/TCNA compliant.
+This guide shows you how to prep in **15 minutes** for a consultation (Atlantic County and all South Jersey) that’s efficient, accurate, and fully New Jersey HIC/TCNA compliant.
 
 ---
 
@@ -72,7 +72,7 @@ These basics let us discuss layouts, waste factor, and whether leveling or frami
 
 ## How Tillerstead Prices—With Full Transparency
 
-Every project is unique, but our proposals follow a clear, NJ HIC-compliant structure:
+Every project is unique, but our proposals follow a clear, New Jersey HIC-compliant structure:
 
 1. **Scope from demo to finish**  
     Plain-language breakdown—demo, disposal, prep, waterproofing, tile setting, grout, caulk—and exclusions (plumbing moves, electrical, glass, etc.), so there are no hidden costs.

@@ -25,7 +25,7 @@ Thank you for reaching out to Tillerstead LLC regarding your [Project Type] in [
 **Explore Our Expertise:**
 - View our [portfolio](/portfolio/) of code-compliant South Jersey projects.
 - Read [verified reviews](/reviews/) from Atlantic, Ocean & Cape May County clients.
-- Download our [Free NJ Tile Installation Guide](/download/nj-tile-guide/)—includes TCNA/NJ HIC compliance checklists.
+- Download our [Free NJ Tile Installation Guide](/download/nj-tile-guide/)—includes TCNA/New Jersey HIC compliance checklists.
 
 Thank you for considering Tillerstead—where technical precision and transparency set us apart.
 
@@ -51,7 +51,7 @@ Following up on your [Date] inquiry about [Project Type] in [County]. Choosing a
 **Common Questions We Address:**
 - What’s a realistic, code-compliant timeline for my project?
 - Which tile and waterproofing systems meet ANSI A118.10 and TCNA standards?
-- How do we ensure proper permits and NJ HIC compliance?
+- How do we ensure proper permits and New Jersey HIC compliance?
 - Can we accommodate your schedule and accessibility needs?
 - Are financing and written warranties available?
 
@@ -72,9 +72,9 @@ Tillerstead LLC
 ```
 Hi [Name],
 
-Whether you choose Tillerstead or another contractor, protect your investment by knowing these TCNA/NJ HIC essentials:
+Whether you choose Tillerstead or another contractor, protect your investment by knowing these TCNA/New Jersey HIC essentials:
 
-**1. NJ HIC Licensing Is Mandatory**  
+**1. New Jersey HIC Licensing Is Mandatory**  
 Always verify licensing at njconsumeraffairs.gov. Only licensed contractors can pull permits and provide legal protection.
 
 **2. Waterproofing Must Meet ANSI A118.10**  
@@ -113,7 +113,7 @@ If you’re still evaluating options, I’m available to:
 - Answer technical or code questions about tile/remodeling
 - Provide ballpark pricing and material recommendations
 - Share references from [County] clients
-- Ensure all work meets TCNA and NJ HIC standards
+- Ensure all work meets TCNA and New Jersey HIC standards
 
 **How to Reach Us:**
 1. Reply to this email
@@ -124,7 +124,7 @@ Thank you for considering Tillerstead—where compliance, transparency, and tech
 
 Tyler  
 Tillerstead LLC  
-Licensed NJ HIC #13VH10808800
+Licensed New Jersey HIC #13VH10808800
 ```
 
 ---
@@ -180,5 +180,5 @@ Add to `netlify.toml` (ensure all keys and paths follow OUTPUT_RULES.md):
 
 ---
 
-**All content and workflows above are reviewed for TCNA, ANSI, and NJ HIC compliance. For technical or legal questions, reference the `.ai/DOMAIN.md` and `.ai/COMPLIANCE.md` files.**
+**All content and workflows above are reviewed for TCNA, ANSI, and New Jersey HIC compliance. For technical or legal questions, reference the `.ai/DOMAIN.md` and `.ai/COMPLIANCE.md` files.**
 

@@ -13,7 +13,7 @@ services:
   - id: stone
     name: Slabs & Premium Stonework
     icon: stone
-    description: Marble, granite, and gauged porcelain slabs installed with ANSI A118.15 thinset by NJ HIC-licensed professionals. Book-matched, sealed, and detailed for decades of durability—never risking your investment with shortcuts.
+    description: Marble, granite, and gauged porcelain slabs installed with ANSI A118.15 thinset by New Jersey HIC-licensed professionals. Book-matched, sealed, and detailed for decades of durability—never risking your investment with shortcuts.
     points:
       - Book-matched marble installations with seamless veining
       - 6mm porcelain slab panels set to manufacturer specs

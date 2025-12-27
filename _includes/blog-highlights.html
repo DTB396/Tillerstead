@@ -15,7 +15,7 @@ Usage: {% include blog-highlights.html limit=3 %}
     <div class="section-header">
       <p class="eyebrow text-accent">{{ include.eyebrow | default: 'Tile & Remodeling Insights' }}</p>
       <h2 id="{{ heading_id }}" class="heading-2">{{ include.title | default: 'Latest Contractor Articles' }}</h2>
-      <p class="lead">{{ include.summary | default: 'Technical guidance on TCNA 2024-compliant tile installation, ANSI A108.10 waterproofing, and code-compliant bathroom remodeling for South Jersey homeowners. NJ HIC #13VH10808800.' }}</p>
+      <p class="lead">{{ include.summary | default: 'Technical guidance on TCNA 2024-compliant tile installation, ANSI A108.10 waterproofing, and code-compliant bathroom remodeling for South Jersey homeowners. New Jersey HIC #13VH10808800.' }}</p>
     </div>
 
     <ul class="cards cards--3col" role="list" aria-label="Latest contractor articles">
@@ -36,7 +36,7 @@ Usage: {% include blog-highlights.html limit=3 %}
           {% endif %}
           <p>
             <a class="card-link" href="{{ post.url | relative_url }}" aria-label="Read article: {{ post.title }}">
-              Read full article – TCNA standards, NJ HIC compliance
+              Read full article – TCNA standards, New Jersey HIC compliance
             </a>
           </p>
         </li>

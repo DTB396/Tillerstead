@@ -3,7 +3,7 @@
 /**
  * slugify.js
  *
- * Converts input text to a TCNA/NJ HIC-compliant URL slug.
+ * Converts input text to a TCNA/New Jersey HIC-compliant URL slug.
  * Usage:
  *   node scripts/slugify.js "Tile Installation in NJ"   -> tile-installation-in-nj
  *   echo "Premium Shower Waterproofing" | node scripts/slugify.js
@@ -29,7 +29,7 @@ function readInput() {
 
 /**
  * Converts a string to a URL-safe, lowercase slug.
- * - Removes diacritics per TCNA/NJ HIC digital accessibility standards.
+ * - Removes diacritics per TCNA/New Jersey HIC digital accessibility standards.
  * - Replaces non-alphanumeric characters with hyphens.
  * - Collapses multiple hyphens and trims.
  * @param {string} value

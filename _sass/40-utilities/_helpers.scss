@@ -63,7 +63,7 @@
 .bg-surface { background: var(--ts-color-surface) !important; }
 
 .bg-gradient {
-  /* TCNA/NJ HIC-compliant: High-contrast, accessible gradient for hero/CTA */
+  /* TCNA/New Jersey HIC-compliant: High-contrast, accessible gradient for hero/CTA */
   background: linear-gradient(135deg, var(--color-brand-teal-700) 0%, var(--color-brand-teal-900) 55%, var(--color-brand-teal-950) 100%) !important;
   color: var(--tiller-hero-text);
   border: 1px solid rgb(255, 255, 255, 0.08);

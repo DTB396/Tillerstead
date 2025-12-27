@@ -8,7 +8,7 @@
  * Compliance:
  * - WCAG 2.1 Level AA: 4.5:1 for normal text, 3:1 for large text
  * - WCAG 2.1 Level AAA: 7:1 for normal text, 4.5:1 for large text
- * - TCNA 2024 and NJ HIC accessibility requirements
+ * - TCNA 2024 and New Jersey HIC accessibility requirements
  *
  * Usage:
  * node scripts/check-contrast.js
@@ -239,7 +239,7 @@ function auditContrast () {
   md += '- **AA Large Text:** 3:1 minimum (≥18pt or ≥14pt bold)\n';
   md += '- **AAA Normal Text:** 7:1 minimum\n';
   md += '- **AAA Large Text:** 4.5:1 minimum\n\n';
-  md += '**Compliance:** TCNA 2024, NJ HIC, WCAG 2.1\n';
+  md += '**Compliance:** TCNA 2024, New Jersey HIC, WCAG 2.1\n';
 
   writeFileSync(mdPath, md);
   console.log(`📄 Markdown report: ${mdPath}`);

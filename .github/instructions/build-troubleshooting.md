@@ -242,6 +242,6 @@ diff assets/css/main.css _site/assets/css/main.css
   - Error logs
   - Screenshots of file structure and browser console
 
-**Tillerstead: TCNA-literate, NJ HIC-compliant, and committed to technical excellence.**  
+**Tillerstead: TCNA-literate, New Jersey HIC-compliant, and committed to technical excellence.**  
 Every build, every pixel—no shortcuts, no technical debt.
 

@@ -235,7 +235,7 @@ Based on filenames in Downloads folder, these issues may still exist:
 All fixes maintain:
 - ✅ WCAG 2.1 Level AA accessibility
 - ✅ TCNA 2024 standards
-- ✅ NJ HIC compliance
+- ✅ New Jersey HIC compliance
 - ✅ Semantic HTML5
 - ✅ Mobile-first responsive design
 

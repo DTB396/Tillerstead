@@ -1,5 +1,5 @@
 # Tillerstead.com robots.txt
-# TCNA-compliant, NJ HIC-compliant site – Tillerstead LLC
+# TCNA-compliant, New Jersey HIC-compliant site – Tillerstead LLC
 
 User-agent: *
 Disallow: /vendor/

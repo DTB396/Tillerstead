@@ -1,7 +1,7 @@
 {% comment %}
   Tillerstead Portfolio Section
   - Displays portfolio items from site.data.portfolio
-  - TCNA/NJ HIC compliant, accessible, conversion-optimized
+  - TCNA/New Jersey HIC compliant, accessible, conversion-optimized
   - Reference: /.ai/OUTPUT_RULES.md, /.ai/STYLE.md
 {% endcomment %}
 
@@ -28,7 +28,7 @@
             {% if item.image or item.images %}
               {% assign portfolio_image = item.image | default: item.images[0].src %}
               {% assign portfolio_webp = portfolio_image | replace: '.jpg', '.webp' | replace: '.png', '.webp' %}
-              {% assign portfolio_alt = item.alt | default: item.images[0].alt | default: item.title | append: ' - TCNA-compliant tile installation by Tillerstead, NJ HIC #13VH10808800' %}
+              {% assign portfolio_alt = item.alt | default: item.images[0].alt | default: item.title | append: ' - TCNA-compliant tile installation by Tillerstead, New Jersey HIC #13VH10808800' %}
               
               <figure class="ts-portfolio__figure">
                 <picture>
@@ -88,7 +88,7 @@
 
     <p class="ts-portfolio__note">
       <small>
-        All work performed to TCNA 2024 standards with full NJ HIC compliance. 
+        All work performed to TCNA 2024 standards with full New Jersey HIC compliance. 
         Documentation includes substrate prep photos, waterproofing flood tests, and final inspection records.
       </small>
     </p>

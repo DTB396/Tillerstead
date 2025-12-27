@@ -12,8 +12,8 @@ This adapter inherits all authoritative rules from:
 
 1. **system.md** — Behavioral contract, project context, operational rules
 2. **style.md** — Brand voice, persuasion (48 Laws), positioning
-3. **domain.md** — TCNA 2024 standards, NJ HIC compliance, technical authority
-4. **compliance.md** — Legal boundaries, NJ Consumer Fraud Act, safety
+3. **domain.md** — TCNA 2024 standards, New Jersey HIC compliance, technical authority
+4. **compliance.md** — Legal boundaries, New Jersey Consumer Fraud Act, safety
 5. **output_rules.md** — Code quality, file naming, accessibility, commit conventions
 
 **Reference each file for full rules. This adapter provides GPT-specific context.**
@@ -48,7 +48,7 @@ GPT must state:
 > "I'm referencing the Tillerstead AI governance structure:
 > - system.md: Behavioral rules
 > - style.md: Brand voice, persuasion
-> - domain.md: TCNA/NJ HIC technical authority
+> - domain.md: TCNA/New Jersey HIC technical authority
 > - compliance.md: Legal boundaries
 > - output_rules.md: Code, naming, accessibility
 > 
@@ -65,7 +65,7 @@ GPT must state:
    - Voice: Competent, technical, persuasive, never generic  
    - Use contrast patterns (proper method vs. shortcut), cite standards, avoid naming competitors
 3. **Consult domain.md:**  
-   - Cite TCNA/ANSI/NJ HIC standards, use precise terminology
+   - Cite TCNA/ANSI/New Jersey HIC standards, use precise terminology
 4. **Consult compliance.md:**  
    - Include required disclaimers, HIC license, legal copy
 5. **Provide 2–3 options** with strategic reasoning and cite relevant rules
@@ -131,7 +131,7 @@ GPT must state:
 
 **Before legal/contract content:**
 - [ ] State limitations: "Not legal advice"
-- [ ] Verify NJ HIC requirements, disclosures, payment terms
+- [ ] Verify New Jersey HIC requirements, disclosures, payment terms
 - [ ] Flag high-risk claims
 
 ---

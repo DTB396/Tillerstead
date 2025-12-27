@@ -2,7 +2,7 @@
 
 **Inherits From**: `SYSTEM.md`  
 **Scope**: Tile installation, waterproofing, carpentry, and NJ compliance  
-**Authority**: TCNA standards, ANSI specifications, NJ HIC regulations
+**Authority**: TCNA standards, ANSI specifications, New Jersey HIC regulations
 
 ---
 
@@ -15,7 +15,7 @@ This document is the definitive technical reference for all Tillerstead LLC cont
 - Carpentry for tile assemblies
 - New Jersey Home Improvement Contractor (HIC) compliance
 
-**Critical**: All technical claims must be verified against this document. Never invent specifications or codes. Reference ANSI/TCNA/NJ HIC standards explicitly.
+**Critical**: All technical claims must be verified against this document. Never invent specifications or codes. Reference ANSI/TCNA/New Jersey HIC standards explicitly.
 
 ---
 
@@ -105,7 +105,7 @@ This document is the definitive technical reference for all Tillerstead LLC cont
 - **Mapei Aquadefense**: Low VOC, crack-bridging
 - **Kerdi-Fix**: Waterproofing sealant
 
-#### NJ Code
+#### New Jersey code
 - **Shower pan**: IRC P2709
 - **Height**: 3" above showerhead rough-in (min. 72" from drain)
 - **Curbless**: Waterproof entire bathroom floor
@@ -181,7 +181,7 @@ This document is the definitive technical reference for all Tillerstead LLC cont
 - **Scope**: Carpentry, tile, waterproofing (statewide NJ)
 - **Display**: License on all contracts, estimates, ads
 
-### NJ Consumer Fraud Act (N.J.S.A. 56:8-136)
+### New Jersey Consumer Fraud Act (N.J.S.A. 56:8-136)
 
 **Contracts must include**:
 1. Contractor name, address, phone, HIC #
@@ -270,7 +270,7 @@ This document is the definitive technical reference for all Tillerstead LLC cont
 
 ---
 
-## PROJECT ESTIMATION (NJ MARKET 2024-2025)
+## PROJECT ESTIMATION (New Jersey market 2024-2025)
 
 | Material/Service         | Typical Range         |
 |-------------------------|----------------------|
@@ -319,5 +319,5 @@ This document is the definitive technical reference for all Tillerstead LLC cont
 
 **Version**: 1.0.1  
 **Last Updated**: December 20, 2025  
-**References**: TCNA Handbook 2024, ANSI A108/A118/A137 (2024), NJ HIC Regulations
+**References**: TCNA Handbook 2024, ANSI A108/A118/A137 (2024), New Jersey HIC Regulations
 

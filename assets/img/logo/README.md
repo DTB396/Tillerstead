@@ -37,7 +37,7 @@ Available symbols:
 ### Full Logos
 
 - **`tillerstead-logo-full.svg`**  
-  Complete logo with tagline and NJ HIC license  
+  Complete logo with tagline and New Jersey HIC license  
   *Use: Marketing materials, hero sections*
 
 - **`tillerstead-logo-stacked.svg`**  
@@ -133,5 +133,5 @@ All SVG files are:
 
 ---
 
-**NJ HIC**: #13VH10808800  
+**New Jersey HIC**: #13VH10808800  
 **Last Updated**: 2025-12-26

@@ -12,10 +12,10 @@
 
 ## About Tillerstead LLC
 
-Tillerstead LLC is a New Jersey-licensed home improvement contractor (NJ HIC #13VH10808800) specializing in tile, bath, and remodeling. Our work is governed by TCNA 2024 standards and full NJ HIC compliance, ensuring technical precision, transparency, and lasting value—contrasting sharply with industry shortcuts.
+Tillerstead LLC is a New Jersey-licensed home improvement contractor (New Jersey HIC #13VH10808800) specializing in tile, bath, and remodeling. Our work is governed by TCNA 2024 standards and full New Jersey HIC compliance, ensuring technical precision, transparency, and lasting value—contrasting sharply with industry shortcuts.
 
 - **Technical Authority:** All methods, materials, and documentation reflect TCNA and ANSI A108/A118 standards.
-- **Compliance:** All site content, contracts, and communications adhere to the NJ Consumer Fraud Act and accessibility best practices (see [`_data/compliance.yml`](./_data/compliance.yml)).
+- **Compliance:** All site content, contracts, and communications adhere to the New Jersey Consumer Fraud Act and accessibility best practices (see [`_data/compliance.yml`](./_data/compliance.yml)).
 - **Transparency:** Every process is documented for client clarity and regulatory audit.
 
 ---
@@ -140,7 +140,7 @@ test/             # Automated tests/fixtures
 1. Create a feature branch.
 2. Keep commits focused and linted (`npm run lint`).
 3. Open a pull request with a clear summary and testing notes.
-4. All contributions must comply with TCNA, NJ HIC, and project style/compliance rules (see `.ai/`).
+4. All contributions must comply with TCNA, New Jersey HIC, and project style/compliance rules (see `.ai/`).
 
 ---
 
@@ -152,7 +152,7 @@ MIT License. See [`LICENSE`](LICENSE) for details.
 
 **References:**  
 - [TCNA Handbook 2024](https://www.tcnatile.com/handbook/)  
-- [NJ Consumer Fraud Act](https://www.njconsumeraffairs.gov/Statutes/consumerfraudact.pdf)  
+- [New Jersey Consumer Fraud Act](https://www.njconsumeraffairs.gov/Statutes/consumerfraudact.pdf)  
 - [Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/standards-guidelines/wcag/)
 
 ---

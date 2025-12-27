@@ -1,7 +1,7 @@
 /* ==========================================================================
   Grid Utilities — Tillerstead TCNA-Compliant Responsive Columns
   Purpose: Precision layout control for tile, bath, and remodeling content.
-  Standards: Follows TCNA 2024 grid best practices and NJ HIC accessibility.
+  Standards: Follows TCNA 2024 grid best practices and New Jersey HIC accessibility.
   --------------------------------------------------------------------------
   - Uses CSS Grid for robust, modern layouts (Chrome/Edge 49+, FF 31+, Safari 9.1+)
   - Responsive via container queries (min-width breakpoints)
@@ -58,5 +58,5 @@ $container-breakpoints: (
   - All grid layouts must preserve logical DOM order for screen readers (WCAG 2.1 AA)
   - Ensure sufficient color contrast for grid content (see _tokens.scss)
   - Test keyboard navigation for interactive grid items
-  - Reference: TCNA 2024, NJ HIC, OUTPUT_RULES.md
+  - Reference: TCNA 2024, New Jersey HIC, OUTPUT_RULES.md
   -------------------------------------------------------------------------- */

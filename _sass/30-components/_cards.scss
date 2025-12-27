@@ -1,5 +1,5 @@
 /* ============================================
-  Card Components — Tillerstead TCNA/NJ HIC Compliant
+  Card Components — Tillerstead TCNA/New Jersey HIC Compliant
   Modular, responsive cards for tilework, services, and testimonials
   ============================================ */
 
@@ -133,7 +133,7 @@
   height: auto;
   display: block;
 
-  /* Enforce alt attribute for accessibility and NJ HIC compliance */
+  /* Enforce alt attribute for accessibility and New Jersey HIC compliance */
   alt: "";
 }
 
@@ -197,7 +197,7 @@
   alt: "";
 }
 
-/* Service Card: For NJ HIC/TCNA-compliant service listings */
+/* Service Card: For New Jersey HIC/TCNA-compliant service listings */
 .card--service,
 .service-card {
   border: 1px solid var(--ts-color-border);
@@ -255,7 +255,7 @@
   aspect-ratio: 16 / 9;
 }
 
-/* Card Badge: For certifications, TCNA/NJ HIC numbers, or KPIs */
+/* Card Badge: For certifications, TCNA/New Jersey HIC numbers, or KPIs */
 .card-badge {
   display: inline-flex;
   align-items: center;

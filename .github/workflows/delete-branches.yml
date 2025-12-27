@@ -30,7 +30,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         shell: bash
         run: |
-          # Tillerstead LLC - Branch Hygiene (TCNA/NJ HIC Compliant)
+          # Tillerstead LLC - Branch Hygiene (TCNA/New Jersey HIC Compliant)
           # This script removes all remote branches except 'main' to ensure codebase integrity and regulatory compliance.
           # See /.ai/OUTPUT_RULES.md for naming and operational standards.
 

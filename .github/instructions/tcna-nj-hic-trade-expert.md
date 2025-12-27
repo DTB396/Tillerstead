@@ -1,4 +1,4 @@
-# TCNA Compliance & NJ HIC Trade Expert Instructions
+# TCNA Compliance & New Jersey HIC Trade Expert Instructions
 
 > ⚠️ **DEPRECATED – CENTRALIZED INSTRUCTION SYSTEM**  
 > This file is retained for historical reference only.  
@@ -59,7 +59,7 @@ This document historically provided technical and regulatory guidance for AI age
 - **Shower framing**: 2×4 studs 16" o.c., blocking at 72", pre-slope 1/4" per foot
 - **Niches**: Slope bottom, waterproof, use prefab (KERDI-BOARD-SN, Wedi Fundo) or custom framed
 
-## NJ HIC Compliance
+## New Jersey HIC Compliance
 
 - **License**: 13VH12293200 (display on all contracts/ads)
 - **Contract**: Must include legal name, address, phone, HIC #, detailed scope, itemized costs, schedule, payment tied to milestones, 3-day rescission notice, warranty, change order process (N.J.S.A. 56:8-136)
@@ -90,7 +90,7 @@ This document historically provided technical and regulatory guidance for AI age
 - **List multiple product options (NJ suppliers)**
 - **Use professional, accessible language**
 - **Distinguish Tillerstead’s technical edge:**
-   - TCNA-literate, NJ HIC-compliant, modern methods, zero shortcuts
+   - TCNA-literate, New Jersey HIC-compliant, modern methods, zero shortcuts
 
 ## Red Flags
 
@@ -113,5 +113,5 @@ This document historically provided technical and regulatory guidance for AI age
 
 **For current, authoritative instructions, see [/.ai/DOMAIN.md](../../.ai/DOMAIN.md) and the centralized `.ai/` directory. All AI outputs must comply with the latest standards, file naming, accessibility, and legal requirements as defined in `/.ai/OUTPUT_RULES.md` and `/.ai/STYLE.md`.**
 
-_Last updated: December 2024. Source: TCNA Handbook 2024, ANSI A108/A118/A137, NJ HIC Regulations._
+_Last updated: December 2024. Source: TCNA Handbook 2024, ANSI A108/A118/A137, New Jersey HIC Regulations._
 

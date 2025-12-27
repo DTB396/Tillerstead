@@ -1,6 +1,6 @@
 /**
  * Tillerstead "Boss" Theme – Interactive Enhancements
- * TCNA/NJ HIC-compliant micro-interactions and accessibility features
+ * TCNA/New Jersey HIC-compliant micro-interactions and accessibility features
  * Authoritative: See /.ai/DOMAIN.md and /.ai/COMPLIANCE.md
  */
 
@@ -11,7 +11,7 @@
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   /**
-   * Initialize all interactive enhancements (TCNA/NJ HIC compliant)
+   * Initialize all interactive enhancements (TCNA/New Jersey HIC compliant)
    */
   function init() {
     if (!prefersReducedMotion) {
@@ -115,7 +115,7 @@
   }
 
   /**
-   * Smooth scrolling for anchor links (ADA/WCAG 2.4.1, NJ HIC §13:45A-16.2)
+   * Smooth scrolling for anchor links (ADA/WCAG 2.4.1, New Jersey HIC §13:45A-16.2)
    */
   function initSmoothScrolling() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -284,7 +284,7 @@
    */
   const handleResize = debounce(() => {
     // Placeholder for recalculating size-dependent features
-    // All recalculations must be TCNA/NJ HIC compliant
+    // All recalculations must be TCNA/New Jersey HIC compliant
     // console.log('Window resized, recalculating...');
   }, 250);
 

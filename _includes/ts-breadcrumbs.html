@@ -1,7 +1,7 @@
 {% comment %}
 Tillerstead.com Breadcrumbs Component
 - Semantic, accessible, and SEO-optimized
-- Compliant with TCNA, NJ HIC, and project OUTPUT_RULES.md
+- Compliant with TCNA, New Jersey HIC, and project OUTPUT_RULES.md
 - All labels and links are explicit, conversion-focused, and legally accurate
 - No dead ends, broken logic, or vague copy
 {% endcomment %}
@@ -72,14 +72,14 @@ Tillerstead.com Breadcrumbs Component
 
   <nav class="breadcrumbs ts-breadcrumbs" aria-label="Breadcrumb" role="navigation" itemscope itemtype="https://schema.org/BreadcrumbList">
     <ol class="breadcrumbs-list ts-breadcrumbs__list">
-      <!-- Home crumb: always present, explicit, conversion-focused, and NJ HIC compliant -->
+      <!-- Home crumb: always present, explicit, conversion-focused, and New Jersey HIC compliant -->
       <li class="breadcrumbs-item ts-breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
         <a class="breadcrumbs-link ts-breadcrumbs__link ts-crumb-link" href="{{ '/' | relative_url }}" itemprop="item">
-          <span itemprop="name">Home – Tillerstead: NJ Licensed Tile & Remodeling Contractor</span>
+          <span itemprop="name">Home – Tillerstead: New Jersey licensed Tile & Remodeling Contractor</span>
         </a>
         <meta itemprop="position" content="{{ crumb_position }}">
       </li>
-      {%- assign json_items = json_items | append: '{"@type":"ListItem","position":1,"name":"Home – Tillerstead: NJ Licensed Tile & Remodeling Contractor","item":"' | append: site.url | append: '/"}' -%}
+      {%- assign json_items = json_items | append: '{"@type":"ListItem","position":1,"name":"Home – Tillerstead: New Jersey licensed Tile & Remodeling Contractor","item":"' | append: site.url | append: '/"}' -%}
       {%- assign crumb_position = crumb_position | plus: 1 -%}
 
       {%- if parent_label and parent_path != '' -%}

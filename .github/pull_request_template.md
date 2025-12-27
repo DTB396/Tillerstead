@@ -13,7 +13,7 @@ This update standardizes theme tokens, enforces WCAG 2.1 AA contrast, and introd
 - [ ] Pa11y CI: Passes all contrast and focus criteria (WCAG 2.1 AA)
 - [ ] Focus outlines: Visible and accessible on all interactive elements
 - [ ] Links: All have non-color affordances (underline, icon, or ARIA label)
-- [ ] Alt text, ARIA, and labels: Verified for legal and NJ HIC accessibility compliance
+- [ ] Alt text, ARIA, and labels: Verified for legal and New Jersey HIC accessibility compliance
 
 ## Visual Evidence
 _Include before/after screenshots for:_
@@ -28,4 +28,4 @@ _Include before/after screenshots for:_
 
 ---
 
-_Reference: See `/.ai/OUTPUT_RULES.md` for naming, structure, and compliance standards. All changes adhere to TCNA 2024 and NJ HIC requirements._
+_Reference: See `/.ai/OUTPUT_RULES.md` for naming, structure, and compliance standards. All changes adhere to TCNA 2024 and New Jersey HIC requirements._

@@ -1,5 +1,5 @@
 /* nav.js — Tillerstead
-  Mobile navigation logic, TCNA/NJ HIC compliant.
+  Mobile navigation logic, TCNA/New Jersey HIC compliant.
   Ensures accessible, responsive navigation per WCAG 2.1 AA and NJ Consumer Fraud Act.
   All ARIA, focus, and event logic validated for legal and technical compliance.
 */
@@ -24,7 +24,7 @@
   const isMobileView = () => window.innerWidth < BP_DESKTOP;
   const isNavOpen = () => navShell?.classList.contains('is-open');
 
-  // ARIA and data-state sync (WCAG 2.1 AA, NJ HIC)
+  // ARIA and data-state sync (WCAG 2.1 AA, New Jersey HIC)
   const syncAria = (open) => {
     const state = open ? 'true' : 'false';
     navToggle?.setAttribute('aria-expanded', state);

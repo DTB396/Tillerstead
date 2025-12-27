@@ -44,7 +44,7 @@ company:
   phone_link: "+16098628808"
   hic: "13VH10808800"
   address_line: "325 E. Jimmie Leeds Road, Suite 7-333"
-  address_city: "Galloway, NJ 08205"
+  address_city: "Galloway, New Jersey 08205"
   address_locality: "Galloway"
   address_region: "NJ"
   address_postal_code: "08205"
@@ -91,7 +91,7 @@ ux:
   cta_primary_label: "Request a scope review"
   cta_secondary_label: "View services"
   reassurances:
-    - "NJ Licensed HIC #13VH10808800"
+    - "New Jersey licensed HIC #13VH10808800"
     - "Written scopes and change orders"
     - "TCNA tile installation standards"
     - "Owner on site and accountable"

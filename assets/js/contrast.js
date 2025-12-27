@@ -3,7 +3,7 @@
  *
  * Purpose:
  * Ensures all text with `.c-contrast` class meets or exceeds WCAG 2.1 AA contrast ratios
- * against its computed background, supporting accessibility and NJ HIC legal compliance.
+ * against its computed background, supporting accessibility and New Jersey HIC legal compliance.
  *
  * Features:
  * - Scans for `.c-contrast` elements on DOMContentLoaded and on manual invocation.
@@ -17,7 +17,7 @@
  * - Call `window.applyContrast()` after theme or DOM changes.
  *
  * Compliance:
- * - Follows TCNA 2024, NJ HIC, and WCAG 2.1 AA/AAA standards.
+ * - Follows TCNA 2024, New Jersey HIC, and WCAG 2.1 AA/AAA standards.
  * - All logic and naming per /.ai/OUTPUT_RULES.md and /.ai/DOMAIN.md.
  *
  * Authoritative: Do not duplicate or polyfill elsewhere.

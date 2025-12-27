@@ -385,4 +385,4 @@ Monochrome variants use `currentColor`. Set `color` on parent:
 
 **Last Updated**: 2025-12-26  
 **Maintained by**: Tillerstead LLC  
-**NJ HIC**: #13VH10808800
+**New Jersey HIC**: #13VH10808800

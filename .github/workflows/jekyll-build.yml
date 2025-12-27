@@ -7,13 +7,13 @@ on:
 
 jobs:
   build:
-    name: Build and Validate Static Site (TCNA/NJ HIC Compliant)
+    name: Build and Validate Static Site (TCNA/New Jersey HIC Compliant)
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Set Up Ruby (TCNA/NJ HIC Standards)
+      - name: Set Up Ruby (TCNA/New Jersey HIC Standards)
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.2'
@@ -29,7 +29,7 @@ jobs:
       - name: Install Node.js Dependencies
         run: npm ci
 
-      - name: Lint JavaScript (ESLint, TCNA/NJ HIC Compliance)
+      - name: Lint JavaScript (ESLint, TCNA/New Jersey HIC Compliance)
         run: npx eslint . || true
 
       - name: Lint HTML (HTMLHint, Accessibility & SEO)

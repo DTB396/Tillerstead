@@ -4,7 +4,7 @@ title: "Large-Format Tile Done Right: Flatness, Mortars, & Trowels"
 description: "Installing large-format tile in South Jersey? Here’s how Tillerstead ensures flat substrates, the right mortar choice, and consistent coverage for floors and walls that stay beautiful."
 ---
 
-Large-format tile—**15″ or greater on any side**—delivers a seamless, modern aesthetic. But performance and longevity depend on strict adherence to **TCNA** and **ANSI** standards. At **Tillerstead LLC**, we don’t cut corners: every step is engineered for lasting results and NJ HIC compliance.
+Large-format tile—**15″ or greater on any side**—delivers a seamless, modern aesthetic. But performance and longevity depend on strict adherence to **TCNA** and **ANSI** standards. At **Tillerstead LLC**, we don’t cut corners: every step is engineered for lasting results and New Jersey HIC compliance.
 
 ---
 
@@ -66,7 +66,7 @@ Coverage is critical:
 - **Tight joints** with minimal lippage
 - **Consistent grout lines** and flat transitions
 - **Full bond**—no hollow sounds, no callbacks
-- **Floors and walls that meet or exceed TCNA/NJ HIC standards**
+- **Floors and walls that meet or exceed TCNA/New Jersey HIC standards**
 
 ---
 

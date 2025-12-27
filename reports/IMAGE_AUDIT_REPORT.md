@@ -196,7 +196,7 @@ Generated: 2025-12-25 21:15:00
 
 All images should have descriptive alt text following this pattern:
 
-- **Bathroom remodels**: "Tillerstead bathroom remodel: [description], NJ HIC licensed contractor"
+- **Bathroom remodels**: "Tillerstead bathroom remodel: [description], New Jersey HIC licensed contractor"
 - **Kitchen work**: "Professional kitchen tile installation: [description] by Tillerstead"
 - **Flooring**: "Floor installation: [description], TCNA-compliant by Tillerstead LLC"
 - **Logos**: "Tillerstead LLC [description], New Jersey licensed home improvement contractor"

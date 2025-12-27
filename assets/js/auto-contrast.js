@@ -4,7 +4,7 @@
  *
  * Ensures WCAG 2.1 AA-compliant color contrast for dynamic UI elements.
  *
- * Technical Authority: TCNA 2024, NJ HIC compliance, WCAG 2.1 §1.4.3
+ * Technical Authority: TCNA 2024, New Jersey HIC compliance, WCAG 2.1 §1.4.3
  *
  * This script dynamically adjusts foreground color for optimal readability
  * against any background, supporting accessible, standards-driven design.

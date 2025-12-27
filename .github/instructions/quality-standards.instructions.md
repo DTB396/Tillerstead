@@ -20,7 +20,7 @@
   *Reference: [OUTPUT_RULES.md §Performance]*  
 - **Accessibility**: WCAG 2.1 AA minimum. All images require descriptive `alt` text; ensure keyboard navigation and ARIA compliance.  
   *Reference: [OUTPUT_RULES.md §Accessibility], [COMPLIANCE.md §Legal]*  
-- **Technical Authority**: Cite TCNA 2024 and NJ HIC standards where relevant.  
+- **Technical Authority**: Cite TCNA 2024 and New Jersey HIC standards where relevant.  
   *Reference: [DOMAIN.md §Compliance]*
 
 ---
@@ -34,7 +34,7 @@
   - `rel="preload"` for critical fonts/images.
 
 - **Meta Tags (Required on Every Page):**  
-  - `<title>`: 50–60 chars, unique, TCNA/NJ HIC compliant.  
+  - `<title>`: 50–60 chars, unique, TCNA/New Jersey HIC compliant.  
   - `<meta name="description">`: 150–160 chars, service-specific.  
   - Open Graph: `og:title`, `og:description`, `og:image`, `og:url`.  
   - Twitter Card: `twitter:card`, `twitter:title`, `twitter:description`, `twitter:image`.  
@@ -43,7 +43,7 @@
 
 - **Structured Data:**  
   - Use JSON-LD for `LocalBusiness`, `Organization`, `Service`, and `BreadcrumbList` schemas.  
-  - Ensure all business info matches NJ HIC registration.
+  - Ensure all business info matches New Jersey HIC registration.
 
 - **Performance Targets:**  
   - LCP < 2.5s  
@@ -137,7 +137,7 @@
   - Update dependencies, review SEO/meta, audit accessibility, run Lighthouse, validate HTML, test on real devices.
 
 - **Ongoing:**  
-  - Monitor Core Web Vitals, gather user feedback, stay current with TCNA/NJ HIC and web standards.
+  - Monitor Core Web Vitals, gather user feedback, stay current with TCNA/New Jersey HIC and web standards.
 
 ---
 

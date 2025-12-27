@@ -2,7 +2,7 @@
 
 **Inheritance**: `SYSTEM.md` → `COMPLIANCE.md`  
 **Scope**: Legal mandates, ethical constraints, safety protocols, and AI content boundaries  
-**Authority**: NJ Consumer Fraud Act, HIC regulations, OSHA, TCNA, ADA, EPA RRP
+**Authority**: New Jersey Consumer Fraud Act, HIC regulations, OSHA, TCNA, ADA, EPA RRP
 
 ---
 
@@ -11,7 +11,7 @@
 This document codifies all legal, ethical, and safety requirements for Tillerstead LLC and governs all AI-generated content. All outputs must strictly comply with:
 
 - New Jersey Home Improvement Contractor (HIC) regulations (N.J.S.A. 56:8-136)
-- NJ Consumer Fraud Act
+- New Jersey Consumer Fraud Act
 - OSHA construction safety standards
 - TCNA (Tile Council of North America) installation standards
 - EPA RRP (lead/asbestos) protocols
@@ -26,7 +26,7 @@ This document codifies all legal, ethical, and safety requirements for Tillerste
 
 **MANDATORY**: All contracts, estimates, and advertisements must display:
 
-- **NJ HIC License Number**: 13VH10808800
+- **New Jersey HIC License Number**: 13VH10808800
 - **Legal Business Name**: Tillerstead LLC
 - **Trade Scope**: Carpentry, Ceramic Tile, Waterproofing
 
@@ -92,7 +92,7 @@ Every written contract must include (per N.J.S.A. 56:8-136):
 ### Prohibited Claims
 
 - ❌ “Lowest prices guaranteed” (unless price-match policy exists)
-- ❌ “Fastest installation in NJ” (unless substantiated)
+- ❌ “Fastest installation in New Jersey” (unless substantiated)
 - ❌ “100% waterproof guarantee” (no tile system is 100% waterproof)
 - ❌ Comparative claims without evidence
 - ❌ “No job too small” (if minimums apply)
@@ -100,7 +100,7 @@ Every written contract must include (per N.J.S.A. 56:8-136):
 
 ### Acceptable Claims
 
-- ✅ “Licensed NJ HIC contractor #13VH10808800”
+- ✅ “Licensed New Jersey HIC contractor #13VH10808800”
 - ✅ “TCNA-compliant installations”
 - ✅ “Schluter System Certified Installer” (if certified)
 - ✅ “Serving South Jersey since [year]”
@@ -281,5 +281,5 @@ Before publishing any AI-generated content, verify:
 
 **Version**: 1.0.1  
 **Last Updated**: June 2024  
-**Legal Authority**: NJ Consumer Fraud Act (N.J.S.A. 56:8-136), NJ HIC Regulations, OSHA, TCNA, EPA RRP, ADA
+**Legal Authority**: New Jersey Consumer Fraud Act (N.J.S.A. 56:8-136), New Jersey HIC Regulations, OSHA, TCNA, EPA RRP, ADA
 

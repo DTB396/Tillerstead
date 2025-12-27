@@ -1,5 +1,5 @@
 // scripts/build-css.js
-// Tillerstead: CSS build script (ESM) – strips Jekyll front matter, compiles SCSS to CSS per TCNA/NJ HIC standards
+// Tillerstead: CSS build script (ESM) – strips Jekyll front matter, compiles SCSS to CSS per TCNA/New Jersey HIC standards
 
 import fs from 'node:fs';
 import path from 'node:path';
@@ -48,13 +48,13 @@ function build() {
     });
   } catch (err) {
     process.stderr.write(
-      `SASS compilation failed: ${err.message}\nCheck TCNA/NJ HIC compliance and SCSS syntax.\n`
+      `SASS compilation failed: ${err.message}\nCheck TCNA/New Jersey HIC compliance and SCSS syntax.\n`
     );
     process.exit(1);
   }
   fs.writeFileSync(cssOutPath, result.css);
   process.stdout.write(
-    `Built CSS → ${path.relative(process.cwd(), cssOutPath)} (TCNA/NJ HIC compliant)\n`
+    `Built CSS → ${path.relative(process.cwd(), cssOutPath)} (TCNA/New Jersey HIC compliant)\n`
   );
 }
 

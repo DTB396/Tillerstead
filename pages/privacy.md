@@ -2,13 +2,13 @@
 layout: default
 title: Privacy Policy | Tillerstead LLC
 permalink: /privacy/
-description: Tillerstead LLC’s NJ HIC-compliant privacy policy—how we collect, use, and safeguard your information per TCNA and New Jersey law.
+description: Tillerstead LLC’s New Jersey HIC-compliant privacy policy—how we collect, use, and safeguard your information per TCNA and New Jersey law.
 body_class: page-legal
 hero_eyebrow: Legal
 hero_title: Privacy Policy
 hero_summary: >
   How Tillerstead LLC collects, uses, and protects information shared through our
-  website, contact forms, and service communications, in strict compliance with TCNA standards and NJ HIC regulations.
+  website, contact forms, and service communications, in strict compliance with TCNA standards and New Jersey HIC regulations.
 hero_kpis:
   - label: "Data use"
     text: "Collected solely to deliver, document, and support licensed services"
@@ -26,7 +26,7 @@ hero_kpis:
 
 ## 1. Who we are
 
-Tillerstead LLC (“we,” “our,” or “us”) is a New Jersey-licensed and insured home improvement contractor (NJ HIC #13VH11754600), specializing in tile, bath, and remodeling per TCNA 2024 standards.  
+Tillerstead LLC (“we,” “our,” or “us”) is a New Jersey-licensed and insured home improvement contractor (New Jersey HIC #13VH11754600), specializing in tile, bath, and remodeling per TCNA 2024 standards.  
 We operate [tillerstead.com](https://tillerstead.com) and collect only the minimum information required to:
 
 - Respond to project inquiries  
@@ -48,7 +48,7 @@ We do **not** collect sensitive personal data (e.g., Social Security numbers, fi
 ## 3. How we use your information
 
 - To respond to your inquiries, schedule consultations, and provide detailed, TCNA-compliant estimates.
-- To plan, perform, document, and invoice licensed contracting services in accordance with NJ HIC and TCNA requirements.
+- To plan, perform, document, and invoice licensed contracting services in accordance with New Jersey HIC and TCNA requirements.
 - To improve our website, communications, and service processes for accessibility and compliance.
 - To meet New Jersey licensing, insurance, and record-keeping obligations.
 
@@ -109,11 +109,11 @@ We may update this Privacy Policy as our services or legal requirements evolve.
 ## 9. Contact & compliance
 
 **Tillerstead LLC**  
-NJ HIC #13VH11754600  
+New Jersey HIC #13VH11754600  
 325 E. Jimmie Leeds Road, Suite 7-333  
-Galloway, NJ 08205
+Galloway, New Jersey 08205
 
 Email: [info@tillerstead.com](mailto:info@tillerstead.com)  
 Phone: [(609) 862-8808](tel:+16098628808)
 
-For privacy or compliance concerns, please reference our NJ HIC license and TCNA standards in your inquiry.
+For privacy or compliance concerns, please reference our New Jersey HIC license and TCNA standards in your inquiry.

@@ -11,7 +11,7 @@
   {% assign aria_label = action.aria_label %}
   {% if aria_label == nil or aria_label == '' %}
     {% if action.id == 'call' %}
-      {% assign aria_label = 'Call ' | append: (site.title | default: 'Tillerstead LLC') | append: ' — NJ Licensed Tile & Bath Contractor — at ' | append: (site.company.phone_display | default: '(609) 862-8808') %}
+      {% assign aria_label = 'Call ' | append: (site.title | default: 'Tillerstead LLC') | append: ' — New Jersey licensed Tile & Bath Contractor — at ' | append: (site.company.phone_display | default: '(609) 862-8808') %}
     {% elsif action.id == 'quote' %}
       {% assign aria_label = 'Request a TCNA-compliant estimate from ' | append: (site.title | default: 'Tillerstead LLC') %}
     {% endif %}
@@ -49,7 +49,7 @@
   {% endif %}
   {% comment %}
     Accessibility: aria-label is always set for actionable links.
-    Legal: Phone and quote actions reference NJ HIC and TCNA standards.
+    Legal: Phone and quote actions reference New Jersey HIC and TCNA standards.
     Conversion: Button label is explicit and persuasive.
   {% endcomment %}
   <a

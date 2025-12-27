@@ -6,7 +6,7 @@
   - Provides copy-to-clipboard JSON export
   - SEO summary: title length, meta description length, canonical present, og:image dimensions attributes
   - Non-invasive; attaches fixed panel bottom-right; hidden in production unless triggered.
-  - All output and controls meet WCAG 2.1 AA, NJ HIC, and TCNA documentation standards.
+  - All output and controls meet WCAG 2.1 AA, New Jersey HIC, and TCNA documentation standards.
 */
 (() => {
   'use strict';
@@ -106,7 +106,7 @@
     preEl.textContent = JSON.stringify(seo, null, 2);
     if (!seo.accessibility) {
       preEl.setAttribute('aria-live', 'polite');
-      preEl.insertAdjacentHTML('beforebegin', '<div class="ts-dev-warn" role="alert">⚠️ Some images lack alt text (required by NJ HIC & ADA).</div>');
+      preEl.insertAdjacentHTML('beforebegin', '<div class="ts-dev-warn" role="alert">⚠️ Some images lack alt text (required by New Jersey HIC & ADA).</div>');
     }
     return seo;
   }

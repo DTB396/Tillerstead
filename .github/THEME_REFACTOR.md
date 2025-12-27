@@ -2,14 +2,14 @@
 
 ## Overview
 
-Tillerstead.com’s theme system has been fully re-engineered for technical clarity, accessibility, and conversion. The new design transitions from a dark navy to a parchment-inspired, light-first palette, leveraging TCNA 2024 standards and NJ HIC compliance. The system is card-based, modular, and optimized for performance, accessibility, and legal transparency.
+Tillerstead.com’s theme system has been fully re-engineered for technical clarity, accessibility, and conversion. The new design transitions from a dark navy to a parchment-inspired, light-first palette, leveraging TCNA 2024 standards and New Jersey HIC compliance. The system is card-based, modular, and optimized for performance, accessibility, and legal transparency.
 
 **Design Philosophy:**
 - **Parchment Base:** Warm, paper-like background (`#f5f1eb`) for a professional, inviting environment
 - **Emerald Primary:** High-contrast action color (`#00a86b`) for CTAs, meeting WCAG 2.1 AA
 - **Brass Accent:** Depth and hierarchy via warm brown (`#8b6f47`)
 - **Component-Driven:** Card-first, modular, and responsive layouts
-- **Technical Authority:** All patterns reference TCNA standards and NJ HIC requirements
+- **Technical Authority:** All patterns reference TCNA standards and New Jersey HIC requirements
 
 ## Color Palette
 
@@ -431,5 +431,5 @@ assets/
 
 ## Summary
 
-This refactored theme system is engineered for technical authority, accessibility, and conversion. Every component, color, and pattern is token-driven, WCAG 2.1 AA compliant, and optimized for performance and legal transparency. Tillerstead’s design system is fully documented, extensible, and built to exceed TCNA and NJ HIC standards.
+This refactored theme system is engineered for technical authority, accessibility, and conversion. Every component, color, and pattern is token-driven, WCAG 2.1 AA compliant, and optimized for performance and legal transparency. Tillerstead’s design system is fully documented, extensible, and built to exceed TCNA and New Jersey HIC standards.
 

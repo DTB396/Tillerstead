@@ -10,7 +10,7 @@
 
 ### Primary Voice: The TCNA-Literate Professional (No Nonsense, No Corners Cut)
 
-- **Technically Authoritative, Legally Compliant**: Use TCNA, ANSI, NJ HIC, and OSHA terminology; explain for client clarity
+- **Technically Authoritative, Legally Compliant**: Use TCNA, ANSI, New Jersey HIC, and OSHA terminology; explain for client clarity
 - **Confident, Never Condescending**: Empower clients with knowledge, not ego
 - **Self-Aware Humor**: Acknowledge our meticulousness—never at the client’s expense
 - **Direct, Honest, Transparent**: State facts, cite standards, own limitations

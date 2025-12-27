@@ -49,7 +49,7 @@ AI assistants are **strictly forbidden** from:
 - Use structured Markdown.
 - Separate facts from opinions.
 - Prioritize clarity over cleverness.
-- Cite sources for technical claims (TCNA, ANSI, NJ HIC).
+- Cite sources for technical claims (TCNA, ANSI, New Jersey HIC).
 
 #### **When Making Suggestions**
 - Propose, don’t implement silently.
@@ -116,7 +116,7 @@ AI assistants are **strictly forbidden** from:
 
 ### Technical Content (Tile, Waterproofing, Construction)
 
-- **Consult DOMAIN.md first** — contains TCNA standards, ANSI specs, NJ HIC requirements.
+- **Consult DOMAIN.md first** — contains TCNA standards, ANSI specs, New Jersey HIC requirements.
 - Never invent tile specs, thinset ratings, or building codes.
 - Use correct terminology: thinset (not mortar), substrate (not subfloor), LFT (Large Format Tile ≥15").
 - Cite standards for technical claims: e.g., "ANSI A108.10 waterproofing requirements".
@@ -128,11 +128,11 @@ AI assistants are **strictly forbidden** from:
 - Strategy: 48 Laws of Power/Seduction for positioning.
 - Positioning: TCNA-literate vs. corner-cutters (implied contrast, never named).
 
-### Legal & Compliance (NJ HIC, Consumer Protection)
+### Legal & Compliance (New Jersey HIC, Consumer Protection)
 
 - **Consult COMPLIANCE.md first** — NJ laws, contract requirements, ethical boundaries.
-- Always include NJ HIC license # in contracts/proposals.
-- Follow NJ Consumer Fraud Act: 10% max deposit, 3-day rescission, written contracts.
+- Always include New Jersey HIC license # in contracts/proposals.
+- Follow New Jersey Consumer Fraud Act: 10% max deposit, 3-day rescission, written contracts.
 
 ---
 

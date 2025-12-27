@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "Home Depot Picks: Good–Better–Best Shower Systems (and How Pros Use Them Right)"
-description: "South Jersey homeowners: discover which Home Depot waterproofing systems—RedGard, Schluter® KERDI, GoBoard—actually meet code, and how Tillerstead installs them to TCNA and NJ HIC standards."
+description: "South Jersey homeowners: discover which Home Depot waterproofing systems—RedGard, Schluter® KERDI, GoBoard—actually meet code, and how Tillerstead installs them to TCNA and New Jersey HIC standards."
 ---
 
-You can source robust, code-compliant shower waterproofing at **Home Depot**—if you know what to look for and how to install it. The difference between a lasting shower and a future leak isn’t the brand; it’s **TCNA-compliant prep, manufacturer-correct methods, and NJ HIC-licensed execution**. That’s the Tillerstead standard for Atlantic County and South Jersey.
+You can source robust, code-compliant shower waterproofing at **Home Depot**—if you know what to look for and how to install it. The difference between a lasting shower and a future leak isn’t the brand; it’s **TCNA-compliant prep, manufacturer-correct methods, and New Jersey HIC-licensed execution**. That’s the Tillerstead standard for Atlantic County and South Jersey.
 
 Below, we break down the **Good–Better–Best** options, with technical specifics and pro-level cautions.
 
@@ -77,7 +77,7 @@ At **Tillerstead**, we:
 - Install to **ANSI A118.10/A118.12** and **TCNA** details (B422, B421, EJ171).
 - Use **movement joints** per TCNA EJ171 for crack isolation.
 - Perform and document **flood tests** before tile.
-- Provide photo documentation of prep and waterproofing for every project (NJ HIC compliance).
+- Provide photo documentation of prep and waterproofing for every project (New Jersey HIC compliance).
 
 **You can buy the materials—Tillerstead ensures they’re assembled to code, not just “stuck together.”**
 

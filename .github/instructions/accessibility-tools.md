@@ -9,7 +9,7 @@
 
 ## Overview
 
-Tillerstead.com is engineered for WCAG 2.1 AA accessibility and NJ HIC legal compliance, using semantic HTML5, high-contrast design tokens, and rigorous manual audits. All legacy automated contrast scripts and toggles have been deprecated for performance, maintainability, and regulatory clarity.
+Tillerstead.com is engineered for WCAG 2.1 AA accessibility and New Jersey HIC legal compliance, using semantic HTML5, high-contrast design tokens, and rigorous manual audits. All legacy automated contrast scripts and toggles have been deprecated for performance, maintainability, and regulatory clarity.
 
 ---
 
@@ -190,6 +190,6 @@ A: Yes, via the audit panel’s JSON export (structural/SEO only).
 
 > **Citations:**  
 > - [TCNA Handbook 2024](https://www.tcnatile.com/)  
-> - [NJ HIC Law](https://www.njconsumeraffairs.gov/hic/Pages/default.aspx)  
+> - [New Jersey HIC Law](https://www.njconsumeraffairs.gov/hic/Pages/default.aspx)  
 > - [WCAG 2.1 AA](https://www.w3.org/WAI/WCAG21/quickref/)
 

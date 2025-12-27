@@ -1,5 +1,5 @@
 hero:
-  eyebrow: "Licensed NJ HIC #13VH10808800 · TCNA 2024 Compliant"
+  eyebrow: "Licensed New Jersey HIC #13VH10808800 · TCNA 2024 Compliant"
   title: "TCNA-Compliant Tile & Waterproofing That Survives South Jersey"
   subtitle: "Code-built, documented, transparent"
   summary: "Tile installations built to code, not guesswork. Substrate prep that meets spec. Waterproofing systems that pass flood tests—with photo documentation for insurance and warranty."
@@ -11,7 +11,7 @@ hero:
     url: /portfolio/
   facts:
     - icon: "badge"
-      label: "NJ HIC Licensed"
+      label: "New Jersey HIC Licensed"
       text: "#13VH10808800"
     - icon: "ruler"
       label: "TCNA Standards"
@@ -106,7 +106,7 @@ services:
 
       label: "Explore Portfolio"
       url: /portfolio/
-  note: "All installations meet TCNA 2024 standards and NJ HIC requirements. Every project documented. Written scope, change orders, and warranty terms provided before work begins."
+  note: "All installations meet TCNA 2024 standards and New Jersey HIC requirements. Every project documented. Written scope, change orders, and warranty terms provided before work begins."
 
 process:
   eyebrow: "Our Process: Scope → Prep → Build → Test → Document → Closeout"
@@ -166,7 +166,7 @@ process:
   fun_fact: null
   steps:
     - title: "Site Assessment & Scope Review"
-      description: "On-site evaluation of substrate condition, moisture levels, and project requirements. We assess whether substrate preparation meets ANSI standards before work begins. Licensed NJ HIC #13VH10808800."
+      description: "On-site evaluation of substrate condition, moisture levels, and project requirements. We assess whether substrate preparation meets ANSI standards before work begins. Licensed New Jersey HIC #13VH10808800."
       icon: clipboard
     - title: "Written Scope & Agreement"
       description: "Detailed scope with ANSI methods, specific waterproofing system, materials list, timeline, and terms. You approve everything in writing. All changes documented before implementation."
@@ -220,6 +220,6 @@ cta:
   secondary:
     label: "Call (609) 862-8808"
     url: "tel:+16098628808"
-  note: "NJ HIC #13VH10808800 · TCNA 2024 Standards · Licensed & Insured · Serving Atlantic, Ocean & Cape May Counties"
+  note: "New Jersey HIC #13VH10808800 · TCNA 2024 Standards · Licensed & Insured · Serving Atlantic, Ocean & Cape May Counties"
 
 

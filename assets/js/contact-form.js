@@ -6,7 +6,7 @@
    * Ensures CRLF line breaks for RFC 5322 compliance.
    */
   const buildMailto = (formData) => {
-    const subject = encodeURIComponent('Tillerstead Project Inquiry – TCNA/NJ HIC Compliant');
+    const subject = encodeURIComponent('Tillerstead Project Inquiry – TCNA/New Jersey HIC Compliant');
     const bodyLines = [];
     formData.forEach((value, key) => {
       // Exclude internal/anti-spam fields
@@ -122,7 +122,7 @@
             submitted = true;
             showStatus(
               statusEl,
-              'Your request has been received. Tillerstead adheres to TCNA and NJ HIC standards—expect a detailed, expert reply within 1 business day.',
+              'Your request has been received. Tillerstead adheres to TCNA and New Jersey HIC standards—expect a detailed, expert reply within 1 business day.',
               'success'
             );
             form.reset();
@@ -139,7 +139,7 @@
         if (!submitted) {
           showStatus(
             statusEl,
-            'We’ve opened your email app with your project details. If your email client did not open, please contact info@tillerstead.com directly. All inquiries are handled per TCNA and NJ HIC requirements.',
+            'We’ve opened your email app with your project details. If your email client did not open, please contact info@tillerstead.com directly. All inquiries are handled per TCNA and New Jersey HIC requirements.',
             'success'
           );
           setTimeout(() => {

@@ -9,7 +9,7 @@
   --ts-color-check: #0b5a34;
 }
 
-/* Root Page Surface — Ensures WCAG 2.1 AA contrast and NJ HIC compliance */
+/* Root Page Surface — Ensures WCAG 2.1 AA contrast and New Jersey HIC compliance */
 .ts-page,
 body.ts-theme {
   background: var(--ts-color-bg);
@@ -74,6 +74,6 @@ body.ts-theme {
 /* [END] All styles validated for: 
   - Naming (OUTPUT_RULES.md)
   - Accessibility (WCAG 2.1 AA)
-  - Technical specificity (TCNA 2024, NJ HIC)
+  - Technical specificity (TCNA 2024, New Jersey HIC)
   - Linting/build compliance
 */

@@ -1,4 +1,4 @@
-﻿# Portfolio slider entries for /portfolio/
+# Portfolio slider entries for /portfolio/
 projects:
   - id: marble-floor-finish
     tags: [showers, floors]
@@ -11,7 +11,7 @@ projects:
     file: tillerstead-work/bathrooms/bathroom-marble-shower-niche.jpg
     file_webp: tillerstead-work/bathrooms/bathroom-marble-shower-niche.webp
     alt: Porcelain slab shower wall with precision-cut mosaic niche, waterproof window returns, and sealed transitions
-    caption: "Slab shower niche — straight miters, waterproof shelf, and natural light, built to NJ HIC and TCNA standards."
+    caption: "Slab shower niche — straight miters, waterproof shelf, and natural light, built to New Jersey HIC and TCNA standards."
   - id: floor-install-progress
     tags: [floors]
     file: tillerstead-work/bathrooms/bathroom-floor-install-progress.jpg
@@ -76,7 +76,7 @@ projects:
     tags: [remodels, showers, floors]
     file: tillerstead-work/bathrooms/bathroom-remodel-finished.webp
     file_webp: tillerstead-work/bathrooms/bathroom-remodel-finished.webp
-    alt: Finished bathroom remodel with waterproof tile shower, marble trim, and curated fixtures, built to NJ HIC standards
+    alt: Finished bathroom remodel with waterproof tile shower, marble trim, and curated fixtures, built to New Jersey HIC standards
     caption: "Finished remodel — waterproof tile, polished stone, and hardware ready for commissioning and inspection."
   - id: ceiling-repair
     tags: [repairs]
@@ -87,8 +87,8 @@ projects:
   - id: shower-white
     tags: [showers]
     file: tillerstead-work/showers/shower-white.jpg
-    alt: Waterproof shower with white tile, bench, and niche, built to TCNA and NJ HIC standards in Atlantic County, NJ
-    caption: "Waterproof shower — bench, hex floor, movement joints, and sealed edges per TCNA and NJ code."
+    alt: Waterproof shower with white tile, bench, and niche, built to TCNA and New Jersey HIC standards in Atlantic County, New Jersey
+    caption: "Waterproof shower — bench, hex floor, movement joints, and sealed edges per TCNA and New Jersey code."
   - id: shower-blue
     tags: [showers]
     file: tillerstead-work/showers/shower-blue.jpg
@@ -98,7 +98,7 @@ projects:
     tags: [showers, floors]
     file: tillerstead-work/bathrooms/bathroom-gray.jpg
     alt: Large-format tile floor and shower installation for New Jersey general contractor, with flat substrate and clean transitions
-    caption: "Large-format layout — flat substrate, clean transitions, and code-compliant installation for NJ GC."
+    caption: "Large-format layout — flat substrate, clean transitions, and code-compliant installation for New Jersey GC."
   - id: marble-bath
     tags: [showers]
     file: tillerstead-work/bathrooms/marble-bath.jpg
@@ -139,7 +139,7 @@ projects:
     file: tillerstead-work/bathrooms/bathroom-remodel-final.webp
     file_webp: tillerstead-work/bathrooms/bathroom-remodel-final.webp
     alt: Finished bathroom remodel tile scope with code-compliant wet area for New Jersey general contractor
-    caption: "Bathroom remodel (final) — code-compliant wet area, waterproofing, and premium finish for NJ GC."
+    caption: "Bathroom remodel (final) — code-compliant wet area, waterproofing, and premium finish for New Jersey GC."
   - id: bathroom-final-2
     tags: [showers]
     file: tillerstead-work/bathrooms/bathroom-remodel-final-2.webp
@@ -157,4 +157,4 @@ projects:
     file: tillerstead-work/bathrooms/bathroom-remodel.webp
     file_webp: tillerstead-work/bathrooms/bathroom-remodel.webp
     alt: Bathroom remodel in progress with waterproofing underway, substrate prep, and code-compliant installation for GC partner
-    caption: "In-progress — substrate prep, waterproofing, and code-compliant installation for NJ general contractor."
+    caption: "In-progress — substrate prep, waterproofing, and code-compliant installation for New Jersey general contractor."

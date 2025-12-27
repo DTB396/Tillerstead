@@ -1,13 +1,13 @@
 # Tillerstead LLC Amazon Associate Product Links
 # Supports HTML development fund through affiliate commissions
-# All products are field-tested and used in actual installations per TCNA and NJ HIC standards
+# All products are field-tested and used in actual installations per TCNA and New Jersey HIC standards
 
 categories:
   - id: planning-essentials
     name: Project Planning & DIY Essentials
     description: >-
       Start here if you’re planning a renovation, gathering estimates, or need to scope work before committing. 
-      These tools clarify project requirements and help prevent costly mistakes—especially for NJ homeowners.
+      These tools clarify project requirements and help prevent costly mistakes—especially for New Jersey homeowners.
     products:
       - name: Room By Room Project Planner
         full_name: "Room By Room Project Planner: Organize Interior Design Ideas, Sketch Layouts, Contractor Quotes & More"
@@ -15,7 +15,7 @@ categories:
         type: Planning & Documentation Tool
         description: >-
           Centralizes room layouts, design concepts, contractor quotes, material lists, and timelines. 
-          Essential for NJ HIC compliance—document existing conditions, measurements, and utility locations 
+          Essential for New Jersey HIC compliance—document existing conditions, measurements, and utility locations 
           before demolition. Streamlines communication and ensures all project details are preserved.
         pro_tip: >-
           Photograph and sketch every room, noting electrical, plumbing, and structural features. 
@@ -79,5 +79,5 @@ metadata:
   
   policy: >-
     We only recommend products field-tested in actual installations—no paid placements or marketing fluff. 
-    All recommendations meet TCNA and NJ HIC standards for quality, safety, and compliance.
+    All recommendations meet TCNA and New Jersey HIC standards for quality, safety, and compliance.
 

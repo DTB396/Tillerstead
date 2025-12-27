@@ -106,4 +106,4 @@ border-color: rgb(255, 255, 255, 0.6);
 
 ---
 
-**Compliance:** TCNA 2024, NJ HIC, WCAG 2.1
+**Compliance:** TCNA 2024, New Jersey HIC, WCAG 2.1

@@ -16,7 +16,7 @@ hero_summary: >
 
 ## 1. Licensed & Insured New Jersey Contractor
 
-Tillerstead LLC (“we,” “our,” “us”) is a New Jersey–licensed and insured Home Improvement Contractor (NJ HIC License #{{ site.company.hic }}). All services strictly adhere to the New Jersey Consumer Fraud Act, Home Improvement Practices (N.J.A.C. 13:45A-16), and TCNA 2024 standards for tile and remodeling.
+Tillerstead LLC (“we,” “our,” “us”) is a New Jersey–licensed and insured Home Improvement Contractor (New Jersey HIC License #{{ site.company.hic }}). All services strictly adhere to the New Jersey Consumer Fraud Act, Home Improvement Practices (N.J.A.C. 13:45A-16), and TCNA 2024 standards for tile and remodeling.
 
 ## 2. Estimates, Proposals & Written Agreements
 
@@ -94,6 +94,6 @@ These Terms are governed by New Jersey law. Disputes are resolved in the appropr
 {{ site.company.address_locality }}, {{ site.company.address_region }} {{ site.company.address_postal_code }}  
 [{{ site.company.email }}](mailto:{{ site.company.email }}) • [{{ site.company.phone_display }}](tel:{{ site.company.phone_link }})
 
-NJ HIC License #: {{ site.company.hic }}  
+New Jersey HIC License #: {{ site.company.hic }}  
 For full compliance details, see [TCNA 2024 Standards](https://www.tcnatile.com/) and [NJ Division of Consumer Affairs](https://www.njconsumeraffairs.gov/).
 

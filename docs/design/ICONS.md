@@ -6,7 +6,7 @@
 
 #### 1. **Trust Bar** (`_includes/trust-bar.html`)
 ```html
-✓ Badge icon → NJ HIC #13VH10808800
+✓ Badge icon → New Jersey HIC #13VH10808800
 ✓ Check-circle icon → TCNA 2024 Compliant  
 ✓ Badge icon → Fully Insured
 ```

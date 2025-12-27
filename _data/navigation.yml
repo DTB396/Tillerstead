@@ -36,7 +36,7 @@ primary:
     url: /for-general-contractors/
     match: /for-general-contractors/
   - id: counties
-    title: Service Areas (NJ Licensed)
+    title: Service Areas (New Jersey licensed)
     children:
       - id: atlantic-county
         title: Atlantic County NJ
@@ -51,7 +51,7 @@ primary:
         url: /cape-may-county-nj/
         match: /cape-may-county-nj/
       - id: nj-hic-license
-        title: NJ HIC License & Compliance
+        title: New Jersey HIC License & Compliance
         url: /nj-hic-license/
         match: /nj-hic-license/
   - id: download-guide

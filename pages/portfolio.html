@@ -1,11 +1,11 @@
 ---
 layout: default
-description: "Portfolio of code-compliant tile, bath, and finish work by Tillerstead LLC. All projects meet TCNA standards and NJ HIC requirements: waterproofing, substrate prep, and precision installation."
+description: "Portfolio of code-compliant tile, bath, and finish work by Tillerstead LLC. All projects meet TCNA standards and New Jersey HIC requirements: waterproofing, substrate prep, and precision installation."
 body_class: page-portfolio
 hero_eyebrow: "Portfolio"
 hero_title: "Recent Tile & Finish Work Across South Jersey"
 hero_summary: >
-  Completed waterproof showers, floors, and backsplashes for New Jersey general contractors. All assemblies follow TCNA methods and NJ HIC law—no shortcuts, no guesswork.
+  Completed waterproof showers, floors, and backsplashes for New Jersey general contractors. All assemblies follow TCNA methods and New Jersey HIC law—no shortcuts, no guesswork.
 permalink: /portfolio/
 ---
 
@@ -15,7 +15,7 @@ permalink: /portfolio/
 {% assign total_projects = projects | size | plus: 0 %}
 {% assign fallback_src = '/assets/img/tillerstead-work/bathrooms/after-lft-vanity-wall.jpg' | relative_url %}
 {% assign fallback_alt = 'Large-format tile bathroom installation by Tillerstead LLC. Installed per TCNA standards with proper substrate prep, waterproofing, and expansion joints.' %}
-{% assign fallback_caption = 'All work meets TCNA and NJ HIC standards—precision installation, code-compliant waterproofing, and built for durability.' %}
+{% assign fallback_caption = 'All work meets TCNA and New Jersey HIC standards—precision installation, code-compliant waterproofing, and built for durability.' %}
 
 <section class="ts-section ts-surface portfolio-page" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cdefs%3E%3Cpattern id=\'tile-grid\' x=\'0\' y=\'0\' width=\'60\' height=\'60\' patternUnits=\'userSpaceOnUse\'%3E%3Cpath d=\'M30 0v60M0 30h60\' stroke=\'%23e0e7ed\' stroke-width=\'0.5\' fill=\'none\' opacity=\'0.3\'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width=\'100%25\' height=\'100%25\' fill=\'url(%23tile-grid)\'/%3E%3C/svg%3E');">
   <div class="container">
@@ -220,7 +220,7 @@ const PROJECTS = {{ projects | jsonify | replace: '</', '<\/') }};
       }
     }
     imgEl.src = base + slide.file;
-    imgEl.alt = slide.alt || 'Project photo by Tillerstead LLC, installed per TCNA/NJ HIC standards.';
+    imgEl.alt = slide.alt || 'Project photo by Tillerstead LLC, installed per TCNA/New Jersey HIC standards.';
     captionEl.textContent = slide.caption || '';
     metaEl.textContent = `${tagLabels[currentFilter] || 'All work'} · ${index + 1} of ${slides.length}`;
 

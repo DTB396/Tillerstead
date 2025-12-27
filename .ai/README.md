@@ -2,7 +2,7 @@
 
 ## Executive Summary
 
-Tillerstead’s AI assistants operate as **precision engineering and documentation agents**, governed by a centralized, version-controlled instruction system. This ensures all AI-driven outputs are **TCNA-compliant**, **NJ HIC-aligned**, and meet the highest standards of technical accuracy, legal compliance, and brand integrity.
+Tillerstead’s AI assistants operate as **precision engineering and documentation agents**, governed by a centralized, version-controlled instruction system. This ensures all AI-driven outputs are **TCNA-compliant**, **New Jersey HIC-aligned**, and meet the highest standards of technical accuracy, legal compliance, and brand integrity.
 
 ## Instruction System Structure
 
@@ -10,7 +10,7 @@ Tillerstead’s AI assistants operate as **precision engineering and documentati
 /.ai/
 ├── SYSTEM.md          # Authoritative behavioral contract (must-read)
 ├── STYLE.md           # Brand voice, persuasion, and copywriting standards
-├── DOMAIN.md          # TCNA 2024, NJ HIC, and technical authority
+├── DOMAIN.md          # TCNA 2024, New Jersey HIC, and technical authority
 ├── COMPLIANCE.md      # Legal, ethical, and regulatory boundaries
 ├── OUTPUT_RULES.md    # Code, naming, formatting, and documentation standards
 ├── COPILOT.md         # GitHub Copilot adaptation (inherits all above)
@@ -42,9 +42,9 @@ Tillerstead’s AI assistants operate as **precision engineering and documentati
 ## Technical & Compliance Highlights
 
 - **File Naming**: Enforce kebab-case for HTML/CSS/JS, camelCase for JS variables, descriptive YAML keys (see `OUTPUT_RULES.md`)
-- **Accessibility**: All alt text, labels, and descriptions must meet WCAG 2.1 AA and NJ HIC requirements
+- **Accessibility**: All alt text, labels, and descriptions must meet WCAG 2.1 AA and New Jersey HIC requirements
 - **SEO & Performance**: Outputs must support LCP <2.5s, TTI <3s, CLS <0.1, and include proper meta/structured data
-- **Legal**: All content and code must comply with NJ Consumer Fraud Act and TCNA 2024 standards
+- **Legal**: All content and code must comply with New Jersey Consumer Fraud Act and TCNA 2024 standards
 
 ---
 

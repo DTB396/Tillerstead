@@ -24,16 +24,16 @@ TCNA-Compliant Tile, Waterproofing & Remodeling
 
 ---
 
-### 2. ✅ Removed "Licensed" from NJ HIC Badge Text
+### 2. ✅ Removed "Licensed" from New Jersey HIC Badge Text
 
 **Before:**
 ```
-NJ Licensed HIC #13VH10808800
+New Jersey licensed HIC #13VH10808800
 ```
 
 **After:**
 ```
-NJ HIC #13VH10808800
+New Jersey HIC #13VH10808800
 ```
 
 **Why:** More concise. The HIC number itself implies licensing. Reduces text clutter on mobile.
@@ -76,8 +76,8 @@ NJ HIC #13VH10808800
 
 **License text:**
 ```diff
-- <strong>NJ Licensed HIC #13VH10808800</strong>
-+ <strong>NJ HIC #13VH10808800</strong>
+- <strong>New Jersey licensed HIC #13VH10808800</strong>
++ <strong>New Jersey HIC #13VH10808800</strong>
 ```
 
 ---
@@ -128,7 +128,7 @@ From `_includes/logo-sprite-inline.html`:
 │                         │
 │   Technical tagline     │
 │                         │
-│   NJ HIC #...          │  ← Removed "Licensed"
+│   New Jersey HIC #...          │  ← Removed "Licensed"
 │                         │
 │   Main Heading         │  ← Removed "| Tillerstead LLC"
 │                         │
@@ -163,7 +163,7 @@ From `_includes/logo-sprite-inline.html`:
 - [ ] View homepage on iPhone 16 Pro Max
 - [ ] Verify logo displays as tile mark (not stacked)
 - [ ] Confirm heading has no pipe or company name
-- [ ] Check license badge says "NJ HIC" not "NJ Licensed HIC"
+- [ ] Check license badge says "New Jersey HIC" not "New Jersey licensed HIC"
 - [ ] Ensure logo is different from header logo
 - [ ] Test on various mobile devices (375px - 430px width)
 - [ ] Verify desktop still looks good
@@ -197,7 +197,7 @@ From `_includes/logo-sprite-inline.html`:
 All changes maintain:
 - ✅ WCAG 2.1 AA accessibility
 - ✅ Semantic HTML structure
-- ✅ NJ HIC disclosure requirements
+- ✅ New Jersey HIC disclosure requirements
 - ✅ TCNA branding guidelines
 - ✅ Mobile-first responsive design
 

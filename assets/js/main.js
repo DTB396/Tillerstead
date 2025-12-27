@@ -1,10 +1,10 @@
 /* main.js — Tillerstead
   - Responsive, accessible navigation (ESC, outside click, resize, touch)
-  - High contrast mode toggle (WCAG AAA, TCNA/NJ HIC compliant, persists via localStorage)
+  - High contrast mode toggle (WCAG AAA, TCNA/New Jersey HIC compliant, persists via localStorage)
   - Smooth anchor scrolling (respects reduced motion, ARIA focus)
   - Static-hosted form handling (GitHub Pages/Netlify passthrough)
   - Modern browser support, robust fallbacks
-  - All logic and markup meet TCNA 2024 and NJ HIC accessibility/legal standards
+  - All logic and markup meet TCNA 2024 and New Jersey HIC accessibility/legal standards
 */
 (() => {
   // =========================
@@ -23,8 +23,8 @@
       contrastToggle.setAttribute(
         'aria-label',
         enabled
-          ? 'Disable high contrast mode (meets WCAG AAA, TCNA/NJ HIC compliant)'
-          : 'Enable high contrast mode (meets WCAG AAA, TCNA/NJ HIC compliant)'
+          ? 'Disable high contrast mode (meets WCAG AAA, TCNA/New Jersey HIC compliant)'
+          : 'Enable high contrast mode (meets WCAG AAA, TCNA/New Jersey HIC compliant)'
       );
     }
     if (typeof window.applyContrast === 'function') window.applyContrast(7); // Maintain AAA target
@@ -109,7 +109,7 @@
 
   // =========================
   // FORM HANDLING (STATIC HOST)
-  // - Ensures forms are accessible, TCNA/NJ HIC compliant
+  // - Ensures forms are accessible, TCNA/New Jersey HIC compliant
   // - Netlify passthrough supported
   // =========================
   // (Add form handling logic here as needed, following OUTPUT_RULES.md)

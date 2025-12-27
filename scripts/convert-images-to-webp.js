@@ -5,7 +5,7 @@
  * Purpose: Scan assets/img for .jpg, .jpeg, .png images and create optimized .webp versions
  * without overwriting existing WebP files unless --force is passed.
  *
- * NJ HIC/TCNA Compliance: All image processing adheres to TCNA 2024 digital asset standards and NJ Consumer Fraud Act transparency requirements.
+ * New Jersey HIC/TCNA Compliance: All image processing adheres to TCNA 2024 digital asset standards and NJ Consumer Fraud Act transparency requirements.
  *
  * Usage:
  *   node scripts/convert-images-to-webp.js          # convert missing
@@ -93,7 +93,7 @@ let skipped = 0;
 let reconverted = 0;
 
 (async () => {
-  console.log('\nImage WebP Conversion (TCNA/NJ HIC Compliant)\n---------------------------------------------');
+  console.log('\nImage WebP Conversion (TCNA/New Jersey HIC Compliant)\n---------------------------------------------');
   console.log(`Source directory: ${sourceDir}`);
   console.log(`Quality: ${quality}`);
   console.log(`Force: ${force ? 'yes' : 'no'}  Dry-run: ${dryRun ? 'yes' : 'no'}`);

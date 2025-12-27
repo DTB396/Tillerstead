@@ -1,7 +1,7 @@
 # Review Management Guide
 
 ## Overview
-Homepage client reviews are dynamically rendered from `_data/reviews.yml` using the testimonials component, which displays Thumbtack-verified feedback with accessible, brand-compliant styling. All testimonial workflows and display logic adhere to TCNA 2024 standards and NJ HIC regulations.
+Homepage client reviews are dynamically rendered from `_data/reviews.yml` using the testimonials component, which displays Thumbtack-verified feedback with accessible, brand-compliant styling. All testimonial workflows and display logic adhere to TCNA 2024 standards and New Jersey HIC regulations.
 
 ## System Architecture
 - **Homepage Section:** `_includes/sections/testimonials.html`
@@ -14,7 +14,7 @@ Homepage client reviews are dynamically rendered from `_data/reviews.yml` using 
 ## Key Features
 - **Thumbtack Verification:** Clickable, accessible badge with checkmark icon and external link (opens in new tab, `rel="noopener nofollow"`)
 - **Star Ratings:** 1–5 stars, visually and programmatically accessible
-- **Metadata:** Author (first name + last initial), NJ location, job type, ISO date
+- **Metadata:** Author (first name + last initial), New Jersey location, job type, ISO date
 - **Custom Badges:** e.g., “Great Communication”, “On Time”, “Expert”
 - **Responsive Layout:** Card grid, mobile-first, WCAG-compliant contrast and focus states
 - **Brand Styling:** All elements styled per design tokens and accessibility guidelines
@@ -42,7 +42,7 @@ Add a new review to `_data/reviews-manual.yml` using this schema:
   rating_max: 5
   quote_html: <p>Review text in semantic HTML.</p>
   author: John D.
-  location: Galloway, NJ
+  location: Galloway, New Jersey
   job_type: Bathroom Remodel
   date: '2025-12-20'
   badges:
@@ -83,7 +83,7 @@ Add a new review to `_data/reviews-manual.yml` using this schema:
     <p>Devon’s TCNA-compliant installation exceeded expectations. Every tile was perfectly aligned, and waterproofing was meticulously documented.</p>
     <p>He explained each step, referencing industry standards. Six months later, the shower remains flawless.</p>
   author: Sarah M.
-  location: Egg Harbor Township, NJ
+  location: Egg Harbor Township, New Jersey
   job_type: Master Bath Renovation
   date: '2025-11-15'
   badges:
@@ -150,4 +150,4 @@ bundle exec jekyll serve
 
 ---
 
-*All review management and display logic must comply with TCNA 2024, NJ HIC, and the operational rules in `/.ai/`. For detailed standards, see `/.ai/DOMAIN.md` and `/.ai/COMPLIANCE.md`.*
+*All review management and display logic must comply with TCNA 2024, New Jersey HIC, and the operational rules in `/.ai/`. For detailed standards, see `/.ai/DOMAIN.md` and `/.ai/COMPLIANCE.md`.*

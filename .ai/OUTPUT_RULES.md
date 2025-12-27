@@ -2,7 +2,7 @@
 
 **Inherits From**: `SYSTEM.md`  
 **Scope**: Code, documentation, assets, and workflow standards  
-**Authority**: Tillerstead conventions, TCNA 2024, NJ HIC, WCAG 2.1, industry best practices
+**Authority**: Tillerstead conventions, TCNA 2024, New Jersey HIC, WCAG 2.1, industry best practices
 
 ---
 
@@ -215,5 +215,5 @@ Defines non-negotiable technical, legal, and brand standards for all code, conte
 **Version**: 1.1.0  
 **Last Updated**: June 2024  
 **Authority**: SYSTEM.md, STYLE.md, DOMAIN.md, COMPLIANCE.md, OUTPUT_RULES.md  
-**Legal**: TCNA 2024, NJ HIC, WCAG 2.1, modern web standards
+**Legal**: TCNA 2024, New Jersey HIC, WCAG 2.1, modern web standards
 

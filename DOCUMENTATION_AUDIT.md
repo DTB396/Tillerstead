@@ -17,7 +17,7 @@
 **Status:** Perfect, no changes needed
 - `SYSTEM.md` - Behavioral contract ✅
 - `STYLE.md` - Brand voice ✅
-- `DOMAIN.md` - TCNA/NJ HIC standards ✅
+- `DOMAIN.md` - TCNA/New Jersey HIC standards ✅
 - `COMPLIANCE.md` - Legal boundaries ✅
 - `OUTPUT_RULES.md` - Code quality ✅
 - `COPILOT.md` - AI-specific ✅

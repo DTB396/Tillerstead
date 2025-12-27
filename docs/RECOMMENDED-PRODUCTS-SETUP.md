@@ -54,7 +54,7 @@ https://www.amazon.com/dp/B001QUZEEU?tag=tillerstead-20&linkCode=ogi&th=1
 
 - All links must use:  
     `https://www.amazon.com/dp/ASIN?tag=YOUR-TAG&linkCode=ogi&th=1`
-- `tag=` — Your Amazon Associate ID (required for NJ HIC/FTC compliance)
+- `tag=` — Your Amazon Associate ID (required for New Jersey HIC/FTC compliance)
 - `linkCode=ogi` — Organic link code for transparent tracking
 - `th=1` — Ensures correct product variation
 
@@ -65,9 +65,9 @@ https://www.amazon.com/dp/B001QUZEEU?tag=tillerstead-20&linkCode=ogi&th=1
 
 ---
 
-## FTC & NJ Consumer Protection Compliance
+## FTC & New Jersey Consumer Protection Compliance
 
-- **Disclosure:** Prominent, above-the-fold affiliate disclosure is required (per FTC & NJ HIC)
+- **Disclosure:** Prominent, above-the-fold affiliate disclosure is required (per FTC & New Jersey HIC)
 - **Link Attributes:** All affiliate links must include `rel="nofollow noopener"` for legal and SEO compliance
 - **Transparency:** Clearly state that prices are identical for users and that Tillerstead earns a commission
 - **Disclaimer:** No medical/safety claims beyond manufacturer specs; no price guarantees
@@ -93,7 +93,7 @@ https://www.amazon.com/dp/B001QUZEEU?tag=tillerstead-20&linkCode=ogi&th=1
 
 **Quarterly:**
 - Review and update product recommendations for new releases or code changes
-- Confirm all FTC/NJ HIC disclosures and link attributes remain current
+- Confirm all FTC/New Jersey HIC disclosures and link attributes remain current
 
 ---
 
@@ -118,7 +118,7 @@ For advanced tracking, append UTM parameters:
 
 ## Legal & Accessibility Notes
 
-- **Disclosure:** Must appear within 200 words of the first affiliate link (FTC/NJ HIC)
+- **Disclosure:** Must appear within 200 words of the first affiliate link (FTC/New Jersey HIC)
 - **Link Attributes:** `rel="nofollow noopener"` required on all affiliate links
 - **No Guarantees:** Do not promise pricing, availability, or make unsupported claims
 - **Accessibility:** All alt text, labels, and descriptions must meet WCAG 2.1 AA standards
@@ -131,4 +131,4 @@ For advanced tracking, append UTM parameters:
 
 ---
 
-_Reference: See `/.ai/DOMAIN.md` for TCNA/NJ HIC compliance, `/.ai/COMPLIANCE.md` for legal, and `/.ai/OUTPUT_RULES.md` for formatting._
+_Reference: See `/.ai/DOMAIN.md` for TCNA/New Jersey HIC compliance, `/.ai/COMPLIANCE.md` for legal, and `/.ai/OUTPUT_RULES.md` for formatting._

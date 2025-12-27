@@ -1,4 +1,4 @@
-// Tillerstead.com – TCNA/NJ HIC-Compliant Lazy Image Loading
+// Tillerstead.com – TCNA/New Jersey HIC-Compliant Lazy Image Loading
 // Implements robust, standards-driven image lazy loading for optimal performance and accessibility.
 // Uses Intersection Observer as a fallback for browsers lacking native support.
 // All images must include descriptive alt text per NJ Consumer Fraud Act and WCAG 2.1 (§1.1.1).
@@ -49,7 +49,7 @@
     lazyImages.forEach(img => {
       // Enforce descriptive alt text for accessibility and legal compliance
       if (!img.hasAttribute('alt') || !img.getAttribute('alt').trim()) {
-        img.setAttribute('alt', 'Decorative image – Tillerstead NJ HIC compliant');
+        img.setAttribute('alt', 'Decorative image – Tillerstead New Jersey HIC compliant');
       }
       imageObserver.observe(img);
     });

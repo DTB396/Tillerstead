@@ -2,7 +2,7 @@
 
 ## Executive Summary
 
-This guide details the automated contrast verification system for Tillerstead.com, engineered to exceed WCAG 2.1 Level AA and AAA standards. All color pairings are validated for compliance, ensuring accessibility, legal adherence (NJ HIC, TCNA), and superior user experience. Tillerstead’s system is engineered for transparency, technical rigor, and measurable compliance—contrasting sharply with industry norms.
+This guide details the automated contrast verification system for Tillerstead.com, engineered to exceed WCAG 2.1 Level AA and AAA standards. All color pairings are validated for compliance, ensuring accessibility, legal adherence (New Jersey HIC, TCNA), and superior user experience. Tillerstead’s system is engineered for transparency, technical rigor, and measurable compliance—contrasting sharply with industry norms.
 
 ---
 
@@ -306,7 +306,7 @@ $safe-color: ensure-contrast($my-new-color, #f9f5eb, 4.5);
 **Implementation Date:** December 20, 2025  
 **Standard:** WCAG 2.1 Level AA (AAA where feasible)  
 **Testing:** Manual + automated (contrast module, browser tools)  
-**Status:** ✅ 100% verified, TCNA/NJ HIC compliant
+**Status:** ✅ 100% verified, TCNA/New Jersey HIC compliant
 
 ---
 

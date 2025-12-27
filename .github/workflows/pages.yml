@@ -20,7 +20,7 @@ concurrency:
 
 jobs:
   build:
-    name: Build & Lint (TCNA/NJ HIC Compliant)
+    name: Build & Lint (TCNA/New Jersey HIC Compliant)
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
@@ -50,7 +50,7 @@ jobs:
         if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
         uses: actions/configure-pages@v5
 
-      - name: Build Site (Production, TCNA/NJ HIC Standards)
+      - name: Build Site (Production, TCNA/New Jersey HIC Standards)
         env:
           JEKYLL_ENV: production
         run: npm run build

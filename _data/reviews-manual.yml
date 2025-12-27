@@ -17,7 +17,7 @@
 #   rating_max: 5
 #   quote_html: <p>Review text goes here. Use HTML paragraph tags.</p>
 #   author: John D.
-#   location: Galloway, NJ
+#   location: Galloway, New Jersey
 #   job_type: Bathroom Remodel
 #   date: '2025-12-20'
 #   badges:
@@ -92,7 +92,7 @@ reviews:
 #     were necessary. The shower hasn't had a single issue after 6 months 
 #     of daily use.</p>
 #   author: Sarah M.
-#   location: Egg Harbor Township, NJ
+#   location: Egg Harbor Township, New Jersey
 #   job_type: Master Bath Renovation
 #   date: '2025-11-15'
 #   badges:
@@ -113,7 +113,7 @@ reviews:
     rating_max: 5
     quote_html: <p>I asked for photos of the waterproofing. They sent me 47 photos. FORTY-SEVEN. These guys document everything like they're building the Sistine Chapel.</p>
     author: Sarah M.
-    location: Egg Harbor Township, NJ
+    location: Egg Harbor Township, New Jersey
     job_type: Master Bath Renovation
     date: '2025-11-15'
     badges:
