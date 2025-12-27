@@ -172,3 +172,12 @@
  */
 
 /* Schema.org BreadcrumbList structured data included in HTML template */
+
+/* ===========================
+   HOMEPAGE - HIDE BREADCRUMBS
+   =========================== */
+body.page-home .ts-breadcrumbs,
+body.page-home .breadcrumbs-bar,
+body.page-home .breadcrumbs {
+  display: none !important;
+}
