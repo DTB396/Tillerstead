@@ -7,7 +7,7 @@
     {% include logo-sprite-inline.html %}
     {% include header.html %}
     <main id="main" class="site-main ts-section ts-surface" role="main" tabindex="-1">
-      {% if page.url != '/' and page.url != '/index.html' and page.is_home != true and page.show_breadcrumbs != false %}
+      {% if page.url != '/' and page.url != '/index.html' and page.is_home != true and page.show_breadcrumbs != false and page.hide_breadcrumbs != true %}
         {% include ts-breadcrumbs.html %}
       {% endif %}
       {% if page.hide_hero != true %}
