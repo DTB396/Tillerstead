@@ -15,12 +15,10 @@ Loads all JavaScript modules with cache busting and proper defer/async attribute
 <script src="{{ '/assets/js/scroll-animations.js' | relative_url }}?v={{ cache_version }}" defer></script>
 <script src="{{ '/assets/js/micro-interactions.js' | relative_url }}?v={{ cache_version }}" defer></script>
 
-{% comment %}
-Contact form handler DISABLED - Using Netlify Forms instead
 {% if page.layout == 'contact' or page.url contains '/contact' %}
-<script src="{{ '/assets/js/contact-form.js' | relative_url }}?v={{ cache_version }}" defer></script>
+<!-- Professional contact form handler with proper messaging -->
+<script src="{{ '/assets/js/contact-form-handler.js' | relative_url }}?v={{ cache_version }}" defer></script>
 {% endif %}
-{% endcomment %}
 
 {% if jekyll.environment == 'development' %}
 <!-- Development overlay for debugging -->
