@@ -3,847 +3,286 @@ layout: default
 title: NJ Homeowner's Tile Installation Guide - Professional Edition
 permalink: /guides/nj-tile-guide/
 body_class: page-guide guide-professional
+description: A practical, standards-aware tile guide for New Jersey homeowners: planning, contractor vetting,
+waterproofing basics, and documentation.
 ---
 
-<style>
-/* ===========================
-   PROFESSIONAL PDF GUIDE STYLING
-   Magazine-quality layout for screen and print
-   =========================== */
-
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&display=swap');
-
-@media print {
-  body { background: white !important; margin: 0; }
-  .no-print, header, footer, .ts-breadcrumbs, nav { display: none !important; }
-  .guide-page { page-break-after: always; }
-  .chapter { page-break-inside: avoid; }
-  img { max-width: 100%; page-break-inside: avoid; }
-}
-
-.guide-container {
-  max-width: 900px;
-  margin: 0 auto;
-  background: white;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-}
-
-/* Cover Page */
-.cover-page {
-  min-height: 100vh;
-  background: linear-gradient(135deg, var(--color-brand-teal-500) 0%, var(--color-brand-teal-700) 100%);
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 4rem 2rem;
-  position: relative;
-  overflow: hidden;
-}
-
-.cover-page::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><rect width="50" height="50" fill="rgba(255,255,255,0.03)"/><rect x="50" y="50" width="50" height="50" fill="rgba(255,255,255,0.03)"/></svg>');
-  background-size: 100px 100px;
-}
-
-.cover-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 4rem;
-  font-weight: 900;
-  line-height: 1.1;
-  margin-bottom: 1rem;
-  text-shadow: 0 2px 10px rgba(0,0,0,0.3);
-  position: relative;
-  z-index: 1;
-}
-
-.cover-subtitle {
-  font-size: 1.5rem;
-  font-weight: 300;
-  margin-bottom: 3rem;
-  opacity: 0.95;
-  position: relative;
-  z-index: 1;
-}
-
-.cover-badge {
-  background: white;
-  color: var(--color-brand-teal-500);
-  padding: 1rem 2rem;
-  border-radius: 50px;
-  font-weight: 700;
-  font-size: 1.1rem;
-  margin: 2rem 0;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-  position: relative;
-  z-index: 1;
-}
-
-.cover-meta {
-  position: absolute;
-  bottom: 2rem;
-  left: 0;
-  right: 0;
-  text-align: center;
-  opacity: 0.8;
-  font-size: 0.9rem;
-}
-
-/* Table of Contents */
-.toc-page {
-  padding: 4rem 3rem;
-  background: var(--color-slate-50);
-}
-
-.toc-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.5rem;
-  color: var(--color-slate-800);
-  margin-bottom: 2rem;
-  border-bottom: 4px solid var(--color-brand-teal-500);
-  padding-bottom: 1rem;
-}
-
-.toc-list {
-  list-style: none;
-  padding: 0;
-}
-
-.toc-item {
-  padding: 1.5rem;
-  margin: 1rem 0;
-  background: white;
-  border-left: 6px solid var(--color-brand-teal-500);
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.toc-item:hover {
-  transform: translateX(5px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-}
-
-.toc-number {
-  width: 60px;
-  height: 60px;
-  background: linear-gradient(135deg, var(--color-brand-teal-500), var(--color-brand-teal-700));
-  color: white;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.75rem;
-  font-weight: 700;
-  flex-shrink: 0;
-}
-
-.toc-content h3 {
-  margin: 0 0 0.5rem 0;
-  color: var(--color-slate-800);
-  font-size: 1.3rem;
-}
-
-.toc-content p {
-  margin: 0;
-  color: var(--color-slate-500);
-  font-size: 0.95rem;
-}
-
-/* Chapter Pages */
-.guide-page {
-  padding: 4rem 3rem;
-  min-height: 100vh;
-}
-
-.chapter-header {
-  margin-bottom: 3rem;
-  border-bottom: 3px solid var(--color-slate-200);
-  padding-bottom: 2rem;
-}
-
-.chapter-number {
-  display: inline-block;
-  background: linear-gradient(135deg, var(--color-brand-teal-500), var(--color-brand-teal-700));
-  color: white;
-  padding: 0.5rem 1.5rem;
-  border-radius: 50px;
-  font-weight: 700;
-  font-size: 1rem;
-  margin-bottom: 1rem;
-}
-
-.chapter-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 3rem;
-  color: var(--color-slate-800);
-  margin: 1rem 0;
-  line-height: 1.2;
-}
-
-.chapter-intro {
-  font-size: 1.3rem;
-  color: var(--color-slate-600);
-  font-style: italic;
-  margin: 1.5rem 0;
-  padding-left: 2rem;
-  border-left: 4px solid #ff8461;
-}
-
-/* Content Sections */
-.section {
-  margin: 3rem 0;
-}
-
-.section-title {
-  font-size: 1.75rem;
-  color: var(--color-slate-700);
-  margin: 2rem 0 1.5rem;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.section-title::before {
-  content: '';
-  width: 6px;
-  height: 40px;
-  background: linear-gradient(to bottom, var(--color-brand-teal-500), #ff8461);
-  border-radius: 3px;
-}
-
-/* Callout Boxes */
-.callout {
-  padding: 2rem;
-  margin: 2.5rem 0;
-  border-radius: 12px;
-  position: relative;
-  overflow: hidden;
-}
-
-.callout::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 6px;
-}
-
-.callout-warning {
-  background: linear-gradient(to right, #fef3c7, #fffbeb);
-  border: 1px solid var(--color-golden-400);
-}
-
-.callout-warning::before {
-  background: linear-gradient(to bottom, var(--color-golden-500), var(--color-golden-600));
-}
-
-.callout-info {
-  background: linear-gradient(to right, #dbeafe, #eff6ff);
-  border: 1px solid #60a5fa;
-}
-
-.callout-info::before {
-  background: linear-gradient(to bottom, #3b82f6, #2563eb);
-}
-
-.callout-success {
-  background: linear-gradient(to right, #d1fae5, #ecfdf5);
-  border: 1px solid #34d399;
-}
-
-.callout-success::before {
-  background: linear-gradient(to bottom, var(--color-success-500), var(--color-success-600));
-}
-
-.callout-title {
-  font-size: 1.3rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-
-.callout-icon {
-  font-size: 1.75rem;
-}
-
-/* Professional Tables */
-.pro-table {
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 0;
-  margin: 2.5rem 0;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
-
-.pro-table thead {
-  background: linear-gradient(135deg, var(--color-brand-teal-500), var(--color-brand-teal-700));
-  color: white;
-}
-
-.pro-table th {
-  padding: 1.25rem 1.5rem;
-  text-align: left;
-  font-weight: 700;
-  font-size: 1.05rem;
-  letter-spacing: 0.5px;
-}
-
-.pro-table td {
-  padding: 1.25rem 1.5rem;
-  border-bottom: 1px solid var(--color-slate-200);
-  background: white;
-}
-
-.pro-table tr:last-child td {
-  border-bottom: none;
-}
-
-.pro-table tbody tr:nth-child(even) td {
-  background: var(--color-slate-50);
-}
-
-.pro-table tbody tr:hover td {
-  background: var(--color-slate-100);
-}
-
-/* Checklist */
-.pro-checklist {
-  list-style: none;
-  padding: 0;
-  margin: 2rem 0;
-}
-
-.pro-checklist li {
-  padding: 1.25rem 1.5rem 1.25rem 4rem;
-  margin: 1rem 0;
-  background: white;
-  border-radius: 8px;
-  border: 1px solid var(--color-slate-200);
-  position: relative;
-  transition: all 0.2s;
-}
-
-.pro-checklist li:hover {
-  border-color: var(--color-brand-teal-500);
-  box-shadow: 0 2px 8px rgba(13, 154, 170, 0.15);
-}
-
-.pro-checklist li::before {
-  content: '✓';
-  position: absolute;
-  left: 1.25rem;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 32px;
-  height: 32px;
-  background: linear-gradient(135deg, var(--color-success-500), var(--color-success-600));
-  color: white;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  font-size: 1.1rem;
-}
-
-/* Image Containers */
-.image-box {
-  margin: 3rem 0;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.12);
-}
-
-.image-box img {
-  width: 100%;
-  display: block;
-}
-
-.image-caption {
-  padding: 1.5rem;
-  background: var(--color-slate-50);
-  border-top: 3px solid var(--color-brand-teal-500);
-  font-size: 0.95rem;
-  color: var(--color-slate-500);
-  font-style: italic;
-}
-
-/* Stats/Numbers */
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 2rem;
-  margin: 3rem 0;
-}
-
-.stat-card {
-  text-align: center;
-  padding: 2rem;
-  background: linear-gradient(135deg, var(--color-slate-50), white);
-  border-radius: 12px;
-  border: 2px solid var(--color-slate-200);
-}
-
-.stat-number {
-  font-size: 3rem;
-  font-weight: 900;
-  color: var(--color-brand-teal-500);
-  line-height: 1;
-  margin-bottom: 0.5rem;
-}
-
-.stat-label {
-  color: var(--color-slate-500);
-  font-size: 0.95rem;
-  font-weight: 600;
-}
-
-/* Resource Links */
-.resource-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  margin: 2.5rem 0;
-}
-
-.resource-card {
-  padding: 1.5rem;
-  background: white;
-  border: 2px solid var(--color-slate-200);
-  border-radius: 12px;
-  transition: all 0.3s;
-  text-decoration: none;
-  color: inherit;
-  display: block;
-}
-
-.resource-card:hover {
-  border-color: var(--color-brand-teal-500);
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(13, 154, 170, 0.15);
-}
-
-.resource-icon {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.resource-title {
-  font-weight: 700;
-  font-size: 1.1rem;
-  color: var(--color-slate-800);
-  margin-bottom: 0.5rem;
-}
-
-.resource-desc {
-  font-size: 0.9rem;
-  color: var(--color-slate-500);
-  margin: 0;
-}
-
-/* Footer */
-.guide-footer {
-  margin-top: 4rem;
-  padding: 3rem 3rem 2rem;
-  background: linear-gradient(135deg, var(--color-slate-800), var(--color-slate-900));
-  color: white;
-  text-align: center;
-  border-radius: 12px 12px 0 0;
-}
-
-.guide-footer h3 {
-  color: white;
-  margin-bottom: 1rem;
-}
-
-.guide-footer a {
-  color: #7dd3fc;
-}
-
-/* Print Actions */
-.print-actions {
-  position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  display: flex;
-  gap: 1rem;
-  z-index: 1000;
-}
-
-.btn-print, .btn-download {
-  padding: 1rem 2rem;
-  border: none;
-  border-radius: 50px;
-  font-weight: 700;
-  font-size: 1rem;
-  cursor: pointer;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-  transition: all 0.3s;
-}
-
-.btn-print {
-  background: linear-gradient(135deg, var(--color-slate-500), var(--color-slate-600));
-  color: white;
-}
-
-.btn-print:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-}
-
-.btn-download {
-  background: linear-gradient(135deg, var(--color-brand-teal-500), var(--color-brand-teal-700));
-  color: white;
-}
-
-.btn-download:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(13, 154, 170, 0.4);
-}
-</style>
-
-<div class="guide-container">
-
-  <!-- COVER PAGE -->
-  <div class="cover-page no-print">
-    <div class="cover-title">NJ Homeowner's<br>Tile Installation Guide</div>
-    <div class="cover-subtitle">Your Complete Reference for TCNA-Compliant Projects</div>
-    <div class="cover-badge">Professional Edition 2024</div>
-    <div style="margin-top: 3rem; position: relative; z-index: 1;">
-      <p style="font-size: 1.1rem; margin-bottom: 1rem;">Published by <strong>Tillerstead LLC</strong></p>
-      <p style="opacity: 0.9;">Licensed New Jersey contractor | New Jersey HIC #13VH10808800</p>
+<main class="guide" id="top" role="main" tabindex="-1" aria-label="NJ Homeowner's Tile Installation Guide">
+
+  <!-- COVER -->
+  <header class="guide__cover no-print" aria-label="Guide cover">
+    <div class="guide__cover-inner">
+      <p class="guide__kicker">NJ Homeowner’s</p>
+      <h1 class="guide__title">Tile Installation Guide</h1>
+      <p class="guide__subtitle">A practical reference for documented, code-aware tile projects</p>
+
+      <div class="guide__badge">Professional Edition</div>
+
+      <p class="guide__byline">
+        Published by <strong>Tillerstead LLC</strong><br>
+        Licensed NJ Home Improvement Contractor · HIC #13VH10808800
+      </p>
+
+      <p class="guide__meta">
+        Updated: December 2024 · Free for personal use · Designed for print
+      </p>
+
+      <div class="guide__cover-actions">
+        <a class="btn btn-accent" href="#toc">Start reading</a>
+        <button class="btn btn-ghost" type="button" onclick="window.print()">Save as PDF</button>
+      </div>
     </div>
-    <div class="cover-meta">
-      <p>© 2024 Tillerstead LLC | Free for Personal Use<br>
-      Updated December 2024 | 6 Comprehensive Chapters</p>
-    </div>
-  </div>
+  </header>
 
-  <!-- TABLE OF CONTENTS -->
-  <div class="toc-page guide-page">
-    <h2 class="toc-title">Table of Contents</h2>
-    <ul class="toc-list">
-      <li class="toc-item">
-        <div class="toc-number">1</div>
-        <div class="toc-content">
-          <h3>Understanding TCNA & ANSI Standards</h3>
-          <p>Industry standards, installation methods, and compliance requirements</p>
-        </div>
-      </li>
-      <li class="toc-item">
-        <div class="toc-number">2</div>
-        <div class="toc-content">
-          <h3>Vetting New Jersey Contractors</h3>
-          <p>New Jersey HIC licensing, essential questions, and red flags to avoid</p>
-        </div>
-      </li>
-      <li class="toc-item">
-        <div class="toc-number">3</div>
-        <div class="toc-content">
-          <h3>Waterproofing: The Critical Element</h3>
-          <p>ANSI A118.10 standards, popular systems, and installation must-haves</p>
-        </div>
-      </li>
-      <li class="toc-item">
-        <div class="toc-number">4</div>
-        <div class="toc-content">
-          <h3>Material Selection Guide</h3>
-          <p>Porcelain vs ceramic vs stone, large format tile, and grout options</p>
-        </div>
-      </li>
-      <li class="toc-item">
-        <div class="toc-number">5</div>
-        <div class="toc-content">
-          <h3>Project Planning & Budgeting</h3>
-          <p>2024 South Jersey pricing, cost factors, and budget planning tips</p>
-        </div>
-      </li>
-      <li class="toc-item">
-        <div class="toc-number">6</div>
-        <div class="toc-content">
-          <h3>Your Legal Rights in New Jersey</h3>
-          <p>Consumer protection laws, contract requirements, and complaint procedures</p>
-        </div>
-      </li>
-    </ul>
-  </div>
+  <!-- TOC -->
+  <section class="guide__page guide__toc" id="toc" aria-labelledby="toc-title">
+    <h2 class="guide__page-title" id="toc-title">Table of Contents</h2>
+
+    <ol class="guide__toc-list">
+      <li><a class="guide__toc-item" href="#ch1"><span class="guide__toc-num">1</span><span
+            class="guide__toc-text"><strong>Understanding TCNA & ANSI</strong><br><span>How standards relate to
+              assemblies, products, and documentation</span></span></a></li>
+      <li><a class="guide__toc-item" href="#ch2"><span class="guide__toc-num">2</span><span
+            class="guide__toc-text"><strong>Vetting NJ Contractors</strong><br><span>HIC verification, contract basics,
+              and red flags</span></span></a></li>
+      <li><a class="guide__toc-item" href="#ch3"><span class="guide__toc-num">3</span><span
+            class="guide__toc-text"><strong>Waterproofing Basics</strong><br><span>What to verify, what “waterproof”
+              should mean in writing</span></span></a></li>
+      <li><a class="guide__toc-item" href="#ch4"><span class="guide__toc-num">4</span><span
+            class="guide__toc-text"><strong>Material Selection</strong><br><span>Porcelain vs ceramic vs stone, grout
+              types, movement joints</span></span></a></li>
+      <li><a class="guide__toc-item" href="#ch5"><span class="guide__toc-num">5</span><span
+            class="guide__toc-text"><strong>Planning & Budgeting</strong><br><span>Scope clarity, allowances, and
+              realistic timelines</span></span></a></li>
+      <li><a class="guide__toc-item" href="#ch6"><span class="guide__toc-num">6</span><span
+            class="guide__toc-text"><strong>NJ Consumer Protections</strong><br><span>What belongs in a contract and
+              what to do if it goes sideways</span></span></a></li>
+    </ol>
+
+    <p class="guide__toc-note">
+      Tip: this guide is designed to print cleanly. Use your browser’s Print → Save as PDF.
+    </p>
+  </section>
 
   <!-- CHAPTER 1 -->
-  <div class="guide-page">
-    <div class="chapter-header">
-      <div class="chapter-number">Chapter 1</div>
-      <h2 class="chapter-title">Understanding TCNA & ANSI Standards</h2>
-      <p class="chapter-intro">The foundation of quality tile work starts with understanding industry standards that govern professional installations</p>
-    </div>
+  <section class="guide__page" id="ch1" aria-labelledby="ch1-title">
+    <header class="guide__chapter-header">
+      <p class="guide__chapter-kicker">Chapter 1</p>
+      <h2 class="guide__chapter-title" id="ch1-title">Understanding TCNA & ANSI Standards</h2>
+      <p class="guide__chapter-intro">
+        Tile isn’t just “tile + mortar.” It’s an assembly. Standards help ensure the assembly survives movement, water
+        exposure, and time.
+      </p>
+    </header>
 
-    <div class="section">
-      <h3 class="section-title">What is TCNA?</h3>
-      <p style="font-size: 1.1rem; line-height: 1.8;">The <strong>Tile Council of North America (TCNA)</strong> is the authoritative source for tile installation methods in North America. Their comprehensive handbook provides detailed, tested installation guidelines that professional contractors follow to ensure long-lasting, code-compliant installations.</p>
+    <div class="guide__section">
+      <h3 class="guide__h3">What TCNA is (in plain English)</h3>
+      <p>
+        The <strong>Tile Council of North America (TCNA)</strong> publishes installation guidance used across the
+        industry.
+        The TCNA Handbook organizes <em>tested installation methods</em> (for showers, floors, walls, and specialty
+        conditions).
+      </p>
 
-      <div class="callout callout-info">
-        <div class="callout-title">
-          <span class="callout-icon">📘</span>
-          Key TCNA Resources
-        </div>
-        <ul style="margin: 1rem 0 0 0; line-height: 1.8;">
-          <li><strong>TCNA Handbook:</strong> Detailed installation method specifications with diagrams</li>
-          <li><strong>Method EJ171:</strong> Standard shower installation over concrete or wood framing</li>
-          <li><strong>Method B421:</strong> Waterproof membrane shower systems (bonded)</li>
-          <li><strong>Method B422:</strong> Shower receptors with clamping-type drains</li>
-          <li><strong>Technical Bulletins:</strong> Material compatibility and troubleshooting guidance</li>
-        </ul>
+      <div class="guide__callout guide__callout--info" role="note" aria-label="Key idea">
+        <h4 class="guide__callout-title">📘 Key idea</h4>
+        <p class="guide__callout-text">
+          A “method” describes the full system: substrate prep, waterproofing (where needed), mortar type, movement
+          accommodation, and details.
+          Ask any contractor: <strong>“Which method are you building to, and how will you document it?”</strong>
+        </p>
       </div>
     </div>
 
-    <div class="section">
-      <h3 class="section-title">Critical ANSI Standards</h3>
-      <p>ANSI (American National Standards Institute) establishes performance specifications for tile materials and installation products:</p>
+    <div class="guide__section">
+      <h3 class="guide__h3">What ANSI covers</h3>
+      <p>
+        ANSI standards are commonly referenced for two buckets: <strong>installation practices</strong> and
+        <strong>product performance</strong>.
+        You do not need to memorize them — but you should recognize them when they show up on data sheets and in scopes.
+      </p>
 
-      <div class="stats-grid">
-        <div class="stat-card">
-          <div class="stat-number">A108</div>
-          <div class="stat-label">Installation Standards</div>
+      <div class="guide__grid-3">
+        <div class="guide__stat">
+          <div class="guide__stat-num">A108</div>
+          <div class="guide__stat-label">Installation practices</div>
         </div>
-        <div class="stat-card">
-          <div class="stat-number">A118</div>
-          <div class="stat-label">Material Specifications</div>
+        <div class="guide__stat">
+          <div class="guide__stat-num">A118</div>
+          <div class="guide__stat-label">Mortars / grouts / membranes</div>
         </div>
-        <div class="stat-card">
-          <div class="stat-number">A137</div>
-          <div class="stat-label">Tile Product Standards</div>
+        <div class="guide__stat">
+          <div class="guide__stat-num">A137</div>
+          <div class="guide__stat-label">Tile product standards</div>
         </div>
       </div>
 
-      <table class="pro-table">
+      <table class="guide__table" role="table" aria-label="Common standards you’ll see">
         <thead>
           <tr>
-            <th>ANSI Standard</th>
-            <th>Purpose</th>
-            <th>Why It Matters</th>
+            <th scope="col">Reference</th>
+            <th scope="col">What it’s used for</th>
+            <th scope="col">What to ask for</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td><strong>ANSI A108.10</strong></td>
-            <td>Installation of ceramic tile</td>
-            <td>Defines proper installation methods</td>
-          </tr>
-          <tr>
             <td><strong>ANSI A118.10</strong></td>
-            <td>Waterproofing membranes</td>
-            <td>Critical for shower/wet area compliance</td>
+            <td>Waterproofing membranes (wet areas)</td>
+            <td>Which system + the manufacturer data sheet + how seams/penetrations are handled</td>
           </tr>
           <tr>
-            <td><strong>ANSI A118.4</strong></td>
-            <td>Modified thin-set mortar</td>
-            <td>Standard adhesive for most tiles</td>
+            <td><strong>ANSI A118.12</strong></td>
+            <td>Crack isolation / uncoupling performance categories</td>
+            <td>Where it’s used + seam treatment + transitions</td>
           </tr>
           <tr>
-            <td><strong>ANSI A118.15</strong></td>
-            <td>Improved modified thin-set</td>
-            <td>Required for large format tile</td>
-          </tr>
-          <tr>
-            <td><strong>ANSI A137.1</strong></td>
-            <td>Ceramic tile specifications</td>
-            <td>Defines tile quality and performance</td>
+            <td><strong>ANSI A118.4 / A118.15</strong></td>
+            <td>Thinset performance classes</td>
+            <td>Which mortar and why (tile type/size/substrate)</td>
           </tr>
         </tbody>
       </table>
-    </div>
 
-    <div class="callout callout-warning">
-      <div class="callout-title">
-        <span class="callout-icon">⚠️</span>
-        Major Red Flag
-      </div>
-      <p style="margin: 0; font-size: 1.05rem; line-height: 1.7;"><strong>If a contractor doesn't reference TCNA methods or ANSI standards in their proposal,</strong> they may not be following industry best practices. This can void material warranties, fail inspections, and lead to premature failure. Always ask for specific method numbers.</p>
-    </div>
-
-    <div class="section">
-      <h3 class="section-title">Official Resources</h3>
-      <div class="resource-grid">
-        <a href="https://www.tcnatile.com/" target="_blank" rel="noopener" class="resource-card">
-          <div class="resource-icon">🏛️</div>
-          <div class="resource-title">TCNA Official Site</div>
-          <p class="resource-desc">Access installation methods and technical bulletins</p>
-        </a>
-        <a href="https://www.ansi.org/" target="_blank" rel="noopener" class="resource-card">
-          <div class="resource-icon">📋</div>
-          <div class="resource-title">ANSI Standards</div>
-          <p class="resource-desc">Purchase current standards and specifications</p>
-        </a>
+      <div class="guide__callout guide__callout--warning" role="note" aria-label="Red flag">
+        <h4 class="guide__callout-title">⚠️ Practical red flag</h4>
+        <p class="guide__callout-text">
+          If a shower proposal doesn’t name a waterproofing system or doesn’t describe how it’s verified/documented,
+          you’re buying a hope-and-pray assembly.
+        </p>
       </div>
     </div>
-  </div>
+
+    <div class="guide__section">
+      <h3 class="guide__h3">Movement joints (the thing everyone forgets)</h3>
+      <p>
+        Tile assemblies need <strong>movement accommodation</strong>. This is where guidance like <strong>TCNA
+          EJ171</strong> matters:
+        it’s not a shower method — it’s movement-joint guidance for changes of plane, perimeters, and field joints.
+      </p>
+    </div>
+
+    <footer class="guide__page-footer">
+      <a class="btn btn-ghost" href="#toc">Back to contents</a>
+      <a class="btn btn-accent" href="#ch2">Next: Vetting NJ contractors →</a>
+    </footer>
+  </section>
 
   <!-- CHAPTER 2 -->
-  <div class="guide-page">
-    <div class="chapter-header">
-      <div class="chapter-number">Chapter 2</div>
-      <h2 class="chapter-title">Vetting New Jersey Contractors</h2>
-      <p class="chapter-intro">New Jersey has specific contractor licensing requirements—here's how to verify compliance and protect yourself</p>
-    </div>
+  <section class="guide__page" id="ch2" aria-labelledby="ch2-title">
+    <header class="guide__chapter-header">
+      <p class="guide__chapter-kicker">Chapter 2</p>
+      <h2 class="guide__chapter-title" id="ch2-title">Vetting New Jersey Contractors</h2>
+      <p class="guide__chapter-intro">
+        In NJ, paperwork is protection. The goal is a clean scope, a real contract, and verifiable credentials.
+      </p>
+    </header>
 
-    <div class="section">
-      <h3 class="section-title">NJ Home Improvement Contractor (HIC) License</h3>
-      <p style="font-size: 1.1rem; line-height: 1.8;">In New Jersey, <strong>any contractor performing work over $500 MUST be registered</strong> with the Division of Consumer Affairs and hold an active HIC license. This is not optional—it's the law.</p>
+    <div class="guide__section">
+      <h3 class="guide__h3">HIC registration: verify, don’t assume</h3>
+      <p>
+        New Jersey requires home improvement contractors to be registered with the Division of Consumer Affairs.
+        Always verify the contractor’s HIC registration and keep a screenshot for your records.
+      </p>
 
-      <div class="callout callout-success">
-        <div class="callout-title">
-          <span class="callout-icon">✓</span>
-          Verification Checklist
-        </div>
-        <ul class="pro-checklist">
-          <li><strong>Verify HIC Registration:</strong> Visit nj.gov/consumeraffairs/hic and search the contractor's name or license number</li>
-          <li><strong>Check License Status:</strong> Ensure the license is active (not suspended, revoked, or expired)</li>
-          <li><strong>Verify Insurance:</strong> Contractor must carry liability insurance (minimum $500,000 recommended for tile work)</li>
-          <li><strong>Review Complaint History:</strong> Check for filed complaints with Consumer Affairs</li>
-          <li><strong>Confirm Business Address:</strong> Legitimate contractors have verifiable physical business locations</li>
-          <li><strong>Check References:</strong> Ask for 3-5 recent similar projects with contact information</li>
+      <div class="guide__callout guide__callout--success" role="note" aria-label="Verification checklist">
+        <h4 class="guide__callout-title">✓ Verification checklist</h4>
+        <ul class="guide__checklist">
+          <li><strong>HIC number</strong> provided in writing (estimate/contract)</li>
+          <li><strong>Insurance</strong> certificate available upon request (liability)</li>
+          <li><strong>Written scope</strong> + materials + exclusions</li>
+          <li><strong>Change orders</strong> handled in writing</li>
+          <li><strong>Start date + duration</strong> defined (with realistic buffers)</li>
         </ul>
       </div>
     </div>
 
-    <div class="section">
-      <h3 class="section-title">10 Essential Questions to Ask</h3>
-      <table class="pro-table">
+    <div class="guide__section">
+      <h3 class="guide__h3">10 questions that reveal competence quickly</h3>
+      <table class="guide__table" role="table" aria-label="Questions to ask a contractor">
         <thead>
           <tr>
-            <th>#</th>
-            <th>Question</th>
-            <th>Why It Matters</th>
+            <th scope="col">#</th>
+            <th scope="col">Question</th>
+            <th scope="col">Good sign</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>1</td>
-            <td>What is your New Jersey HIC license number?</td>
-            <td>Should be readily available and verifiable</td>
+            <td>What’s your NJ HIC number?</td>
+            <td>Answers immediately; matches paperwork.</td>
           </tr>
           <tr>
             <td>2</td>
-            <td>Which TCNA methods will you follow?</td>
-            <td>Specific method numbers show expertise</td>
+            <td>What waterproofing system will you use (brand + type)?</td>
+            <td>Names system + describes seams/penetrations.</td>
           </tr>
           <tr>
             <td>3</td>
-            <td>What waterproofing system will you use?</td>
-            <td>Schluter, RedGard, Laticrete, etc.</td>
+            <td>How will you document waterproofing before tile?</td>
+            <td>Photos + flood test when applicable.</td>
           </tr>
           <tr>
             <td>4</td>
-            <td>Do you warranty your work? For how long?</td>
-            <td>1-2 years minimum for labor</td>
+            <td>How do you verify substrate flatness for large format tile?</td>
+            <td>Explains flatness checks and correction plan.</td>
           </tr>
           <tr>
             <td>5</td>
-            <td>Will you provide a written contract?</td>
-            <td>Required by NJ law for work over $500</td>
+            <td>How do you handle movement at changes of plane/perimeters?</td>
+            <td>References movement accommodation (not “grout everywhere”).</td>
           </tr>
           <tr>
             <td>6</td>
-            <td>Can you provide recent references?</td>
-            <td>Verifiable past work quality</td>
+            <td>What’s excluded from this scope?</td>
+            <td>Clear exclusions, no surprises.</td>
           </tr>
           <tr>
             <td>7</td>
-            <td>What is your substrate inspection process?</td>
-            <td>Shows attention to preparation</td>
+            <td>How do change orders work?</td>
+            <td>Written approval before extra work.</td>
           </tr>
           <tr>
             <td>8</td>
-            <td>Modified or unmodified thin-set?</td>
-            <td>Should know when to use each type</td>
+            <td>What’s the realistic timeline?</td>
+            <td>Builds in cure times and inspection windows.</td>
           </tr>
           <tr>
             <td>9</td>
-            <td>How do you handle changes during work?</td>
-            <td>Written change order process</td>
+            <td>What’s your labor warranty?</td>
+            <td>Clear term in writing.</td>
           </tr>
           <tr>
             <td>10</td>
-            <td>What is your cleanup/disposal process?</td>
-            <td>Professional waste management</td>
+            <td>Can I see 2–3 similar recent projects?</td>
+            <td>Shows recent, comparable work and references.</td>
           </tr>
         </tbody>
       </table>
     </div>
 
-    <div class="callout callout-warning">
-      <div class="callout-title">
-        <span class="callout-icon">🚨</span>
-        Major Red Flags - Walk Away If:
-      </div>
-      <ul style="margin: 1rem 0 0 0; line-height: 2;">
-        <li>❌ <strong>No HIC license</strong> or unwilling to provide license number</li>
-        <li>❌ <strong>Requests full payment upfront</strong> (NJ law limits deposits to 1/3 or $1,000)</li>
-        <li>❌ <strong>Won't provide written contract</strong> or detailed estimates</li>
-        <li>❌ <strong>Doesn't mention waterproofing</strong> in shower/wet area proposals</li>
-        <li>❌ <strong>Significantly lower price</strong> than other bids (corners being cut)</li>
-        <li>❌ <strong>Pressure to sign immediately</strong> without time to review</li>
-        <li>❌ <strong>Cash-only payment</strong> with no receipts</li>
-        <li>❌ <strong>No insurance or "self-insured"</strong> claims</li>
-      </ul>
-    </div>
+    <footer class="guide__page-footer">
+      <a class="btn btn-ghost" href="#toc">Back to contents</a>
+      <a class="btn btn-accent" href="#ch3">Next: Waterproofing basics →</a>
+    </footer>
+  </section>
 
-    <div class="resource-grid" style="margin-top: 3rem;">
-      <a href="https://www.njconsumeraffairs.gov/hic/" target="_blank" rel="noopener" class="resource-card">
-        <div class="resource-icon">🏛️</div>
-        <div class="resource-title">New Jersey Consumer Affairs</div>
-        <p class="resource-desc">Verify licenses and file complaints</p>
-      </a>
-      <a href="tel:18002425846" class="resource-card">
-        <div class="resource-icon">📞</div>
-        <div class="resource-title">HIC Hotline</div>
-        <p class="resource-desc">1-800-242-5846 for assistance</p>
-      </a>
-    </div>
+  <!-- (Chapters 3–6 can follow same pattern.) -->
+
+  <footer class="guide__site-footer">
+    <p><strong>Tillerstead LLC</strong> · NJ HIC #13VH10808800 · <a href="{{ '/contact/' | relative_url }}">Contact</a>
+    </p>
+    <p class="guide__fineprint">
+      Disclaimer: general information only. Standards and requirements change; verify current manufacturer instructions
+      and applicable codes for your specific conditions.
+    </p>
+  </footer>
+
+  <!-- Floating actions -->
+  <div class="guide__actions no-print" aria-label="Guide actions">
+    <button class="btn btn-ghost" type="button" onclick="window.print()">🖨️ Save as PDF</button>
+    <a class="btn btn-accent" href="{{ '/contact/' | relative_url }}">Request estimate</a>
+    <a class="btn btn-ghost" href="#top">↑ Top</a>
   </div>
-
-  <!-- Continuing with remaining chapters... (truncated for length) -->
-  <!-- Would include Chapters 3-6 with same professional styling -->
-
-  <!-- FOOTER -->
-  <div class="guide-footer">
-    <h3>Published by Tillerstead LLC</h3>
-    <p>Licensed NJ Home Improvement Contractor<br>
-    New Jersey HIC #13VH10808800</p>
-    <p style="margin-top: 2rem;">
-      <a href="https://tillerstead.com">tillerstead.com</a> | 
-      <a href="tel:+16098628808">(609) 862-8808</a> | 
-      <a href="mailto:info@tillerstead.com">info@tillerstead.com</a>
-    </p>
-    <p style="margin-top: 2rem; font-size: 0.9rem; opacity: 0.8;">
-      <strong>Disclaimer:</strong> This guide provides general information about tile installation standards and New Jersey contractor requirements. It is not a substitute for professional consultation. Standards may change—always verify current requirements.
-    </p>
-    <p style="margin-top: 1rem; font-size: 0.85rem; opacity: 0.7;">
-      © 2024 Tillerstead LLC. This guide may be freely distributed for personal use.
-    </p>
-  </div>
-
-</div>
-
-<!-- Print Actions -->
-<div class="print-actions no-print">
-  <button onclick="window.print()" class="btn-print">🖨️ Save as PDF</button>
-  <a href="/contact/" class="btn-download">Request Estimate</a>
-</div>
+</main>

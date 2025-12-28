@@ -8,6 +8,7 @@ show_breadcrumbs: false
 hide_hero: true
 hero_project_image: /assets/img/tillerstead-work/bathrooms/after-entry-shot.jpg
 hero_image_alt: Completed bathroom tile installation by Tillerstead LLC, TCNA-compliant methods, New Jersey licensed contractor
+show_process: false
 ---
 
 {% comment %} Hero – first thing visitors see {% endcomment %}
@@ -16,8 +17,9 @@ hero_image_alt: Completed bathroom tile installation by Tillerstead LLC, TCNA-co
 {% comment %} Trust Indicators – Reviews showcase {% endcomment %}
 {% include reviews-highlights.html limit=3 %}
 
-{% comment %} Process – How we work {% endcomment %}
+{% if page.show_process != false %}
 {% include ts-process.html %}
+{% endif %}
 
 {% comment %} Services Preview – What we do {% endcomment %}
 <section class="ts-section ts-services-preview" aria-labelledby="services-preview-title">
