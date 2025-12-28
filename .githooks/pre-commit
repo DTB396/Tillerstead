@@ -4,23 +4,15 @@ set -eu
 echo ""
 echo "[pre-commit] Tillerstead checks..."
 
-# Fail if PowerShell scripts were saved with broken encoding patterns in them
-# (we keep this in PS, but this is a light guard)
-# If you want this stricter, we can add a dedicated node/ps scan.
-# echo "[pre-commit] quick encoding scan..."
-
-# Run your audit script (should be fast — if it’s heavy, move to pre-push)
-if [ -f "./scripts/audit-site.ps1" ]; then
-  # Prefer pwsh; fall back to powershell
-  if command -v pwsh >/dev/null 2>&1; then
-    pwsh -NoProfile -ExecutionPolicy Bypass -File "./scripts/audit-site.ps1"
-  else
-    powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\audit-site.ps1"
-  fi
+# Fast gate: quick audits (full build gate runs on pre-push)
+if command -v pwsh >/dev/null 2>&1; then
+  pwsh -NoProfile -ExecutionPolicy Bypass -File "./scripts/audit-site.ps1" -Fast
+else
+  powershell -NoProfile -ExecutionPolicy Bypass -File "./scripts/audit-site.ps1" -Fast
 fi
 
 # Optional: quick CSS build (keep it fast)
-if [ -f "./scripts/build-css.js" ]; then
+if command -v node >/dev/null 2>&1 && [ -f "./scripts/build-css.js" ]; then
   node "./scripts/build-css.js"
 fi
 
