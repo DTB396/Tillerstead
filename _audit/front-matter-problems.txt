@@ -1,38 +1,47 @@
 
 file  : C:\Users\Devon Tyler\tillerstead\pages\about.html
 issue : Front matter YAML parse failed
-error : (<unknown>): could not find expected ':' while scanning a simple key at line 6 column 1
+error : C:\Ruby32-x64\bin\ruby.exe: warning: Ruby was built without YJIT support. You may need to install rustc to build Ruby with YJIT.
+        (<unknown>): could not find expected ':' while scanning a simple key at line 6 column 1
 
 file  : C:\Users\Devon Tyler\tillerstead\pages\blog.html
 issue : Front matter YAML parse failed
-error : (<unknown>): could not find expected ':' while scanning a simple key at line 10 column 1
+error : C:\Ruby32-x64\bin\ruby.exe: warning: Ruby was built without YJIT support. You may need to install rustc to build Ruby with YJIT.
+        (<unknown>): could not find expected ':' while scanning a simple key at line 10 column 1
 
 file  : C:\Users\Devon Tyler\tillerstead\pages\download-nj-tile-guide.html
 issue : Front matter YAML parse failed
-error : (<unknown>): could not find expected ':' while scanning a simple key at line 4 column 1
+error : C:\Ruby32-x64\bin\ruby.exe: warning: Ruby was built without YJIT support. You may need to install rustc to build Ruby with YJIT.
+        (<unknown>): could not find expected ':' while scanning a simple key at line 4 column 1
 
 file  : C:\Users\Devon Tyler\tillerstead\pages\financing.html
 issue : Front matter YAML parse failed
-error : (<unknown>): could not find expected ':' while scanning a simple key at line 5 column 1
+error : C:\Ruby32-x64\bin\ruby.exe: warning: Ruby was built without YJIT support. You may need to install rustc to build Ruby with YJIT.
+        (<unknown>): could not find expected ':' while scanning a simple key at line 5 column 1
 
 file  : C:\Users\Devon Tyler\tillerstead\pages\guides\nj-tile-guide.html
 issue : Front matter YAML parse failed
-error : (<unknown>): mapping values are not allowed in this context at line 5 column 79
+error : C:\Ruby32-x64\bin\ruby.exe: warning: Ruby was built without YJIT support. You may need to install rustc to build Ruby with YJIT.
+        (<unknown>): mapping values are not allowed in this context at line 5 column 79
 
 file  : C:\Users\Devon Tyler\tillerstead\pages\process.html
 issue : Front matter YAML parse failed
-error : (<unknown>): could not find expected ':' while scanning a simple key at line 5 column 1
+error : C:\Ruby32-x64\bin\ruby.exe: warning: Ruby was built without YJIT support. You may need to install rustc to build Ruby with YJIT.
+        (<unknown>): could not find expected ':' while scanning a simple key at line 5 column 1
 
 file  : C:\Users\Devon Tyler\tillerstead\pages\recommended-products.html
 issue : Front matter YAML parse failed
-error : (<unknown>): could not find expected ':' while scanning a simple key at line 6 column 1
+error : C:\Ruby32-x64\bin\ruby.exe: warning: Ruby was built without YJIT support. You may need to install rustc to build Ruby with YJIT.
+        (<unknown>): could not find expected ':' while scanning a simple key at line 6 column 1
 
 file  : C:\Users\Devon Tyler\tillerstead\pages\reviews.html
 issue : Front matter YAML parse failed
-error : (<unknown>): could not find expected ':' while scanning a simple key at line 12 column 1
+error : C:\Ruby32-x64\bin\ruby.exe: warning: Ruby was built without YJIT support. You may need to install rustc to build Ruby with YJIT.
+        (<unknown>): could not find expected ':' while scanning a simple key at line 12 column 1
 
 file  : C:\Users\Devon Tyler\tillerstead\pages\services.html
 issue : Front matter YAML parse failed
-error : (<unknown>): could not find expected ':' while scanning a simple key at line 6 column 1
+error : C:\Ruby32-x64\bin\ruby.exe: warning: Ruby was built without YJIT support. You may need to install rustc to build Ruby with YJIT.
+        (<unknown>): could not find expected ':' while scanning a simple key at line 6 column 1
 
 

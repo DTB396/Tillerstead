@@ -1,4 +1,6 @@
 Running: bundle exec jekyll build --trace
+C:\Ruby32-x64\bin\ruby.exe: warning: Ruby was built without YJIT support. You may need to install rustc to build Ruby with YJIT.
+C:\Ruby32-x64\lib\ruby\gems\3.2.0\bin\../../../../../bin/ruby.exe: warning: Ruby was built without YJIT support. You may need to install rustc to build Ruby with YJIT.
 [LiquidEngine] Attempting to include: cta-estimate.html
 [LiquidEngine] Rendering include: cta-estimate.html
 [Jekyll::Site] Writing output to: C:/Users/Devon Tyler/tillerstead/_site/blog/nj-tile-bath-consultation-guide/index.html
@@ -202,21 +204,21 @@ hide_hero: true
       <p>Even flawless tile work fails if the waterproofing beneath isnΓÇÖt installed <strong>precisely to manufacturer and code spec</strong>. At <strong>Tillerstead LLC</strong>, every shower is built to <strong>ANSI A118.10 (waterproof membranes)</strong>, <strong>A118.12 (crack isolation)</strong>, and the <strong>TCNA Handbook</strong> (details B422, B421, B415, etc.), ensuring your system is <strong>documented, warrantable, and durable</strong>ΓÇönot just attractive.</p>
 <p>Below: a field-tested, code-referenced comparison of three leading systems available at local supply 
 Build failed: (<unknown>): could not find expected ':' while scanning a simple key at line 6 column 1
-C:/Ruby34-x64/lib/ruby/3.4.0/psych/parser.rb:62:in 'Psych::Parser#_native_parse'
-C:/Ruby34-x64/lib/ruby/3.4.0/psych/parser.rb:62:in 'Psych::Parser#parse'
-C:/Ruby34-x64/lib/ruby/3.4.0/psych.rb:457:in 'Psych.parse_stream'
-C:/Ruby34-x64/lib/ruby/3.4.0/psych.rb:401:in 'Psych.parse'
-C:/Ruby34-x64/lib/ruby/3.4.0/psych.rb:325:in 'Psych.safe_load'
-C:/Users/Devon Tyler/tillerstead/vendor/gems/jekyll/lib/jekyll/site.rb:284:in 'Jekyll::Site#parse_document'
-C:/Users/Devon Tyler/tillerstead/vendor/gems/jekyll/lib/jekyll/site.rb:197:in 'block in Jekyll::Site#prepare_pages'
-C:/Users/Devon Tyler/tillerstead/vendor/gems/jekyll/lib/jekyll/site.rb:191:in 'Array#map'
-C:/Users/Devon Tyler/tillerstead/vendor/gems/jekyll/lib/jekyll/site.rb:191:in 'Jekyll::Site#prepare_pages'
-C:/Users/Devon Tyler/tillerstead/vendor/gems/jekyll/lib/jekyll/site.rb:47:in 'Jekyll::Site#build'
-C:/Users/Devon Tyler/tillerstead/vendor/gems/jekyll/lib/jekyll/cli.rb:37:in 'Jekyll::CLI#run_build'
-C:/Users/Devon Tyler/tillerstead/vendor/gems/jekyll/lib/jekyll/cli.rb:20:in 'Jekyll::CLI#run'
-C:/Users/Devon Tyler/tillerstead/vendor/gems/jekyll/lib/jekyll/cli.rb:9:in 'Jekyll::CLI.start'
-C:/Users/Devon Tyler/tillerstead/vendor/gems/jekyll/bin/jekyll:6:in '<top (required)>'
-C:/Ruby34-x64/lib/ruby/gems/3.4.0/bin/jekyll:25:in 'Kernel#load'
-C:/Ruby34-x64/lib/ruby/gems/3.4.0/bin/jekyll:25:in '<main>'
+c:/Ruby32-x64/lib/ruby/3.2.0/psych/parser.rb:62:in `_native_parse'
+c:/Ruby32-x64/lib/ruby/3.2.0/psych/parser.rb:62:in `parse'
+c:/Ruby32-x64/lib/ruby/3.2.0/psych.rb:455:in `parse_stream'
+c:/Ruby32-x64/lib/ruby/3.2.0/psych.rb:399:in `parse'
+c:/Ruby32-x64/lib/ruby/3.2.0/psych.rb:323:in `safe_load'
+C:/Users/Devon Tyler/tillerstead/vendor/gems/jekyll/lib/jekyll/site.rb:284:in `parse_document'
+C:/Users/Devon Tyler/tillerstead/vendor/gems/jekyll/lib/jekyll/site.rb:197:in `block in prepare_pages'
+C:/Users/Devon Tyler/tillerstead/vendor/gems/jekyll/lib/jekyll/site.rb:191:in `map'
+C:/Users/Devon Tyler/tillerstead/vendor/gems/jekyll/lib/jekyll/site.rb:191:in `prepare_pages'
+C:/Users/Devon Tyler/tillerstead/vendor/gems/jekyll/lib/jekyll/site.rb:47:in `build'
+C:/Users/Devon Tyler/tillerstead/vendor/gems/jekyll/lib/jekyll/cli.rb:37:in `run_build'
+C:/Users/Devon Tyler/tillerstead/vendor/gems/jekyll/lib/jekyll/cli.rb:20:in `run'
+C:/Users/Devon Tyler/tillerstead/vendor/gems/jekyll/lib/jekyll/cli.rb:9:in `start'
+C:/Users/Devon Tyler/tillerstead/vendor/gems/jekyll/bin/jekyll:6:in `<top (required)>'
+C:/Ruby32-x64/lib/ruby/gems/3.2.0/bin/jekyll:25:in `load'
+C:/Ruby32-x64/lib/ruby/gems/3.2.0/bin/jekyll:25:in `<main>'
 ...
 

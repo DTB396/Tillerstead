@@ -47,6 +47,7 @@ run-jekyll.sh                             1373 12/27/2025 6:21:34 PM
 run-nav-shim.cjs                          5209 12/25/2025 7:41:47 PM
 run-nav-shim.js                           5509 12/25/2025 7:41:47 PM
 scan-css-contrast.cjs                     8842 12/27/2025 10:08:00 AM
+setup-git-hooks.ps1                       2886 12/28/2025 5:41:18 PM
 slugify.js                                1952 12/27/2025 6:29:36 PM
 sync_thumbtack_reviews.js                 9320 12/21/2025 2:10:15 PM
 test-navigation.js                        6036 12/25/2025 7:41:47 PM
