@@ -14,20 +14,18 @@ license:
 	type: "Home Improvement Contractor"
 	verified: true
 	last_verified: "2024-06-01"
-
-scope_notice: >
-	Licensure is held as a New Jersey Home Improvement Contractor. References to
-	technical standards apply only to tile and stone assemblies and related
-	waterproofing systems within the scope of licensed home improvement work.
-
-trades:
-- "Tile Installation (ceramic, porcelain, glass)"
-- "Natural Stone Tile Installation (thin-set methods only)"
-- "Large-Format & Gauged Porcelain Tile Panels/Slabs (GPTP)"
-- "Bonded Waterproofing Systems within Tile Assemblies"
-- "Crack Isolation and Movement Joint Integration"
-- "Substrate Preparation and Framing Support for Tile Assemblies"
-- "Bathroom Remodeling (non-licensed specialty trades excluded)"
+	scope_notice: >
+		Licensure is held as a New Jersey Home Improvement Contractor. References to
+		technical standards apply only to tile and stone assemblies and related
+		waterproofing systems within the scope of licensed home improvement work.
+	trades:
+		- "Tile Installation (ceramic, porcelain, glass)"
+		- "Natural Stone Tile Installation (thin-set methods only)"
+		- "Large-Format & Gauged Porcelain Tile Panels/Slabs (GPTP)"
+		- "Bonded Waterproofing Systems within Tile Assemblies"
+		- "Crack Isolation and Movement Joint Integration"
+		- "Substrate Preparation and Framing Support for Tile Assemblies"
+		- "Bathroom Remodeling (non-licensed specialty trades excluded)"
 - "Project Coordination and Construction Management (administrative)"
 
 business:
