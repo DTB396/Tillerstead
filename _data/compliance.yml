@@ -23,121 +23,124 @@ license:
     - "Natural Stone Tile Installation (thin-set methods only)"
     - "Large-Format & Gauged Porcelain Tile Panels/Slabs (GPTP)"
     - "Bonded Waterproofing Systems within Tile Assemblies"
-    - "Crack Isolation and Movement Joint Integration"
-    - "Substrate Preparation and Framing Support for Tile Assemblies"
-    - "Bathroom Remodeling (non-licensed specialty trades excluded)"
-    - "Project Coordination and Construction Management (administrative)"
 
-business:
-  legal_name: "Tillerstead LLC"
-  trade_name: "Tillerstead"
-  owner: "Faith Frontier Ecclesiastical Trust"
-  address:
-    street: "325 East Jimmie Leeds Road, Suite 7-333"
-    city: "Galloway Township"
-    state: "NJ"
-    zip: "08205"
+	# Compliance & Legal Data
+	# Purpose: Public-facing compliance disclosures and internal reference
+	# Authority: New Jersey Home Improvement Contractor Act, NJ Consumer Fraud Act
+	# Technical Standards: TCNA 2024 · ANSI A108/A118 (tile assemblies only)
 
-
-
-standards:
-	tcna:
-		handbook: "TCNA 2024 Handbook for Ceramic, Glass, and Stone Tile Installation"
+	license:
+		number: "13VH10808800"
+		status: "Active"
+		issuer: "New Jersey Division of Consumer Affairs"
+		type: "Home Improvement Contractor"
+		verified: true
+		last_verified: "2024-06-01"
 		scope_notice: >
-			TCNA methods are referenced as recognized industry standards for tile
-			assemblies. Use of TCNA references does not imply certification or
-			endorsement by the Tile Council of North America.
-		references:
-			- "EJ171 – Movement Joint Guidelines"
-	ansi:
-		installation:
-			- "ANSI A108.01 – Substrates and Preparation"
-			- "ANSI A108.02 – Materials, Environmental, and Workmanship"
-			- "ANSI A108.05 – Thin-set and Modified Mortar Tile Installation"
-			- "ANSI A108.10 – Installation of Grout in Tilework"
-			- "ANSI A108.13 – Installation of Load-Bearing Bonded Waterproof Membranes"
-			- "ANSI A108.19 – Interior Installation of Gauged Porcelain Tile Panels/Slabs"
-			- "ANSI A108.20 – Exterior Installation of Gauged Porcelain Tile Panels/Slabs"
-			- "ANSI A108.21 – Self-Leveling Underlayments"
-			- "ANSI A108.22 – Installation of Pre-Mixed Grout"
-		material_specifications:
-			- "ANSI A118.1 – Dry-Set Cement Mortar"
-			- "ANSI A118.4 – Modified Dry-Set Cement Mortar"
-			- "ANSI A118.11 – EGP Mortar for Plywood"
-			- "ANSI A118.15 – Improved Modified Dry-Set Cement Mortar"
-			- "ANSI A118.10 – Load-Bearing Bonded Waterproof Membranes"
-			- "ANSI A118.12 – Crack Isolation Membranes"
-	astm:
-		- "ASTM D5957 – Flood (Ponding) Testing of Horizontal Waterproofing"
-		- "ASTM C627 – Robinson-Type Floor Tester"
-	osha:
-		- "29 CFR 1926.1153 – Respirable Crystalline Silica"
-		- "29 CFR 1926.501 – Fall Protection"
-  tcna:
-    handbook: "TCNA 2024 Handbook for Ceramic, Glass, and Stone Tile Installation"
-    scope_notice: >
-      TCNA methods are referenced as recognized industry standards for tile
-      assemblies. Use of TCNA references does not imply certification or
-      endorsement by the Tile Council of North America.
-    references:
-      - "EJ171 – Movement Joint Guidelines"
+			Licensure is held as a New Jersey Home Improvement Contractor. References to
+			technical standards apply only to tile and stone assemblies and related
+			waterproofing systems within the scope of licensed home improvement work.
+		trades:
+			- "Tile Installation (ceramic, porcelain, glass)"
+			- "Natural Stone Tile Installation (thin-set methods only)"
+			- "Large-Format & Gauged Porcelain Tile Panels/Slabs (GPTP)"
+			- "Bonded Waterproofing Systems within Tile Assemblies"
+			- "Crack Isolation and Movement Joint Integration"
+			- "Substrate Preparation and Framing Support for Tile Assemblies"
+			- "Bathroom Remodeling (non-licensed specialty trades excluded)"
+			- "Project Coordination and Construction Management (administrative)"
 
-	ansi:
-		installation:
-			- "ANSI A108.01 – Substrates and Preparation"
-			- "ANSI A108.02 – Materials, Environmental, and Workmanship"
-			- "ANSI A108.05 – Thin-set and Modified Mortar Tile Installation"
-			- "ANSI A108.10 – Installation of Grout in Tilework"
-			- "ANSI A108.13 – Installation of Load-Bearing Bonded Waterproof Membranes"
-			- "ANSI A108.19 – Interior Installation of Gauged Porcelain Tile Panels/Slabs"
-			- "ANSI A108.20 – Exterior Installation of Gauged Porcelain Tile Panels/Slabs"
-			- "ANSI A108.21 – Self-Leveling Underlayments"
-			- "ANSI A108.22 – Installation of Pre-Mixed Grout"
-		material_specifications:
-			- "ANSI A118.1 – Dry-Set Cement Mortar"
-			- "ANSI A118.4 – Modified Dry-Set Cement Mortar"
-			- "ANSI A118.11 – EGP Mortar for Plywood"
-			- "ANSI A118.15 – Improved Modified Dry-Set Cement Mortar"
-			- "ANSI A118.10 – Load-Bearing Bonded Waterproof Membranes"
-			- "ANSI A118.12 – Crack Isolation Membranes"
-	astm:
-		- "ASTM D5957 – Flood (Ponding) Testing of Horizontal Waterproofing"
-		- "ASTM C627 – Robinson-Type Floor Tester"
-	osha:
-		- "29 CFR 1926.1153 – Respirable Crystalline Silica"
-		- "29 CFR 1926.501 – Fall Protection"
+	business:
+		legal_name: "Tillerstead LLC"
+		trade_name: "Tillerstead"
+		owner: "Faith Frontier Ecclesiastical Trust"
+		address:
+			street: "325 East Jimmie Leeds Road, Suite 7-333"
+			city: "Galloway Township"
+			state: "NJ"
+			zip: "08205"
 
-insurance:
-	general_liability: "$1M per occurrence / $2M aggregate"
-	workers_comp: "Compliant where applicable"
-	coverage:
-		- "General Liability"
-		- "Property Damage"
-		- "Bodily Injury"
-		- "Surety Bond (where required)"
+	standards:
+		tcna:
+			handbook: "TCNA 2024 Handbook for Ceramic, Glass, and Stone Tile Installation"
+			scope_notice: >
+				TCNA methods are referenced as recognized industry standards for tile
+				assemblies. Use of TCNA references does not imply certification or
+				endorsement by the Tile Council of North America.
+			references:
+				- "EJ171 – Movement Joint Guidelines"
+		ansi:
+			installation:
+				- "ANSI A108.01 – Substrates and Preparation"
+				- "ANSI A108.02 – Materials, Environmental, and Workmanship"
+				- "ANSI A108.05 – Thin-set and Modified Mortar Tile Installation"
+				- "ANSI A108.10 – Installation of Grout in Tilework"
+				- "ANSI A108.13 – Installation of Load-Bearing Bonded Waterproof Membranes"
+				- "ANSI A108.19 – Interior Installation of Gauged Porcelain Tile Panels/Slabs"
+				- "ANSI A108.20 – Exterior Installation of Gauged Porcelain Tile Panels/Slabs"
+				- "ANSI A108.21 – Self-Leveling Underlayments"
+				- "ANSI A108.22 – Installation of Pre-Mixed Grout"
+			material_specifications:
+				- "ANSI A118.1 – Dry-Set Cement Mortar"
+				- "ANSI A118.4 – Modified Dry-Set Cement Mortar"
+				- "ANSI A118.11 – EGP Mortar for Plywood"
+				- "ANSI A118.15 – Improved Modified Dry-Set Cement Mortar"
+				- "ANSI A118.10 – Load-Bearing Bonded Waterproof Membranes"
+				- "ANSI A118.12 – Crack Isolation Membranes"
+		astm:
+			- "ASTM D5957 – Flood (Ponding) Testing of Horizontal Waterproofing"
+			- "ASTM C627 – Robinson-Type Floor Tester"
+		osha:
+			- "29 CFR 1926.1153 – Respirable Crystalline Silica"
+			- "29 CFR 1926.501 – Fall Protection"
 
-warranty:
-	workmanship_years: 2
-	workmanship_description: >
-		Limited workmanship warranty covering tile and stone installation work
-		performed by Tillerstead LLC, including substrate preparation within scope,
-		bonded waterproofing membrane installation, tile setting, and grout
-		application, when performed in accordance with published TCNA 2024 and
-		ANSI A108/A118 standards.
-	exclusions:
-		- "Normal wear and tear"
-		- "Improper maintenance, misuse, or incompatible cleaning products"
-		- "Impact damage or alterations by others"
-		- "Manufacturer material defects (covered by manufacturer warranties)"
+	insurance:
+		general_liability: "$1M per occurrence / $2M aggregate"
+		workers_comp: "Compliant where applicable"
+		coverage:
+			- "General Liability"
+			- "Property Damage"
+			- "Bodily Injury"
+			- "Surety Bond (where required)"
 
-consumer_protection:
-	three_day_rescission: >
-		You, the buyer, may cancel this transaction at any time prior to midnight of
-		the third business day after the date of this transaction, pursuant to the
-		New Jersey Consumer Fraud Act (N.J.S.A. 56:8-136).
-	payment_terms: >
-		Deposits, progress payments, and final payment terms are defined in a
-		written contract. Progress payments are tied to objectively verifiable
+	warranty:
+		workmanship_years: 2
+		workmanship_description: >
+			Limited workmanship warranty covering tile and stone installation work
+			performed by Tillerstead LLC, including substrate preparation within scope,
+			bonded waterproofing membrane installation, tile setting, and grout
+			application, when performed in accordance with published TCNA 2024 and
+			ANSI A108/A118 standards.
+		exclusions:
+			- "Normal wear and tear"
+			- "Improper maintenance, misuse, or incompatible cleaning products"
+			- "Impact damage or alterations by others"
+			- "Manufacturer material defects (covered by manufacturer warranties)"
+
+	consumer_protection:
+		three_day_rescission: >
+			You, the buyer, may cancel this transaction at any time prior to midnight of
+			the third business day after the date of this transaction, pursuant to the
+			New Jersey Consumer Fraud Act (N.J.S.A. 56:8-136).
+		payment_terms: >
+			Deposits, progress payments, and final payment terms are defined in a
+			written contract. Progress payments are tied to objectively verifiable
+			completion milestones. Specialty or custom materials may require advance
+			deposit.
+		public_notice: >
+			Tillerstead LLC is a New Jersey Licensed Home Improvement Contractor
+			(HIC #13VH10808800). Tile and stone work is performed within the scope of
+			published industry standards for tile assemblies. All projects are governed
+			by written contracts, documented scope, and applicable consumer protections
+			under New Jersey law.
+
+	# Legacy keys retained for backwards compatibility
+	hic_license_number: "13VH10808800"
+	hic_license_status: "Active"
+	hic_license_issuer: "New Jersey Division of Consumer Affairs"
+	hic_license_type: "Home Improvement Contractor"
+	hic_license_verified: true
+	hic_license_last_verified: "2024-06-01"
 		completion milestones. Specialty or custom materials may require advance
 		deposit.
 	public_notice: >
