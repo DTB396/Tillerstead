@@ -1,5 +1,7 @@
 # Tillerstead.com
 
+> **📋 REPOSITORY INDEX:** See [`INDEX.md`](INDEX.md) for complete navigation and file guide.
+>
 > **⚠️ IMPORTANT:** This repository powers a **Jekyll-based static site generator**. **All changes require a rebuild to take effect.**
 >
 > ```bash

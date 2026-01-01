@@ -4,7 +4,7 @@ Homepage Portfolio Highlights Include
 - Data source: _data/portfolio_highlights.yml (key: highlights)
 - Optional overrides: eyebrow, title, summary, cta_url, cta_label
   - Optional IDs: section_id (default: gallery), heading_id (default: section_id + '-title')
-Usage: {% include portfolio-highlights.html %}
+Usage: {% include content/portfolio-highlights.html %}
 {% endcomment %}
 {% assign section_id = include.section_id | default: 'gallery' %}
 {% assign heading_id = include.heading_id | default: section_id | append: '-title' %}
@@ -62,3 +62,4 @@ Usage: {% include portfolio-highlights.html %}
 
     <div class="section-action">
       <a href="{{ include.cta_url |
+

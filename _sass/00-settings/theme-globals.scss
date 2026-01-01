@@ -1,0 +1,237 @@
+/* ====================================================================
+   TILLERSTEAD GLOBAL THEME SETTINGS
+   Central control for all design system colors, spacing, and typography
+   Last Updated: 2026-01-01
+   ==================================================================== */
+
+// ====================================================================
+// 1. COLOR PALETTE (Primary Authority)
+// ====================================================================
+
+$color-primary: #1a5c3a;        // Tillerstead green (TCNA-aligned)
+$color-primary-light: #2d8b54;  // Hover state
+$color-primary-dark: #0f3a23;   // Dark variant
+
+$color-secondary: #c9a961;      // Bronze/gold accent
+$color-secondary-light: #dbb876;
+$color-secondary-dark: #a87e38;
+
+$color-accent: #e74c3c;          // Alert/emphasis red
+$color-success: #27ae60;          // Success green
+$color-warning: #f39c12;          // Warning orange
+$color-error: #c0392b;            // Error red
+
+// ====================================================================
+// 2. NEUTRAL PALETTE (Backgrounds & Text)
+// ====================================================================
+
+$color-white: #ffffff;
+$color-gray-50: #f9fafb;
+$color-gray-100: #f3f4f6;
+$color-gray-200: #e5e7eb;
+$color-gray-300: #d1d5db;
+$color-gray-400: #9ca3af;
+$color-gray-500: #6b7280;
+$color-gray-600: #4b5563;
+$color-gray-700: #374151;
+$color-gray-800: #1f2937;
+$color-gray-900: #111827;
+$color-black: #000000;
+
+// ====================================================================
+// 3. SEMANTIC TEXT COLORS
+// ====================================================================
+
+$text-primary: $color-gray-900;       // Main text
+$text-secondary: $color-gray-600;     // Muted text
+$text-tertiary: $color-gray-500;      // Minor text
+$text-inverse: $color-white;          // On dark backgrounds
+$text-link: $color-primary;           // Links
+$text-link-hover: $color-primary-dark;
+
+// ====================================================================
+// 4. BACKGROUND COLORS
+// ====================================================================
+
+$bg-base: $color-white;
+$bg-soft: $color-gray-50;
+$bg-medium: $color-gray-100;
+$bg-hard: $color-gray-200;
+$bg-inverse: $color-gray-900;
+$bg-overlay: rgba(0, 0, 0, 0.5);
+
+// ====================================================================
+// 5. SPACING SYSTEM (8px base)
+// ====================================================================
+
+$spacing-xs: 0.25rem;   // 4px
+$spacing-sm: 0.5rem;    // 8px
+$spacing-md: 1rem;      // 16px
+$spacing-lg: 1.5rem;    // 24px
+$spacing-xl: 2rem;      // 32px
+$spacing-2xl: 3rem;     // 48px
+$spacing-3xl: 4rem;     // 64px
+$spacing-4xl: 6rem;     // 96px
+
+// ====================================================================
+// 6. TYPOGRAPHY SYSTEM
+// ====================================================================
+
+// Font families
+$font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+$font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+$font-serif: Georgia, 'Times New Roman', serif;
+
+// Font sizes (modular scale 1.125)
+$font-size-xs: 0.75rem;    // 12px
+$font-size-sm: 0.875rem;   // 14px
+$font-size-base: 1rem;     // 16px
+$font-size-lg: 1.125rem;   // 18px
+$font-size-xl: 1.25rem;    // 20px
+$font-size-2xl: 1.5rem;    // 24px
+$font-size-3xl: 1.875rem;  // 30px
+$font-size-4xl: 2.25rem;   // 36px
+$font-size-5xl: 2.875rem;  // 46px
+$font-size-6xl: 3.5rem;    // 56px
+
+// Font weights
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-extrabold: 800;
+
+// Line heights
+$line-height-tight: 1.2;
+$line-height-snug: 1.4;
+$line-height-normal: 1.6;
+$line-height-relaxed: 1.8;
+$line-height-loose: 2;
+
+// ====================================================================
+// 7. BORDER RADIUS (Semantic)
+// ====================================================================
+
+$radius-none: 0;
+$radius-sm: 0.25rem;   // 4px - tight corners
+$radius-md: 0.5rem;    // 8px - standard
+$radius-lg: 1rem;      // 16px - soft
+$radius-xl: 1.5rem;    // 24px - rounded
+$radius-full: 9999px;  // Fully rounded
+
+// ====================================================================
+// 8. BORDER & STROKE
+// ====================================================================
+
+$border-width-thin: 1px;
+$border-width-normal: 2px;
+$border-width-thick: 3px;
+
+$border-color: $color-gray-300;
+$border-color-light: $color-gray-200;
+$border-color-dark: $color-gray-400;
+
+// ====================================================================
+// 9. SHADOWS (Elevation System)
+// ====================================================================
+
+$shadow-none: none;
+
+$shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+
+$shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+            0 2px 4px -1px rgba(0, 0, 0, 0.06);
+
+$shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+            0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+$shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+            0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+$shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+
+// Focus shadow (accessibility)
+$shadow-focus: 0 0 0 3px rgba(26, 92, 58, 0.1);
+$shadow-focus-offset: 0 0 0 4px $color-white;
+
+// ====================================================================
+// 10. TRANSITIONS & ANIMATIONS
+// ====================================================================
+
+$transition-fast: 150ms ease-in-out;
+$transition-base: 250ms ease-in-out;
+$transition-slow: 350ms ease-in-out;
+
+$easing-linear: linear;
+$easing-in: cubic-bezier(0.4, 0, 1, 1);
+$easing-out: cubic-bezier(0, 0, 0.2, 1);
+$easing-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+
+// ====================================================================
+// 11. BREAKPOINTS (Mobile-first)
+// ====================================================================
+
+$breakpoint-sm: 640px;    // Small phones
+$breakpoint-md: 768px;    // Tablets
+$breakpoint-lg: 1024px;   // Desktops
+$breakpoint-xl: 1280px;   // Large desktops
+$breakpoint-2xl: 1536px;  // Extra large
+
+// ====================================================================
+// 12. Z-INDEX SCALE (Stacking Context)
+// ====================================================================
+
+$z-hide: -1;
+$z-base: 0;
+$z-dropdown: 100;
+$z-sticky: 200;
+$z-fixed: 300;
+$z-modal-backdrop: 400;
+$z-modal: 500;
+$z-popover: 600;
+$z-tooltip: 700;
+
+// ====================================================================
+// 13. PERFORMANCE THRESHOLDS
+// ====================================================================
+
+$max-line-length: 70ch;          // Optimal reading line length
+$container-max-width: 1280px;    // Max content width
+$container-padding: $spacing-lg;  // Default padding
+
+// ====================================================================
+// 14. ACCESSIBILITY STANDARDS
+// ====================================================================
+
+// WCAG AA contrast ratios (minimum 4.5:1 for normal text)
+$contrast-ratio-aa: 4.5;
+$contrast-ratio-aaa: 7;
+
+// Focus indicators
+$focus-outline-width: 2px;
+$focus-outline-color: $color-primary;
+
+// ====================================================================
+// 15. DERIVED VALUES (Calculated from above)
+// ====================================================================
+
+// Use these to maintain consistency throughout the codebase
+$input-height: calc($spacing-lg * 2 + $font-size-base * $line-height-normal);
+$button-padding: $spacing-md $spacing-lg;
+$card-padding: $spacing-xl;
+$section-padding: $spacing-3xl $spacing-lg;
+
+// ====================================================================
+// EXPORT CHECKLIST
+// ====================================================================
+// All values above are GLOBAL and can be imported:
+// @import "00-settings/theme-globals";
+//
+// Usage examples:
+// .element { color: $text-primary; }
+// .button { background: $color-primary; padding: $button-padding; }
+// .card { box-shadow: $shadow-md; border-radius: $radius-lg; }
+//
+// Never hardcode colors, spacing, or sizes. Always use these variables.
+// ==================================================================== */

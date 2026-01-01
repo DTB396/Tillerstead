@@ -40,13 +40,13 @@
 
       <!-- Center Branding -->
       <div class="footer-brand">
-        {% include logo-header.html symbol="logo-mark" variant="mono" link_class="ts-logo-link ts-logo-link--footer" svg_class="ts-logo ts-logo--footer" %}
+        {% include layout/logo-header.html symbol="logo-mark" variant="mono" link_class="ts-logo-link ts-logo-link--footer" svg_class="ts-logo ts-logo--footer" %}
 
         <p class="footer-tagline">TCNA‑Certified Tile &amp; Stone Installation</p>
         <p class="footer-license">New Jersey HIC License #{{ site.company.hic }}</p>
 
         <div class="footer-social">
-          {% include social-links.html class="social-links--footer"
+          {% include components/social-links.html class="social-links--footer"
           aria_label="Tillerstead social profiles" %}
         </div>
 

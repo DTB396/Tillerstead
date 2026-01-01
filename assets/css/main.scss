@@ -5,6 +5,10 @@
    ============================================ */
 
 /* 00 - Settings: Design Tokens & Variables */
+/* ⭐ GLOBAL THEME - Edit here to change all colors/spacing */
+@import "00-settings/theme-globals";
+
+/* Legacy settings (being consolidated into theme-globals) */
 @import "00-settings/tokens-modern";
 @import "00-settings/dark-theme-experiment";
 @import "00-settings/luxury-refinements";

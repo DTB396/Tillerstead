@@ -2,7 +2,7 @@
 Homepage Blog Highlights Include
 - Renders recent N posts as compact cards
 - Params: limit (default 3), eyebrow, title, summary, cta_url, cta_label
-Usage: {% include blog-highlights.html limit=3 %}
+Usage: {% include content/blog-highlights.html limit=3 %}
 {% endcomment %}
 {% assign posts_sorted = site.posts | sort: 'date' | reverse %}
 {% assign limit = include.limit | default: 3 %}
@@ -51,3 +51,4 @@ Usage: {% include blog-highlights.html limit=3 %}
   </div>
 </section>
 {% endif %}
+

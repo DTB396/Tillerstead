@@ -26,12 +26,12 @@ show_process: false
 </script>
 
 {%- comment -%} Hero – first thing visitors see {%- endcomment -%}
-{% include unified-hero-home.html %}
+{% include hero/unified-hero-home.html %}
 
-{% include reviews-highlights.html limit=3 %}
+{% include content/reviews-highlights.html limit=3 %}
 
 {% if page.show_process != false %}
-{% include ts-process.html %}
+{% include content/ts-process.html %}
 {% endif %}
 
 {%- comment -%} Services Preview – What we do {%- endcomment -%}

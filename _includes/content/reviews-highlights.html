@@ -3,7 +3,7 @@ Homepage Reviews Highlights Include
 - Renders top N reviews from _data/reviews.yml as trust cards
 - Params: limit (default 3), eyebrow, title, summary, cta_url, cta_label
 - Optional IDs: section_id (default: home-reviews), heading_id (default: section_id + '-title')
-Usage: {% include reviews-highlights.html limit=3 %}
+Usage: {% include content/reviews-highlights.html limit=3 %}
 {% endcomment %}
 {% assign all = site.data.reviews.reviews | default: [] %}
 {% assign limit = include.limit | default: 3 %}
@@ -65,3 +65,4 @@ Usage: {% include reviews-highlights.html limit=3 %}
     </div>
   </div>
 </section>
+

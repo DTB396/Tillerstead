@@ -9,7 +9,7 @@ hero_summary: >
 permalink: /portfolio/
 ---
 
-{% include ts-portfolio.html %}
+{% include content/ts-portfolio.html %}
 
 {% assign projects = site.data.portfolio.projects | default: [] %}
 {% assign total_projects = projects | size | plus: 0 %}
@@ -308,3 +308,4 @@ const PROJECTS = {{ projects | jsonify | replace: '</', '<\/') }};
   setFilter(initialFilter);
 })();
 </script>
+

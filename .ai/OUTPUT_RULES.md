@@ -126,7 +126,7 @@ Defines non-negotiable technical, legal, and brand standards for all code, conte
 
 ### Front Matter
 - Always include: `layout`, `title`, `description`
-- Use unified hero: `{% include unified-hero.html ... %}` with explicit params
+- Use unified hero: `{% include hero/unified-hero.html ... %}` with explicit params
 - Minimal logic in templates; move complexity to data files
 
 ---
@@ -216,4 +216,5 @@ Defines non-negotiable technical, legal, and brand standards for all code, conte
 **Last Updated**: June 2024  
 **Authority**: SYSTEM.md, STYLE.md, DOMAIN.md, COMPLIANCE.md, OUTPUT_RULES.md  
 **Legal**: TCNA 2024, New Jersey HIC, WCAG 2.1, modern web standards
+
 

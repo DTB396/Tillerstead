@@ -14,7 +14,7 @@ This directory contains all official Tillerstead LLC branding assets optimized f
 ### Quick Start
 
 ```liquid
-{% include logo-header.html symbol="logo-mark" variant="mono" %}
+{% include layout/logo-header.html symbol="logo-mark" variant="mono" %}
 ```
 
 Available symbols:
@@ -135,3 +135,4 @@ All SVG files are:
 
 **New Jersey HIC**: #13VH10808800  
 **Last Updated**: 2025-12-26
+

@@ -1,0 +1,25 @@
+[LiquidEngine] Attempting to include: cta-estimate.html
+Build failed: (<unknown>): could not find expected ':' while scanning a simple key at line 6 column 1
+[LiquidEngine] Rendering include: cta-estimate.html
+[LiquidEngine] Attempting to include: cta-estimate.html
+[LiquidEngine] Rendering include: cta-estimate.html
+[LiquidEngine] Attempting to include: cta-estimate.html
+[LiquidEngine] Rendering include: cta-estimate.html
+[LiquidEngine] Attempting to include: cta-estimate.html
+[LiquidEngine] Rendering include: cta-estimate.html
+C:/Ruby34-x64/lib/ruby/3.4.0/psych/parser.rb:62:in 'Psych::Parser#_native_parse'
+C:/Ruby34-x64/lib/ruby/3.4.0/psych/parser.rb:62:in 'Psych::Parser#parse'
+C:/Ruby34-x64/lib/ruby/3.4.0/psych.rb:457:in 'Psych.parse_stream'
+C:/Ruby34-x64/lib/ruby/3.4.0/psych.rb:401:in 'Psych.parse'
+C:/Ruby34-x64/lib/ruby/3.4.0/psych.rb:325:in 'Psych.safe_load'
+C:/Users/Devon Tyler/tillerstead/vendor/gems/jekyll/lib/jekyll/site.rb:280:in 'Jekyll::Site#parse_document'
+C:/Users/Devon Tyler/tillerstead/vendor/gems/jekyll/lib/jekyll/site.rb:197:in 'block in Jekyll::Site#prepare_pages'
+C:/Users/Devon Tyler/tillerstead/vendor/gems/jekyll/lib/jekyll/site.rb:191:in 'Array#map'
+C:/Users/Devon Tyler/tillerstead/vendor/gems/jekyll/lib/jekyll/site.rb:191:in 'Jekyll::Site#prepare_pages'
+C:/Users/Devon Tyler/tillerstead/vendor/gems/jekyll/lib/jekyll/site.rb:47:in 'Jekyll::Site#build'
+C:/Users/Devon Tyler/tillerstead/vendor/gems/jekyll/lib/jekyll/cli.rb:37:in 'Jekyll::CLI#run_build'
+C:/Users/Devon Tyler/tillerstead/vendor/gems/jekyll/lib/jekyll/cli.rb:20:in 'Jekyll::CLI#run'
+C:/Users/Devon Tyler/tillerstead/vendor/gems/jekyll/lib/jekyll/cli.rb:9:in 'Jekyll::CLI.start'
+C:/Users/Devon Tyler/tillerstead/vendor/gems/jekyll/bin/jekyll:6:in '<top (required)>'
+C:/Ruby34-x64/lib/ruby/gems/3.4.0/bin/jekyll:25:in 'Kernel#load'
+C:/Ruby34-x64/lib/ruby/gems/3.4.0/bin/jekyll:25:in '<main>'
