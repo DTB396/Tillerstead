@@ -77,7 +77,7 @@ This is not a DIY manual. It is an **education and alignment resource** so expec
 ### 8. Common Failures & Red Flags
 
 **Where problems originate, what warning signs to watch for, and how quality builds prevent them.**
-[Read: Common Failures & Red Flags](/pages/build/common-failures/)
+[Read: Common Failures & Red Flags](/pages/build/common-build-failures/)
 
 ---
 
